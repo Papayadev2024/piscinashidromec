@@ -526,14 +526,14 @@
 
                                     <div class="relative">
                                         <div class="flex justify-center items-center">
-                                            <img src="{{ asset($servicio->url_image) }}" alt="problema en la vesicula">
+                                            <img src="{{ asset($servicio->url_image) }}" alt="{{substr(strrchr($servicio->url_image, '_'), 1)}}">
                                        
                                         </div>
 
                                         <a href="#">
                                             <img src="{{ asset('images/svg/video.svg') }}"
                                                 class="absolute bottom-0 right-0 opacity-0 group-hover:opacity-100 md:duration-500"
-                                                alt="problema de vesicula" />
+                                                alt="{{substr(strrchr($servicio->url_image, '_'), 1)}}" />
 
                                         </a>
                                     </div>
