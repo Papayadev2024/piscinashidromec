@@ -97,8 +97,8 @@ export default {
 
             backgroundImage: {
                 Hero_Doctor_mobile:
-                    "url('../../public/images/img/Hero_Doctor_mobile.png')",
-                Hero_Doctor: "url('../../public/images/img/Hero_Doctor.png')",
+                    "url('/public/images/img/Hero_Doctor_mobile.png')",
+                Hero_Doctor: "url('/public/images/img/Hero_Doctor.png')",
             },
 
             backgroundColor: {
