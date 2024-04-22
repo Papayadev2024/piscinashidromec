@@ -14,10 +14,12 @@ return new class extends Migration
         Schema::create('services', function (Blueprint $table) {
             $table->id();
 
-            $table->string('title');
-            $table->text('description');
+            $table->string('title')->nullable();
+            $table->text('extracto')->nullable();
+            $table->text('description')->nullable();
             $table->string('url_image')->nullable();
             $table->string('name_image')->nullable();
+            $table->string('link')->nullable();
             $table->boolean('visible')->default(false);
             $table->boolean('status')->default(false);
 

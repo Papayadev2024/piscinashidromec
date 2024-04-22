@@ -18,6 +18,13 @@ return new class extends Migration
             $table->string('email')->nullable();
             $table->string('ocupation')->nullable();
             $table->string('testimonie')->nullable();
+
+            $table->string('url_image_antes')->nullable();
+            $table->string('name_image_antes')->nullable();
+
+            $table->string('url_image_posterior')->nullable();
+            $table->string('name_image_posterior')->nullable();
+
             $table->boolean('visible')->default(false);
             $table->boolean('status')->default(false);
 

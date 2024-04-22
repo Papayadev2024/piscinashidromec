@@ -16,10 +16,8 @@ class MessageController extends Controller
     public function index()
     {
         //
-        $mensajes = Message::all();
-        return view('pages.message.index', compact('mensajes'));
-    
-        
+        $mensajes = Message::where('status', '=', 1)->get();
+        return view('pages.message.index', compact('mensajes'));        
     }
 
     /**
@@ -39,6 +37,7 @@ class MessageController extends Controller
     }
     function storePublic(Request $request)
     {
+        
         $mensaje = new Message();
 
         $mensaje->full_name = $request-> nombre; 
@@ -65,6 +64,14 @@ class MessageController extends Controller
         $message->save();
 
         return view('pages.message.show', compact('message'));
+    }
+
+    public function borrar(Request $request){
+
+        $message = Message::findOrFail($request->id);
+        $message->status = 0;
+        $message->save();
+        return response()->json(['message' => 'Mensaje eliminado correctamente']);
     }
 
     /**

@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Testimony extends Model
 {
     use HasFactory;
-    protected $fillable=['name', 'email', 'ocupation' ,'testimonie','visible','status'];
+    protected $fillable=['name', 'email', 'ocupation' ,'testimonie', 'url_image_antes' , 'name_image_antes' , 'url_image_posterior', 'name_image_posterior' ,'visible','status'];
 }

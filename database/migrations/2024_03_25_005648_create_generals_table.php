@@ -14,6 +14,9 @@ return new class extends Migration
         Schema::create('generals', function (Blueprint $table) {
             $table->id();
             $table->string('address')->nullable();
+            $table->string('title1')->nullable();
+            $table->string('title2')->nullable();
+            $table->string('description')->nullable();
             $table->string('inside')->nullable();
             $table->string('district')->nullable();
             $table->string('city')->nullable();
@@ -26,6 +29,8 @@ return new class extends Migration
             $table->string('instagram')->nullable();
             $table->string('youtube')->nullable();
             $table->string('twitter')->nullable();
+            $table->string('linkedin')->nullable();
+            $table->string('tiktok')->nullable();
             $table->string('whatsapp')->nullable();
             $table->string('form_email')->nullable();
             $table->string('business_hours')->nullable();

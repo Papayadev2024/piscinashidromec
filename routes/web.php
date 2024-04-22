@@ -50,8 +50,9 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
         Route::get('/dashboard/analytics', [DashboardController::class, 'analytics'])->name('analytics');
         Route::get('/dashboard/fintech', [DashboardController::class, 'fintech'])->name('fintech');
 
-        //messages
+        //messages 
         Route::resource('/mensajes', MessageController::class);
+        Route::post('/mensajes/borrar', [MessageController::class, 'borrar'] )->name('mensajes.borrar');
 
         //Datos Generales
         Route::resource('/datosgenerales', GeneralController::class);

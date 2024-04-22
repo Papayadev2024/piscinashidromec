@@ -15,10 +15,15 @@ class ServiceSeeder extends Seeder
     public function run(): void
     {
         //
-        for ($i = 1; $i <= 5; $i++) {
+        $title = ['Problema en la Vesícula', 'Presencia de Hernias', 'Problema de Obesidad', 'Balón Gástrico', 'Cinta Gástrica', 'Problema Induvicales'];
+
+        $desc = ['Conoce las causas de los problemas de vesícula y obtén la mejor atención por parte del Dr. Kewin y su equipo de especialistas para evitar problemas de salud en un futuro.', 'Una hernia no tratada tiempo puede perjudicarte en tus actividades diarias. Nosotros te ofrecemos una atención especializada y el tratamiento más avanzado para recuperar tu mejor versión.', 'Combatir la obesidad es esencial para mejorar la salud y el bienestar. En nuestro servicio, ofrecemos soluciones efectivas y personalizadas para la gestión del peso y el estilo de vida saludable.', 'Confía en el Dr. Kewin, especialista en balón gástrico, para recibir la mejor atención y asesoramiento de calidad. Nuestro equipo de especialistas te brinda el mejor cuidado para ayudarte a alcanzar tus objetivos de pérdida de peso de manera segura y efectiva.', 'Descubre la efectividad del tratamiento para la obesidad con la cinta gástrica, una opción segura y probada que ofrece nuestro equipo de especialistas para hacer de tu vida más saludable y sencilla.', 'Lucha contra los problemas individuales con nuestra atención personalizada. Nos comprometemos a ofrecerte soluciones efectivas para superar tus desafíos personales.'];
+
+    
+        for ($i = 0; $i <= 5; $i++) {
             Service::create([
-                'title' => 'Servicio '. $i,
-                'description' => 'Yep Advisors, entendemos que cada individuo tiene objetivos financieros únicos. Nuestro servicio de Wealth Management ofrece soluciones personalizadas diseñadas para proteger y hacer tu patrimonio. Desde la planificación de la jubilación hasta la gestión de inversiones, nuestro enfoque centrado en el cliente garantiza que tus necesidades estén siempre en el centro de nuestras decisiones. Confía en nosotros para ayudarte a alcanzar tus metas financieras con confianza y tranquilidad.',
+                'title' => $title[$i],
+                'extracto' => $desc[$i],
                 'url_image' => 'https://picsum.photos/id/'. $i * 33 .'/50',
                 'status' => 1,
             ]);

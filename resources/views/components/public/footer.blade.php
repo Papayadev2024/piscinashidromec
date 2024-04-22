@@ -10,13 +10,15 @@
                     </p>
                 </div>
                 <div class="font-semibold text-text16 xl:text-text20">
-                    <a href="#formulario"
+                    <a href="https://api.whatsapp.com/send?phone={{$generales->whatsapp}}&text={{$generales->mensaje_whatsapp}}"
                         class="bg-bgCeleste py-3 px-5 rounded-xl inline-block text-center hover:bg-bgCelesteStrong md:duration-500 w-full 2md:w-auto">Solicitar
                         una cita
                     </a>
                 </div>
             </div>
 
+            
+        
             <div class="flex flex-col 2md:flex-row gap-12 2md:gap-16">
                 <div class="flex flex-col gap-5">
                     <p class="font-medium text-text16 xl:text-text20">Enlaces</p>
@@ -33,15 +35,15 @@
                     </p>
                     <div class="flex flex-col gap-2">
                         <p class="font-normal text-text14 xl:text-text18">
-                            123 Calle Principal, Ciudad Perfecta
+                            {{$generales->address}}, {{$generales->inside}} {{$generales->district}}
                         </p>
                         <div class="font-normal text-text14 xl:text-text18">
                             <p>Correo Electrónico</p>
-                            <a href="#">info@doctorkewin.com.pe</a>
+                            <p href="#">{{$generales->email}}</p>
                         </div>
                         <div class="font-normal text-text14 xl:text-text18">
                             <span>Teléfono:</span>
-                            <a href="#">+51 999 888 444</a>
+                            <p href="#">{{$generales->cellphone}}</p>
                         </div>
                     </div>
                 </div>
@@ -49,8 +51,8 @@
                 <div class="flex flex-col gap-5">
                     <p class="font-medium text-text16 xl:text-text20">Aviso Legal</p>
                     <div class="font-normal text-text14 xl:text-text18 flex flex-col gap-2">
-                        <a href="#">Política de Privacidad</a>
-                        <a href="#">Términos y Condiciones</a>
+                        <p>Política de Privacidad</p>
+                        <p>Términos y Condiciones</p>
                     </div>
                 </div>
             </div>
@@ -59,13 +61,13 @@
             class="flex flex-col gap-5 2md:flex-row 2md:justify-between items-start 2md:items-center text-text14 xl:text-text18">
             <p>Copyright &copy; 2023 Mundo Web. Reservados todos los derechos</p>
             <div class="flex justify-start 2md:justify-between gap-5 w-full 2md:w-auto">
-                <a href="#">
+                <a href="https://{{$generales->instagram}}">
                     <img src="{{ asset('images/svg/instagram.svg') }}" alt="instagram">
                 </a>
-                <a href="#">
+                <a href="https://{{$generales->facebook}}">
                     <img src="{{ asset('images/svg/facebook.svg') }}" alt="facebook">
                 </a>
-                <a href="#">
+                <a href="https://{{$generales->linkedin}}">
                     <img src="{{ asset('images/svg/linkedin.svg') }}" alt="linkedin">
                 </a>
             </div>
