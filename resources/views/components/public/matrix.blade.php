@@ -11,7 +11,13 @@
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <link rel="stylesheet" href="{{asset('build/assets/app-dGvTjJ5y.css')}}">
+    <link rel="stylesheet" href="{{asset('build/assets/app-yt1RioBr.css')}}">
 
+    <script src="{{asset('build/assets/app-zWqa92Wg.js')}}">
+
+    </script>
+    
     {{-- Aqui van los CSS --}}
     @yield('css_improtados')
 
