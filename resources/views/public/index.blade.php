@@ -390,29 +390,39 @@
         textarea {
             font-size: inherit;
         }
+
+        .bg__image-header {
+            background-image: url({{ asset('images/img/Hero_Doctor_mobile.png') }});
+        }
+
+        @media (min-width: 768px) {
+            .bg__image-header {
+                background-image: url({{ asset('images/img/Hero_Doctor.png') }});
+            }
+
+        }
     </style>
 
 @stop
-
+{{-- style="background-image: url({{asset('images/img/Hero_Doctor_mobile.png')}})" --}}
 @section('content')
     <main class="flex flex-col gap-20 font-outfit">
-        <section
-            class="bg-Hero_Doctor_mobile md:bg-Hero_Doctor bg-cover bg-center bg-no-repeat sm:w-full h-full pt-24 md:pt-44">
+        <section class="bg__image-header bg-cover bg-center bg-no-repeat sm:w-full h-full pt-24 md:pt-44">
             <div class="flex flex-col lg:flex-row gap-10 md:gap-32 w-11/12 mx-auto text-textWhite mt-12 items-center"
                 data-aos="fade-up" data-aos-offset="150">
                 <div class="flex flex-col gap-10 basis-1/2 justify-center">
                     <div class="flex flex-col gap-8 md:gap-5">
                         <h1 class="font-bold text-text56 md:text-text36 2md:text-text64 leading-none 2md:leading-tight">
-                            {{$generales->title1}}
-                            
+                            {{ $generales->title1 }}
+
                         </h1>
                         <p class="font-medium text-text18 xl:text-text22">
-                            {{$generales->description}}
+                            {{ $generales->description }}
                         </p>
                     </div>
                     <div
                         class="font-semibold text-text18 xl:text-text22 flex flex-col md:flex-row items-center justify-start gap-5">
-                        <a href="https://api.whatsapp.com/send?phone={{$generales->whatsapp}}&text={{$generales->mensaje_whatsapp}}"
+                        <a href="https://api.whatsapp.com/send?phone={{ $generales->whatsapp }}&text={{ $generales->mensaje_whatsapp }}"
                             class="bg-bgCeleste py-3 px-5 rounded-xl inline-block text-center hover:bg-bgCelesteStrong md:duration-500 w-full md:w-auto">
                             Solicitar una cita
                         </a>
@@ -526,14 +536,15 @@
 
                                     <div class="relative">
                                         <div class="flex justify-center items-center">
-                                            <img src="{{ asset($servicio->url_image) }}" alt="{{substr(strrchr($servicio->url_image, '_'), 1)}}">
-                                       
+                                            <img src="{{ asset($servicio->url_image) }}"
+                                                alt="{{ substr(strrchr($servicio->url_image, '_'), 1) }}">
+
                                         </div>
 
                                         <a href="#">
                                             <img src="{{ asset('images/svg/video.svg') }}"
                                                 class="absolute bottom-0 right-0 opacity-0 group-hover:opacity-100 md:duration-500"
-                                                alt="{{substr(strrchr($servicio->url_image, '_'), 1)}}" />
+                                                alt="{{ substr(strrchr($servicio->url_image, '_'), 1) }}" />
 
                                         </a>
                                     </div>
@@ -546,7 +557,7 @@
                                             {!! $servicio->extracto !!}
                                         </p>
                                         <div class="flex justify-center items-center absolute -bottom-[85px] w-full">
-                                            <a href="https://api.whatsapp.com/send?phone={{$generales->whatsapp}}&text={{$generales->mensaje_whatsapp}}"
+                                            <a href="https://api.whatsapp.com/send?phone={{ $generales->whatsapp }}&text={{ $generales->mensaje_whatsapp }}"
                                                 class="bg-bgCeleste py-3 px-5 rounded-xl inline-block text-center text-textWhite font-semibold text-text16 xl:text-text20 w-full md:w-auto group-hover:bg-bgAzul md:duration-500">
                                                 Solicitar una cita
                                             </a>
@@ -555,7 +566,7 @@
                                 </div>
                             </div>
                         </div>
-                    @endforeach                  
+                    @endforeach
                 </div>
                 <div class="swiper-pagination-grid"></div>
             </div>
@@ -599,7 +610,7 @@
                     <div class="relative contenedor_video">
                         {{-- <p>{{$texto_despues_igual = substr(strrchr($generales->title2, '='), 1);}}</p>
                         <p>{{$texto_despues_igual}}</p> --}}
-                        <iframe src="https://www.youtube.com/embed/{{substr(strrchr($generales->title2, '='), 1)}}"
+                        <iframe src="https://www.youtube.com/embed/{{ substr(strrchr($generales->title2, '='), 1) }}"
                             title="YouTube video player" frameborder="0" referrerpolicy="strict-origin-when-cross-origin"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowfullscreen
@@ -745,7 +756,7 @@
                     </ul>
 
                     <div class="font-semibold text-text18 xl:text-text22">
-                        <a href="https://api.whatsapp.com/send?phone={{$generales->whatsapp}}&text={{$generales->mensaje_whatsapp}}"
+                        <a href="https://api.whatsapp.com/send?phone={{ $generales->whatsapp }}&text={{ $generales->mensaje_whatsapp }}"
                             class="bg-bgCeleste py-3 px-5 rounded-xl inline-block text-center hover:bg-bgCelesteStrong md:duration-500 w-full 2md:w-auto text-textWhite">Solicitar
                             una cita</a>
                     </div>
@@ -959,17 +970,18 @@
                                                 class="h-[200px] md:h-[400px] absolute opacity-50 md:left-1/3 myBox"
                                                 alt="testimonios" /> --}}
 
-                                                <img src="{{$testimonio->url_image_antes}}"
+                                            <img src="{{ $testimonio->url_image_antes }}"
                                                 class="h-[200px] md:h-[400px] absolute opacity-50 md:left-1/3 myBox"
                                                 alt="testimonios" />
 
-                                                <img src="{{$testimonio->url_image_posterior}}"
+                                            <img src="{{ $testimonio->url_image_posterior }}"
                                                 class="h-[200px] md:h-[400px] absolute top-1/4 left-1/4 md:left-1/2 z-[1] myBox"
                                                 alt="testimonios" />
 
                                             {{-- <img src="{{ asset('images/img/testimonio_01.png') }}" alt="testimonios"
                                                 class="h-[200px] md:h-[400px] absolute top-1/4 left-1/4 md:left-1/2 z-[1] myBox" />
-                                         --}}</div>
+                                         --}}
+                                        </div>
                                     </div>
 
 
@@ -1205,7 +1217,7 @@
                 </div>
 
                 <div>
-                    <a href="https://api.whatsapp.com/send?phone={{$generales->whatsapp}}&text={{$generales->mensaje_whatsapp}}"
+                    <a href="https://api.whatsapp.com/send?phone={{ $generales->whatsapp }}&text={{ $generales->mensaje_whatsapp }}"
                         class="bg-bgAzul py-4 px-10 rounded-xl inline-block text-center hover:bg-blue-500 md:duration-500 w-full 2md:w-auto text-textWhite text-text18 xl:text-text22 font-semibold">
                         Solicitar una cita
                     </a>
@@ -1233,7 +1245,7 @@
 
                     <div class="w-full">
                         <form class="flex flex-col gap-10 font-semibold text-text18 xl:text-text22" id="formContactos">
-                            @csrf 
+                            @csrf
                             <div class="flex flex-col md:flex-row gap-10">
                                 <div class="w-full">
                                     <input required type="text" placeholder="Nombre" name="name"
@@ -1253,7 +1265,8 @@
                                 </div>
 
                                 <div class="w-full">
-                                    <input id="telefono" required type="text" placeholder="Teléfono" name="phone" maxlength="9"
+                                    <input id="telefono" required type="text" placeholder="Teléfono" name="phone"
+                                        maxlength="9"
                                         class="border-[1.5px] border-[#D3D3D3] w-full py-4 bg-bgRosaWeak rounded-xl px-2 outline-[#254F9A] text-textAzul placeholder:text-textAzul placeholder:opacity-40" />
                                 </div>
                             </div>
