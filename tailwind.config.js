@@ -112,6 +112,7 @@ export default {
                 bgRosa: "#F9F9F9",
                 bgAzul: "#254F9A",
                 bgRosaWeak: "#F6F8FE",
+                bgAzulStrong: "#23498E",
             },
             textColor: {
                 colorSubtitle: "#113E55",

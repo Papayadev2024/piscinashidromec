@@ -32,6 +32,16 @@ class IndexController extends Controller
         return view('public.index', compact('servicios', 'titulos', 'generales', 'testimonios', 'logos'));
     }
 
+
+    public function servicios($id)
+    {
+        /* dump($id); */
+        $servicioById = Service::where('id', '=', $id)->first();
+        $servicios = Service::where('status', '=', true)->where('visible', '=',  true)->get();
+        $generales = General::all()->first();
+        return view('public.servicios', compact('generales', 'servicios', 'servicioById'));
+    }
+
     /**
      * Show the form for creating a new resource.
      */

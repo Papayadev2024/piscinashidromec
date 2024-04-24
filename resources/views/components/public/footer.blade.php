@@ -23,10 +23,10 @@
                 <div class="flex flex-col gap-5">
                     <p class="font-medium text-text16 xl:text-text20">Enlaces</p>
                     <div class="flex flex-col gap-2">
-                        <a href="#inicio" class="font-normal text-text14 xl:text-text18">Inicio</a>
-                        <a href="#servicios" class="font-normal text-text14 xl:text-text18">Servicios</a>
-                        <a href="#acerca" class="font-normal text-text14 xl:text-text18">Acerca del Doctor</a>
-                        <a href="#proceso" class="font-normal text-text14 xl:text-text18">Proceso</a>
+                        <a href="{{route('index')}}" class="font-normal text-text14 xl:text-text18">Inicio</a>
+                        <a href="{{route('index').'#servicios'}}" class="font-normal text-text14 xl:text-text18">Servicios</a>
+                        <a href="{{route('index').'#acerca'}}" class="font-normal text-text14 xl:text-text18">Acerca del Doctor</a>
+                        <a href="{{route('index').'#proceso'}}" class="font-normal text-text14 xl:text-text18">Proceso</a>
                     </div>
                 </div>
                 <div class="flex flex-col gap-5">

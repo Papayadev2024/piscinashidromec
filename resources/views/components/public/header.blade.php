@@ -1,6 +1,6 @@
 <header
-    class="bg-transparent font-outfit absolute w-full">
-    <div class="text-textWhite flex justify-between items-center w-11/12 mx-auto py-10">
+    class="bg-transparent bg__servicios-fondo font-outfit absolute w-full">
+    <div class="text-textWhite flex justify-between items-center w-11/12 mx-auto py-5">
         <div class="flex justify-start items-center w-full md:w-auto" data-aos="fade-up" data-aos-offset="150">
             <a href="{{route('index')}}">
                 <img src="{{ asset('images/img/logo.png') }}" alt="doctor Kewin">
@@ -9,10 +9,10 @@
         </div>
         <div class="hidden md:flex justify-center items-center gap-10 font-semibold text-text18 xl:text-text22">
             <nav class="flex justify-center items-center gap-10 text-center" data-aos="fade-up" data-aos-offset="150">
-                <a href="#inicio" class="text-textCeleste">Inicio</a>
-                <a href="#servicios">Servicios</a>
-                <a href="#acerca">Acerca del Doctor</a>
-                <a href="#proceso">Proceso</a>
+                <a href="{{route('index')}}" class="text-textCeleste">Inicio</a>
+                <a href="{{route('index').'#servicios'}}">Servicios</a>
+                <a href="{{route('index').'#acerca'}}">Acerca del Doctor</a>
+                <a href="{{route('index').'#proceso'}}">Proceso</a>
             </nav>
             <div data-aos="fade-up" data-aos-offset="150">
                 <a href="https://api.whatsapp.com/send?phone={{$generales->whatsapp}}&text={{$generales->mensaje_whatsapp}}"

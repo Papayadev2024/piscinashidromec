@@ -71,7 +71,9 @@ class ServiceController extends Controller
       }
       $service->link = $request->link;
       $service->title = $request->title;
+      /* $service->description = $request->description; */
       $service->description = $request->description;
+
       $service->extracto = $request->extracto;
       $service->status = 1;
       $service->visible = 1;

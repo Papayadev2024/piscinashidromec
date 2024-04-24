@@ -526,41 +526,36 @@
                     Atención Especializada para tu Bienestar
                 </h2>
             </div>
+
             <div class="swiper enfermedades w-11/12 mx-auto">
                 <div class="swiper-wrapper">
 
                     @foreach ($servicios as $servicio)
                         <div class="swiper-slide">
-                            <div class="flex flex-col gap-5 text-textAzul bg-bgRosa rounded-3xl py-16 px-5 group">
-                                <div class="flex flex-col justify-center items-center gap-3">
+                            <div class="flex flex-col justify-center gap-5 text-textAzul bg-bgRosa rounded-3xl py-16 px-5 group ">
+                                <div class="flex flex-col justify-center items-center gap-3 ">
 
                                     <div class="relative">
                                         <div class="flex justify-center items-center">
                                             <img src="{{ asset($servicio->url_image) }}"
                                                 alt="{{ substr(strrchr($servicio->url_image, '_'), 1) }}">
-
                                         </div>
-
-                                        <a href="#">
-                                            <img src="{{ asset('images/svg/video.svg') }}"
-                                                class="absolute bottom-0 right-0 opacity-0 group-hover:opacity-100 md:duration-500"
-                                                alt="{{ substr(strrchr($servicio->url_image, '_'), 1) }}" />
-
-                                        </a>
                                     </div>
 
-                                    <div class="relative flex flex-col gap-5 text-center">
-                                        <h2 class="font-bold text-text32 xl:text-text36">
+                                    <div class="relative flex flex-col gap-5 text-center ">
+                                        <h2 class="font-bold text-text32 xl:text-text36 w-full md:w-1/2 mx-auto">
                                             {{ $servicio->title }}
                                         </h2>
                                         <p class="font-medium text-text16 xl:text-text20">
-                                            {!! $servicio->extracto !!}
+                                            {!!  substr($servicio->extracto, 0, 200) . '...' !!}
                                         </p>
+                                        
                                         <div class="flex justify-center items-center absolute -bottom-[85px] w-full">
-                                            <a href="https://api.whatsapp.com/send?phone={{ $generales->whatsapp }}&text={{ $generales->mensaje_whatsapp }}"
-                                                class="bg-bgCeleste py-3 px-5 rounded-xl inline-block text-center text-textWhite font-semibold text-text16 xl:text-text20 w-full md:w-auto group-hover:bg-bgAzul md:duration-500">
-                                                Solicitar una cita
+                                            <a href="{{ route('servicios', $servicio->id)}}"
+                                                class="bg-bgCeleste py-3 px-10 rounded-xl inline-block text-center text-textWhite font-semibold text-text16 xl:text-text20 w-full md:w-auto group-hover:bg-bgAzul md:duration-500">
+                                                Ver más
                                             </a>
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -614,8 +609,8 @@
                             title="YouTube video player" frameborder="0" referrerpolicy="strict-origin-when-cross-origin"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowfullscreen
-                            class="h-[200px] sm:w-[500px] sm:h-[400px] md:w-[500px] md:h-[400px] lg:w-[800px] lg:h-[500px] 2xl:w-[1000px] 2xl:h-[600px]"></iframe>
-                        <!--  -->
+                            class="w-full aspect-video  md:w-[500px] md:h-[283px] lg:w-[800px] lg:h-[450px] 2xl:w-[1000px] 2xl:h-[565px]"></iframe>
+                        <!-- h-[200px] sm:w-[500px] sm:h-[400px] md:w-[500px] md:h-[400px] lg:w-[800px] lg:h-[500px] 2xl:w-[1000px] 2xl:h-[600px] -->
                     </div>
                 </div>
             </div>

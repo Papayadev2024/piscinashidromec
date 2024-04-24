@@ -37,7 +37,9 @@ use App\Http\Controllers\StaffController;
 /* Las rutas publicas */
 Route::get('/', [IndexController::class, 'index'] )->name('index');
 Route::get('/nosotros', [IndexController::class, 'index'] )->name('nosotros');
-Route::get('/servicios', [IndexController::class, 'index'] )->name('servicios');
+/* Route::get('/servicios', [IndexController::class, 'index'] )->name('servicios'); */
+Route::get('/servicios/{id}', [IndexController::class, 'servicios'] )->name('servicios');
+
 
 Route::post('guardarContactos', [IndexController::class, 'guardarContacto'] )->name('guardarContactos');
 
