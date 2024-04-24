@@ -1,14 +1,6 @@
 {
-  "public/images/img/Hero_Doctor.png": {
-    "file": "assets/Hero_Doctor-ls5R_vWi.png",
-    "src": "public/images/img/Hero_Doctor.png"
-  },
-  "public/images/img/Hero_Doctor_mobile.png": {
-    "file": "assets/Hero_Doctor_mobile-NQwARx5n.png",
-    "src": "public/images/img/Hero_Doctor_mobile.png"
-  },
   "resources/css/app.css": {
-    "file": "assets/app-yt1RioBr.css",
+    "file": "assets/app-sgqe_xgQ.css",
     "isEntry": true,
     "src": "resources/css/app.css"
   },
