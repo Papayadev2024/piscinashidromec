@@ -495,7 +495,7 @@
                         <img src="{{ asset('images/img/doctor_kewin_1.png') }}" alt="doctor kevin" class="h-full w-full">
 
                         <div class="logo-container hidden md:block">
-                            <img src="{{ asset('images/img/logo_doctor.png') }}" alt="imagen estomacal"
+                            <img src="{{ asset('images/img/Logo Iso.png') }}" alt="imagen estomacal"
                                 class="h-full w-full">
                         </div>
                     </div>
