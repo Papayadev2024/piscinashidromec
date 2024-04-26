@@ -246,8 +246,8 @@
             position: absolute;
             width: 5px;
 
-            height: 230px; /* 210 */
-            top: -150px;
+            height: 268px; /* 210 */
+            top: -184px; /* 150 */
             left: 23px;
             background-color: #f8f2f2;
 
@@ -651,7 +651,7 @@
                     <h2 class="text-textCeleste font-semibold text-text24 xl:text-text28">
                         Proceso de una intervención
                     </h2>
-                    <h2 class="font-bold text-text48 xl:text-text52 text-textAzul leading-none md:leading-tight">
+                    <h2 class="font-bold text-text48 xl:text-text52 text-textAzul leading-none md:leading-tight py-5">
                         Qué necesito para ser candidato a una intervención
                     </h2>
                     <p class="font-medium text-text18 xl:text-text22 text-textAzul" data-aos="fade-up"
