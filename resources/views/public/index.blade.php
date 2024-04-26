@@ -246,7 +246,7 @@
             position: absolute;
             width: 5px;
 
-            height: 210px;
+            height: 230px; /* 210 */
             top: -150px;
             left: 23px;
             background-color: #f8f2f2;
@@ -266,6 +266,9 @@
         }
 
         /* Responsive Css  */
+
+        
+        
 
         @media (min-width: 375px) {
             .progress::after {
@@ -568,14 +571,14 @@
         </section>
 
         <section class="bg-bgAzul text-textWhite" id="acerca">
-            <div class="relative p-5 md:pt-20 md:px-20 w-11/12 mx-auto 2xs:pb-[126px] sm:pb-[280px] lg:pb-[350px] xl:pb-[285px] 2xl:pb-[400px] flex flex-col items-center"
+            <div class="relative p-5 md:pt-20 md:px-20 w-11/12 mx-auto xs:pb-[120px] 2xs:pb-[126px] sm:pb-[280px] lg:pb-[350px] xl:pb-[285px] 2xl:pb-[400px] flex flex-col items-center"
                 data-aos="fade-up" data-aos-offset="150">
                 <div class="flex flex-col xl:flex-row gap-10">
                     <div class="md:basis-1/2 flex flex-col gap-4">
-                        <p class="font-medium text-text20 xl:text-text24 md:text-text24">
+                        <p class="font-medium xs:text-text18 2xs:text-text20 xl:text-text24 md:text-text24">
                             Conoce al Dr. Kewin Quispe de la Roca
                         </p>
-                        <h2 class="font-bold text-text40 md:text-text56 xl:text-text60 leading-none md:leading-tight">
+                        <h2 class="font-bold xs:text-text36  2xs:text-text40 md:text-text56 xl:text-text60 leading-tight">
                             Explora el Mundo de la Gastroenterología con el Dr. Kewin
                         </h2>
                     </div>
@@ -601,7 +604,7 @@
                 </div>
 
                 <div
-                    class="flex justify-center items-center absolute 2xs:-bottom-[129px] sm:-bottom-[160px] md:-bottom-[190px] 3md:-bottom-[220px] xl:-bottom-[290px] 2xl:-bottom-[290px] w-full">
+                    class="flex justify-center items-center absolute xs:-bottom-[110px] 2xs:-bottom-[129px] sm:-bottom-[160px] md:-bottom-[190px] 3md:-bottom-[220px] xl:-bottom-[290px] 2xl:-bottom-[290px] w-full">
                     <div class="relative contenedor_video">
                         {{-- <p>{{$texto_despues_igual = substr(strrchr($generales->title2, '='), 1);}}</p>
                         <p>{{$texto_despues_igual}}</p> --}}
@@ -609,7 +612,7 @@
                             title="YouTube video player" frameborder="0" referrerpolicy="strict-origin-when-cross-origin"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowfullscreen
-                            class="w-full aspect-video  md:w-[500px] md:h-[283px] lg:w-[800px] lg:h-[450px] 2xl:w-[1000px] 2xl:h-[565px]"></iframe>
+                            class="w-full  aspect-video  md:w-[500px] md:h-[283px] lg:w-[800px] lg:h-[450px] 2xl:w-[1000px] 2xl:h-[565px]"></iframe>
                         <!-- h-[200px] sm:w-[500px] sm:h-[400px] md:w-[500px] md:h-[400px] lg:w-[800px] lg:h-[500px] 2xl:w-[1000px] 2xl:h-[600px] -->
                     </div>
                 </div>
