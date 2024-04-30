@@ -1,12 +1,12 @@
 <footer class="bg-bgAzul font-outfit text-textWhite">
-    <div class="w-11/12 mx-auto flex flex-col gap-10 py-12 2md:p-20">
-        <div class="flex flex-col 2md:flex-row 2md:justify-between border-b-2 border-white pb-10 gap-12 2md:gap-0"  data-aos="fade-up" data-aos-offset="150">
-            <div class="flex flex-col gap-5">
+    <div class="w-11/12 mx-auto flex flex-col gap-10 py-12 ">
+        <div class="flex flex-col 2md:flex-row 2md:justify-between border-b-2 border-white pb-10 gap-12 2md:gap-24"  data-aos="fade-up" data-aos-offset="150">
+
+            <div class="flex flex-col gap-5 basis-1/3">
                 <div class="flex flex-col gap-3">
                     <h2 class="font-bold text-text28 xl:text-text32">Doctor Kewin</h2>
-                    <p class="font-normal text-text14 xl:text-text18">
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                        accusantium doloremque laudantium, to
+                    <p class="font-normal text-text14 xl:text-text18 w-full ">
+                        El Dr. Kewin Quispe de la Roca es un experto en cirugía gastrointestinal especializado en tratamientos para problemas de vesícula y obesidad, incluyendo la banda gástrica.
                     </p>
                 </div>
                 <div class="font-semibold text-text16 xl:text-text20">
@@ -16,17 +16,15 @@
                     </a>
                 </div>
             </div>
-
-            
-        
-            <div class="flex flex-col 2md:flex-row gap-12 2md:gap-16">
+       
+            <div class="flex flex-col 2md:flex-row gap-12 2md:gap-16 basis-2/3">
                 <div class="flex flex-col gap-5">
                     <p class="font-medium text-text16 xl:text-text20">Enlaces</p>
                     <div class="flex flex-col gap-2">
-                        <a href="{{route('index')}}" class="font-normal text-text14 xl:text-text18">Inicio</a>
-                        <a href="{{route('index').'#servicios'}}" class="font-normal text-text14 xl:text-text18">Servicios</a>
-                        <a href="{{route('index').'#acerca'}}" class="font-normal text-text14 xl:text-text18">Acerca del Doctor</a>
-                        <a href="{{route('index').'#proceso'}}" class="font-normal text-text14 xl:text-text18">Proceso</a>
+                        <a href="{{route('index')}}" class="font-normal text-text14 xl:text-text18 block">Inicio</a>
+                        <a href="{{route('index').'#servicios'}}" class="font-normal text-text14 xl:text-text18 block">Servicios</a>
+                        <a href="{{route('index').'#acerca'}}" class="font-normal text-text14 xl:text-text18 block">Acerca del Doctor</a>
+                        <a href="{{route('index').'#proceso'}}" class="font-normal text-text14 xl:text-text18 block">Proceso</a>
                     </div>
                 </div>
                 <div class="flex flex-col gap-5">
@@ -38,12 +36,12 @@
                             {{$generales->address}}, {{$generales->inside}} {{$generales->district}}
                         </p>
                         <div class="font-normal text-text14 xl:text-text18">
-                            <p>Correo Electrónico</p>
+                            <p>Correo Electrónico:</p>
                             <p href="#">{{$generales->email}}</p>
                         </div>
                         <div class="font-normal text-text14 xl:text-text18">
                             <span>Teléfono:</span>
-                            <p href="#">{{$generales->cellphone}}</p>
+                            <p href="#">{{$generales->office_phone}}</p>
                         </div>
                     </div>
                 </div>
@@ -57,6 +55,9 @@
                 </div>
             </div>
         </div>
+
+
+
         <div
             class="flex flex-col gap-5 2md:flex-row 2md:justify-between items-start 2md:items-center text-text14 xl:text-text18">
             <p>Copyright &copy; 2023 Mundo Web. Reservados todos los derechos</p>

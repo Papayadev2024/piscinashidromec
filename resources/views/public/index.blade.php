@@ -431,7 +431,7 @@
                         </a>
 
                         <a href="#imc"
-                            class="bg-bgWhiteWeak text-textAzul py-3 px-8 rounded-xl inline-block text-center hover:bg-slate-300 md:duration-500 w-full md:w-auto">
+                            class="bg-bgWhiteWeak text-textAzul py-3 px-8 rounded-xl inline-block text-center w-full md:w-auto">
                             Calcula tu IMC
                         </a>
                     </div>
