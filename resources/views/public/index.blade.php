@@ -604,7 +604,7 @@
                 </div>
 
                 <div
-                    class="flex justify-center items-center absolute xs:-bottom-[110px] 2xs:-bottom-[129px] sm:-bottom-[160px] md:-bottom-[190px] 3md:-bottom-[220px] xl:-bottom-[290px] 2xl:-bottom-[290px] w-full">
+                    class="flex justify-center items-center absolute xs:-bottom-[110px] 2xs:-bottom-[102px] sm:-bottom-[160px] md:-bottom-[190px] 3md:-bottom-[220px] xl:-bottom-[290px] 2xl:-bottom-[290px] w-full">
                     <div class="relative contenedor_video">
                         {{-- <p>{{$texto_despues_igual = substr(strrchr($generales->title2, '='), 1);}}</p>
                         <p>{{$texto_despues_igual}}</p> --}}
@@ -612,7 +612,7 @@
                             title="YouTube video player" frameborder="0" referrerpolicy="strict-origin-when-cross-origin"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowfullscreen
-                            class="w-full  aspect-video  md:w-[500px] md:h-[283px] lg:w-[800px] lg:h-[450px] 2xl:w-[1000px] 2xl:h-[565px]"></iframe>
+                            class="w-full aspect-video  sm:w-[500px] sm:h-[283px]  md:w-[500px] md:h-[282px] lg:w-[800px] lg:h-[450px] 2xl:w-[1000px] 2xl:h-[565px]"></iframe>
                         <!-- h-[200px] sm:w-[500px] sm:h-[400px] md:w-[500px] md:h-[400px] lg:w-[800px] lg:h-[500px] 2xl:w-[1000px] 2xl:h-[600px] -->
                     </div>
                 </div>
@@ -964,9 +964,7 @@
 
                                     <div class="flex justify-center">
                                         <div class="relative w-[200px] md:w-[400px] h-[300px] md:h-[600px]">
-                                            {{-- <img src="{{ asset('images/img/testimonio_00.png') }}"
-                                                class="h-[200px] md:h-[400px] absolute opacity-50 md:left-1/3 myBox"
-                                                alt="testimonios" /> --}}
+                                           
 
                                             <img src="{{ $testimonio->url_image_antes }}"
                                                 class="h-[200px] md:h-[400px] absolute opacity-50 md:left-1/3 myBox"
@@ -976,9 +974,7 @@
                                                 class="h-[200px] md:h-[400px] absolute top-1/4 left-1/4 md:left-1/2 z-[1] myBox"
                                                 alt="testimonios" />
 
-                                            {{-- <img src="{{ asset('images/img/testimonio_01.png') }}" alt="testimonios"
-                                                class="h-[200px] md:h-[400px] absolute top-1/4 left-1/4 md:left-1/2 z-[1] myBox" />
-                                         --}}
+                                            
                                         </div>
                                     </div>
 

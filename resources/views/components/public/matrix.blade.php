@@ -59,13 +59,13 @@
         function validarTelefono(value) {
             if (value !== '') {
                 if (isNaN(value)) {
-                    alerta("El campo Teléfono debe ser solo números");
+                    alerta("Por favor, asegúrate de ingresar solo números en el teléfono");
                     return false;
                 }
             }
 
             if (value.length < 9) {
-                alerta("El campo Teléfono debe ser de 9 dígitos");
+                alerta("El teléfono solo puede tener 9 dígitos");
                 return false;
             }
 
@@ -78,15 +78,13 @@
                 /^(([^<>()\[\]\\.,;:\s@”]+(\.[^<>()\[\]\\.,;:\s@”]+)*)|(“.+”))@((\[[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}])|(([a-zA-Z\-0–9]+\.)+[a-zA-Z]{2,}))$/
 
             if (!regex.test(value)) {
-                alerta("El campo email no es válido");
+                alerta("Por favor, asegúrate de ingresar una dirección de correo electrónico válida");
                 return false;
             }
             return true;
         }
 
         $('#formContactos').submit(function(event) {
-            // Evita que se envíe el formulario automáticamente
-            //console.log('evcnto')
 
             event.preventDefault();
             let formDataArray = $(this).serializeArray();
@@ -99,7 +97,6 @@
                 return;
             };
 
-            /* console.log(formDataArray); */
             $.ajax({
                 url: '{{ route('guardarContactos') }}',
                 method: 'POST',
