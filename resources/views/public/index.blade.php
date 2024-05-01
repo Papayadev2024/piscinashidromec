@@ -525,7 +525,7 @@
                 <h3 class="font-semibold text-textCeleste text-text24 xl:text-text28 leading-none md:leading-tight">
                     Descubre Soluciones Personalizadas
                 </h3>
-                <h2 class="font-bold text-textAzul text-text40 md:text-text64 xl:text-text68 leading-none md:leading-tight">
+                <h2 class="font-bold text-textAzul text-text48 md:text-text64 xl:text-text68 leading-none md:leading-tight">
                     Atención Especializada para tu Bienestar
                 </h2>
             </div>
@@ -571,14 +571,14 @@
         </section>
 
         <section class="bg-bgAzul text-textWhite" id="acerca">
-            <div class="relative p-5 md:pt-20 md:px-20 w-11/12 mx-auto xs:pb-[120px] 2xs:pb-[126px] sm:pb-[280px] lg:pb-[350px] xl:pb-[285px] 2xl:pb-[400px] flex flex-col items-center"
+            <div class="relative py-5 md:pt-20 md:px-20 w-11/12 mx-auto xs:pb-[120px] 2xs:pb-[126px] sm:pb-[280px] lg:pb-[350px] xl:pb-[285px] 2xl:pb-[400px] flex flex-col items-center"
                 data-aos="fade-up" data-aos-offset="150">
-                <div class="flex flex-col xl:flex-row gap-10">
+                <div class="flex flex-col xl:flex-row gap-10 md:gap-20">
                     <div class="md:basis-1/2 flex flex-col gap-4">
-                        <p class="font-medium xs:text-text18 2xs:text-text20 xl:text-text24 md:text-text24">
+                        <p class="font-medium text-text24">
                             Conoce al Dr. Kewin Quispe de la Roca
                         </p>
-                        <h2 class="font-bold xs:text-text36  2xs:text-text40 md:text-text56 xl:text-text60 leading-tight">
+                        <h2 class="font-bold text-[40px] md:text-text56 xl:text-text60 leading-tight">
                             Explora el Mundo de la Gastroenterología con el Dr. Kewin
                         </h2>
                     </div>
@@ -619,7 +619,7 @@
             </div>
 
             <div class="bg-bgCeleste pt-[126px] md:pt-[180px] 3md:pt-[200px] lg:pt-[268px] xl:pt-[280px] 2xl:pt-[350px]">
-                <div class="w-11/12 mx-auto flex flex-col md:flex-row justify-center text-center items-start sm:pt-[90px] pb-10 px-5 md:pt-20 lg:pb-20 lg:px-20 lg:pt-10"
+                <div class="w-11/12 mx-auto flex flex-col md:flex-row justify-center text-center items-start sm:pt-[90px] pb-10  md:pt-20 lg:pb-20 lg:px-20 lg:pt-10"
                     data-aos="fade-up" data-aos-offset="150">
                     <div class="flex-1">
                         <p class="font-bold text-text68 xl:text-text72">300+</p>
@@ -628,7 +628,7 @@
                         </p>
                     </div>
                     <div
-                        class="flex-1 border-t-4 border-b-4 md:border-r-4 md:border-l-4 md:border-b-0 md:border-t-0 border-white w-full flex flex-col items-start md:items-center">
+                        class="flex-1 border-t-4 border-b-4 md:border-r-4 md:border-l-4 md:border-b-0 md:border-t-0 border-white w-full flex flex-col items-start md:items-center mt-5 pb-5 md:mt-0 md:pb-0">
                         <p class="font-bold text-text68 xl:text-text72">1M+</p>
                         <p class="font-medium text-text18 xl:text-text22">
                             Pacientes Satisfechos
@@ -769,9 +769,9 @@
         <section id="imc">
 
             <div class="bg-bgRosaWeak" data-aos="fade-up" data-aos-offset="150">
-                <div class="flex flex-col lg:flex-row w-11/12 mx-auto md:p-10 gap-24">
+                <div class="flex flex-col lg:flex-row w-11/12 mx-auto py-10 md:p-10 gap-12 md:gap-24">
                     <div class="basis-1/2 contenedor w-full">
-                        <div class="flip">
+                        <div class="flip hidden lg:block">
                             <div class="card">
                                 <div class="front bg-indice h-auto rounded-3xl p-5">
                                     <div class="flex flex-col gap-5 justify-center items-center front">
@@ -833,7 +833,7 @@
                         <p class="text-textAzul font-medium text-text20 xl:text-text24">
                             ¡Tu camino hacia una vida más saludable comienza ahora!
                         </p>
-                        <h2 class="font-bold text-text48 xl:text-text52 text-textAzul leading-none md:leading-tight">
+                        <h2 class="font-bold text-text48 xl:text-text52 text-textAzul leading-none md:leading-tight mb-2 md:mb-0">
                             Calcula tu índice de Masa Corporal (IMC)
                         </h2>
 
@@ -1220,14 +1220,14 @@
         </section>
 
         <section id="formulario">
-            <div class="flex flex-col md:flex-row w-11/12 mx-auto gap-10" data-aos="fade-up" data-aos-offset="150">
-                <div class="basis-1/2 order-2 md:order-1">
+            <div class="flex flex-col 2md:flex-row w-11/12 mx-auto md:gap-10" data-aos="fade-up" data-aos-offset="150">
+                <div class="basis-1/2 order-2 2md:order-1">
                     <div class="flex justify-center items-center h-full">
                         <img src="{{ asset('images/img/doctor.png') }}" class="h-full" alt="doctor kewin" />
 
                     </div>
                 </div>
-                <div class="basis-1/2 flex flex-col gap-8 order-1 md:order-2 justify-center pb-20 2xl:pb-10">
+                <div class="basis-1/2 flex flex-col gap-8 order-1 2md:order-2 justify-center pb-10 md:pb-20 2xl:pb-10">
                     <p class="text-textCeleste font-semibold text-text24 xl:text-text28">
                         Contáctanos
                     </p>

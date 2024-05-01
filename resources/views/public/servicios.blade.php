@@ -34,7 +34,7 @@
         </section>
 
         <section class="font-outfit pb-12 md:py-12">
-            <div class="grid grid-cols-1  grid-rows-auto  lg:grid-cols-2  lg:grid-rows-auto w-11/12 mx-auto gap-12">
+            <div class="grid grid-cols-1  grid-rows-auto  lg:grid-cols-2  lg:grid-rows-auto w-11/12 mx-auto gap-8 md:gap-12">
                 <div class="order-1 col-span-1 row-span-1 lg:order-1 lg:col-span-1 lg:row-span-1 flex flex-col gap-3">
                     <h4 class="text-textCeleste text-text20 md:text-text28 font-semibold">Servicio</h4>
                     <h2 class="font-bold text-textAzul text-text40 md:text-text52 leading-none md:leading-tight">
