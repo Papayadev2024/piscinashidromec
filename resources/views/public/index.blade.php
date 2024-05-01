@@ -573,7 +573,7 @@
         <section class="bg-bgAzul text-textWhite" id="acerca">
             <div class="relative py-5 md:pt-20 md:px-20 w-11/12 mx-auto xs:pb-[120px] 2xs:pb-[126px] sm:pb-[280px] lg:pb-[350px] xl:pb-[285px] 2xl:pb-[400px] flex flex-col items-center"
                 data-aos="fade-up" data-aos-offset="150">
-                <div class="flex flex-col xl:flex-row gap-10 md:gap-20">
+                <div class="flex flex-col xl:flex-row gap-10 md:gap-20 px-2">
                     <div class="md:basis-1/2 flex flex-col gap-4">
                         <p class="font-medium text-text24">
                             Conoce al Dr. Kewin Quispe de la Roca
