@@ -549,7 +549,7 @@
                         </div>
                     @endforeach
                 </div>
-                <div class="swiper-pagination-grid"></div>
+                {{-- <div class="swiper-pagination-grid"></div> --}}
             </div>
         </section>
 
@@ -1152,42 +1152,7 @@
                                     </div>
                                 @endforeach
 
-                                {{-- <div class="swiper-slide">
-                                    <div class="flex justify-center items-center">
-                                        <img src="{{ asset('images/img/IFS.png') }}" alt="IFS" />
-
-
-                                    </div>
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <div class="flex justify-center items-center">
-                                        <img src="{{ asset('images/img/Apebem.png') }}" alt="Apebem" />
-
-                                    </div>
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <div class="flex justify-center items-center">
-                                        <img src="{{ asset('images/img/IFS.png') }}" alt="IFS" />
-
-
-                                    </div>
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <div class="flex justify-center items-center">
-                                        <img src="{{ asset('images/img/Apebem.png') }}" alt="Apebem" />
-
-                                    </div>
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <div class="flex justify-center items-center">
-                                        <img src="{{ asset('images/img/IFS.png') }}" alt="IFS" />
-
-                                    </div>
-                                </div> --}}
+                                
                             </div>
                         </div>
                     </div>
