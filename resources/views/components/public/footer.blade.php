@@ -17,7 +17,7 @@
                 </div>
             </div>
        
-            <div class="flex flex-col 2md:flex-row gap-12 2md:gap-16 basis-2/3">
+            <div class="flex flex-col 2md:flex-row gap-12 2md:gap-16 basis-2/3 2md:justify-end">
                 <div class="flex flex-col gap-5">
                     <p class="font-medium text-text16 xl:text-text20">Enlaces</p>
                     <div class="flex flex-col gap-2">

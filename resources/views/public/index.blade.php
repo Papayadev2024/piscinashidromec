@@ -79,15 +79,6 @@
             -ms-border-radius: 50%;
             -o-border-radius: 50%;
             position: relative !important;
-            transition: background-color 0.5s ease-in;
-            -webkit-transition: background-color 0.5s ease-in;
-            -moz-transition: background-color 0.5s ease-in;
-            -ms-transition: background-color 0.5s ease-in;
-            -o-transition: background-color 0.5s ease-in;
-        }
-
-        .swiper-button-next:hover {
-            background-color: #393f53;
         }
 
         .swiper-button-prev:after {
@@ -108,16 +99,8 @@
             -o-border-radius: 50%;
             position: relative !important;
             width: calc(var(--swiper-navigation-size) / 29 * 27) !important;
-            transition: background-color 0.5s ease-in;
-            -webkit-transition: background-color 0.5s ease-in;
-            -moz-transition: background-color 0.5s ease-in;
-            -ms-transition: background-color 0.5s ease-in;
-            -o-transition: background-color 0.5s ease-in;
         }
 
-        .swiper-button-prev:hover {
-            background-color: #b0b2bd;
-        }
 
         .buttonSliderServicios {
             display: flex !important;
@@ -571,9 +554,9 @@
         </section>
 
         <section class="bg-bgAzul text-textWhite" id="acerca">
-            <div class="relative py-5 md:pt-20 md:px-20 w-11/12 mx-auto xs:pb-[120px] 2xs:pb-[126px] sm:pb-[280px] lg:pb-[350px] xl:pb-[285px] 2xl:pb-[400px] flex flex-col items-center"
+            <div class="relative py-12 md:pt-20  w-11/12 mx-auto xs:pb-[120px] 2xs:pb-[126px] sm:pb-[280px] lg:pb-[350px] xl:pb-[285px] 2xl:pb-[400px] flex flex-col items-center"
                 data-aos="fade-up" data-aos-offset="150">
-                <div class="flex flex-col xl:flex-row gap-10 md:gap-20 px-2">
+                <div class="flex flex-col xl:flex-row gap-6 xl:gap-20">
                     <div class="md:basis-1/2 flex flex-col gap-4">
                         <p class="font-medium text-text24">
                             Conoce al Dr. Kewin Quispe de la Roca
@@ -582,8 +565,8 @@
                             Explora el Mundo de la Gastroenterología con el Dr. Kewin
                         </h2>
                     </div>
-                    <div class="basis-1/2 flex flex-col gap-4">
-                        <p class="font-medium text-text18 xl:text-text22">
+                    <div class="md:basis-1/2 flex flex-col gap-4">
+                        <p class="font-medium text-text16 xl:text-text22">
                             Con una dedicación inquebrantable hacia la excelencia médica, el Dr. Kewin Quispe de la Roca es
                             un experto en <b>cirugía gastrointestinal</b> con un enfoque humano y compasivo. Su vasta
                             experiencia y su compromiso con el bienestar de sus pacientes lo convierten en el socio ideal en
@@ -591,7 +574,7 @@
 
                         </p>
 
-                        <p class="font-medium text-text18 xl:text-text22">
+                        <p class="font-medium text-text16 xl:text-text22">
                             Con una sólida formación académica y años de experiencia práctica, el Dr. Quispe de la Roca ha
                             ganado el respeto de sus colegas y pacientes por igual. Su enfoque centrado en el paciente
                             garantiza que cada persona reciba un tratamiento personalizado y compasivo. Desde la primera
