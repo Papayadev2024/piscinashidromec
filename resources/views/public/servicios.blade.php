@@ -23,7 +23,7 @@
                     <div class="flex flex-col gap-3 justify-center items-center bg-bgRosa rounded-3xl px-5 py-10">
                         <div>
                             <img src="{{ asset($servicio->url_image) }}"
-                                alt="{{ substr(strrchr($servicio->url_image, '_'), 1) }}" class="w-12">
+                                alt="{{ substr(strrchr($servicio->url_image, '_'), 1) }}" class="w-12 md:w-full">
                         </div>
                         <h2
                             class="text-textAzul font-bold text-text16 md:text-text24 lg:text-text32 xl:text-text36 text-center w-11/12 md:w-8/12 lg:w-1/2 mx-auto">
