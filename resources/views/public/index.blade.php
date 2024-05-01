@@ -533,7 +533,7 @@
                                             {{ $servicio->title }}
                                         </h2>
                                         <p class="font-medium text-text16 xl:text-text20">
-                                            {!!  substr($servicio->extracto, 0, 200) . '...' !!}
+                                            {!! $servicio->extracto !!}
                                         </p>
                                         
                                         <div class="flex justify-center items-center absolute -bottom-[85px] w-full">
