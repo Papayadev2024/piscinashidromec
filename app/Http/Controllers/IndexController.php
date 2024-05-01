@@ -24,7 +24,7 @@ class IndexController extends Controller
     {
         //
         $servicios = Service::where('status', '=', true)->where('visible', '=',  true)->get();
-        $titulos = Category::all();
+        $titulos = Category::where('status', '=', true)->where('visible', '=',  true)->get();
         $testimonios = Testimony::where('status', '=', true)->where('visible', '=',  true)->get();
         $logos = ClientLogos::all();
         $generales = General::all()->first();
