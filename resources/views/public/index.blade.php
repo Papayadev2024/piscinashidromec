@@ -408,7 +408,7 @@
                     </div>
                     <div
                         class="font-semibold text-text18 xl:text-text22 flex flex-col md:flex-row items-center justify-start gap-5">
-                        <a href="https://api.whatsapp.com/send?phone={{ $generales->whatsapp }}&text={{ $generales->mensaje_whatsapp }}"
+                        <a target="_blank"  href="https://api.whatsapp.com/send?phone={{ $generales->whatsapp }}&text={{ $generales->mensaje_whatsapp }}"
                             class="bg-bgCeleste py-3 px-5 rounded-xl inline-block text-center hover:bg-bgCelesteStrong md:duration-500 w-full md:w-auto">
                             Solicitar una cita
                         </a>
@@ -737,7 +737,7 @@
                     </ul>
 
                     <div class="font-semibold text-text18 xl:text-text22">
-                        <a href="https://api.whatsapp.com/send?phone={{ $generales->whatsapp }}&text={{ $generales->mensaje_whatsapp }}"
+                        <a target="_blank" href="https://api.whatsapp.com/send?phone={{ $generales->whatsapp }}&text={{ $generales->mensaje_whatsapp }}"
                             class="bg-bgCeleste py-3 px-5 rounded-xl inline-block text-center hover:bg-bgCelesteStrong md:duration-500 w-full 2md:w-auto text-textWhite">Solicitar
                             una cita</a>
                     </div>
@@ -1159,7 +1159,7 @@
                 </div>
 
                 <div>
-                    <a href="https://api.whatsapp.com/send?phone={{ $generales->whatsapp }}&text={{ $generales->mensaje_whatsapp }}"
+                    <a target="_blank" href="https://api.whatsapp.com/send?phone={{ $generales->whatsapp }}&text={{ $generales->mensaje_whatsapp }}"
                         class="bg-bgAzul py-4 px-10 rounded-xl inline-block text-center hover:bg-blue-500 md:duration-500 w-full 2md:w-auto text-textWhite text-text18 xl:text-text22 font-semibold">
                         Solicitar una cita
                     </a>

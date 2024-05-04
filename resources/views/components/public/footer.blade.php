@@ -10,7 +10,7 @@
                     </p>
                 </div>
                 <div class="font-semibold text-text16 xl:text-text20">
-                    <a href="https://api.whatsapp.com/send?phone={{$generales->whatsapp}}&text={{$generales->mensaje_whatsapp}}"
+                    <a target="_blank" href="https://api.whatsapp.com/send?phone={{$generales->whatsapp}}&text={{$generales->mensaje_whatsapp}}"
                         class="bg-bgCeleste py-3 px-5 rounded-xl inline-block text-center hover:bg-bgCelesteStrong md:duration-500 w-full 2md:w-auto">Solicitar
                         una cita
                     </a>
@@ -62,13 +62,13 @@
             class="flex flex-col gap-5 2md:flex-row 2md:justify-between items-start 2md:items-center text-text14 xl:text-text18">
             <p>Copyright &copy; 2023 Mundo Web. Reservados todos los derechos</p>
             <div class="flex justify-start 2md:justify-between gap-5 w-full 2md:w-auto">
-                <a href="https://{{$generales->instagram}}">
+                <a target="_blank" href="https://{{$generales->instagram}}">
                     <img src="{{ asset('images/svg/instagram.svg') }}" alt="instagram">
                 </a>
-                <a href="https://{{$generales->facebook}}">
+                <a target="_blank" href="https://{{$generales->facebook}}">
                     <img src="{{ asset('images/svg/facebook.svg') }}" alt="facebook">
                 </a>
-                <a href="https://{{$generales->linkedin}}">
+                <a target="_blank" href="https://{{$generales->linkedin}}">
                     <img src="{{ asset('images/svg/linkedin.svg') }}" alt="linkedin">
                 </a>
             </div>
