@@ -9,7 +9,7 @@
 @stop
 {{-- style="background-image: url({{asset('images/img/Hero_Doctor_mobile.png')}})" --}}
 @section('content')
-    <main class="pt-32">
+    <main class="pt-52">
         
 
         <section class="font-outfit pb-12 md:py-12">
