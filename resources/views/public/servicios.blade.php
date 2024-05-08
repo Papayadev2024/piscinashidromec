@@ -9,29 +9,8 @@
 @stop
 {{-- style="background-image: url({{asset('images/img/Hero_Doctor_mobile.png')}})" --}}
 @section('content')
-    <main class="pt-52">
-        <section class="font-outfit w-11/12 mx-auto flex flex-col gap-10 pb-12 ">
-            <div class="flex flex-col gap-2">
-                <h1
-                    class="text-textAzul text-text48 md:text-text68 leading-none md:leading-tight font-bold w-full lg:w-9/12 xl:w-7/12 2xl:w-6/12">
-                    Atención Especializada para tu Bienestar</h1>
-                <h3 class="font-semibold text-text24 md:text-text28 text-textCeleste">Descubre Soluciones Personalizadas</h3>
-            </div>
-
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
-                @foreach ($servicios as $servicio)
-                    <div class="flex flex-col gap-3 justify-center items-center bg-bgRosa rounded-3xl px-5 py-10">
-                        <div>
-                            <img src="{{ asset($servicio->url_image) }}"
-                                alt="{{ substr(strrchr($servicio->url_image, '_'), 1) }}" class="w-12 md:w-full">
-                        </div>
-                        <h2
-                            class="text-textAzul font-bold text-text16 md:text-text24 lg:text-text32 xl:text-text36 text-center w-11/12 md:w-8/12 lg:w-1/2 mx-auto">
-                            {{ $servicio->title }}</h2>
-                    </div>
-                @endforeach
-            </div>
-        </section>
+    <main class="pt-32">
+        
 
         <section class="font-outfit pb-12 md:py-12">
             <div class="grid grid-cols-1  grid-rows-auto  lg:grid-cols-2  lg:grid-rows-auto w-11/12 mx-auto gap-8 md:gap-12">
