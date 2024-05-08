@@ -69,6 +69,35 @@
                             <span>Teléfono:</span> <span>{{$generales->office_phone}}</span>
                             {{-- <p href="#">{{$generales->office_phone}}</p> --}}
                         </div>
+
+                        <div class="font-normal text-text14 xl:text-text18 py-2">
+                            <p>Centro Médico Qualis</p>
+                            <p>Dirección : Av. Brasil 2730</p>
+                            <p>Consultorio Nro 503</p>
+                            <p>Pueblo Libre</p>
+                            <a target="_blank" href="https://g.co/kgs/Dp16ft">Mapa👉</a>
+                        </div>
+
+                        <div class="font-normal text-text14 xl:text-text18 py-2">
+                            <p>Clínica Integrasalud</p>
+                            <p>Dirección : Av. Brasil 831 </p>
+                            <p>Consultorio Nro 503</p>
+                            <p>Jesús Maria</p>
+                            <a target="_blank" href=" https://goo.gl/maps/tfQC3HLLDxBCLCva6
+                            ">Mapa👉</a>
+                        </div>
+
+                        <div class="font-normal text-text14 xl:text-text18 py-2">
+                            <p>Clínica CREO - Cayetano Heredia</p>
+                            <p>Dirección:Av. Eloy Espinoza 700</p>
+                            <p>San Martín de Porres.</p>
+                            <a target="_blank" href="https://g.co/kgs/qT97oP">Mapa👉</a>
+                        </div>
+
+           
+
+
+
                     </div>
                 </div>
 
