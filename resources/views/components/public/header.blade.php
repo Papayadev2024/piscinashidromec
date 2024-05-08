@@ -15,7 +15,7 @@
                 <a href="{{route('index').'#proceso'}}">Proceso</a>
             </nav>
             <div data-aos="fade-up" data-aos-offset="150">
-                <a href="https://api.whatsapp.com/send?phone={{$generales->whatsapp}}&text={{$generales->mensaje_whatsapp}}"
+                <a target="_blank" href="https://api.whatsapp.com/send?phone={{$generales->whatsapp}}&text={{$generales->mensaje_whatsapp}}"
                     class="bg-bgCeleste py-3 px-5 rounded-xl inline-block text-center hover:bg-bgCelesteStrong md:duration-500 w-full md:w-auto">Solicitar
                     una cita</a>
             </div>

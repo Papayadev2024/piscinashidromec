@@ -89,7 +89,7 @@
                 responsive: true
             });
 
-            $( ".btn_delete" ).on( "click", function(e) {
+            $('#tabladatos').on('click', '.btn_delete', function(e) {
                 
                 var id = $(this).attr('data-idService');
 
@@ -133,7 +133,7 @@
             });
 
 
-            $( ".btn_swithc" ).on( "change", function() {
+            $('#tabladatos').on('change', '.btn_swithc', function() {
                 
                 var status = 0;
                 var id = $(this).attr('data-idService');

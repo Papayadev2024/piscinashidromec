@@ -40,8 +40,8 @@
                             <p href="#">{{$generales->email}}</p>
                         </div>
                         <div class="font-normal text-text14 xl:text-text18">
-                            <span>Teléfono:</span>
-                            <p href="#">{{$generales->office_phone}}</p>
+                            <span>Teléfono:</span> <span>{{$generales->office_phone}}</span>
+                            {{-- <p href="#">{{$generales->office_phone}}</p> --}}
                         </div>
                     </div>
                 </div>
@@ -62,15 +62,25 @@
             class="flex flex-col gap-5 2md:flex-row 2md:justify-between items-start 2md:items-center text-text14 xl:text-text18">
             <p>Copyright &copy; 2023 Mundo Web. Reservados todos los derechos</p>
             <div class="flex justify-start 2md:justify-between gap-5 w-full 2md:w-auto">
-                <a target="_blank" href="https://{{$generales->instagram}}">
-                    <img src="{{ asset('images/svg/instagram.svg') }}" alt="instagram">
-                </a>
-                <a target="_blank" href="https://{{$generales->facebook}}">
-                    <img src="{{ asset('images/svg/facebook.svg') }}" alt="facebook">
-                </a>
-                <a target="_blank" href="https://{{$generales->linkedin}}">
-                    <img src="{{ asset('images/svg/linkedin.svg') }}" alt="linkedin">
-                </a>
+
+                @if ($generales->instagram != null)
+                    <a target="_blank" href="https://{{$generales->instagram}}">
+                        <img src="{{ asset('images/svg/instagram.svg') }}" alt="instagram">
+                    </a>
+                @endif
+
+                @if ($generales->facebook != null)
+                    <a target="_blank" href="https://{{$generales->facebook}}">
+                        <img src="{{ asset('images/svg/facebook.svg') }}" alt="facebook">
+                    </a>
+                @endif
+
+                @if ($generales->linkedin != null)
+                    <a target="_blank" href="https://{{$generales->linkedin}}">
+                        <img src="{{ asset('images/svg/linkedin.svg') }}" alt="linkedin">
+                    </a>
+                @endif
+
             </div>
         </div>
     </div>

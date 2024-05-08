@@ -44,7 +44,7 @@
 
                 <div
                     class="order-3 col-span-1 row-span-1 lg:order-2 lg:col-span-1 lg:row-span-1 flex justify-end items-end">
-                    <a href="https://api.whatsapp.com/send?phone={{ $generales->whatsapp }}&text={{ $generales->mensaje_whatsapp }}"
+                    <a target="_blank" href="https://api.whatsapp.com/send?phone={{ $generales->whatsapp }}&text={{ $generales->mensaje_whatsapp }}"
                         class="font-semibold text-text20 bg-bgAzulStrong text-white  py-4 lg:py-5 rounded-xl px-10 w-full lg:w-auto text-center hover:bg-blue-600 md:duration-300">
                         Solicitar una cita
                     </a>

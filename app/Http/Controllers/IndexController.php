@@ -14,6 +14,7 @@ use App\Models\ClientLogos;
 use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
 use PhpParser\Node\Stmt\TryCatch;
+use App\Helpers\EmailConfig;
 
 class IndexController extends Controller
 {
@@ -23,21 +24,20 @@ class IndexController extends Controller
     public function index()
     {
         //
-        $servicios = Service::where('status', '=', true)->where('visible', '=',  true)->get();
-        $titulos = Category::where('status', '=', true)->where('visible', '=',  true)->get();
-        $testimonios = Testimony::where('status', '=', true)->where('visible', '=',  true)->get();
+        $servicios = Service::where('status', '=', true)->where('visible', '=', true)->get();
+        $titulos = Category::where('status', '=', true)->where('visible', '=', true)->get();
+        $testimonios = Testimony::where('status', '=', true)->where('visible', '=', true)->get();
         $logos = ClientLogos::all();
         $generales = General::all()->first();
-        
+
         return view('public.index', compact('servicios', 'titulos', 'generales', 'testimonios', 'logos'));
     }
-
 
     public function servicios($id)
     {
         /* dump($id); */
         $servicioById = Service::where('id', '=', $id)->first();
-        $servicios = Service::where('status', '=', true)->where('visible', '=',  true)->get();
+        $servicios = Service::where('status', '=', true)->where('visible', '=', true)->get();
         $generales = General::all()->first();
         return view('public.servicios', compact('generales', 'servicios', 'servicioById'));
     }
@@ -95,43 +95,211 @@ class IndexController extends Controller
      */
     public function guardarContacto(Request $request)
     {
-        
         //Del modelo
         //'full_name', 'email', 'phone', 'message', 'status', 'is_read'
         $data = $request->all();
-        $data['full_name'] = $request->name. ' ' . $request->last_name;
-    
-       try {
-        $reglasValidacion = [
-            'name' => 'required|string|max:255',
-            'last_name' => 'required|string|max:255',
-            'email' => 'required|email|max:255',
-            'address' => 'required|string|max:255',
-            'phone' => 'required|string|max:99999999999',
-            'message' => 'required|string|max:255'
-        ];
-        $mensajes = [
-            'name.required' => 'El campo nombre es obligatorio.',
-            'last_name.required' => 'El campo apellido es obligatorio.',
-            'email.required' => 'El campo correo electrónico es obligatorio.',
-            'email.email' => 'El formato del correo electrónico no es válido.',
-            'email.max' => 'El campo correo electrónico no puede tener más de :max caracteres.',
-            'phone.required' => 'El campo teléfono es obligatorio.',
-            'phone.integer' => 'El campo teléfono debe ser un número entero.',
-            'address.required' => 'El campo dirección es obligatorio.',
-            'message.required' => 'El campo mensaje es obligatorio.',
-        ];
-        $request->validate($reglasValidacion, $mensajes);
-        $formlanding = Message::create($data);
-        // return redirect()->route('landingaplicativos', $formlanding)->with('mensaje','Mensaje enviado exitoso')->with('name', $request->nombre);
-        return response()->json(['message'=> 'Mensaje enviado con exito']);
-       } catch (ValidationException $e) {
-       
-        return response()->json(['message'=> $e->validator->errors()], 400);
-       }
+        $data['full_name'] = $request->name . ' ' . $request->last_name;
 
-       
+        try {
+            $reglasValidacion = [
+                'name' => 'required|string|max:255',
+                'last_name' => 'required|string|max:255',
+                'email' => 'required|email|max:255',
+                'address' => 'required|string|max:255',
+                'phone' => 'required|string|max:99999999999',
+                'message' => 'required|string|max:255',
+            ];
+            $mensajes = [
+                'name.required' => 'El campo nombre es obligatorio.',
+                'last_name.required' => 'El campo apellido es obligatorio.',
+                'email.required' => 'El campo correo electrónico es obligatorio.',
+                'email.email' => 'El formato del correo electrónico no es válido.',
+                'email.max' => 'El campo correo electrónico no puede tener más de :max caracteres.',
+                'phone.required' => 'El campo teléfono es obligatorio.',
+                'phone.integer' => 'El campo teléfono debe ser un número entero.',
+                'address.required' => 'El campo dirección es obligatorio.',
+                'message.required' => 'El campo mensaje es obligatorio.',
+            ];
+            $request->validate($reglasValidacion, $mensajes);
+            $formlanding = Message::create($data);
+            $this->envioCorreo($formlanding);
+            // return redirect()->route('landingaplicativos', $formlanding)->with('mensaje','Mensaje enviado exitoso')->with('name', $request->nombre);
+            return response()->json(['message' => 'Mensaje enviado con exito']);
+        } catch (ValidationException $e) {
+            return response()->json(['message' => $e->validator->errors()], 400);
+        }
     }
 
-    
+    private function envioCorreo($data)
+    {
+        $name = $data['full_name'];
+        $mail = EmailConfig::config($name);
+        try {
+            $mail->addAddress($data['email']);
+            $mail->Body =
+                '
+            <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mundo web</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <table
+        style="
+          width: 600px;
+          margin: 0 auto;
+          text-align: center;
+          background-image: url(https://dockewin.mundoweb.pe/mail/Fondo.png);
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+        "
+      >
+        <thead>
+          <tr>
+            <th
+              style="
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                margin: 40px;
+              "
+            >
+              <img
+                src="https://dockewin.mundoweb.pe/mail/logo.png"
+                alt="kewin"
+              />
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <p
+                style="
+                  color: #ffffff;
+                  font-weight: 500;
+                  font-size: 18px;
+                  text-align: center;
+                  width: 500px;
+                  margin: 0 auto;
+                  padding: 20px 0;
+                  font-family: Montserrat, sans-serif;
+                "
+              >
+                <span style="display: block">Hola </span>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p
+                style="
+                  color: #ffffff;
+                  font-size: 40px;
+                  line-height: 20px;
+                  font-family: Montserrat, sans-serif;
+                "
+              >
+                <span style="display: block">' .
+                $name .
+                ' </span>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p
+                style="
+                  color: #ffffff;
+                  font-size: 40px;
+                  line-height: 70px;
+                  font-family: Montserrat, sans-serif;
+                  font-weight: bold;
+                "
+              >
+                ¡Gracias
+                <span style="color: #ffffff">por escribirnos!</span>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p
+                style="
+                  color: #ffffff;
+                  font-weight: 500;
+                  font-size: 18px;
+                  text-align: center;
+                  width: 500px;
+                  margin: 0 auto;
+                  padding: 20px 0;
+                  font-family: Montserrat, sans-serif;
+                "
+              >
+                En breve estaremos comunicandonos contigo.
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a
+                target="_blank"
+                href="https://dockewin.mundoweb.pe/"
+                style="
+                  text-decoration: none;
+                  background-color: #fdfefd;
+                  color: #254f9a;
+                  padding: 16px 20px;
+                  display: inline-flex;
+                  justify-content: center;
+                  border-radius: 10px;
+                  align-items: center;
+                  gap: 10px;
+                  font-weight: 600;
+                  font-family: Montserrat, sans-serif;
+                  font-size: 16px;
+                "
+              >
+                <span>Visita nuestra web</span>
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align: right; padding-right: 80px">
+              <img
+                src="https://dockewin.mundoweb.pe/mail/banner.png"
+                alt="mundo web"
+                style="width: 80%"
+              />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+  </body>
+</html>
+';
+            $mail->isHTML(true);
+            $mail->send();
+        } catch (\Throwable $th) {
+            //throw $th;
+        }
+    }
 }
