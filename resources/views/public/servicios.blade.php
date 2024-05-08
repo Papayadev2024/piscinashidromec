@@ -11,6 +11,27 @@
 @section('content')
     <main class="pt-52">
         
+        <div class="flex justify-start  gap-5  w-11/12 mx-auto pb-12 md:pb-0">
+
+            @if ($generales->instagram != null)
+                <a target="_blank" href="https://{{$generales->instagram}}">
+                    <img src="{{ asset('images/svg/instagram.svg') }}" alt="instagram">
+                </a>
+            @endif
+
+            @if ($generales->facebook != null)
+                <a target="_blank" href="https://{{$generales->facebook}}">
+                    <img src="{{ asset('images/svg/facebook.svg') }}" alt="facebook">
+                </a>
+            @endif
+
+            @if ($generales->linkedin != null)
+                <a target="_blank" href="https://{{$generales->linkedin}}">
+                    <img src="{{ asset('images/svg/linkedin.svg') }}" alt="linkedin">
+                </a>
+            @endif
+
+        </div>
 
         <section class="font-outfit pb-12 md:py-12">
             <div class="grid grid-cols-1  grid-rows-auto  lg:grid-cols-2  lg:grid-rows-auto w-11/12 mx-auto gap-8 md:gap-12">
