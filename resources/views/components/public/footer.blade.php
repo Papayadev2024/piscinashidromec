@@ -72,26 +72,26 @@
 
                         <div class="font-normal text-text14 xl:text-text18 py-2">
                             <p class="font-bold">Centro Médico Qualis</p>
-                            <p>Dirección : Av. Brasil 2730</p>
+                            <p>Dirección : <a target="_blank" href="https://g.co/kgs/Dp16ft">Av. Brasil 2730</a></p>
                             <p>Consultorio Nro 503</p>
                             <p>Pueblo Libre</p>
-                            <a target="_blank" href="https://g.co/kgs/Dp16ft">Av. Brasil 2730</a>
+                            
                         </div>
 
                         <div class="font-normal text-text14 xl:text-text18 py-2">
                             <p class="font-bold">Clínica Integrasalud</p>
-                            <p>Dirección : Av. Brasil 831 </p>
+                            <p>Dirección : <a target="_blank" href=" https://goo.gl/maps/tfQC3HLLDxBCLCva6
+                                ">Av. Brasil 831</a> </p>
        
                             <p>Jesús Maria</p>
-                            <a target="_blank" href=" https://goo.gl/maps/tfQC3HLLDxBCLCva6
-                            ">Av. Brasil 831</a>
+                            
                         </div>
 
                         <div class="font-normal text-text14 xl:text-text18 py-2">
                             <p class="font-bold">Clínica CREO - Cayetano Heredia</p>
-                            <p>Dirección:Av. Eloy Espinoza 700</p>
+                            <p>Dirección: <a target="_blank" href="https://g.co/kgs/qT97oP">Av. Eloy Espinoza 700</a></p>
                             <p>San Martín de Porres.</p>
-                            <a target="_blank" href="https://g.co/kgs/qT97oP">Av. Eloy Espinoza 700</a>
+                            
                         </div>
 
            
