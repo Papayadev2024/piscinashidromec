@@ -81,7 +81,7 @@
                         <div class="font-normal text-text14 xl:text-text18 py-2">
                             <p>Clínica Integrasalud</p>
                             <p>Dirección : Av. Brasil 831 </p>
-                            <p>Consultorio Nro 503</p>
+       
                             <p>Jesús Maria</p>
                             <a target="_blank" href=" https://goo.gl/maps/tfQC3HLLDxBCLCva6
                             ">Mapa👉</a>
