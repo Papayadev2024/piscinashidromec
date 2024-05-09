@@ -32,7 +32,7 @@
             @endif
 
             @if ($generales->tiktok != null)
-                    <a target="_blank" href="https://{{$generales->linkedin}}">
+                    <a target="_blank" href="https://{{$generales->tiktok}}">
                         <img src="{{ asset('images/svg/tiktok.svg') }}" alt="tiktok">
                     </a>
             @endif
