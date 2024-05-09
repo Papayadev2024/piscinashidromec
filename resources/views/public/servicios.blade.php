@@ -31,6 +31,12 @@
                 </a>
             @endif
 
+            @if ($generales->tiktok != null)
+                    <a target="_blank" href="https://{{$generales->linkedin}}">
+                        <img src="{{ asset('images/svg/tiktok.svg') }}" alt="tiktok">
+                    </a>
+            @endif
+
         </div>
 
         <section class="font-outfit pb-12 md:py-12">

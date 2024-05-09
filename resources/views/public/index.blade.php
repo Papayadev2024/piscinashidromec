@@ -380,12 +380,12 @@
         }
 
         .bg__image-header {
-            background-image: url({{ asset('images/img/Hero_Doctor_mobile.png') }});
+            background-image: url({{ asset('images/img/Hero_Doctor_mobile_2.png') }});
         }
 
         @media (min-width: 768px) {
             .bg__image-header {
-                background-image: url({{ asset('images/img/Hero_Doctor.png') }});
+                background-image: url({{ asset('images/img/Hero_Doctor_2.png') }});
             }
 
         }
@@ -395,7 +395,7 @@
 {{-- style="background-image: url({{asset('images/img/Hero_Doctor_mobile.png')}})" --}}
 @section('content')
     <main class="flex flex-col gap-20 font-outfit">
-        <section class="bg__image-header bg-cover bg-center bg-no-repeat sm:w-full h-full pt-24 md:pt-44">
+        <section class="bg__image-header bg-cover bg-center bg-no-repeat sm:w-full h-full pt-24 md:pt-32">
             <div class="flex flex-col lg:flex-row gap-10 md:gap-32 w-11/12 mx-auto text-textWhite mt-12 items-center"
                 data-aos="fade-up" data-aos-offset="150">
                 <div class="flex flex-col gap-10 basis-1/2 justify-center">
@@ -1199,10 +1199,10 @@
                 },
                 centeredSlides: true,
                 initialSlide: 0, // Empieza en el cuarto slide (índice 3) */
-                /* autoplay: {
-                  delay: 1500,
+                autoplay: {
+                  delay: 2500,
                   disableOnInteraction: false,
-                }, */
+                }, 
                 breakpoints: {
                     0: {
                         slidesPerView: 1,
