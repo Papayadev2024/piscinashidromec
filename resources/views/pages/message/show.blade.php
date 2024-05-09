@@ -20,6 +20,10 @@
                            <span class="font-bold text-[18px]">Correo:</span> <span class="text-[16px]">{{$message->email}}</span>
                         </p>
 
+                        <p>
+                            <span class="font-bold text-[18px]">Mensaje:</span> <span class="text-[16px]">{{$message->message}}</span>
+                         </p>
+
                         {{-- <p>
                             <span class="font-bold text-[18px]">{{$message->full_name}}</span>  esta interesado en tener informes del servicio: <span class="font-bold text-[18px]">{{$message->service_product}}</span> </p> --}}
 

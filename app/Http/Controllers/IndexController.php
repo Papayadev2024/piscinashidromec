@@ -35,7 +35,7 @@ class IndexController extends Controller
 
     public function servicios($id)
     {
-        /* dump($id); */
+        
         $servicioById = Service::where('id', '=', $id)->first();
         $servicios = Service::where('status', '=', true)->where('visible', '=', true)->get();
         $generales = General::all()->first();

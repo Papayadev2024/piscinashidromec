@@ -229,8 +229,10 @@
             position: absolute;
             width: 5px;
 
-            height: 268px; /* 210 */
-            top: -184px; /* 150 */
+            height: 268px;
+            /* 210 */
+            top: -184px;
+            /* 150 */
             left: 23px;
             background-color: #f8f2f2;
 
@@ -250,8 +252,8 @@
 
         /* Responsive Css  */
 
-        
-        
+
+
 
         @media (min-width: 375px) {
             .progress::after {
@@ -408,7 +410,8 @@
                     </div>
                     <div
                         class="font-semibold text-text18 xl:text-text22 flex flex-col md:flex-row items-center justify-start gap-5">
-                        <a target="_blank"  href="https://api.whatsapp.com/send?phone={{ $generales->whatsapp }}&text={{ $generales->mensaje_whatsapp }}"
+                        <a target="_blank"
+                            href="https://api.whatsapp.com/send?phone={{ $generales->whatsapp }}&text={{ $generales->mensaje_whatsapp }}"
                             class="bg-bgCeleste py-3 px-5 rounded-xl inline-block text-center hover:bg-bgCelesteStrong md:duration-500 w-full md:w-auto">
                             Solicitar una cita
                         </a>
@@ -479,11 +482,6 @@
                     </div>
                     <div class="relative md:absolute bottom-0">
                         <img src="{{ asset('images/img/doctor_kewin_1.png') }}" alt="doctor kevin" class="h-full w-full">
-
-                        {{-- <div class="logo-container hidden md:block">
-                            <img src="{{ asset('images/img/Logo Iso.png') }}" alt="imagen estomacal"
-                                class="h-full w-full">
-                        </div> --}}
                     </div>
                 </div>
             </div>
@@ -513,44 +511,80 @@
                 </h2>
             </div>
 
-            <div class="swiper enfermedades w-11/12 mx-auto">
-                <div class="swiper-wrapper">
+            <div class="hidden md:grid grid-cols-2 lg:grid-cols-3 gap-10 ">
+                @foreach ($servicios as $servicio)
+                    <div class="flex flex-col justify-center gap-5 text-textAzul bg-bgRosa rounded-3xl py-16 px-5 group ">
+                        <div class="flex flex-col justify-center items-center gap-3 ">
 
-                    @foreach ($servicios as $servicio)
-                        <div class="swiper-slide">
-                            <div class="flex flex-col justify-center gap-5 text-textAzul bg-bgRosa rounded-3xl py-16 px-5 group ">
-                                <div class="flex flex-col justify-center items-center gap-3 ">
+                            <div class="relative">
+                                <div class="flex justify-center items-center">
+                                    <img src="{{ asset($servicio->url_image) }}"
+                                        alt="{{ substr(strrchr($servicio->url_image, '_'), 1) }}">
+                                </div>
+                            </div>
 
-                                    <div class="relative">
-                                        <div class="flex justify-center items-center">
-                                            <img src="{{ asset($servicio->url_image) }}"
-                                                alt="{{ substr(strrchr($servicio->url_image, '_'), 1) }}">
+                            <div class="relative flex flex-col gap-5 text-center ">
+                                <h2 class="font-bold text-text32 xl:text-text36 w-full md:w-1/2 mx-auto">
+                                    {{ $servicio->title }}
+                                </h2>
+                                <p class="font-medium text-text16 xl:text-text20">
+                                    {!! $servicio->extracto !!}
+                                </p>
+
+                                <div class="flex justify-center items-center absolute -bottom-[85px] w-full">
+                                    <a href="{{ route('servicios', $servicio->id) }}"
+                                        class="bg-bgCeleste py-3 px-10 rounded-xl inline-block text-center text-textWhite font-semibold text-text16 xl:text-text20 w-full md:w-auto group-hover:bg-bgAzul md:duration-500">
+                                        Ver más
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+            <div class="block md:hidden">
+                <div class="swiper  enfermedades ">
+                    <div class="swiper-wrapper">
+                        @foreach ($servicios as $servicio)
+                            <div class="swiper-slide">
+                                <div
+                                    class="flex flex-col justify-center gap-5 text-textAzul bg-bgRosa rounded-3xl py-16 px-5 group ">
+                                    <div class="flex flex-col justify-center items-center gap-3 ">
+
+                                        <div class="relative">
+                                            <div class="flex justify-center items-center">
+                                                <img src="{{ asset($servicio->url_image) }}"
+                                                    alt="{{ substr(strrchr($servicio->url_image, '_'), 1) }}">
+                                            </div>
                                         </div>
-                                    </div>
 
-                                    <div class="relative flex flex-col gap-5 text-center ">
-                                        <h2 class="font-bold text-text32 xl:text-text36 w-full md:w-1/2 mx-auto">
-                                            {{ $servicio->title }}
-                                        </h2>
-                                        <p class="font-medium text-text16 xl:text-text20">
-                                            {!! $servicio->extracto !!}
-                                        </p>
-                                        
-                                        <div class="flex justify-center items-center absolute -bottom-[85px] w-full">
-                                            <a href="{{ route('servicios', $servicio->id)}}"
-                                                class="bg-bgCeleste py-3 px-10 rounded-xl inline-block text-center text-textWhite font-semibold text-text16 xl:text-text20 w-full md:w-auto group-hover:bg-bgAzul md:duration-500">
-                                                Ver más
-                                            </a>
-                                            
+                                        <div class="relative flex flex-col gap-5 text-center ">
+                                            <h2 class="font-bold text-text32 xl:text-text36 w-full md:w-1/2 mx-auto">
+                                                {{ $servicio->title }}
+                                            </h2>
+                                            <p class="font-medium text-text16 xl:text-text20">
+                                                {!! $servicio->extracto !!}
+                                            </p>
+
+                                            <div class="flex justify-center items-center absolute -bottom-[85px] w-full">
+                                                <a href="{{ route('servicios', $servicio->id) }}"
+                                                    class="bg-bgCeleste py-3 px-10 rounded-xl inline-block text-center text-textWhite font-semibold text-text16 xl:text-text20 w-full md:w-auto group-hover:bg-bgAzul md:duration-500">
+                                                    Ver más
+                                                </a>
+
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    @endforeach
+                        @endforeach
+
+                    </div>
+
                 </div>
-                {{-- <div class="swiper-pagination-grid"></div> --}}
             </div>
+
         </section>
 
         <section class="bg-bgAzul text-textWhite" id="acerca">
@@ -737,7 +771,8 @@
                     </ul>
 
                     <div class="font-semibold text-text18 xl:text-text22">
-                        <a target="_blank" href="https://api.whatsapp.com/send?phone={{ $generales->whatsapp }}&text={{ $generales->mensaje_whatsapp }}"
+                        <a target="_blank"
+                            href="https://api.whatsapp.com/send?phone={{ $generales->whatsapp }}&text={{ $generales->mensaje_whatsapp }}"
                             class="bg-bgCeleste py-3 px-5 rounded-xl inline-block text-center hover:bg-bgCelesteStrong md:duration-500 w-full 2md:w-auto text-textWhite">Solicitar
                             una cita</a>
                     </div>
@@ -816,7 +851,8 @@
                         <p class="text-textAzul font-medium text-text20 xl:text-text24">
                             ¡Tu camino hacia una vida más saludable comienza ahora!
                         </p>
-                        <h2 class="font-bold text-text48 xl:text-text52 text-textAzul leading-none md:leading-tight mb-2 md:mb-0">
+                        <h2
+                            class="font-bold text-text48 xl:text-text52 text-textAzul leading-none md:leading-tight mb-2 md:mb-0">
                             Calcula tu índice de Masa Corporal (IMC)
                         </h2>
 
@@ -947,7 +983,7 @@
 
                                     <div class="flex justify-center">
                                         <div class="relative w-[200px] md:w-[400px] h-[300px] md:h-[600px]">
-                                           
+
 
                                             <img src="{{ $testimonio->url_image_antes }}"
                                                 class="h-[200px] md:h-[400px] absolute opacity-50 md:left-1/3 myBox"
@@ -957,7 +993,7 @@
                                                 class="h-[200px] md:h-[400px] absolute top-1/4 left-1/4 md:left-1/2 z-[1] myBox"
                                                 alt="testimonios" />
 
-                                            
+
                                         </div>
                                     </div>
 
@@ -965,163 +1001,7 @@
                                 </div>
                             </div>
                         @endforeach
-                        {{-- <div class="swiper-slide">
-                            <div class="flex flex-col lg:flex-row gap-16 md:gap-32 items-center">
-                                <div class="flex flex-col gap-10 basis-1/2 justify-center">
-                                    <div class="buttonSliderServicios">
-                                        <div class="swiper-button-next"></div>
-                                        <div class="swiper-button-prev"></div>
-                                    </div>
 
-                                    <p class="font-semibold text-text32 md:text-text40">
-                                        "Gracias al Dr. Quispe de la Roca y su equipo, finalmente
-                                        he encontrado una solución efectiva para mi lucha contra
-                                        el peso. La banda gástrica cambió mi vida, brindándome una
-                                        nueva confianza y vitalidad."
-                                    </p>
-
-                                    <div class="flex gap-5 items-center">
-                                        <div>
-                                            <svg width="64" height="64" viewBox="0 0 64 64" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <rect width="64" height="64" rx="8" fill="#42BAE2" />
-                                                <path
-                                                    d="M16 44V34.9893C16 30.7189 16.9978 27.3452 18.9934 24.8683C21.0171 22.3915 23.9543 20.7687 27.805 20V24.4413C24.9381 25.3523 23.0127 26.9181 22.029 29.1388C21.5231 30.306 21.3123 31.516 21.3966 32.7687H28.0158V44H16ZM47.7892 24.4413C44.9504 25.3238 43.0391 26.9181 42.0553 29.2242C41.4932 30.4484 41.2683 31.6299 41.3808 32.7687H48V44H35.9842V34.9893C35.9842 30.6619 37.0101 27.274 39.0619 24.8256C41.1419 22.3772 44.0509 20.7687 47.7892 20V24.4413Z"
-                                                    fill="white" />
-                                            </svg>
-                                        </div>
-
-                                        <div>
-                                            <p class="font-semibold text-text18 xl:text-text22">
-                                                María Neyra
-                                            </p>
-                                            <p class="font-normal text-text14 xl:text-text18">
-                                                Paciente
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-
-                                <div class="flex justify-center">
-                                    <div class="relative w-[200px] md:w-[400px] h-[300px] md:h-[600px]">
-                                        <img src="{{ asset('images/img/testimonio_00.png') }}"
-                                            class="h-[200px] md:h-[400px] absolute opacity-50 md:left-1/3 myBox"
-                                            alt="testimonios" />
-
-                                        <img src="{{ asset('images/img/testimonio_01.png') }}" alt="testimonios"
-                                            class="h-[200px] md:h-[400px] absolute top-1/4 left-1/4 md:left-1/2 z-[1] myBox" />
-                                    </div>
-                                </div>
-
-
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="flex flex-col lg:flex-row gap-16 md:gap-32 items-center">
-                                <div class="flex flex-col gap-10 basis-1/2 justify-center">
-                                    <div class="buttonSliderServicios">
-                                        <div class="swiper-button-next"></div>
-                                        <div class="swiper-button-prev"></div>
-                                    </div>
-
-                                    <p class="font-semibold text-text32 md:text-text40">
-                                        "Gracias al Dr. Quispe de la Roca y su equipo, finalmente
-                                        he encontrado una solución efectiva para mi lucha contra
-                                        el peso. La banda gástrica cambió mi vida, brindándome una
-                                        nueva confianza y vitalidad."
-                                    </p>
-
-                                    <div class="flex gap-5 items-center">
-                                        <div>
-                                            <svg width="64" height="64" viewBox="0 0 64 64" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <rect width="64" height="64" rx="8" fill="#42BAE2" />
-                                                <path
-                                                    d="M16 44V34.9893C16 30.7189 16.9978 27.3452 18.9934 24.8683C21.0171 22.3915 23.9543 20.7687 27.805 20V24.4413C24.9381 25.3523 23.0127 26.9181 22.029 29.1388C21.5231 30.306 21.3123 31.516 21.3966 32.7687H28.0158V44H16ZM47.7892 24.4413C44.9504 25.3238 43.0391 26.9181 42.0553 29.2242C41.4932 30.4484 41.2683 31.6299 41.3808 32.7687H48V44H35.9842V34.9893C35.9842 30.6619 37.0101 27.274 39.0619 24.8256C41.1419 22.3772 44.0509 20.7687 47.7892 20V24.4413Z"
-                                                    fill="white" />
-                                            </svg>
-                                        </div>
-
-                                        <div>
-                                            <p class="font-semibold text-text18 xl:text-text22">
-                                                María Neyra
-                                            </p>
-                                            <p class="font-normal text-text14 xl:text-text18">
-                                                Paciente
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                                <div class="flex justify-center">
-                                    <div class="relative w-[200px] md:w-[400px] h-[300px] md:h-[600px]">
-                                        <img src="{{ asset('images/img/testimonio_00.png') }}"
-                                            class="h-[200px] md:h-[400px] absolute opacity-50 md:left-1/3 myBox"
-                                            alt="testimonios" />
-
-                                        <img src="{{ asset('images/img/testimonio_01.png') }}" alt="testimonios"
-                                            class="h-[200px] md:h-[400px] absolute top-1/4 left-1/4 md:left-1/2 z-[1] myBox" />
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="flex flex-col lg:flex-row gap-16 md:gap-32 items-center">
-                                <div class="flex flex-col gap-10 basis-1/2 justify-center">
-                                    <div class="buttonSliderServicios">
-                                        <div class="swiper-button-next"></div>
-                                        <div class="swiper-button-prev"></div>
-                                    </div>
-
-                                    <p class="font-semibold text-text32 md:text-text40">
-                                        "Gracias al Dr. Quispe de la Roca y su equipo, finalmente
-                                        he encontrado una solución efectiva para mi lucha contra
-                                        el peso. La banda gástrica cambió mi vida, brindándome una
-                                        nueva confianza y vitalidad."
-                                    </p>
-
-                                    <div class="flex gap-5 items-center">
-                                        <div>
-                                            <svg width="64" height="64" viewBox="0 0 64 64" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <rect width="64" height="64" rx="8" fill="#42BAE2" />
-                                                <path
-                                                    d="M16 44V34.9893C16 30.7189 16.9978 27.3452 18.9934 24.8683C21.0171 22.3915 23.9543 20.7687 27.805 20V24.4413C24.9381 25.3523 23.0127 26.9181 22.029 29.1388C21.5231 30.306 21.3123 31.516 21.3966 32.7687H28.0158V44H16ZM47.7892 24.4413C44.9504 25.3238 43.0391 26.9181 42.0553 29.2242C41.4932 30.4484 41.2683 31.6299 41.3808 32.7687H48V44H35.9842V34.9893C35.9842 30.6619 37.0101 27.274 39.0619 24.8256C41.1419 22.3772 44.0509 20.7687 47.7892 20V24.4413Z"
-                                                    fill="white" />
-                                            </svg>
-                                        </div>
-
-                                        <div>
-                                            <p class="font-semibold text-text18 xl:text-text22">
-                                                María Neyra
-                                            </p>
-                                            <p class="font-normal text-text14 xl:text-text18">
-                                                Paciente
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-
-                                <div class="flex justify-center">
-                                    <div class="relative w-[200px] md:w-[400px] h-[300px] md:h-[600px]">
-                                        <img src="{{ asset('images/img/testimonio_00.png') }}"
-                                            class="h-[200px] md:h-[400px] absolute opacity-50 md:left-1/3 myBox"
-                                            alt="testimonios" />
-
-                                        <img src="{{ asset('images/img/testimonio_01.png') }}" alt="testimonios"
-                                            class="h-[200px] md:h-[400px] absolute top-1/4 left-1/4 md:left-1/2 z-[1] myBox" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div> --}}
                     </div>
                 </div>
             </div>
@@ -1152,14 +1032,15 @@
                                     </div>
                                 @endforeach
 
-                                
+
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div>
-                    <a target="_blank" href="https://api.whatsapp.com/send?phone={{ $generales->whatsapp }}&text={{ $generales->mensaje_whatsapp }}"
+                    <a target="_blank"
+                        href="https://api.whatsapp.com/send?phone={{ $generales->whatsapp }}&text={{ $generales->mensaje_whatsapp }}"
                         class="bg-bgAzul py-4 px-10 rounded-xl inline-block text-center hover:bg-blue-500 md:duration-500 w-full 2md:w-auto text-textWhite text-text18 xl:text-text22 font-semibold">
                         Solicitar una cita
                     </a>
@@ -1248,14 +1129,12 @@
                 loop: true,
                 grab: true,
                 centeredSlides: true,
-                initialSlide: 2, // Empieza en el cuarto slide (índice 3) */
+                initialSlide: 2,
                 pagination: {
                     el: ".swiper-pagination-estadisticas",
                     clickable: true,
                 },
-                //allowSlideNext: false,  //Bloquea el deslizamiento hacia el siguiente slide
-                //allowSlidePrev: false,  //Bloquea el deslizamiento hacia el slide anterior
-                allowTouchMove: false, // Bloquea el movimiento táctil
+                allowTouchMove: false,
                 autoplay: {
                     delay: 1500,
                     disableOnInteraction: false,
@@ -1271,44 +1150,16 @@
             });
 
             /* ---------------- CARROSUEL PARA GRILLAS --------- */
-            var swiper = new Swiper(".enfermedades", {
-                spaceBetween: 30,
-                grid: {
-                    rows: 2,
-                },
-                pagination: {
-                    el: ".swiper-pagination-grid",
-                    clickable: true,
-                    dynamicBullets: false,
-                },
 
-                breakpoints: {
-                    0: {
-                        grid: {
-                            rows: 1,
-                        },
-                        loop: true,
-                        allowTouchMove: true,
-                        slidesPerView: 1,
-                    },
-                    768: {
-                        grid: {
-                            rows: 2,
-                        },
-                        loop: true,
-                        slidesPerView: 2,
-                        allowTouchMove: true,
-                    },
-                    1024: {
-                        grid: {
-                            rows: 2,
-                        },
-                        slidesPerView: 3,
-                        allowTouchMove: false,
-                    },
-                },
+            var enfermedades = new Swiper(".enfermedades", {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                loop: true,
+                grab: true,
+                centeredSlides: true,
+                initialSlide: 2,
+                allowTouchMove: true,
             });
-
             /* --------------------- CARRUSEL PARA MARCAS ------- */
 
             var logosHospitales = new Swiper(".logosHospitales", {

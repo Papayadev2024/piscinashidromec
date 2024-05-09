@@ -16,7 +16,8 @@ class MessageController extends Controller
     public function index()
     {
         //
-        $mensajes = Message::where('status', '=', 1)->get();
+        $mensajes = Message::where('status', '=', 1)->orderBy('created_at','desc')->get();
+
         return view('pages.message.index', compact('mensajes'));        
     }
 

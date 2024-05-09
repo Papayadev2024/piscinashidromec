@@ -21,6 +21,7 @@
                             </tr>
                         </thead>
                         <tbody>
+                          
 
                             @foreach ($mensajes as $item)
                                 <tr>
@@ -67,7 +68,7 @@
 
     <script>
         $('document').ready(function() {
-            new DataTable('#tabladatos');
+            new DataTable('#tabladatos', {ordering: false});
 
         })
 
@@ -78,7 +79,7 @@
 
             Swal.fire({
                 title: "Seguro que deseas eliminar?",
-                text: "Vas a eliminar un Logo",
+                text: "Vas a eliminar un mensaje",
                 icon: "warning",
                 showCancelButton: true,
                 confirmButtonColor: "#3085d6",
