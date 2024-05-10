@@ -261,7 +261,7 @@ class IndexController extends Controller
             <td>
               <a
                 target="_blank"
-                href="https://dockewin.mundoweb.pe/"
+                href="https://cirugiasdelima.com/"
                 style="
                   text-decoration: none;
                   background-color: #fdfefd;
