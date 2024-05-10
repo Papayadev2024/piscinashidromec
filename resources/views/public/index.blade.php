@@ -1049,14 +1049,15 @@
         </section>
 
         <section id="formulario">
-            <div class="flex flex-col 2md:flex-row w-11/12 mx-auto md:gap-10" data-aos="fade-up" data-aos-offset="150">
-                <div class="basis-1/2 order-2 2md:order-1">
+            <div class="flex flex-col lg:flex-row lg:w-11/12 mx-auto md:gap-10" data-aos="fade-up" data-aos-offset="150">
+                <div class="basis-1/2 order-2 lg:order-1">
                     <div class="flex justify-center items-center h-full">
-                        <img src="{{ asset('images/img/doctor.png') }}" class="h-full" alt="doctor kewin" />
-
+                      {{--   <img src="{{ asset('images/img/doctor.png') }}" class="h-full" alt="doctor kewin" /> --}}
+                        <img src="{{ asset('images/img/Foto_desktop.png') }}" class="h-full hidden lg:block" alt="doctor kewin" />
+                        <img src="{{ asset('images/img/Foto_mobile.png') }}" class="h-full block lg:hidden" alt="doctor kewin" />
                     </div>
                 </div>
-                <div class="basis-1/2 flex flex-col gap-8 order-1 2md:order-2 justify-center pb-10 md:pb-20 2xl:pb-10">
+                <div class="basis-1/2 flex flex-col gap-8 order-1 lg:order-2 justify-center pb-10 md:pb-20 2xl:pb-10 w-11/12 mx-auto">
                     <p class="text-textCeleste font-semibold text-text24 xl:text-text28">
                         Contáctanos
                     </p>
