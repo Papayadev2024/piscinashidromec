@@ -779,7 +779,7 @@
                 </div>
                 <div class="basis-1/2 flex justify-center items-center order-1 md:order-2">
                     <img src="{{ asset('images/img/cirugia_imagen.png') }}" class="h-full" alt="cirugía de obesidad" />
-
+                    {{-- <img src="{{ asset('images/img/image_imc.png') }}" alt="imc" class="h-full"/> --}}
                 </div>
             </div>
         </section>
@@ -843,7 +843,8 @@
 
                         <div class="flex justify-center items-center">
                             <img src="{{ asset('images/img/image_imc.png') }}" alt="imc" />
-
+                            {{-- <img src="{{ asset('images/img/image_imc.png') }}" alt="imc" /> --}}
+                            {{-- <img src="{{ asset('images/img/imc_nueva_imagen.jpg') }}" alt="imc" class="w-[488px] h-[720px]"/> --}}
                         </div>
                     </div>
 
