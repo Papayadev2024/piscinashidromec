@@ -37,10 +37,10 @@
                 <!-- Content -->
                 <div class="w-full md:w-1/2">
 
-                    <div class="min-h-[100dvh] h-full flex flex-col after:flex-1">
+                    <div class="min-h-[100dvh] h-full flex flex-col justify-center">
 
                         <!-- Header -->
-                        <div class="flex-1">
+                        {{-- <div class="flex-1">
                             <div class="flex items-center justify-between h-16 px-4 sm:px-6 lg:px-8">
                                 <!-- Logo -->
                                 <a class="block" href="{{ route('dashboard') }}">
@@ -62,7 +62,7 @@
                                     </svg>
                                 </a>
                             </div>
-                        </div>
+                        </div> --}}
 
                         <div class="max-w-sm mx-auto w-full px-4 py-8">
                             {{ $slot }}
