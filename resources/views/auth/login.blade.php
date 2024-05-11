@@ -11,11 +11,14 @@
         <div class="space-y-4">
             <div>
                 <x-label for="email" value="{{ __('Correo') }}" class="text-[#254F9A] font-medium text-[14px]"/>
-                <x-input id="email" type="email" name="email" :value="old('email')" required autofocus class="text-[#254F9A] py-4 rounded-lg font-medium text-[18px] border-2 border-[#254F9A] focus:border-[#254F9A] px-5 placeholder:text-[#254F9A] bg-[#F6F8FE]"/>                
+                <x-input id="email" type="email" name="email" :value="old('email')" required autofocus  placeholder="hola@mundoweb.pe" class="text-[#254F9A] py-4 rounded-lg font-medium text-[18px] border-2 border-[#254F9A] focus:border-[#254F9A] px-5 placeholder:text-[#254F9A] bg-[#F6F8FE]"/>                
             </div>
             <div>
                 <x-label for="password" value="{{ __('Contraseña') }}" class="text-[#254F9A] font-medium text-[14px]"/>
-                <x-input id="password" type="password" name="password" required autocomplete="current-password" class="text-[#254F9A] py-4 rounded-lg font-medium text-[18px] border-2 border-[#254F9A] focus:border-[#254F9A] px-5 placeholder:text-[#254F9A] bg-[#F6F8FE]"/>                
+                <x-input id="password" type="password" name="password" required autocomplete="current-password" placeholder="*******" class="text-[#254F9A] py-4 rounded-lg font-medium text-[18px] border-2 border-[#254F9A] focus:border-[#254F9A] px-5 placeholder:text-[#254F9A] bg-[#F6F8FE]"/>                
+            </div>
+            <div>
+                pggsg
             </div>
         </div>
         <div class="flex items-center justify-end mt-6">
