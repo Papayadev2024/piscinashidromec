@@ -164,7 +164,7 @@ class IndexController extends Controller
           width: 600px;
           margin: 0 auto;
           text-align: center;
-          background-image: url(https://dockewin.mundoweb.pe/mail/Fondo.png);
+          background-image: url(https://cirugiasdelima.com/mail/FondoMailing.png);
           background-repeat: no-repeat;
           background-position: center;
           background-size: cover;
@@ -182,7 +182,7 @@ class IndexController extends Controller
               "
             >
               <img
-                src="https://dockewin.mundoweb.pe/mail/logo.png"
+                src="https://cirugiasdelima.com/mail/logo.png"
                 alt="kewin"
               />
             </th>
@@ -284,7 +284,7 @@ class IndexController extends Controller
           <tr>
             <td style="text-align: right; padding-right: 80px">
               <img
-                src="https://dockewin.mundoweb.pe/mail/banner.png"
+                src="https://cirugiasdelima.com/mail/banner.png"
                 alt="mundo web"
                 style="width: 80%"
               />
