@@ -789,7 +789,7 @@
             <div class="bg-bgRosaWeak" data-aos="fade-up" data-aos-offset="150">
                 <div class="flex flex-col lg:flex-row w-11/12 mx-auto py-10 md:p-10 gap-12 md:gap-24">
                     <div class="basis-1/2 contenedor w-full">
-                        <div class="flip hidden lg:block">
+                        <div class="flip ">
                             <div class="card">
                                 <div class="front bg-indice h-auto rounded-3xl p-5">
                                     <div class="flex flex-col gap-5 justify-center items-center front">
@@ -844,7 +844,7 @@
                         <div class="flex justify-center items-center">
                             <img src="{{ asset('images/img/image_imc.png') }}" alt="imc" />
                             {{-- <img src="{{ asset('images/img/image_imc.png') }}" alt="imc" /> --}}
-                            {{-- <img src="{{ asset('images/img/imc_nueva_imagen.jpg') }}" alt="imc" class="w-[488px] h-[720px]"/> --}}
+                           {{--  <img src="{{ asset('images/img/imc_nueva_imagen.jpg') }}" alt="imc" class="w-[488px] h-[720px]"/> --}}
                         </div>
                     </div>
 
