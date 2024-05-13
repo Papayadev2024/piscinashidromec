@@ -778,7 +778,7 @@
                     </div>
                 </div>
                 <div class="basis-1/2 flex justify-center items-center order-1 md:order-2">
-                    <img src="{{ asset('images/img/cirugia_imagen.png') }}" class="h-full" alt="cirugía de obesidad" />
+                    <img src="{{ asset('images/img/nueva_imagen_que.jpg') }}" class="h-full" alt="cirugía de obesidad" /> {{-- aquir --}}
                     {{-- <img src="{{ asset('images/img/image_imc.png') }}" alt="imc" class="h-full"/> --}}
                 </div>
             </div>
@@ -1052,13 +1052,13 @@
         <section id="formulario">
             <div class="flex flex-col lg:flex-row lg:w-11/12 mx-auto md:gap-10" data-aos="fade-up" data-aos-offset="150">
                 <div class="basis-1/2 order-2 lg:order-1">
-                    <div class="flex justify-center items-center h-full">
+                    <div class="flex justify-center items-end h-full">
                       {{--   <img src="{{ asset('images/img/doctor.png') }}" class="h-full" alt="doctor kewin" /> --}}
-                        <img src="{{ asset('images/img/Foto_desktop.png') }}" class="h-full hidden lg:block" alt="doctor kewin" />
+                        <img src="{{ asset('images/img/Foto_desktop.png') }}" class=" hidden lg:block" alt="doctor kewin" />
                         <img src="{{ asset('images/img/Foto_mobile.png') }}" class="h-full block lg:hidden" alt="doctor kewin" />
                     </div>
                 </div>
-                <div class="basis-1/2 flex flex-col gap-8 order-1 lg:order-2 justify-center pb-10 md:pb-20 2xl:pb-10 w-11/12 mx-auto">
+                <div class="basis-1/2 flex flex-col gap-5 order-1 lg:order-2 justify-center pb-10  2xl:pb-10 w-11/12 mx-auto">
                     <p class="text-textCeleste font-semibold text-text24 xl:text-text28">
                         Contáctanos
                     </p>
@@ -1069,7 +1069,7 @@
                     </div>
 
                     <div class="w-full">
-                        <form class="flex flex-col gap-10 font-semibold text-text18 xl:text-text22" id="formContactos">
+                        <form class="flex flex-col gap-5 font-semibold text-text18 xl:text-text22" id="formContactos">
                             @csrf
                             <div class="flex flex-col md:flex-row gap-10">
                                 <div class="w-full">
