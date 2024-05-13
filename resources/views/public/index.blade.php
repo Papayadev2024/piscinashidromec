@@ -778,7 +778,7 @@
                     </div>
                 </div>
                 <div class="basis-1/2 flex justify-center items-center order-1 md:order-2">
-                    <img src="{{ asset('images/img/nueva_imagen_que.jpg') }}" class="object-cover" alt="cirugía de obesidad" /> {{-- aquir --}}
+                    <img src="{{ asset('images/img/nueva_imagen_que.jpg') }}" class="h-full object-cover" alt="cirugía de obesidad" /> {{-- aquir --}}
                     {{-- <img src="{{ asset('images/img/image_imc.png') }}" alt="imc" class="h-full"/> --}}
                 </div>
             </div>
