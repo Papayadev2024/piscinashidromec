@@ -1056,10 +1056,10 @@
                       {{--   <img src="{{ asset('images/img/doctor.png') }}" class="h-full" alt="doctor kewin" /> --}}
                         {{-- <img src="{{ asset('images/img/Foto_desktop.png') }}" class=" hidden lg:block" alt="doctor kewin" />
                         <img src="{{ asset('images/img/Foto_mobile.png') }}" class="h-full block lg:hidden" alt="doctor kewin" /> --}}
-                        <img src="{{ asset('images/img/nueva_foto_doctor.png') }}" class="w-full object-cover" alt="doctor kewin" />
+                        <img src="{{ asset('images/img/doctor_2.png') }}" class="w-full object-cover" alt="doctor kewin" />
                     </div>
                 </div>
-                <div class="basis-1/2 flex flex-col gap-8 order-1 lg:order-2 justify-center pb-10  2xl:pb-10 w-11/12 mx-auto lg:pr-10">
+                <div class="basis-1/2 flex flex-col gap-8 order-1 lg:order-2 justify-center pb-10  w-11/12 mx-auto lg:pr-10">
                     <p class="text-textCeleste font-semibold text-text24 xl:text-text28">
                         Contáctanos
                     </p>
@@ -1070,7 +1070,7 @@
                     </div>
 
                     <div class="">
-                        <form class="flex flex-col gap-5 md:gap-10 font-semibold text-text18 xl:text-text22" id="formContactos">
+                        <form class="flex flex-col gap-5 md:gap-5 font-semibold text-text18 xl:text-text22" id="formContactos">
                             @csrf
                             <div class="flex flex-col md:flex-row gap-10">
                                 <div class="w-full">
