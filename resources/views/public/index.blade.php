@@ -1056,7 +1056,7 @@
                       {{--   <img src="{{ asset('images/img/doctor.png') }}" class="h-full" alt="doctor kewin" /> --}}
                         {{-- <img src="{{ asset('images/img/Foto_desktop.png') }}" class=" hidden lg:block" alt="doctor kewin" />
                         <img src="{{ asset('images/img/Foto_mobile.png') }}" class="h-full block lg:hidden" alt="doctor kewin" /> --}}
-                        <img src="{{ asset('images/img/foto_formulario.png') }}" class="w-full object-cover" alt="doctor kewin" />
+                        <img src="{{ asset('images/img/nueva_foto_doctor.png') }}" class="w-full object-cover" alt="doctor kewin" />
                     </div>
                 </div>
                 <div class="basis-1/2 flex flex-col gap-8 order-1 lg:order-2 justify-center pb-10  2xl:pb-10 w-11/12 mx-auto lg:pr-10">
