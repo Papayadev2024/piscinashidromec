@@ -26,6 +26,14 @@ class ServiceSeeder extends Seeder
                 'extracto' => $desc[$i],
                 'url_image' => 'https://picsum.photos/id/'. $i * 33 .'/50',
                 'status' => 1,
+                /* 'name_beneficio1' => null,
+                'description_beneficio1' => null,
+                'name_beneficio2' => null,
+                'description_beneficio2' => null,
+                'name_beneficio3' => null,
+                'description_beneficio3' => null,
+                'name_beneficio4' => null,
+                'description_beneficio4' => null, */
             ]);
         }
         

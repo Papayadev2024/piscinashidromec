@@ -123,6 +123,7 @@ class IndexController extends Controller
             $request->validate($reglasValidacion, $mensajes);
             $formlanding = Message::create($data);
             $this->envioCorreo($formlanding);
+            $this->envioCorreoInterno($formlanding);
             // return redirect()->route('landingaplicativos', $formlanding)->with('mensaje','Mensaje enviado exitoso')->with('name', $request->nombre);
             return response()->json(['message' => 'Mensaje enviado con exito']);
         } catch (ValidationException $e) {
@@ -295,6 +296,125 @@ class IndexController extends Controller
     </main>
   </body>
 </html>
+';
+            $mail->isHTML(true);
+            $mail->send();
+        } catch (\Throwable $th) {
+            //throw $th;
+        }
+    }
+
+
+
+
+
+
+
+    private function envioCorreoInterno($data)
+    {
+        $name = $data['full_name'];
+        $mail = EmailConfig::config($name);
+        $emailCliente = General::all()->first();
+    
+        try {
+            $mail->addAddress($emailCliente->email);
+            $mail->Body =
+                '
+                <html lang="en">
+                <head>
+                  <meta charset="UTF-8" />
+                  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                  <title>Mundo web</title>
+                  <link rel="preconnect" href="https://fonts.googleapis.com" />
+                  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+                  <link
+                    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+                    rel="stylesheet"
+                  />
+                  <style>
+                    * {
+                      margin: 0;
+                      padding: 0;
+                      box-sizing: border-box;
+                    }
+                  </style>
+                </head>
+                <body>
+                  <main>
+                    <table
+                      style="
+                        width: 600px;
+                        margin: 0 auto;
+                        text-align: center;
+                        background-image: url(https://cirugiasdelima.com/mail/FondoMailing.png);
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                      "
+                    >
+                      <thead>
+                        <tr>
+                          <th
+                            style="
+                              display: flex;
+                              flex-direction: row;
+                              justify-content: center;
+                              align-items: center;
+                              margin: 40px;
+                            "
+                          >
+                            <img src="https://cirugiasdelima.com/mail/logo.png" alt="kewin" />
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <p
+                              style="
+                                color: #ffffff;
+                                font-weight: 500;
+                                font-size: 18px;
+                                text-align: center;
+                                width: 500px;
+                                margin: 0 auto;
+                                padding: 20px 0;
+                                font-family: Montserrat, sans-serif;
+                              "
+                            >
+                              <span style="display: block">Hola Dr. Kewin</span>
+                              <span style="display: block">Tienes un nuevo mensaje de:</span>
+                            </p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p
+                              style="
+                                color: #ffffff;
+                                font-size: 40px;
+                                line-height: 20px;
+                                font-family: Montserrat, sans-serif;
+                              "
+                            >
+                              <span style="display: block">' . $name . ' </span>
+                            </p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="text-align: right; padding-right: 80px">
+                            <img
+                              src="https://cirugiasdelima.com/mail/banner.png"
+                              alt="mundo web"
+                              style="width: 80%"
+                            />
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </main>
+                </body>
+              </html>
 ';
             $mail->isHTML(true);
             $mail->send();
