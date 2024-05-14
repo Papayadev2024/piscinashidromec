@@ -478,7 +478,7 @@
                     </div>
                 </div>
 
-                <div class="image-container flex justify-center items-center basis-1/2 relative mt-12  xl:mt-32"><!-- md:mt-24 -->
+                <div class="image-container flex justify-center items-center basis-1/2 relative md:mt-24"><!-- md:mt-24 - mt-12  xl:mt-32-->
                     <div class="hidden md:flex flex-col justify-end h-full items-end">
                         <img src="{{ asset('images/img/doctor_kewin_2.png') }}" alt="doctor Kewin" class="w-[95%]">
                     </div>
@@ -530,7 +530,7 @@
                                     {{ $servicio->title }}
                                 </h2>
                                 <p class="font-medium text-text16 xl:text-text20 px-5">
-                                    <!-- {!! $servicio->extracto !!} -->{!! Str::limit($servicio->extracto, 200) !!}
+                                    {!! $servicio->extracto !!}<!-- {!! Str::limit($servicio->extracto, 250) !!} -->
                                 </p>
 
                                 <div class="flex justify-center items-center absolute -bottom-[25px] w-full">
