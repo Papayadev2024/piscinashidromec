@@ -396,12 +396,15 @@
 @section('content')
     <main class="flex flex-col gap-20 font-outfit">
         <section class="bg__image-header bg-cover bg-center bg-no-repeat sm:w-full h-full pt-24 md:pt-32">
-            <div class="flex flex-col lg:flex-row gap-10 md:gap-32 w-11/12 mx-auto text-textWhite mt-12 items-center"
+            <div class="flex flex-col lg:flex-row gap-10 md:gap-32 w-11/12 mx-auto text-textWhite mt-12 items-start"
                 data-aos="fade-up" data-aos-offset="150">
                 <div class="flex flex-col gap-10 basis-1/2 justify-center ">
                     <div class="flex flex-col gap-8 md:gap-5">
-                        <h1 class="font-bold text-text56 md:text-text36 2md:text-text64 leading-none 2md:leading-tight">
-                            <!-- {{ $generales->title1 }} --> Explora un Nuevo Horizonte de Salud con el Dr. Kewin
+                        <h1 class="font-bold text-[50px] md:text-text36 2md:text-text64 leading-none 2md:leading-tight">
+                            <!-- {{ $generales->title1 }} --> <!-- Explora un Nuevo Horizonte de Salud con el Dr. Kewin -->
+                            <!-- Explora un Nuevo Horizonte de Salud con el Dr. Kewin -->
+                            Explore una atención personalizada en cirugía con nuestro equipo
+                            <!--  Explore una atención personalizada en cirugía con nuestro equipo -->
                         </h1>
                         <p class="font-medium text-text18 xl:text-text22">
                             {{ $generales->description }}
@@ -475,7 +478,7 @@
                     </div>
                 </div>
 
-                <div class="image-container flex justify-center items-center basis-1/2 relative md:mt-24">
+                <div class="image-container flex justify-center items-center basis-1/2 relative mt-12  xl:mt-32"><!-- md:mt-24 -->
                     <div class="hidden md:flex flex-col justify-end h-full items-end">
                         <img src="{{ asset('images/img/doctor_kewin_2.png') }}" alt="doctor Kewin" class="w-[95%]">
                     </div>
@@ -550,14 +553,12 @@
                                 <div
                                     class="flex flex-col justify-center gap-5 text-textAzul bg-bgRosa rounded-3xl py-16 px-5 group ">
                                     <div class="flex flex-col justify-center items-center gap-3 ">
-
                                         <div class="relative">
                                             <div class="flex justify-center items-center">
                                                 <img src="{{ asset($servicio->url_image) }}"
                                                     alt="{{ substr(strrchr($servicio->url_image, '_'), 1) }}">
                                             </div>
                                         </div>
-
                                         <div class="relative flex flex-col gap-5 text-center ">
                                             <h2 class="font-bold text-text32 xl:text-text36 w-full md:w-1/2 mx-auto">
                                                 {{ $servicio->title }}
