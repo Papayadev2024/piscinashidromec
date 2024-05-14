@@ -523,7 +523,7 @@
                             </div>
 
                             <div class="relative flex flex-col gap-5 text-center ">
-                                <h2 class="font-bold text-text32 xl:text-text36 w-full md:w-1/2 mx-auto">
+                                <h2 class="font-bold text-text32 xl:text-text36 w-full md:w-2/3 mx-auto">
                                     {{ $servicio->title }}
                                 </h2>
                                 <p class="font-medium text-text16 xl:text-text20">
