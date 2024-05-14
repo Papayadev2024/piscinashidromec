@@ -533,7 +533,7 @@
                                     <!-- {!! $servicio->extracto !!} -->{!! Str::limit($servicio->extracto, 200) !!}
                                 </p>
 
-                                <div class="flex justify-center items-center absolute -bottom-[20px] w-full">
+                                <div class="flex justify-center items-center absolute -bottom-[25px] w-full">
                                     <a href="{{ route('servicios', $servicio->id) }}"
                                         class="bg-bgCeleste py-3 px-10 rounded-xl inline-block text-center text-textWhite font-semibold text-text16 xl:text-text20 w-full md:w-auto group-hover:bg-bgAzul md:duration-500">
                                         Ver más
