@@ -402,7 +402,6 @@
                     <div class="flex flex-col gap-8 md:gap-5">
                         <h1 class="font-bold text-text56 md:text-text36 2md:text-text64 leading-none 2md:leading-tight">
                             {{ $generales->title1 }}
-
                         </h1>
                         <p class="font-medium text-text18 xl:text-text22">
                             {{ $generales->description }}
@@ -528,7 +527,7 @@
                                     {{ $servicio->title }}
                                 </h2>
                                 <p class="font-medium text-text16 xl:text-text20">
-                                    {!! $servicio->extracto !!}
+                                    <!-- {!! $servicio->extracto !!} -->{!! Str::limit($servicio->extracto, 200) !!}
                                 </p>
 
                                 <div class="flex justify-center items-center absolute -bottom-[85px] w-full">
@@ -1077,6 +1076,9 @@
                                     <input required type="text" placeholder="Nombre" name="name"
                                         class="border-[1.5px] border-[#D3D3D3] w-full py-4 bg-bgRosaWeak rounded-xl px-2 outline-[#254F9A] text-textAzul placeholder:text-textAzul placeholder:opacity-40" />
                                 </div>
+
+                                <!-- <input hidden required type="text" name="form_email"
+                                        class="border-[1.5px] border-[#D3D3D3] w-full py-4 bg-bgRosaWeak rounded-xl px-2 outline-[#254F9A] text-textAzul placeholder:text-textAzul placeholder:opacity-40" value="{{$generales->email}}"/> -->
 
                                 <div class="w-full">
                                     <input required type="text" placeholder="Apellido" name="last_name"

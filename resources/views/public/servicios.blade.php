@@ -70,7 +70,7 @@
                 <h4 class="text-textCeleste font-semibold text-text24 md:text-text28 text-center">Beneficios</h4>
                 <h2 class="font-bold text-text40 md:text-text52 text-textAzul text-center leading-none md:leading-tight">
                     ¡Beneficios para tu salud!
-</h2>
+                </h2>
                 <p class="font-medium text-text16 md:text-text22 text-center w-full md:w-2/3 text-textAzul">¿Buscas una solución efectiva para problemas de vesícula, obesidad o sobrepeso? El Dr. Kewin Quispe de la Roca y su equipo de expertos tienen la respuesta.  Descubre los beneficios de confiar en su experiencia y cuidado personalizado para recuperar tu bienestar y vitalidad. ¡Obten los mejores resultados en tiempo récord!
 
                 </p>
@@ -82,12 +82,11 @@
                     <div class="flex flex-col gap-2">
                         <h2
                             class="font-bold text-textAzul text-text36 leading-none md:leading-tight group-hover:text-white md:duration-300">
-                            Tratamiento especializado
+                            <!-- Tratamiento especializado --> {{$servicioById->name_beneficio1}}
                         </h2>
                         <p
                             class="font-medium text-text18 md:text-text22 text-textAzul group-hover:text-white md:duration-300">
-                            El Dr. Kewin Quispe de la Roca y los profesionales que lo acompañan te ofrecen un tratamiento especializado y personalizado, como el <b>balón gástrico</b> o <b>banda gástrica</b>, para mejorar tu salud y puedas seguir tu vida con normalidad.
-
+                            {{$servicioById->description_beneficio1}}
                         </p>
                     </div>
                 </div>
@@ -95,12 +94,13 @@
                 <div class="flex flex-col gap-4 bg-bgRosa rounded-xl group hover:bg-bgCeleste p-5 md:duration-300">
                     <p class="font-bold text-text68 text-textCeleste group-hover:text-white md:duration-300">2</p>
                     <div class="flex flex-col gap-2">
-                        <h2
+                    <h2
                             class="font-bold text-textAzul text-text36 leading-none md:leading-tight group-hover:text-white md:duration-300">
-                            Mejora tu calidad de vida </h2>
+                            <!-- Tratamiento especializado --> {{$servicioById->name_beneficio2}}
+                        </h2>
                         <p
                             class="font-medium text-text18 md:text-text22 text-textAzul group-hover:text-white md:duration-300">
-                            Al recibir atención médica adecuada y específica para tus necesidades, puedes experimentar una mejora significativa en tu calidad de vida, incluyendo la reducción de síntomas y el aumento de la energía y vitalidad. ¡Mejora para cumplir tus objetivos!
+                            {{$servicioById->description_beneficio2}}
                         </p>
                     </div>
                 </div>
@@ -108,12 +108,13 @@
                 <div class="flex flex-col gap-4 bg-bgRosa rounded-xl group hover:bg-bgCeleste p-5 md:duration-300">
                     <p class="font-bold text-text68 text-textCeleste group-hover:text-white md:duration-300">3</p>
                     <div class="flex flex-col gap-2">
-                        <h2
+                    <h2
                             class="font-bold text-textAzul text-text36 leading-none md:leading-tight group-hover:text-white md:duration-300">
-                            Reducción de Riesgos</h2>
+                            <!-- Tratamiento especializado --> {{$servicioById->name_beneficio3}}
+                        </h2>
                         <p
                             class="font-medium text-text18 md:text-text22 text-textAzul group-hover:text-white md:duration-300">
-                            El tratamiento adecuado en contra de los problemas de vesícula, obesidad y sobrepeso puede ayudarte a reducir los riesgos asociados, como complicaciones de salud a largo plazo, enfermedades cardiovasculares y otros problemas de salud relacionados.
+                            {{$servicioById->description_beneficio3}}
                         </p>
                     </div>
                 </div>
@@ -121,12 +122,13 @@
                 <div class="flex flex-col gap-4 bg-bgRosa rounded-xl group hover:bg-bgCeleste p-5 md:duration-300">
                     <p class="font-bold text-text68 text-textCeleste group-hover:text-white md:duration-300">4</p>
                     <div class="flex flex-col gap-2">
-                        <h2
+                    <h2
                             class="font-bold text-textAzul text-text36 leading-none md:leading-tight group-hover:text-white md:duration-300">
-                            Asesoramiento</h2>
+                            <!-- Tratamiento especializado --> {{$servicioById->name_beneficio4}}
+                        </h2>
                         <p
                             class="font-medium text-text18 md:text-text22 text-textAzul group-hover:text-white md:duration-300">
-                            El Dr. Kewin y su equipo no solo proporcionan tratamiento médico, sino también asesoramiento y educación sobre hábitos de vida saludables, lo que te ayuda a tomar el control de tu salud y a mantener resultados positivos a largo plazo.
+                            {{$servicioById->description_beneficio4}}
                         </p>
                     </div>
                 </div>

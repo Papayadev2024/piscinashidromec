@@ -17,9 +17,9 @@
                 <x-label for="password" value="{{ __('Contraseña') }}" class="text-[#254F9A] font-medium text-[14px]"/>
                 <x-input id="password" type="password" name="password" required autocomplete="current-password" placeholder="*******" class="text-[#254F9A] py-4 rounded-lg font-medium text-[18px] border-2 border-[#254F9A] focus:border-[#254F9A] px-5 placeholder:text-[#254F9A] bg-[#F6F8FE]"/>                
             </div>
-            <div>
+            <!-- <div>
                 pggsg
-            </div>
+            </div> -->
         </div>
         <div class="flex items-center justify-end mt-6">
            {{--  @if (Route::has('password.request'))

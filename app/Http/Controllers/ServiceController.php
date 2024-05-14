@@ -75,6 +75,20 @@ class ServiceController extends Controller
       $service->description = $request->description;
 
       $service->extracto = $request->extracto;
+
+
+      /* beneficio */
+      $service->name_beneficio1 = $request->name_beneficio1;
+      $service->description_beneficio1 = $request->description_beneficio1;
+      $service->name_beneficio2 = $request->name_beneficio2;
+      $service->description_beneficio2 = $request->description_beneficio2;
+      $service->name_beneficio3 = $request->name_beneficio3;
+      $service->description_beneficio3 = $request->description_beneficio3;
+      $service->name_beneficio4 = $request->name_beneficio4;
+      $service->description_beneficio4 = $request->description_beneficio4;
+
+
+      /*  */
       $service->status = 1;
       $service->visible = 1;
 
@@ -142,6 +156,19 @@ class ServiceController extends Controller
       $service->title = $request->title;
       $service->description = $request->description;
       $service->extracto = $request->extracto;
+
+      /* beneficios */
+      $service->name_beneficio1 = $request->name_beneficio1;
+      $service->description_beneficio1 = $request->description_beneficio1;
+      $service->name_beneficio2 = $request->name_beneficio2;
+      $service->description_beneficio2 = $request->description_beneficio2;
+      $service->name_beneficio3 = $request->name_beneficio3;
+      $service->description_beneficio3 = $request->description_beneficio3;
+      $service->name_beneficio4 = $request->name_beneficio4;
+      $service->description_beneficio4 = $request->description_beneficio4;
+
+
+      /*  */
       $service->save();
 
       return redirect()->route('servicios.index')->with('success', 'Servicio actualizado exitosamente.');
