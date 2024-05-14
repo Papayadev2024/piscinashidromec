@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="{{asset('build/assets/app-yt1RioBr.css')}}">
 
     <script src="{{asset('build/assets/app-zWqa92Wg.js')}}"> --}}
-
+   
     </script>
 
     {{-- Aqui van los CSS --}}
