@@ -564,7 +564,7 @@
                                                 {{ $servicio->title }}
                                             </h2>
                                             <p class="font-medium text-text16 xl:text-text20">
-                                                <!-- {!! $servicio->extracto !!} --> {!! Str::limit($servicio->extracto, 200) !!}
+                                                {!! $servicio->extracto !!} <!-- {!! Str::limit($servicio->extracto, 200) !!} -->
                                             </p>
 
                                             <div class="flex justify-center items-center absolute -bottom-[85px] w-full">
