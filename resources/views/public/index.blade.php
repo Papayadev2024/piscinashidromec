@@ -1052,7 +1052,7 @@
                         <img src="{{ asset('images/img/doctor_2.png') }}" class="w-full object-cover" alt="doctor kewin" />
                     </div>
                 </div>
-                <div class="basis-1/2 flex flex-col gap-8 order-1 lg:order-2 justify-center pb-10  w-11/12 mx-auto lg:pr-10">
+                <div class="basis-1/2 flex flex-col gap-5 order-1 lg:order-2 justify-center pb-10 md:pb-0  w-11/12 mx-auto lg:pr-10">
                     <p class="text-textCeleste font-semibold text-text24 xl:text-text28">
                         Contáctanos
                     </p>
@@ -1063,51 +1063,47 @@
                     </div>
 
                     <div class="">
-                        <form class="flex flex-col gap-5 md:gap-5 font-semibold text-text18 xl:text-text22" id="formContactos">
+                        <form class="flex flex-col gap-5 md:gap-5 font-semibold text-text18 xl:text-text20" id="formContactos">
                             @csrf
-                            <div class="flex flex-col md:flex-row gap-10">
+                            <div class="flex flex-col md:flex-row gap-5">
                                 <div class="w-full">
                                     <input required type="text" placeholder="Nombre" name="name"
-                                        class="border-[1.5px] border-[#D3D3D3] w-full py-4 bg-bgRosaWeak rounded-xl px-2 outline-[#254F9A] text-textAzul placeholder:text-textAzul placeholder:opacity-40" />
+                                        class="border-[1.5px] border-[#D3D3D3] w-full py-3 bg-bgRosaWeak rounded-xl px-2 outline-[#254F9A] text-textAzul placeholder:text-textAzul placeholder:opacity-40" />
                                 </div>
-
-                                <!-- <input hidden required type="text" name="form_email"
-                                        class="border-[1.5px] border-[#D3D3D3] w-full py-4 bg-bgRosaWeak rounded-xl px-2 outline-[#254F9A] text-textAzul placeholder:text-textAzul placeholder:opacity-40" value="{{$generales->email}}"/> -->
-
                                 <div class="w-full">
                                     <input required type="text" placeholder="Apellido" name="last_name"
-                                        class="border-[1.5px] border-[#D3D3D3] w-full py-4 bg-bgRosaWeak rounded-xl px-2 outline-[#254F9A] text-textAzul placeholder:text-textAzul placeholder:opacity-40" />
+                                        class="border-[1.5px] border-[#D3D3D3] w-full py-3 bg-bgRosaWeak rounded-xl px-2 outline-[#254F9A] text-textAzul placeholder:text-textAzul placeholder:opacity-40" />
                                 </div>
                             </div>
 
-                            <div class="flex flex-col md:flex-row gap-10">
+                            <div class="flex flex-col md:flex-row gap-5">
                                 <div class="w-full">
                                     <input id="email" required type="email" placeholder="Email" name="email"
-                                        class="border-[1.5px] border-[#D3D3D3] w-full py-4 bg-bgRosaWeak rounded-xl px-2 outline-[#254F9A] text-textAzul placeholder:text-textAzul placeholder:opacity-40" />
+                                        class="border-[1.5px] border-[#D3D3D3] w-full py-3 bg-bgRosaWeak rounded-xl px-2 outline-[#254F9A] text-textAzul placeholder:text-textAzul placeholder:opacity-40" />
                                 </div>
 
                                 <div class="w-full">
                                     <input id="telefono" required type="text" placeholder="Teléfono" name="phone"
                                         maxlength="9"
-                                        class="border-[1.5px] border-[#D3D3D3] w-full py-4 bg-bgRosaWeak rounded-xl px-2 outline-[#254F9A] text-textAzul placeholder:text-textAzul placeholder:opacity-40" />
+                                        class="border-[1.5px] border-[#D3D3D3] w-full py-3 bg-bgRosaWeak rounded-xl px-2 outline-[#254F9A] text-textAzul placeholder:text-textAzul placeholder:opacity-40" />
                                 </div>
                             </div>
 
                             <div class="text-[#9CA3AF]">
                                 <div class="w-full">
                                     <input required type="text" placeholder="Dirección" name="address"
-                                        class="border-[1.5px] border-[#D3D3D3] w-full py-4 bg-bgRosaWeak rounded-xl px-2 outline-[#254F9A] text-textAzul placeholder:text-textAzul placeholder:opacity-40" />
+                                        class="border-[1.5px] border-[#D3D3D3] w-full py-3 bg-bgRosaWeak rounded-xl px-2 outline-[#254F9A] text-textAzul placeholder:text-textAzul placeholder:opacity-40" />
                                 </div>
                             </div>
 
                             <div>
                                 <textarea name="message" id="input" rows="5" maxlength="256" placeholder="Mensaje"
-                                    class="border-[1.5px] border-[#D3D3D3] w-full py-4 bg-bgRosaWeak rounded-xl px-2 outline-[#254F9A] text-textAzul placeholder:text-textAzul placeholder:opacity-40"></textarea>
+                                    class="border-[1.5px] border-[#D3D3D3] w-full py-3 bg-bgRosaWeak rounded-xl px-2 outline-[#254F9A] text-textAzul placeholder:text-textAzul placeholder:opacity-40"></textarea>
                             </div>
 
                             <div>
                                 <button type="submit" id="btnAjax"
-                                    class="bg-bgAzul py-4 px-20 rounded-xl inline-block text-center hover:bg-blue-500 md:duration-500 w-full 2md:w-auto text-textWhite">
+                                    class="bg-bgAzul py-3 px-20 rounded-xl inline-block text-center hover:bg-blue-500 md:duration-500 w-full 2md:w-auto text-textWhite">
                                     Enviar
                                 </button>
                             </div>
