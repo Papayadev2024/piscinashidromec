@@ -512,7 +512,7 @@
 
             <div class="hidden md:grid grid-cols-2 lg:grid-cols-3 gap-10 ">
                 @foreach ($servicios as $servicio)
-                    <div class="flex flex-col justify-center gap-5 text-textAzul bg-bgRosa rounded-3xl py-16 px-5 group ">
+                    <div class="flex flex-col justify-start gap-5 text-textAzul bg-bgRosa rounded-3xl py-16 px-5 group ">
                         <div class="flex flex-col justify-center items-center gap-3 ">
 
                             <div class="relative">
