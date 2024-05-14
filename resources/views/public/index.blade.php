@@ -401,7 +401,7 @@
                 <div class="flex flex-col gap-10 basis-1/2 justify-center ">
                     <div class="flex flex-col gap-8 md:gap-5">
                         <h1 class="font-bold text-text56 md:text-text36 2md:text-text64 leading-none 2md:leading-tight">
-                            {{ $generales->title1 }}
+                            <!-- {{ $generales->title1 }} --> Explora un Nuevo Horizonte de Salud con el Dr. Kewin
                         </h1>
                         <p class="font-medium text-text18 xl:text-text22">
                             {{ $generales->description }}
@@ -863,8 +863,7 @@
                                 </div>
                                 <p class="font-medium text-text18 xl:text-text22 text-textAzul imcpInfo leading-none">
                                     Si tu <b>Índice de Masa Corporal</b> (IMC) es inferior a
-                                    18.5, se considera que tienes un peso por debajo de lo
-                                    recomendado.
+                                    18.5, se considera que tienes bajo peso.
                                 </p>
                             </div>
 
@@ -889,8 +888,7 @@
                                     </svg>
                                 </div>
                                 <p class="font-medium text-text18 xl:text-text22 text-textAzul imcpInfo leading-none">
-                                    Si tu IMC cae en el intervalo de 25 a 29.9, se considera un
-                                    diagnóstico presuntivo de sobrepeso.
+                                    Si tu IMC cae en el intervalo de 25 a 29.9, se considera  sobrepeso.
                                 </p>
                             </div>
 
@@ -903,7 +901,7 @@
                                 </div>
                                 <p class="font-medium text-text18 xl:text-text22 text-textAzul imcpInfo leading-none">
                                     Si tu IMC se encuentra en el rango de 30.0 a 34.9, se
-                                    considera un diagnóstico presuntivo de obesidad leve.
+                                    considera obesidad leve.
                                 </p>
                             </div>
 
@@ -915,8 +913,7 @@
                                     </svg>
                                 </div>
                                 <p class="font-medium text-text18 xl:text-text22 text-textAzul imcpInfo leading-none">
-                                    Si tu IMC oscila entre 35.0 y 39.9, se te diagnosticaría
-                                    presumiblemente con obesidad moderada.
+                                    Si tu IMC oscila entre 35.0 y 39.9, se considera obesidad moderada.
                                 </p>
                             </div>
 
@@ -928,8 +925,7 @@
                                     </svg>
                                 </div>
                                 <p class="font-medium text-text18 xl:text-text22 text-textAzul imcpInfo leading-none">
-                                    Si tu IMC es superior a 40, se considera un diagnóstico
-                                    presuntivo de obesidad severa.
+                                    Si tu IMC es superior a 40, se considera obesidad severa.
                                 </p>
                             </div>
                         </div>
