@@ -435,7 +435,7 @@
                                 </svg>
                             </div>
                             <h2 class="font-medium text-text18 xl:text-text22">
-                                Pierde peso
+                                Cirugía segura
                             </h2>
                         </div>
 
@@ -452,7 +452,7 @@
                                 </svg>
                             </div>
                             <h2 class="font-medium text-text18 xl:text-text22">
-                                Recupera tu salud física y mental
+                                Rápida recuperación
                             </h2>
                         </div>
 
@@ -469,7 +469,7 @@
                                 </svg>
                             </div>
                             <h2 class="font-medium text-text18 xl:text-text22">
-                                Mejora tu bienestar
+                                Menor dolor post operatorio
                             </h2>
                         </div>
                     </div>
@@ -503,10 +503,10 @@
         <section class="flex flex-col gap-10 w-11/12 mx-auto" data-aos="fade-up" data-aos-offset="150">
             <div class="flex flex-col gap-3 text-center">
                 <h3 class="font-semibold text-textCeleste text-text24 xl:text-text28 leading-none md:leading-tight">
-                    Descubre Soluciones Personalizadas
+                    Descubre nuestros métodos avanzados
                 </h3>
-                <h2 class="font-bold text-textAzul text-text48 md:text-text64 xl:text-text68 leading-none md:leading-tight">
-                    Atención Especializada para tu Bienestar
+                <h2 class="font-bold text-textAzul text-text48 md:text-text64 leading-none md:leading-tight">
+                    Cirugía Especializada para tu Bienestar
                 </h2>
             </div>
 
@@ -592,29 +592,26 @@
                 <div class="flex flex-col xl:flex-row gap-6 xl:gap-20">
                     <div class="md:basis-1/2 flex flex-col gap-4">
                         <p class="font-medium text-text24">
-                            Conoce al Dr. Kewin Quispe de la Roca
+                            <!-- Conoce al Dr. Kewin Quispe de la Roca --> Conoce al Dr. Kewin Quispe de la Roca
                         </p>
-                        <h2 class="font-bold text-[40px] md:text-text56 xl:text-text60 leading-tight">
-                            Explora el Mundo de la Gastroenterología con el Dr. Kewin
+                        <h2 class="font-bold text-[40px] md:text-text56  leading-tight">
+                            <!-- Explora el Mundo de la Gastroenterología con el Dr. Kewin -->
+                            Su compromiso con la seguridad y la calidad en cada procedimiento asegura el éxito en tu cirugía.
+
                         </h2>
                     </div>
                     <div class="md:basis-1/2 flex flex-col gap-4">
                         <p class="font-medium text-text16 xl:text-text22">
-                            Con una dedicación inquebrantable hacia la excelencia médica, el Dr. Kewin Quispe de la Roca es
-                            un experto en <b>cirugía gastrointestinal</b> con un enfoque humano y compasivo. Su vasta
-                            experiencia y su compromiso con el bienestar de sus pacientes lo convierten en el socio ideal en
-                            tu viaje hacia una salud óptima.
+                        El Dr. Quispe de la Roca ha construido una carrera basada en una formación académica rigurosa y una amplia experiencia quirúrgica. Su Enfoque Centrado en el Paciente ofrece una atención personalizada que considera las necesidades y preocupaciones únicas de cada persona. 
 
                         </p>
 
                         <p class="font-medium text-text16 xl:text-text22">
-                            Con una sólida formación académica y años de experiencia práctica, el Dr. Quispe de la Roca ha
-                            ganado el respeto de sus colegas y pacientes por igual. Su enfoque centrado en el paciente
-                            garantiza que cada persona reciba un tratamiento personalizado y compasivo. Desde la primera
-                            consulta hasta la recuperación posterior al procedimiento, el Dr. Quispe de la Roca está
-                            comprometido a brindar un cuidado excepcional y resultados sobresalientes para mejorar la
-                            calidad de vida de sus pacientes.
+                        Su habilidad para comunicar claramente los procedimientos y expectativas hacen que los pacientes se sientan seguros y apoyados. Está dedicado a brindar un cuidado integral que abarca desde la evaluación inicial hasta la recuperación postoperatoria. 
+                        </p>
 
+                        <p class="font-medium text-text16 xl:text-text22">
+                        Su dedicación y habilidades excepcionales lo convierten en el especialista ideal para guiarte hacia tu bienestar.
                         </p>
                     </div>
                 </div>
