@@ -34,8 +34,8 @@ class GeneralSeeder extends Seeder
             'whatsapp' => '555-555-123' ,
             'form_email' => 'usuario@mundoweb.pe',
             'business_hours' => 'horas',
-            'mensaje_whatsapp' => 'Hola estamos atentos a lo que ud desee'
-
+            'mensaje_whatsapp' => 'Hola estamos atentos a lo que ud desee',
+            'title2' => 'https://www.youtube.com/watch?v=J70XgiTEtyg'
         ]);
     }
 }
