@@ -398,7 +398,7 @@
         <section class="bg__image-header bg-cover bg-center bg-no-repeat sm:w-full h-full pt-24 md:pt-32">
             <div class="flex flex-col lg:flex-row gap-10 md:gap-32 w-11/12 mx-auto text-textWhite mt-12 items-center"
                 data-aos="fade-up" data-aos-offset="150">
-                <div class="flex flex-col gap-10 basis-1/2 justify-center">
+                <div class="flex flex-col gap-10 basis-1/2 justify-center ">
                     <div class="flex flex-col gap-8 md:gap-5">
                         <h1 class="font-bold text-text56 md:text-text36 2md:text-text64 leading-none 2md:leading-tight">
                             {{ $generales->title1 }}
@@ -415,10 +415,10 @@
                             Solicitar una cita
                         </a>
 
-                        <a href="#imc"
+                        <!-- <a href="#imc"
                             class="bg-bgWhiteWeak text-textAzul py-3 px-8 rounded-xl inline-block text-center w-full md:w-auto">
                             Calcula tu IMC
-                        </a>
+                        </a> -->
                     </div>
 
                     <div class="flex flex-col gap-5">
@@ -563,7 +563,7 @@
                                                 {{ $servicio->title }}
                                             </h2>
                                             <p class="font-medium text-text16 xl:text-text20">
-                                                {!! $servicio->extracto !!}
+                                                <!-- {!! $servicio->extracto !!} --> {!! Str::limit($servicio->extracto, 200) !!}
                                             </p>
 
                                             <div class="flex justify-center items-center absolute -bottom-[85px] w-full">
