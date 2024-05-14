@@ -1053,11 +1053,11 @@
                     </div>
                 </div>
                 <div class="basis-1/2 flex flex-col gap-5 order-1 lg:order-2 justify-center pb-10 md:pb-0  w-11/12 mx-auto lg:pr-10">
-                    <p class="text-textCeleste font-semibold text-text24 xl:text-text28">
+                    <p class="text-textCeleste font-semibold text-text24">
                         Contáctanos
                     </p>
                     <div class="w-full md:w-9/12 xl:w-9/12 2xl:w-9/12">
-                        <h2 class="text-textAzul font-bold text-text40 xl:text-text52 leading-none md:leading-tight">
+                        <h2 class="text-textAzul font-bold text-text40 xl:text-text48 leading-none md:leading-tight">
                             Programe una consulta gratuita
                         </h2>
                     </div>
