@@ -515,7 +515,7 @@
 
             <div class="hidden md:grid grid-cols-2 lg:grid-cols-3 gap-10 ">
                 @foreach ($servicios as $servicio)
-                    <div class="flex flex-col justify-start gap-5 text-textAzul bg-bgRosa rounded-3xl py-16  group relative">
+                    <div class="flex flex-col justify-start  gap-5 text-textAzul bg-bgRosa rounded-3xl py-16  group relative">
                         <div class="flex flex-col justify-center items-center gap-3 ">
 
                             <div class="relative">
@@ -525,7 +525,7 @@
                                 </div>
                             </div>
 
-                            <div class=" flex flex-col gap-5 text-center ">
+                            <div class=" flex flex-col gap-5 text-center items-center">{{-- se agrego : items-center --}}
                                 <h2 class="font-bold text-text32 xl:text-text36 w-full md:w-2/3 mx-auto px-5">
                                     {{ $servicio->title }}
                                 </h2>
@@ -533,7 +533,7 @@
                                     {!! $servicio->extracto !!}<!-- {!! Str::limit($servicio->extracto, 250) !!} -->
                                 </p>
 
-                                <div class="flex justify-center items-center absolute -bottom-[25px] w-full">
+                                <div class="flex justify-center items-center absolute -bottom-[25px] md:w-auto">
                                     <a href="{{ route('servicios', $servicio->id) }}"
                                         class="bg-bgCeleste py-3 px-10 rounded-xl inline-block text-center text-textWhite font-semibold text-text16 xl:text-text20 w-full md:w-auto group-hover:bg-bgAzul md:duration-500">
                                         Ver más
@@ -549,39 +549,36 @@
                 <div class="swiper  enfermedades ">
                     <div class="swiper-wrapper">
                         @foreach ($servicios as $servicio)
-                            <div class="swiper-slide">
-                                <div
-                                    class="flex flex-col justify-center gap-5 text-textAzul bg-bgRosa rounded-3xl py-16 px-5 group ">
-                                    <div class="flex flex-col justify-center items-center gap-3 ">
-                                        <div class="relative">
-                                            <div class="flex justify-center items-center">
-                                                <img src="{{ asset($servicio->url_image) }}"
-                                                    alt="{{ substr(strrchr($servicio->url_image, '_'), 1) }}">
-                                            </div>
+                        <div class="swiper-slide">
+                            <div class="flex flex-col justify-start  gap-5 text-textAzul bg-bgRosa rounded-3xl py-16  group relative">
+                                <div class="flex flex-col justify-center items-center gap-3 ">
+        
+                                    <div class="relative">
+                                        <div class="flex justify-center items-center">
+                                            <img src="{{ asset($servicio->url_image) }}"
+                                                alt="{{ substr(strrchr($servicio->url_image, '_'), 1) }}">
                                         </div>
-                                        <div class="relative flex flex-col gap-5 text-center ">
-                                            <h2 class="font-bold text-text32 xl:text-text36 w-full md:w-1/2 mx-auto">
-                                                {{ $servicio->title }}
-                                            </h2>
-                                            <p class="font-medium text-text16 xl:text-text20">
-                                                {!! $servicio->extracto !!} <!-- {!! Str::limit($servicio->extracto, 200) !!} -->
-                                            </p>
-
-                                            <div class="flex justify-center items-center absolute -bottom-[85px] w-full">
-                                                <a href="{{ route('servicios', $servicio->id) }}"
-                                                    class="bg-bgCeleste py-3 px-10 rounded-xl inline-block text-center text-textWhite font-semibold text-text16 xl:text-text20 w-full md:w-auto group-hover:bg-bgAzul md:duration-500">
-                                                    Ver más
-
-
-
-                                                    
-                                                </a>
-
-                                            </div>
+                                    </div>
+        
+                                    <div class=" flex flex-col gap-5 text-center items-center">{{-- se agrego : items-center --}}
+                                        <h2 class="font-bold text-text32 xl:text-text36 w-full md:w-2/3 mx-auto px-5">
+                                            {{ $servicio->title }}
+                                        </h2>
+                                        <p class="font-medium text-text16 xl:text-text20 px-5">
+                                            {!! $servicio->extracto !!}<!-- {!! Str::limit($servicio->extracto, 250) !!} -->
+                                        </p>
+        
+                                        <div class="flex justify-center items-center absolute -bottom-[25px] md:w-auto">
+                                            <a href="{{ route('servicios', $servicio->id) }}"
+                                                class="bg-bgCeleste py-3 px-10 rounded-xl inline-block text-center text-textWhite font-semibold text-text16 xl:text-text20 w-full md:w-auto group-hover:bg-bgAzul md:duration-500">
+                                                Ver más
+                                            </a>
+        
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                        </div>
                         @endforeach
 
                     </div>
