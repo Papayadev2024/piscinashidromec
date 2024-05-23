@@ -254,45 +254,67 @@
 
 
 
-
-        @media (min-width: 375px) {
+        @media (min-width: 340px) {
             .progress::after {
-                height: 243px;
-                top: -170px;
+                height: 322px;
+                top: -286px;
             }
         }
 
-        @media (min-width: 580px) {
+
+        @media (min-width: 375px) {
             .progress::after {
-                height: 200px;
-                top: -150px;
+                height: 290px;
+                top: -266px;
+            }
+        }
+
+        @media (min-width: 400px) {
+            .progress::after {
+                height: 290px;
+                top: -245px;
+            }
+        }
+
+        @media (min-width: 460px) {
+            .progress::after {
+                height: 266px;
+                top: -215px;
+            }
+        }
+
+        @media (min-width: 640px) {
+            .progress::after {
+                height: 220px;
+                top: -200px;
             }
         }
 
         @media (min-width: 768px) {
             .progress::after {
-                height: 270px;
-                top: -185px;
+                height: 344px;
+                top: -305px;
             }
         }
 
-        @media (min-width: 840px) {
+        @media (min-width: 1024px) {
             .progress::after {
                 height: 250px;
+                top: -200px;
             }
         }
 
-        @media (min-width: 910px) {
+        @media (min-width: 1280px) {
             .progress::after {
-                height: 240px;
-                top: -170px;
+                height: 250px;
+                top: -210px;
             }
         }
 
-        @media (min-width: 1150px) {
+        @media (min-width: 1920px) {
             .progress::after {
-                height: 225px;
-                top: -165px;
+                height: 250px;
+                top: -195px;
             }
         }
 
@@ -604,16 +626,16 @@
                     </div>
                     <div class="md:basis-1/2 flex flex-col gap-4">
                         <p class="font-medium text-text16 xl:text-text22">
-                        El Dr. Quispe de la Roca ha construido una carrera basada en una formación académica rigurosa y una amplia experiencia quirúrgica. Su Enfoque Centrado en el Paciente ofrece una atención personalizada que considera las necesidades y preocupaciones únicas de cada persona. 
+                            El Dr. Quispe de la Roca ha construido una carrera basada en una formación académica rigurosa y una amplia experiencia quirúrgica. Su enfoque centrado en el paciente ofrece una atención personalizada que considera las necesidades y preocupaciones únicas de cada persona. 
 
                         </p>
 
                         <p class="font-medium text-text16 xl:text-text22">
-                        Su habilidad para comunicar claramente los procedimientos y expectativas hacen que los pacientes se sientan seguros y apoyados. Está dedicado a brindar un cuidado integral que abarca desde la evaluación inicial hasta la recuperación postoperatoria. 
+                            Su habilidad para comunicar claramente los procedimientos y expectativas hace que los pacientes se sientan seguros y apoyados. Está dedicado a brindar un cuidado integral que abarca desde la evaluación inicial hasta la recuperación postoperatoria.
                         </p>
 
                         <p class="font-medium text-text16 xl:text-text22">
-                        Su dedicación y habilidades excepcionales lo convierten en el especialista ideal para guiarte hacia tu bienestar.
+                            Su dedicación y habilidades excepcionales lo convierten en el especialista ideal para guiarte hacia tu bienestar.
                         </p>
                     </div>
                 </div>
@@ -644,15 +666,15 @@
                     </div>
                     <div
                         class="flex-1 border-t-4 border-b-4 md:border-r-4 md:border-l-4 md:border-b-0 md:border-t-0 border-white w-full flex flex-col items-start md:items-center mt-5 pb-5 md:mt-0 md:pb-0">
-                        <p class="font-bold text-text68 xl:text-text72">1M+</p>
+                        <p class="font-bold text-text68 xl:text-text72">1K+</p>
                         <p class="font-medium text-text18 xl:text-text22">
-                            Pacientes Satisfechos
+                            Pacientes
                         </p>
                     </div>
                     <div class="flex-1">
-                        <p class="font-bold text-text68 xl:text-text72">40K+</p>
+                        <p class="font-bold text-text68 xl:text-text72">1K+</p>
                         <p class="font-medium text-text18 xl:text-text22">
-                            Consultas Atendidas
+                            Consultas
                         </p>
                     </div>
                 </div>
@@ -664,24 +686,22 @@
                 <div class="basis-1/2 order-2 md:order-1 flex flex-col justify-between" data-aos="fade-up"
                     data-aos-offset="150">
                     <h2 class="text-textCeleste font-semibold text-text24 xl:text-text28">
-                        Proceso de una intervención
+                        Proceso de una intervención quirúrgica
                     </h2>
                     <h2 class="font-bold text-text48 xl:text-text52 text-textAzul leading-none md:leading-tight py-5">
-                        Qué necesito para ser candidato a una intervención
+                        ¿Qué necesito para ser candidato a una Cirugía?
                     </h2>
                     <p class="font-medium text-text18 xl:text-text22 text-textAzul" data-aos="fade-up"
                         data-aos-offset="150">
-                        Las personas que desean obtener el mejor <b>tratamiento para la obesidad</b> u otra intervención
-                        médica con el Doctor Kewin deben de tener en cuenta los siguientes pasos para cuidar de su salud y
-                        obtener los mejores resultados.
-
+                        Para ser candidato a una cirugía, necesitas una evaluación médica completa, estudios diagnósticos, y evaluaciones preoperatorias para asegurar que estás en condiciones óptimas y bien informado sobre el procedimiento quirúrgico indicado. Aquí te cuento todo el proceso.
                     </p>
 
                     <ul class="text-textAzul" data-aos="fade-up" data-aos-offset="150">
                         <li class="flex items-center py-5">
                             <div class="progress one">
-                                <div class="flex gap-5 items-center">
-                                    <div>
+                                <div class="flex gap-5 items-start">
+                                    {{-- items-center --}}
+                                    <div class="pt-1">
                                         <svg width="52" height="52" viewBox="0 0 52 52" fill="none"
                                             xmlns="http://www.w3.org/2000/svg" class="group">
                                             <circle cx="26" cy="26" r="26" fill="#42BAE2" id="firstCircle"
@@ -695,13 +715,11 @@
                                     </div>
                                     <div>
                                         <h3 class="font-bold text-text24 xl:text-text28">
-                                            Consulta Inicial
+                                            Evaluación Inicial Especializada
                                         </h3>
 
                                         <p class="font-normal text-text16 xl:text-text20">
-                                            Como especialista en <b>balón gástrico</b>, el Dr. Kewin
-                                            te invita a una consulta inicial para discutir
-                                            preocupaciones y objetivos de salud.
+                                            Necesitas una evaluación médica completa, incluyendo historia clínica, examen físico y estudios diagnósticos para determinar tu estado de salud general y específico.
                                         </p>
                                     </div>
                                 </div>
@@ -709,8 +727,8 @@
                         </li>
                         <li class="flex items-center py-5">
                             <div class="progress two">
-                                <div class="flex gap-5 items-center">
-                                    <div data-aos="fade-up" data-aos-offset="150">
+                                <div class="flex gap-5 items-start">
+                                    <div data-aos="fade-up" data-aos-offset="150" class="pt-1">
                                         <svg width="52" height="52" viewBox="0 0 52 52" fill="none"
                                             xmlns="http://www.w3.org/2000/svg" class="group">
                                             <circle cx="26" cy="26" r=" 26" fill="#F8FBFD"
@@ -725,13 +743,11 @@
 
                                     <div>
                                         <h3 class="font-bold text-text24 xl:text-text28">
-                                            Evaluación de Riesgo Quirúrgico
+                                            Evaluación Preoperatoria
                                         </h3>
 
                                         <p class="font-normal text-text16 xl:text-text20">
-                                            Antes de cualquier procedimiento, nuestro equipo de
-                                            expertos realiza una evaluación exhaustiva de tu salud
-                                            para garantizar tu seguridad durante la intervención.
+                                            Requiere consultas con especialistas en cardiología y anestesiología, además de pruebas sanguíneas adicionales para asegurar que estás en condiciones óptimas para la cirugía.
                                         </p>
                                     </div>
                                 </div>
@@ -739,8 +755,8 @@
                         </li>
                         <li class="flex items-center py-5">
                             <div class="progress three">
-                                <div class="flex gap-5 items-center">
-                                    <div data-aos="fade-up" data-aos-offset="150">
+                                <div class="flex gap-5 items-start">
+                                    <div data-aos="fade-up" data-aos-offset="150" class="pt-1">
                                         <svg width="52" height="52" viewBox="0 0 52 52" fill="none"
                                             xmlns="http://www.w3.org/2000/svg" class="group">
                                             <circle cx="26" cy="26" r="26" fill="#F8FBFD"
@@ -759,8 +775,7 @@
                                         </h3>
 
                                         <p class="font-normal text-text16 xl:text-text20">
-                                            Tras finalizar la evaluación, el Dr. Kewin y su equipo
-                                            procederá a realizar la cirugía.
+                                            La cirugía se programará una vez que se hayan cumplido todos los requisitos previos, asegurando una información clara y adecuada respecto a la cirugía, seguido de un plan de recuperación adecuado.
                                         </p>
                                     </div>
                                 </div>
@@ -1007,11 +1022,13 @@
                 data-aos-offset="150">
                 <div class="flex flex-col 2md:flex-row gap-10">
                     <div class="flex flex-col-reverse 2md:flex-col basis-1/2 gap-4">
-                        <p class="font-medium text-text24 xl:text-text28">
-                            Cras laoreet commodo rhoncus. Morbi vel ante iaculis.
+                        <p class="font-medium text-text24">
+                            El Dr. Kewin Quipe de la Roca mantiene una actualización constante
                         </p>
-                        <h1 class="font-bold text-text40 xl:text-text52 leading-none md:leading-tight">
-                            Perteneciente a las Sociedades Científicas más Eminentes
+                        <h1 class="font-bold text-text36 xl:text-text52 leading-none md:leading-tight">
+                            Miembro de las sociedades de 
+                            cirugía especializada más prestigiosas
+
                         </h1>
                     </div>
 
@@ -1059,7 +1076,7 @@
                     </p>
                     <div class="w-full md:w-9/12 xl:w-9/12 2xl:w-9/12">
                         <h2 class="text-textAzul font-bold text-text40 xl:text-text48 leading-none md:leading-tight">
-                            Programe una consulta gratuita
+                            Programe una consulta especializada
                         </h2>
                     </div>
 
