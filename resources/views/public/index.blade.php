@@ -418,7 +418,7 @@
 @section('content')
     <main class="flex flex-col gap-20 font-outfit">
         <section class="bg__image-header bg-cover bg-center bg-no-repeat sm:w-full h-full pt-24 md:pt-32">
-            <div class="flex flex-col lg:flex-row gap-10 md:gap-32 w-11/12 mx-auto text-textWhite mt-12 items-start"
+            <div class="flex flex-col items-center lg:flex-row gap-10 md:gap-32 w-11/12 mx-auto text-textWhite mt-12 lg:items-start"
                 data-aos="fade-up" data-aos-offset="150">
                 <div class="flex flex-col gap-10 basis-1/2 justify-center ">
                     <div class="flex flex-col gap-8 md:gap-5">
