@@ -9,6 +9,12 @@
             /* Ancho máximo para el contenedor */
         }
 
+
+
+
+
+        
+
         .img-container {
             position: relative;
             width: 100%;
