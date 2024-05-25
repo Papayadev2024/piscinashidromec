@@ -116,7 +116,9 @@
                 </div>
             </div>
         </div>
-        <p>Copyright &copy; 2023 Mundo Web. Reservados todos los derechos</p>
+
+        <a href="http://mundoweb.pe/" target="_blank">Copyright &copy; 2023 Mundo Web. Reservados todos los derechos</a>
+
     </div>
 </footer>
 
