@@ -118,7 +118,7 @@
         </div>
 
         <a href="http://mundoweb.pe/" target="_blank">Copyright &copy; 2023 Mundo Web. Reservados todos los derechos</a>
-        <a href="#">dsads</a>
+
     </div>
 </footer>
 
