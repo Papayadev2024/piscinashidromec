@@ -35,7 +35,6 @@ class IndexController extends Controller
 
     public function servicios($id)
     {
-        
         $servicioById = Service::where('id', '=', $id)->first();
         $servicios = Service::where('status', '=', true)->where('visible', '=', true)->get();
         $generales = General::all()->first();
@@ -304,18 +303,12 @@ class IndexController extends Controller
         }
     }
 
-
-
-
-
-
-
     private function envioCorreoInterno($data)
     {
         $name = $data['full_name'];
         $mail = EmailConfig::config($name);
         $emailCliente = General::all()->first();
-    
+
         try {
             $mail->addAddress($emailCliente->email);
             $mail->Body =
@@ -395,10 +388,37 @@ class IndexController extends Controller
                                 font-size: 40px;
                                 line-height: 20px;
                                 font-family: Montserrat, sans-serif;
+                                margin: 30px 0;
                               "
                             >
-                              <span style="display: block">' . $name . ' </span>
+                              <span style="display: block">' .
+                $name .
+                ' </span>
                             </p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <a
+                              target="_blank"
+                              href="https://cirugiasdelima.com/"
+                              style="
+                                text-decoration: none;
+                                background-color: #fdfefd;
+                                color: #254f9a;
+                                padding: 16px 20px;
+                                display: inline-flex;
+                                justify-content: center;
+                                border-radius: 10px;
+                                align-items: center;
+                                gap: 10px;
+                                font-weight: 600;
+                                font-family: Montserrat, sans-serif;
+                                font-size: 16px;
+                              "
+                            >
+                              <span>Visita nuestra web</span>
+                            </a>
                           </td>
                         </tr>
                         <tr>
