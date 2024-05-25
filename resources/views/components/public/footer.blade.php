@@ -116,10 +116,7 @@
                 </div>
             </div>
         </div>
-
         <p>Copyright &copy; 2023 Mundo Web. Reservados todos los derechos</p>
-
-        
     </div>
 </footer>
 
