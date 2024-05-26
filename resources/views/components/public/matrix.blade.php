@@ -10,6 +10,8 @@
         content="Expertos en vesícula, hernias, balón gástrico, cinta gástrica, problema de obesidad e induvicales. Consulta el precio aquí.">
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    {{-- fontawesome --}}
+   
     @vite(['resources/css/app.css', 'resources/js/app.js'])
    
     <link rel="icon" href="{{asset('images/svg/Logo_redondo_2.svg')}}" type="image/svg+xml">
