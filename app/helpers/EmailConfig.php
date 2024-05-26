@@ -18,9 +18,9 @@ class EmailConfig
         $mail->Password = 'idcmqvwnrfifbxnm';
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
         $mail->Port = 465;
-        $mail->Subject = '' . $name . ', Gracias por comunicarte con Doctor Kewin';
+        $mail->Subject = '' . $name . ', Gracias por comunicarte con Dr. Kewin Quispe de la Roca';
         $mail->CharSet = 'UTF-8';
-        $mail->setFrom('endocirugias@gmail.com', 'Doctor Kewin');
+        $mail->setFrom('endocirugias@gmail.com', 'Dr. Kewin de la Roca');
         return $mail;
     }
 }
