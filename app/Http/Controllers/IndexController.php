@@ -288,11 +288,11 @@ class IndexController extends Controller
 
           <tr>
               <td style="padding: 10px 0">
-              <a href=""><img src="./instagram.svg" alt="" /></a>
-              <a href=""><img src="./facebook.svg" alt="" /></a>
-              <a href=""> <img src="./linkedin.svg" alt="" /></a>
-              <a href=""><img src="./tiktok.svg" alt="" /></a>
-              <a href=""><img src="./tiktok.svg" alt="" /></a>
+              <a href="https://cirugiasdelima.com/" target="_blank"><img src="https://cirugiasdelima.com/mail/instagram_1.svg" alt="instagram" /></a>
+              <a href=""><img src="https://cirugiasdelima.com/mail/facebook_1.svg" alt="facebook" /></a>
+              <a href=""><img src="https://cirugiasdelima.com/mail/linkedin_1.svg" alt="linkedin" /></a>
+              <a href=""><img src="https://cirugiasdelima.com/mail/tiktok_1.svg" alt="tiktok" /></a>
+              <a href=""><img src="https://cirugiasdelima.com/mail/tiktok_1.svg" alt="whatsapp" /></a>
             </td>
           </tr>
           <tr>
