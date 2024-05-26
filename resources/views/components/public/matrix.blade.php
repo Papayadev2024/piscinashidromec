@@ -12,7 +12,7 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
    
-    <link rel="icon" href="{{asset('images/svg/Logo_redondo_1.svg')}}" type="image/svg+xml">
+    <link rel="icon" href="{{asset('images/svg/Logo_redondo_2.svg')}}" type="image/svg+xml">
     </script>
 
     {{-- Aqui van los CSS --}}
