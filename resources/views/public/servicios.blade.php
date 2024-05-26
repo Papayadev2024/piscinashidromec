@@ -71,7 +71,7 @@
                 <h2 class="font-bold text-text40 md:text-text52 text-textAzul text-center leading-none md:leading-tight">
                     ¡Beneficios para tu salud!
                 </h2>
-                <p class="font-medium text-text16 md:text-text22 text-center w-full md:w-2/3 text-textAzul">¿Buscas una solución efectiva para problemas de vesícula, obesidad o sobrepeso? El Dr. Kewin Quispe de la Roca y su equipo de expertos tienen la respuesta.  Descubre los beneficios de confiar en su experiencia y cuidado personalizado para recuperar tu bienestar y vitalidad. ¡Obten los mejores resultados en tiempo récord!
+                <p class="font-medium text-text16 md:text-text22 text-center w-full md:w-2/3 text-textAzul">¿Buscas una solución efectiva para tus problemas del aparato digestivo? El Dr. Kewin Quispe de la Roca y su equipo de especialistas tienen la respuesta. Descubre los beneficios de confiar en su experiencia y cuidado personalizado para recuperar tu bienestar y calidad de vida.
 
                 </p>
             </div>
@@ -85,7 +85,7 @@
                             <!-- Tratamiento especializado --> {{$servicioById->name_beneficio1}}
                         </h2>
                         <p
-                            class="font-medium text-text18 md:text-text22 text-textAzul group-hover:text-white md:duration-300">
+                            class="font-medium text-text18 md:text-text22 text-textAzul group-hover:text-white md:duration-300 text-justify">
                             {{$servicioById->description_beneficio1}}
                         </p>
                     </div>
@@ -99,7 +99,7 @@
                             <!-- Tratamiento especializado --> {{$servicioById->name_beneficio2}}
                         </h2>
                         <p
-                            class="font-medium text-text18 md:text-text22 text-textAzul group-hover:text-white md:duration-300">
+                            class="font-medium text-text18 md:text-text22 text-textAzul group-hover:text-white md:duration-300 text-justify">
                             {{$servicioById->description_beneficio2}}
                         </p>
                     </div>
@@ -113,7 +113,7 @@
                             <!-- Tratamiento especializado --> {{$servicioById->name_beneficio3}}
                         </h2>
                         <p
-                            class="font-medium text-text18 md:text-text22 text-textAzul group-hover:text-white md:duration-300">
+                            class="font-medium text-text18 md:text-text22 text-textAzul group-hover:text-white md:duration-300 text-justify">
                             {{$servicioById->description_beneficio3}}
                         </p>
                     </div>
@@ -127,7 +127,7 @@
                             <!-- Tratamiento especializado --> {{$servicioById->name_beneficio4}}
                         </h2>
                         <p
-                            class="font-medium text-text18 md:text-text22 text-textAzul group-hover:text-white md:duration-300">
+                            class="font-medium text-text18 md:text-text22 text-textAzul group-hover:text-white md:duration-300 text-justify">
                             {{$servicioById->description_beneficio4}}
                         </p>
                     </div>
