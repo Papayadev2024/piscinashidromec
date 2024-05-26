@@ -132,6 +132,7 @@ class IndexController extends Controller
 
     private function envioCorreo($data)
     {
+      dd($data);
         $name = $data['full_name'];
         $mail = EmailConfig::config($name);
         $generales = General::all()->first();
@@ -289,11 +290,23 @@ class IndexController extends Controller
 
           <tr>
               <td style="padding: 10px 0">
-              <a href="https://' . htmlspecialchars($generales->instagram, ENT_QUOTES, 'UTF-8') . '" target="_blank"><img src="https://cirugiasdelima.com/mail/instagram0.png" alt="instagram" /></a>
-              <a href="https://' . htmlspecialchars($generales->facebook, ENT_QUOTES, 'UTF-8') . '" target="_blank"><img src="https://cirugiasdelima.com/mail/facebook0.png" alt="facebook" /></a>
-              <a href="https://' . htmlspecialchars($generales->linkedin, ENT_QUOTES, 'UTF-8') . '" target="_blank"><img src="https://cirugiasdelima.com/mail/linkedin0.png" alt="linkedin" /></a>
-              <a href="https://' . htmlspecialchars($generales->tiktok, ENT_QUOTES, 'UTF-8') . '" target="_blank"><img src="https://cirugiasdelima.com/mail/tiktok0.png" alt="linkedin" /></a>
-              <a href="https://api.whatsapp.com/send?phone=' . htmlspecialchars($generales->whatsapp, ENT_QUOTES, 'UTF-8') . '&text=' . htmlspecialchars($generales->mensaje_whatsapp, ENT_QUOTES, 'UTF-8') . '" target="_blank"><img src="https://cirugiasdelima.com/mail/tiktok0.png" alt="whatsapp" /></a>
+              <a href="https://' .
+                htmlspecialchars($generales->instagram, ENT_QUOTES, 'UTF-8') .
+                '" target="_blank"><img src="https://cirugiasdelima.com/mail/instagram0.png" alt="instagram" /></a>
+              <a href="https://' .
+                htmlspecialchars($generales->facebook, ENT_QUOTES, 'UTF-8') .
+                '" target="_blank"><img src="https://cirugiasdelima.com/mail/facebook0.png" alt="facebook" /></a>
+              <a href="https://' .
+                htmlspecialchars($generales->linkedin, ENT_QUOTES, 'UTF-8') .
+                '" target="_blank"><img src="https://cirugiasdelima.com/mail/linkedin0.png" alt="linkedin" /></a>
+              <a href="https://' .
+                htmlspecialchars($generales->tiktok, ENT_QUOTES, 'UTF-8') .
+                '" target="_blank"><img src="https://cirugiasdelima.com/mail/tiktok0.png" alt="linkedin" /></a>
+              <a href="https://api.whatsapp.com/send?phone=' .
+                htmlspecialchars($generales->whatsapp, ENT_QUOTES, 'UTF-8') .
+                '&text=' .
+                htmlspecialchars($generales->mensaje_whatsapp, ENT_QUOTES, 'UTF-8') .
+                '" target="_blank"><img src="https://cirugiasdelima.com/mail/tiktok0.png" alt="whatsapp" /></a>
               </td>
           </tr>
           <tr>
@@ -308,23 +321,23 @@ class IndexController extends Controller
 
 </html>
 ';
-$mail->isHTML(true);
-$mail->send();
-} catch (\Throwable $th) {
-//throw $th;
-}
-}
+            $mail->isHTML(true);
+            $mail->send();
+        } catch (\Throwable $th) {
+            //throw $th;
+        }
+    }
 
-private function envioCorreoInterno($data)
-{
-$name = $data['full_name'];
-$mail = EmailConfig::config($name);
-$emailCliente = General::all()->first();
+    private function envioCorreoInterno($data)
+    {
+        $name = $data['full_name'];
+        $mail = EmailConfig::config($name);
+        $emailCliente = General::all()->first();
 
-try {
-$mail->addAddress($emailCliente->email);
-$mail->Body =
-'
+        try {
+            $mail->addAddress($emailCliente->email);
+            $mail->Body =
+                '
 <html lang="en">
 
 <head>
@@ -396,8 +409,8 @@ $mail->Body =
                                 margin: 30px 0;
                               ">
                             <span style="display: block">' .
-                                $name .
-                                ' </span>
+                $name .
+                ' </span>
                         </p>
                     </td>
                 </tr>
@@ -433,10 +446,10 @@ $mail->Body =
 
 </html>
 ';
-$mail->isHTML(true);
-$mail->send();
-} catch (\Throwable $th) {
-//throw $th;
-}
-}
+            $mail->isHTML(true);
+            $mail->send();
+        } catch (\Throwable $th) {
+            //throw $th;
+        }
+    }
 }
