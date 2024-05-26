@@ -674,13 +674,13 @@
                         class="flex-1 border-t-4 border-b-4 md:border-r-4 md:border-l-4 md:border-b-0 md:border-t-0 border-white w-full flex flex-col items-start md:items-center mt-5 pb-5 md:mt-0 md:pb-0">
                         <p class="font-bold text-text68 xl:text-text72">1K+</p>
                         <p class="font-medium text-text18 xl:text-text22">
-                            Pacientes
+                            Pacientes satisfechos
                         </p>
                     </div>
                     <div class="flex-1">
                         <p class="font-bold text-text68 xl:text-text72">1K+</p>
                         <p class="font-medium text-text18 xl:text-text22">
-                            Consultas
+                            Consultas atendidas
                         </p>
                     </div>
                 </div>
