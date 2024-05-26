@@ -147,6 +147,7 @@ class IndexController extends Controller
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mundo web</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
@@ -278,10 +279,21 @@ class IndexController extends Controller
                   font-weight: 600;
                   font-family: Montserrat, sans-serif;
                   font-size: 16px;
+                  margin-bottom:20px;
                 "
               >
                 <span>Visita nuestra web</span>
               </a>
+            </td>
+          </tr>
+
+          <tr>
+              <td style="padding: 10px 0">
+              <a href=""><img src="./instagram.svg" alt="" /></a>
+              <a href=""><img src="./facebook.svg" alt="" /></a>
+              <a href=""> <img src="./linkedin.svg" alt="" /></a>
+              <a href=""><img src="./tiktok.svg" alt="" /></a>
+              <a href=""><img src="./tiktok.svg" alt="" /></a>
             </td>
           </tr>
           <tr>
