@@ -1,6 +1,6 @@
 <footer class="bg-bgAzul font-outfit text-textWhite">
-    <div class="w-11/12 mx-auto flex flex-col gap-10 py-12 ">
-        <div class="flex flex-col 2md:flex-row 2md:justify-between border-b-2 border-white pb-10 gap-12 2md:gap-24"  data-aos="fade-up" data-aos-offset="150">
+    <div class="w-11/12 mx-auto flex flex-col gap-10 pt-12 "> {{-- py-12 --}}
+        <div class="flex flex-col 2md:flex-row 2md:justify-between  pb-10 gap-12 2md:gap-24" > {{-- border-b-2 border-white -  data-aos="fade-up" data-aos-offset="150"  --}}
 
             <div class="flex flex-col gap-5 basis-1/3">
                 <div class="flex flex-col gap-3">
@@ -100,10 +100,6 @@
                             
                         </div>
 
-           
-
-
-
                     </div>
                 </div>
 
@@ -117,7 +113,7 @@
             </div>
         </div>
 
-        <a href="http://mundoweb.pe/" target="_blank">Copyright &copy; 2023 Mundo Web. Reservados todos los derechos</a>
+        {{-- <a href="http://mundoweb.pe/" target="_blank">Copyright &copy; 2023 Mundo Web. Reservados todos los derechos</a> --}}
 
     </div>
 </footer>
