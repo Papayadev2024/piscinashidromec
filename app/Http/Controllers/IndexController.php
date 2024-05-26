@@ -135,6 +135,7 @@ class IndexController extends Controller
         $name = $data['full_name'];
         $mail = EmailConfig::config($name);
         $generales = General::all()->first();
+        $instagram = $generales->instagram;
 
         try {
             $mail->addAddress($data['email']);
@@ -288,68 +289,64 @@ class IndexController extends Controller
 
           <tr>
               <td style="padding: 10px 0">
-              <a href="https://cirugiasdelima.com/" target="_blank"><img src="https://cirugiasdelima.com/mail/instagram_1.svg" alt="instagram" /></a>
-              <a href=""><img src="https://cirugiasdelima.com/mail/facebook_1.svg" alt="facebook" /></a>
-              <a href=""><img src="https://cirugiasdelima.com/mail/linkedin_1.svg" alt="linkedin" /></a>
-              <a href=""><img src="https://cirugiasdelima.com/mail/tiktok_1.svg" alt="tiktok" /></a>
-              <a href=""><img src="https://cirugiasdelima.com/mail/tiktok_1.svg" alt="whatsapp" /></a>
-            </td>
+              <a href="https://' . htmlspecialchars($generales->instagram, ENT_QUOTES, 'UTF-8') . '" target="_blank"><img src="https://cirugiasdelima.com/mail/instagram0.png" alt="instagram" /></a>
+              <a href="https://' . htmlspecialchars($generales->facebook, ENT_QUOTES, 'UTF-8') . '" target="_blank"><img src="https://cirugiasdelima.com/mail/facebook0.png" alt="facebook" /></a>
+              <a href="https://' . htmlspecialchars($generales->linkedin, ENT_QUOTES, 'UTF-8') . '" target="_blank"><img src="https://cirugiasdelima.com/mail/linkedin0.png" alt="linkedin" /></a>
+              <a href="https://' . htmlspecialchars($generales->tiktok, ENT_QUOTES, 'UTF-8') . '" target="_blank"><img src="https://cirugiasdelima.com/mail/tiktok0.png" alt="linkedin" /></a>
+              <a href="https://api.whatsapp.com/send?phone=' . htmlspecialchars($generales->whatsapp, ENT_QUOTES, 'UTF-8') . '&text=' . htmlspecialchars($generales->mensaje_whatsapp, ENT_QUOTES, 'UTF-8') . '" target="_blank"><img src="https://cirugiasdelima.com/mail/tiktok0.png" alt="whatsapp" /></a>
+              </td>
           </tr>
           <tr>
-            <td style="text-align: right; padding-right: 80px">
-              <img
-                src="https://cirugiasdelima.com/mail/banner.png"
-                alt="mundo web"
-                style="width: 80%"
-              />
-            </td>
+              <td style="text-align: right; padding-right: 80px">
+                  <img src="https://cirugiasdelima.com/mail/banner.png" alt="mundo web" style="width: 80%" />
+              </td>
           </tr>
-        </tbody>
-      </table>
-    </main>
-  </body>
+</tbody>
+</table>
+</main>
+</body>
+
 </html>
 ';
-            $mail->isHTML(true);
-            $mail->send();
-        } catch (\Throwable $th) {
-            //throw $th;
-        }
+$mail->isHTML(true);
+$mail->send();
+} catch (\Throwable $th) {
+//throw $th;
+}
+}
+
+private function envioCorreoInterno($data)
+{
+$name = $data['full_name'];
+$mail = EmailConfig::config($name);
+$emailCliente = General::all()->first();
+
+try {
+$mail->addAddress($emailCliente->email);
+$mail->Body =
+'
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mundo web</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
+    </style>
+</head>
 
-    private function envioCorreoInterno($data)
-    {
-        $name = $data['full_name'];
-        $mail = EmailConfig::config($name);
-        $emailCliente = General::all()->first();
-
-        try {
-            $mail->addAddress($emailCliente->email);
-            $mail->Body =
-                '
-                <html lang="en">
-                <head>
-                  <meta charset="UTF-8" />
-                  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                  <title>Mundo web</title>
-                  <link rel="preconnect" href="https://fonts.googleapis.com" />
-                  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-                  <link
-                    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-                    rel="stylesheet"
-                  />
-                  <style>
-                    * {
-                      margin: 0;
-                      padding: 0;
-                      box-sizing: border-box;
-                    }
-                  </style>
-                </head>
-                <body>
-                  <main>
-                    <table
-                      style="
+<body>
+    <main>
+        <table style="
                         width: 600px;
                         margin: 0 auto;
                         text-align: center;
@@ -357,28 +354,24 @@ class IndexController extends Controller
                         background-repeat: no-repeat;
                         background-position: center;
                         background-size: cover;
-                      "
-                    >
-                      <thead>
-                        <tr>
-                          <th
-                            style="
+                      ">
+            <thead>
+                <tr>
+                    <th style="
                               display: flex;
                               flex-direction: row;
                               justify-content: center;
                               align-items: center;
                               margin: 40px;
-                            "
-                          >
-                            <img src="https://cirugiasdelima.com/mail/logo.png" alt="kewin" />
-                          </th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>
-                            <p
-                              style="
+                            ">
+                        <img src="https://cirugiasdelima.com/mail/logo.png" alt="kewin" />
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p style="
                                 color: #ffffff;
                                 font-weight: 500;
                                 font-size: 18px;
@@ -387,36 +380,30 @@ class IndexController extends Controller
                                 margin: 0 auto;
                                 padding: 20px 0;
                                 font-family: Montserrat, sans-serif;
-                              "
-                            >
-                              <span style="display: block">Hola Dr. Kewin</span>
-                              <span style="display: block">Tienes un nuevo mensaje de:</span>
-                            </p>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <p
-                              style="
+                              ">
+                            <span style="display: block">Hola Dr. Kewin</span>
+                            <span style="display: block">Tienes un nuevo mensaje de:</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p style="
                                 color: #ffffff;
                                 font-size: 40px;
                                 line-height: 20px;
                                 font-family: Montserrat, sans-serif;
                                 margin: 30px 0;
-                              "
-                            >
-                              <span style="display: block">' .
-                $name .
-                ' </span>
-                            </p>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <a
-                              target="_blank"
-                              href="https://cirugiasdelima.com/"
-                              style="
+                              ">
+                            <span style="display: block">' .
+                                $name .
+                                ' </span>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a target="_blank" href="https://cirugiasdelima.com/" style="
                                 text-decoration: none;
                                 background-color: #fdfefd;
                                 color: #254f9a;
@@ -429,31 +416,27 @@ class IndexController extends Controller
                                 font-weight: 600;
                                 font-family: Montserrat, sans-serif;
                                 font-size: 16px;
-                              "
-                            >
-                              <span>Visita nuestra web</span>
-                            </a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td style="text-align: right; padding-right: 80px">
-                            <img
-                              src="https://cirugiasdelima.com/mail/banner.png"
-                              alt="mundo web"
-                              style="width: 80%"
-                            />
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </main>
-                </body>
-              </html>
+                              ">
+                            <span>Visita nuestra web</span>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right; padding-right: 80px">
+                        <img src="https://cirugiasdelima.com/mail/banner.png" alt="mundo web" style="width: 80%" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+</body>
+
+</html>
 ';
-            $mail->isHTML(true);
-            $mail->send();
-        } catch (\Throwable $th) {
-            //throw $th;
-        }
-    }
+$mail->isHTML(true);
+$mail->send();
+} catch (\Throwable $th) {
+//throw $th;
+}
+}
 }
