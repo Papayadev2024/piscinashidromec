@@ -636,11 +636,11 @@
 
                         </p>
 
-                        <p class="font-medium text-text16 xl:text-text22">
+                        <p class="font-medium text-text16 xl:text-text22 text-justify">
                             Su habilidad para comunicar claramente los procedimientos y expectativas hace que los pacientes se sientan seguros y apoyados. Está dedicado a brindar un cuidado integral que abarca desde la evaluación inicial hasta la recuperación postoperatoria.
                         </p>
 
-                        <p class="font-medium text-text16 xl:text-text22">
+                        <p class="font-medium text-text16 xl:text-text22 text-justify">
                             Su dedicación y habilidades excepcionales lo convierten en el especialista ideal para guiarte hacia tu bienestar.
                         </p>
                     </div>
