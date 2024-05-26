@@ -6,7 +6,7 @@
                 <div class="flex flex-col gap-3">
                     <h2 class="font-bold text-text28 xl:text-text32">Dr. Kewin Quispe de la Roca</h2>
                     <p class="font-normal text-text14 xl:text-text18 w-full">
-                        El Dr. Kewin Quispe de la Roca es un experto en cirugía gastrointestinal especializado en tratamientos para problemas de vesícula y obesidad, incluyendo la banda gástrica.
+                        Es un especialista en cirugía del aparato digestivo orientado a tratar problemas de vesícula biliar, hernias de la pared abdominal y obesidad.
                     </p>
                 </div>
                 <div class="font-semibold text-text16 xl:text-text20">
