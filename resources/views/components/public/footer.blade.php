@@ -4,7 +4,7 @@
 
             <div class="flex flex-col gap-5 basis-1/3">
                 <div class="flex flex-col gap-3">
-                    <h2 class="font-bold text-text28 xl:text-text32">Doctor Kewin</h2>
+                    <h2 class="font-bold text-text28 xl:text-text32">Dr. Kewin Quispe de la Roca</h2>
                     <p class="font-normal text-text14 xl:text-text18 w-full">
                         El Dr. Kewin Quispe de la Roca es un experto en cirugía gastrointestinal especializado en tratamientos para problemas de vesícula y obesidad, incluyendo la banda gástrica.
                     </p>
