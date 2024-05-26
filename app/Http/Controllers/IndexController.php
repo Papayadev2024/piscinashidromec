@@ -135,6 +135,8 @@ class IndexController extends Controller
     {
         $name = $data['full_name'];
         $mail = EmailConfig::config($name);
+        $generales = General::all()->first();
+
         try {
             $mail->addAddress($data['email']);
             $mail->Body =

@@ -631,7 +631,7 @@
                         </h2>
                     </div>
                     <div class="md:basis-1/2 flex flex-col gap-4">
-                        <p class="font-medium text-text16 xl:text-text22">
+                        <p class="font-medium text-text16 xl:text-text22 text-justify">
                             El Dr. Quispe de la Roca ha construido una carrera basada en una formación académica rigurosa y una amplia experiencia quirúrgica. Su enfoque centrado en el paciente ofrece una atención personalizada que considera las necesidades y preocupaciones únicas de cada persona. 
 
                         </p>
