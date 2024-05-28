@@ -549,7 +549,7 @@
                             <div class="relative">
                                 <div class="flex justify-center items-center">
                                     <img src="{{ asset($servicio->url_image) }}"
-                                        alt="{{ substr(strrchr($servicio->url_image, '_'), 1) }}">
+                                        alt="{{ substr(strrchr($servicio->url_image, '_'), 1) }}" class="w-[96px] h-[96px] rounded-full">
                                 </div>
                             </div>
 
@@ -1045,7 +1045,7 @@
                                 @foreach ($logos as $logo)
                                     <div class="swiper-slide">
                                         <div class="flex justify-center items-center">
-                                            <img src="{{ asset($logo->url_image) }}" alt="Apebem" />
+                                            <img src="{{ asset($logo->url_image) }}" alt="Apebem" class="w-[217px] h-[122px]"/>
                                         </div>
                                     </div>
                                 @endforeach
