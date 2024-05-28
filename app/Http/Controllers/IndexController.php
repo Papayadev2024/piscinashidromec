@@ -306,7 +306,7 @@ class IndexController extends Controller
                 htmlspecialchars($generales->whatsapp, ENT_QUOTES, 'UTF-8') .
                 '&text=' .
                 htmlspecialchars($generales->mensaje_whatsapp, ENT_QUOTES, 'UTF-8') .
-                '" target="_blank"><img src="https://cirugiasdelima.com/mail/tiktok0.png" alt="whatsapp" /></a>
+                '" target="_blank"><img src="https://cirugiasdelima.com/mail/whatsapp_1.png" alt="whatsapp" /></a>
               </td>
           </tr>
           <tr>
