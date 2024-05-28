@@ -133,7 +133,6 @@ class IndexController extends Controller
 
     private function envioCorreo($data)
     {
-      dd($data);
         $name = $data['full_name'];
         $mail = EmailConfig::config($name);
         $generales = General::all()->first();
@@ -413,28 +412,7 @@ class IndexController extends Controller
                                 font-size: 40px;
                                 line-height: 20px;
                                 font-family: Montserrat, sans-serif;
-<<<<<<< HEAD
-                              "
-                            >
-                              <span style="display: block">' . $name . ' </span>
-                            </p>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td style="text-align: right; padding-right: 80px">
-                            <img
-                              src="https://cirugiasdelima.com/mail/banner.png"
-                              alt="mundo web"
-                              style="width: 80%"
-                            />
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </main>
-                </body>
-              </html>
-=======
+
                                 margin: 30px 0;
                               ">
                             <span style="display: block">' .
@@ -474,7 +452,7 @@ class IndexController extends Controller
 </body>
 
 </html>
->>>>>>> e27221ff127efca3233469d18b724b76a0fc629a
+
 ';
             $mail->isHTML(true);
             $mail->send();
