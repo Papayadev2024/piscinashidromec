@@ -14,7 +14,10 @@
    
     @vite(['resources/css/app.css', 'resources/js/app.js'])
    
-    <link rel="icon" href="{{asset('images/svg/Logo_redondo_2.svg')}}" type="image/svg+xml">
+    {{-- <link rel="icon" href="{{asset('images/svg/Logo_redondo_2.svg')}}" type="image/svg+xml"> --}}
+    <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
+
+
     </script>
 
     {{-- Aqui van los CSS --}}
