@@ -16,6 +16,7 @@
    
     {{-- <link rel="icon" href="{{asset('images/svg/Logo_redondo_2.svg')}}" type="image/svg+xml"> --}}
     <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
 
 
     </script>
@@ -33,7 +34,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
-
 </head>
 
 <body id="inicio">
@@ -156,7 +156,6 @@
             });
         })
     </script>
-
 </body>
 
 </html>

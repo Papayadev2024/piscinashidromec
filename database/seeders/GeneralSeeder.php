@@ -35,7 +35,7 @@ class GeneralSeeder extends Seeder
             'form_email' => 'usuario@mundoweb.pe',
             'business_hours' => 'horas',
             'mensaje_whatsapp' => 'Hola estamos atentos a lo que ud desee',
-            'title2' => 'https://www.youtube.com/watch?v=J70XgiTEtyg'
+            'title2' => 'https://www.youtube.com/watch?v=k2PcGFCi08Y'
         ]);
     }
 }

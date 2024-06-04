@@ -82,6 +82,8 @@ export default {
                 text24: "24px",
                 text26: "26px",
                 text28: "28px",
+                text29: "29px",
+                text30: "30px",
                 text32: "32px",
                 text36: "36px",
                 text40: "40px",
@@ -113,6 +115,18 @@ export default {
                 bgAzul: "#254F9A",
                 bgRosaWeak: "#F6F8FE",
                 bgAzulStrong: "#23498E",
+
+                azulcreditomype: "#052453",
+                verdecreditomype: "#33BF82",
+                plomocreditomype: "#F3F3F3",
+                plomoblanco: "#F5F5F5",
+            },
+            fontFamily: {
+                fontBold: ["font_Bold"],
+                fontBook: ["font_Book"],
+                fontLight: ["font_Light"],
+                fontMedium: ["font_Medium"],
+                fontThin: ["font_Thin"],
             },
             textColor: {
                 colorSubtitle: "#113E55",
@@ -121,6 +135,9 @@ export default {
                 textWhite: "#FFFFFF",
                 textCeleste: "#42BAE2",
                 textAzul: "#254F9A",
+
+                azulcreditomype: "#052453",
+                verdecreditomype: "#33BF82",
             },
             borderColor: {
                 selectCheck: "#173525",

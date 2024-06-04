@@ -1,20 +1,15 @@
-<footer class="bg-bgAzul font-outfit text-textWhite">
+<footer class="bg-azulcreditomype font-outfit text-textWhite">
     <div class="w-11/12 mx-auto flex flex-col gap-10 pt-12 "> {{-- py-12 --}}
         <div class="flex flex-col 2md:flex-row 2md:justify-between  pb-10 gap-12 2md:gap-24" > {{-- border-b-2 border-white -  data-aos="fade-up" data-aos-offset="150"  --}}
 
             <div class="flex flex-col gap-5 basis-1/3">
                 <div class="flex flex-col gap-3">
-                    <h2 class="font-bold text-text28 xl:text-text32">Dr. Kewin Quispe de la Roca</h2>
+                    <h2 class="font-bold text-text28 xl:text-text32">Credito Mype</h2>
                     <p class="font-normal text-text14 xl:text-text18 w-full">
                         Es un especialista en cirugía del aparato digestivo orientado a tratar problemas de vesícula biliar, hernias de la pared abdominal y obesidad.
                     </p>
                 </div>
-                <div class="font-semibold text-text16 xl:text-text20">
-                    <a target="_blank" href="https://api.whatsapp.com/send?phone={{$generales->whatsapp}}&text={{$generales->mensaje_whatsapp}}"
-                        class="bg-bgCeleste py-3 px-5 rounded-xl inline-block text-center hover:bg-bgCelesteStrong md:duration-500 w-full 2md:w-auto">Solicitar
-                        una cita
-                    </a>
-                </div>
+                
 
                 <div
             class="flex flex-col gap-5 2md:flex-row 2md:justify-between items-start 2md:items-center text-text14 xl:text-text18">
@@ -81,22 +76,6 @@
                             <p>Dirección : <a target="_blank" href="https://g.co/kgs/Dp16ft">Av. Brasil 2730</a></p>
                             <p>Consultorio Nro 503</p>
                             <p>Pueblo Libre</p>
-                            
-                        </div>
-
-                        <div class="font-normal text-text14 xl:text-text18 py-2">
-                            <p class="font-bold">Clínica Integrasalud</p>
-                            <p>Dirección : <a target="_blank" href=" https://goo.gl/maps/tfQC3HLLDxBCLCva6
-                                ">Av. Brasil 831</a> </p>
-       
-                            <p>Jesús Maria</p>
-                            
-                        </div>
-
-                        <div class="font-normal text-text14 xl:text-text18 py-2">
-                            <p class="font-bold">Clínica CREO - Cayetano Heredia</p>
-                            <p>Dirección: <a target="_blank" href="https://g.co/kgs/qT97oP">Av. Eloy Espinoza 700</a></p>
-                            <p>San Martín de Porres.</p>
                             
                         </div>
 
