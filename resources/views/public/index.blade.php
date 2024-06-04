@@ -512,10 +512,10 @@
 
                     </div>
 
-                    <div class="image-container flex justify-center items-center basis-1/2 relative md:mt-24">
+                    <div class="image-container flex justify-center items-center basis-1/2 relative ">
                         <!-- md:mt-24 - mt-12  xl:mt-32-->
                         <div class="hidden md:flex flex-col justify-end h-full items-end">
-                            <img src="{{ asset('images/img/mapa.png') }}" alt="doctor Kewin" class="w-[95%]">
+                            <img src="{{ asset('images/img/form.png') }}" alt="doctor Kewin" class="w-[100%]">
                         </div>
                         {{-- <div class="relative md:absolute bottom-0">
                             <img src="{{ asset('images/img/doctor_kewin_1.png') }}" alt="doctor kevin"
