@@ -95,8 +95,7 @@ class IndexController extends Controller
      */
     public function guardarContacto(Request $request)
     {
-        //Del modelo
-        //'full_name', 'email', 'phone', 'message', 'status', 'is_read'
+       
         $data = $request->all();
         $data['full_name'] = $request->name . ' ' . $request->last_name;
 
@@ -106,8 +105,7 @@ class IndexController extends Controller
                 'last_name' => 'required|string|max:255',
                 'email' => 'required|email|max:255',
                 'address' => 'required|string|max:255',
-                'phone' => 'required|string|max:99999999999',
-                'message' => 'required|string|max:255',
+                'cellphone' => 'required|string|max:99999999999',
             ];
             $mensajes = [
                 'name.required' => 'El campo nombre es obligatorio.',
@@ -115,15 +113,14 @@ class IndexController extends Controller
                 'email.required' => 'El campo correo electrónico es obligatorio.',
                 'email.email' => 'El formato del correo electrónico no es válido.',
                 'email.max' => 'El campo correo electrónico no puede tener más de :max caracteres.',
-                'phone.required' => 'El campo teléfono es obligatorio.',
-                'phone.integer' => 'El campo teléfono debe ser un número entero.',
+                'cellphone.required' => 'El campo teléfono es obligatorio.',
+                'cellphone.integer' => 'El campo teléfono debe ser un número entero.',
                 'address.required' => 'El campo dirección es obligatorio.',
-                'message.required' => 'El campo mensaje es obligatorio.',
             ];
             $request->validate($reglasValidacion, $mensajes);
             $formlanding = Message::create($data);
-            $this->envioCorreo($formlanding);
-            $this->envioCorreoInterno($formlanding);
+            // $this->envioCorreo($formlanding);
+            // $this->envioCorreoInterno($formlanding);
             // return redirect()->route('landingaplicativos', $formlanding)->with('mensaje','Mensaje enviado exitoso')->with('name', $request->nombre);
             return response()->json(['message' => 'Mensaje enviado con exito']);
         } catch (ValidationException $e) {

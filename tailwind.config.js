@@ -120,6 +120,7 @@ export default {
                 verdecreditomype: "#33BF82",
                 plomocreditomype: "#F3F3F3",
                 plomoblanco: "#F5F5F5",
+                plomotransparente: "#F9FAFB",
             },
             fontFamily: {
                 fontBold: ["font_Bold"],
@@ -142,6 +143,7 @@ export default {
             borderColor: {
                 selectCheck: "#173525",
                 borderOrange: "#E38533",
+                borderverde: "#33BF82",
             },
 
             screens: {

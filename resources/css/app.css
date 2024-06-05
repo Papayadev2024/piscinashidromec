@@ -12,6 +12,18 @@
     #tabladatos_wrapper .dt-length select {
         @apply px-5;
     }
+
+    .option{
+            -webkit-appearance: none; /* Quita el estilo predeterminado en Safari */
+            -moz-appearance: none; /* Quita el estilo predeterminado en Firefox */
+            appearance: none; /* Quita el estilo predeterminado en otros navegadores */
+            color: #000000; /* Color del texto */
+            font-family: 'font_Book'; /* Fuente */
+            font-size: 16px; /* Tamaño del texto */
+            padding: 8px; /* Padding */
+            background-color: white; /* Color de fondo */
+            padding: 8px 32px 8px 8px;
+    }
 }
 
 /* ---- css kewin ---- */

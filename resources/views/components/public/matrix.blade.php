@@ -67,7 +67,7 @@
             }
 
             if (value.length < 9) {
-                alerta("El teléfono solo puede tener 9 dígitos");
+                alerta("El teléfono debe tener 9 dígitos");
                 return false;
             }
 
