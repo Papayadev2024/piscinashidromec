@@ -150,7 +150,7 @@ class IndexController extends Controller
                     rel="stylesheet"
                   />
                   <style>
-                    @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+                     @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
                     * {
                       margin: 0;
                       padding: 0;
@@ -199,7 +199,7 @@ class IndexController extends Controller
                                 color: #ffffff;
                                 font-size: 40px;
                                 line-height: 60px;
-                                font-family: Montserrat, sans-serif;
+                                font-family: "Montserrat", sans-serif;
                                 font-weight: bold;
                               "
                             >
@@ -219,7 +219,7 @@ class IndexController extends Controller
                                 width: 500px;
                                 margin: 0 auto;
                                 padding: 30px 0;
-                                font-family: Montserrat, sans-serif;
+                                font-family: "Montserrat", sans-serif;
                               "
                             >
                               Hola ' . $name . '<br>
@@ -231,7 +231,7 @@ class IndexController extends Controller
                           <td>
                             <a
                               target="_blank"
-                              href="#"
+                              href="'. $baseUrllink . '"
                               style="
                                 text-decoration: none;
                                 background-color: #33BF82;
@@ -243,7 +243,7 @@ class IndexController extends Controller
                                 align-items: center;
                                 gap: 10px;
                                 font-weight: 600;
-                                font-family: Montserrat, sans-serif;
+                                font-family: "Montserrat", sans-serif;
                                 font-size: 16px;
                                 margin-bottom: 350px;
                               "
