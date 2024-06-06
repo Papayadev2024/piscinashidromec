@@ -150,7 +150,7 @@ class IndexController extends Controller
                     rel="stylesheet"
                   />
                   <style>
-                    @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+                    @import url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap);
                     * {
                       margin: 0;
                       padding: 0;
@@ -203,8 +203,8 @@ class IndexController extends Controller
                                 font-weight: bold;
                               "
                             >
-                              ¡Gracias
-                              <span style="color: #ffffff">por escribirnos!</span>
+                              ¡Nuevo
+                              <span style="color: #ffffff">mensaje!</span>
                             </p>
                           </td>
                         </tr>          
@@ -223,7 +223,7 @@ class IndexController extends Controller
                               "
                             >
                               Hola ' . $name . '<br>
-                              Tienes un nuevo mensaje - Landing CreditoMype.
+                              Tienes un nuevo mensaje en tu bandeja.
                             </p>
                           </td>
                         </tr>
@@ -315,7 +315,8 @@ class IndexController extends Controller
         $name = $data['full_name'];
         $mensaje = "Gracias por comunicarte con CreditoMype";
         $mail = EmailConfig::config($name, $mensaje);
-        
+        $baseUrl = 'https://' . $_SERVER['HTTP_HOST'] . '/mail';
+        $baseUrllink = 'https://' . $_SERVER['HTTP_HOST'] . '/';
 
         try {
             $mail->addAddress($data['email']);
@@ -333,10 +334,14 @@ class IndexController extends Controller
                     rel="stylesheet"
                   />
                   <style>
+                    @import url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap);
                     * {
                       margin: 0;
                       padding: 0;
                       box-sizing: border-box;
+                    }
+                    body {
+                      font-family: Montserrat, sans-serif;
                     }
                   </style>
                 </head>
@@ -347,7 +352,7 @@ class IndexController extends Controller
                         width: 600px;
                         margin: 0 auto;
                         text-align: center;
-                        background-image: url(./fondo.png);
+                        background-image: url(' . $baseUrl . '/Fondo.png);
                         background-repeat: no-repeat;
                         background-position: center;
                         background-size: cover;
@@ -361,11 +366,12 @@ class IndexController extends Controller
                               flex-direction: row;
                               justify-content: center;
                               align-items: center;
-                              margin: 20px;
-                              padding: 0 80px;
+                              margin: 20px auto;
+                              padding: 0 200px;
+                              text-align:center;
                             "
                           >
-                            <img src="./logo.png" alt="hpi" />
+                            <a href="'. $baseUrllink . '" target="_blank" style="text-align:center" ><img src="' . $baseUrl . '/logo.png" alt="creditomype" /></a>
                           </th>
                         </tr>
                       </thead>
@@ -409,7 +415,7 @@ class IndexController extends Controller
                           <td>
                             <a
                               target="_blank"
-                              href="#"
+                              href="'. $baseUrllink . '"
                               style="
                                 text-decoration: none;
                                 background-color: #33BF82;
@@ -433,7 +439,7 @@ class IndexController extends Controller
                         <tr>
                           <td>
                             <a
-                              href=" "
+                              <img src="' . $baseUrl . '/facebook.png" alt="Facebook"
                               target="_blank"
                               style="padding: 0 5px 30px 0; display: inline-block"
                             >
@@ -445,7 +451,7 @@ class IndexController extends Controller
                               target="_blank"
                               style="padding: 0 5px 30px 0; display: inline-block"
                             >
-                              <img src="./instagram.png" alt=""
+                              <img src="' . $baseUrl . '/instagram.png" alt="Instagram"
                             /></a>
               
                             <a
@@ -453,7 +459,7 @@ class IndexController extends Controller
                               target="_blank"
                               style="padding: 0 5px 30px 0; display: inline-block"
                             >
-                              <img src="./twitter.png" alt=""
+                              <img src="' . $baseUrl . '/twitter.png" alt="Twitter"
                             /></a>
               
                             <a
@@ -461,7 +467,7 @@ class IndexController extends Controller
                               target="_blank"
                               style="padding: 0 5px 30px 0; display: inline-block"
                             >
-                              <img src="./linkedin.png" alt=""
+                              <img src="' . $baseUrl . '/linkedin.png" alt="LinkedIn"
                             /></a>
               
                             <a
@@ -469,7 +475,7 @@ class IndexController extends Controller
                               target="_blank"
                               style="padding: 0 5px 30px 0; display: inline-block"
                             >
-                              <img src="./youtube.png" alt=""
+                              <img src="' . $baseUrl . '/youtube.png" alt="YouTube"
                             /></a>
                           </td>
                         </tr>
