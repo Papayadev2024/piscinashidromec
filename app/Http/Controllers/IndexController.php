@@ -178,11 +178,11 @@ class IndexController extends Controller
                               flex-direction: row;
                               justify-content: center;
                               align-items: center;
-                              margin: 20px 0px;
+                              margin: 20px;
                               padding: 0 80px;
                             "
                           >
-                            <img src="' . $baseUrl . '/logo.png" alt="creditomype" />
+                            <a style="text-align:center" ><img src="' . $baseUrl . '/logo.png" alt="creditomype" /></a>
                           </th>
                         </tr>
                       </thead>
