@@ -179,11 +179,11 @@ class IndexController extends Controller
                               justify-content: center;
                               align-items: center;
                               margin: 20px auto;
-                              padding: 0 80px;
+                              padding: 0 200px;
                               text-align:center;
                             "
                           >
-                            <a style="text-align:center" ><img src="' . $baseUrl . '/logo.png" alt="creditomype" /></a>
+                            <a href="'. $baseUrl . '" target="_blank" style="text-align:center" ><img src="' . $baseUrl . '/logo.png" alt="creditomype" /></a>
                           </th>
                         </tr>
                       </thead>
