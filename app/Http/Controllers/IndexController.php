@@ -133,7 +133,7 @@ class IndexController extends Controller
         $mail = EmailConfig::config($name, $mensaje);
         $emailadmin = "diego.martinez.r@tecsup.edu.pe";
         $baseUrl = 'https://' . $_SERVER['HTTP_HOST'] . '/mail';
-        
+        $baseUrllink = 'https://' . $_SERVER['HTTP_HOST'] . '/';
         try {
             $mail->addAddress($emailadmin);
             $mail->Body =
@@ -183,7 +183,7 @@ class IndexController extends Controller
                               text-align:center;
                             "
                           >
-                            <a href="'. $baseUrl . '" target="_blank" style="text-align:center" ><img src="' . $baseUrl . '/logo.png" alt="creditomype" /></a>
+                            <a href="'. $baseUrllink . '" target="_blank" style="text-align:center" ><img src="' . $baseUrl . '/logo.png" alt="creditomype" /></a>
                           </th>
                         </tr>
                       </thead>
