@@ -20,7 +20,7 @@ class EmailConfig
         $mail->Port = 465;
         $mail->Subject = '' . $name . ', ' .$mensaje;
         $mail->CharSet = 'UTF-8';
-        $mail->setFrom('endocirugias@gmail.com', 'Dr. Kewin de la Roca');
+        $mail->setFrom('diegomartinez1996x@gmail.com', 'CreditoMype');
         return $mail;
     }
 }
