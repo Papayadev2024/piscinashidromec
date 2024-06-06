@@ -133,6 +133,7 @@ class IndexController extends Controller
         $mail = EmailConfig::config($name, $mensaje);
         $emailadmin = "diego.martinez.r@tecsup.edu.pe";
         $baseUrl = 'https://' . $_SERVER['HTTP_HOST'] . '/mail';
+        $mail->addEmbeddedImage('mail/fondo.png', 'fondo_image');
         
         try {
             $mail->addAddress($emailadmin);
@@ -164,7 +165,7 @@ class IndexController extends Controller
                         width: 600px;
                         margin: 0 auto;
                         text-align: center;
-                        background-image: url(' . $baseUrl . '/fondo.png);
+                        background-image: url(\'cid:fondo_image\');
                         background-repeat: no-repeat;
                         background-position: center;
                         background-size: cover;
