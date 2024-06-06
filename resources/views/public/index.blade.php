@@ -418,6 +418,13 @@
                 background-image: url({{ asset('images/img/fondoheader.png') }}) !important;
             }
 
+            .fontosectionmidle {
+            background-position: top right!important;
+            background-repeat: no-repeat!important;
+            background-size: contain!important;
+            background-image: url({{ asset('images/img/texturasection.png') }})!important;
+            }
+
         }
 
         .bg__image-header {
@@ -428,7 +435,7 @@
         }
 
         .fontosectionmidle {
-            background-position: top right;
+            background-position: bottom right;
             background-repeat: no-repeat;
             background-size: contain;
             background-image: url({{ asset('images/img/texturasection.png') }});
@@ -439,6 +446,20 @@
             background-repeat: no-repeat;
             background-size: cover;
             background-image: url({{ asset('images/img/bannervideo.png') }});
+        }
+
+        .texturapreguntas{
+            background-position: top;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url({{ asset('images/img/texturapreguntas.png') }});
+        }
+
+        .texturalogos{
+            background-position: top;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url({{ asset('images/img/texturalogos.png') }});
         }
     </style>
 
@@ -834,7 +855,7 @@
             </div>
         </section>
       
-        <section class="flex flex-col gap-10 w-full px-[5%] bg-white py-12 lg:py-24" data-aos="fade-up" data-aos-offset="150">
+        <section class="flex flex-col gap-10 w-full px-[5%] bg-white py-12 lg:py-24 texturalogos" data-aos="fade-up" data-aos-offset="150">
             <div class="flex flex-col gap-3 text-center px-[5%] lg:px-[20%]">
                 <h2
                     class="tracking-tight font-bold font-fontBold text-verdecreditomype text-text48 md:text-text56 leading-none md:leading-tight">
@@ -976,8 +997,8 @@
         </section>
 
         <section>
-            <div class="bg-[#F5F5F5] font-poppins py-12 lg:py-20">
-                <div class="relative bg-[#F5F5F5] px-6  ring-gray-900/5 sm:mx-auto sm:rounded-lg sm:px-10">
+            <div  class="bg-[#F5F5F5] font-poppins py-12 lg:py-20 texturapreguntas">
+                <div class="relative  px-6  ring-gray-900/5 sm:mx-auto sm:rounded-lg sm:px-10 ">
                     <div class="mx-auto px-5">
                         <div class="flex flex-col items-center ">
                             <h2
