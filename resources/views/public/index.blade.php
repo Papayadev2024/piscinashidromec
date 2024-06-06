@@ -560,15 +560,15 @@
                                                 </select>
                                             </div>
                                             <div class="relative mb-4">
-                                                <textarea name="garantie" style="font-size: 17px; height: auto; min-height: 4rem;" 
-                                                          class=" tracking-tight bg-transparent placeholder:text-text14 mt-1 block w-full border-0 border-b-2 border-gray-400 rounded-none p-3 pr-24 focus:ring-0 focus:border-b-2 focus:border-gray-500 resize-none" 
+                                                <textarea name="garantie" style="font-size: 17px; height: auto;" 
+                                                          class="min-h-28 lg:min-h-14 tracking-tight bg-transparent placeholder:text-text14 mt-1 block w-full border-0 border-b-2 border-gray-400 rounded-none p-3 pr-24 focus:ring-0 focus:border-b-2 focus:border-gray-500 resize-none" 
                                                           placeholder="Tienes una casa o departamento que puedas dejar como garantía hipotecaria?"></textarea>
                                                 <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-verdecreditomype text-text14"></span>
                                             </div>
 
                                             <div class="relative mb-4">
-                                                <textarea name="address" style="font-size: 17px; height: auto; min-height: 4rem;" 
-                                                class=" tracking-tight bg-transparent placeholder:text-text14 mt-1 block w-full border-0 border-b-2 border-gray-400 rounded-none p-3 pr-24 focus:ring-0 focus:border-b-2 focus:border-gray-500 resize-none" 
+                                                <textarea name="address" style="font-size: 17px; height: auto;" 
+                                                class="min-h-32 lg:min-h-14 tracking-tight bg-transparent placeholder:text-text14 mt-1 block w-full border-0 border-b-2 border-gray-400 rounded-none p-3 pr-24 focus:ring-0 focus:border-b-2 focus:border-gray-500 resize-none" 
                                                 placeholder="Distrito de la casa o departamento (debe estar ubicado en lima metropolitana, callao, lima provincia o huancayo)"></textarea>
                                                 <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-verdecreditomype text-text14"></span>
                                             </div>
