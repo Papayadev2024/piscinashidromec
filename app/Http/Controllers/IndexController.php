@@ -163,7 +163,7 @@ class IndexController extends Controller
                         width: 600px;
                         margin: 0 auto;
                         text-align: center;
-                        background-image: url(./mail/fondo.png);
+                        background-image: url(mail/fondo.png);
                         background-repeat: no-repeat;
                         background-position: center;
                         background-size: cover;
@@ -181,7 +181,7 @@ class IndexController extends Controller
                               padding: 0 80px;
                             "
                           >
-                            <img src="./mail/logo.png" alt="hpi" />
+                            <img src="mail/logo.png" alt="creditomype" />
                           </th>
                         </tr>
                       </thead>
@@ -253,7 +253,7 @@ class IndexController extends Controller
                               target="_blank"
                               style="padding: 0 5px 30px 0; display: inline-block"
                             >
-                              <img src="./mail/facebook.png" alt=""
+                              <img src="mail/facebook.png" alt=""
                             /></a>
               
                             <a
@@ -261,7 +261,7 @@ class IndexController extends Controller
                               target="_blank"
                               style="padding: 0 5px 30px 0; display: inline-block"
                             >
-                              <img src="./mail/instagram.png" alt=""
+                              <img src="mail/instagram.png" alt=""
                             /></a>
               
                             <a
@@ -269,7 +269,7 @@ class IndexController extends Controller
                               target="_blank"
                               style="padding: 0 5px 30px 0; display: inline-block"
                             >
-                              <img src="./mail/twitter.png" alt=""
+                              <img src="mail/twitter.png" alt=""
                             /></a>
               
                             <a
@@ -277,7 +277,7 @@ class IndexController extends Controller
                               target="_blank"
                               style="padding: 0 5px 30px 0; display: inline-block"
                             >
-                              <img src="./mail/linkedin.png" alt=""
+                              <img src="mail/linkedin.png" alt=""
                             /></a>
               
                             <a
@@ -285,7 +285,7 @@ class IndexController extends Controller
                               target="_blank"
                               style="padding: 0 5px 30px 0; display: inline-block"
                             >
-                              <img src="./mail/youtube.png" alt=""
+                              <img src="mail/youtube.png" alt=""
                             /></a>
                           </td>
                         </tr>
