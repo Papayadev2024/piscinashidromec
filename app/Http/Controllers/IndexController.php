@@ -157,7 +157,7 @@ class IndexController extends Controller
                       box-sizing: border-box;
                     }
                     body {
-                      font-family: "Montserrat", sans-serif;
+                      font-family: Montserrat, sans-serif;
                     }
                   </style>
                 </head>
@@ -199,7 +199,7 @@ class IndexController extends Controller
                                 color: #ffffff;
                                 font-size: 40px;
                                 line-height: 60px;
-                                font-family: "Montserrat", sans-serif;
+                                font-family: Montserrat, sans-serif;
                                 font-weight: bold;
                               "
                             >
@@ -219,7 +219,7 @@ class IndexController extends Controller
                                 width: 500px;
                                 margin: 0 auto;
                                 padding: 30px 0;
-                                font-family: "Montserrat", sans-serif;
+                                font-family: Montserrat, sans-serif;
                               "
                             >
                               Hola ' . $name . '<br>
@@ -243,7 +243,7 @@ class IndexController extends Controller
                                 align-items: center;
                                 gap: 10px;
                                 font-weight: 600;
-                                font-family: "Montserrat", sans-serif;
+                                font-family: Montserrat, sans-serif;
                                 font-size: 16px;
                                 margin-bottom: 350px;
                               "
