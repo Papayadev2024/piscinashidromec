@@ -131,9 +131,10 @@ class IndexController extends Controller
         $name = "Administrador";
         $mensaje = "tienes un nuevo mensaje - Landing Credito";
         $mail = EmailConfig::config($name, $mensaje);
-    
+        $emailadmin = "diego.martinez.r@tecsup.edu.pe";
+
         try {
-            $mail->addAddress($data['email']);
+            $mail->addAddress($emailadmin);
             $mail->Body =
                 '
                 <html lang="en">
@@ -308,10 +309,10 @@ class IndexController extends Controller
         $name = $data['full_name'];
         $mensaje = "Gracias por comunicarte con CreditoMype";
         $mail = EmailConfig::config($name, $mensaje);
-        $emailCliente = General::all()->first();
+        
 
         try {
-            $mail->addAddress($emailCliente->email);
+            $mail->addAddress($data['email']);
             $mail->Body =
                 '
                 <html lang="en">
