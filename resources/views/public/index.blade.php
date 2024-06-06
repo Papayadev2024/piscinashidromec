@@ -512,7 +512,7 @@
 
                     </div>
 
-                    <div class="image-container flex justify-center items-center basis-1/2 relative ">
+                    <div class="image-container flex justify-center items-center basis-1/2 relative " id="prestamo">
                         <!-- md:mt-24 - mt-12  xl:mt-32-->
                         <div class="flex flex-col justify-end h-full items-end p-5 lg:p-8 bg-plomotransparente rounded-3xl ">
 
@@ -594,7 +594,7 @@
             </div>
         </section>
 
-        <section class="flex flex-col gap-10 w-full px-[5%] bg-plomocreditomype py-12 lg:py-24" data-aos="fade-up"
+        <section id="beneficios" class="flex flex-col gap-10 w-full px-[5%] bg-plomocreditomype py-12 lg:py-24" data-aos="fade-up"
             data-aos-offset="150">
             <div class="flex flex-col gap-3 text-center px-[5%] lg:px-[20%]">
                 <h2
@@ -764,7 +764,7 @@
         </section>
 
 
-        <section class="bannervideo">
+        <section class="bannervideo" id="testimonio">
             <div class="flex flex-col gap-5 text-textAzul w-full" data-aos="fade-up" data-aos-offset="150">
                 <div class="flex flex-col 2md:flex-row gap-10">
 
@@ -839,7 +839,7 @@
 
         </section>
 
-        <section class="bg-azulcreditomype py-12 lg:py-24 space-y-14" id="proceso">
+        <section class="bg-azulcreditomype py-12 lg:py-24 space-y-14" id="prensa">
             <div class="flex flex-col md:flex-row w-11/12 mx-auto">
                 <h2
                     class="tracking-tight font-bold font-fontBold text-white text-text48 md:text-text56 leading-none md:leading-tight">
@@ -890,7 +890,7 @@
             </div>
         </section>
 
-        <section class="pt-12">
+        <section class="pt-12" id="cobertura">
             <div class="w-full mx-auto flex flex-col md:flex-row justify-center text-center items-start sm:pt-[90px] pb-10 md:pt-20 lg:px-20 lg:pt-10"
                 data-aos="fade-up" data-aos-offset="150">
 
