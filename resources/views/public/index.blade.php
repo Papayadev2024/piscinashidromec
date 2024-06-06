@@ -780,16 +780,19 @@
                         <div
                             class="bg-plomoblanco font-semibold flex flex-col md:flex-col items-start justify-start gap-0 w-4/6 lg:w-2/6 rounded-2xl p-5 relative left-10 lg:left-24">
 
-                            <img class="absolute top-0 right-28 -m-5" src="{{ asset('images/img/triangulo.png') }}" />
+                            <img class="absolute top-0 right-28 -m-5 w-10 lg:18" src="{{ asset('images/img/triangulo.png') }}" />
                             <h2 class="text-azulcreditomype  text-text11 lg:text-text24 font-fontLight">"Credito MYPE me ayudó a expandir
                                 mi tienda en un tiempo récord.
                                 El proceso fue simple y el equipo muy profesional."</h2>
                             <h3 class="text-azulcreditomype text-text18 font-fontBold tracking-tighter mt-4">Maria
                                 Rodríguez,</h3>
-                            <h2 class="text-azulcreditomype text-text18 font-fontLight tracking-tighter">Emprendendora</h2>
+                            <h2 class="text-azulcreditomype text-text18 font-fontLight tracking-tighter">Emprendendora
+                                <div class="bg-azulcreditomype rounded-full absolute bottom-6 right-10 block lg:hidden"><img class=" animate-bounce animate-infinite w-7 h-7"
+                                    src="{{ asset('images/img/play.png') }}" /></div>
+                            </h2>
                         </div>
 
-                        <div class="bg-azulcreditomype rounded-full absolute top-1/2 right-1/2"><img class="w-20 h-20"
+                        <div class="bg-azulcreditomype rounded-full absolute top-1/2 right-1/2 hidden lg:block animate-bounce animate-infinite"><img class="w-20 h-20"
                                 src="{{ asset('images/img/play.png') }}" /></div>
                     </div>
 

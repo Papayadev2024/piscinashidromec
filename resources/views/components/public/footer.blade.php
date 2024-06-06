@@ -16,30 +16,29 @@
 
                     <div class="flex justify-start 2md:justify-between gap-5 w-full 2md:w-auto">
 
-                        @if ($generales->instagram != null)
-                            <a target="_blank" href=" ">
+                        
+                            <a target="_blank" href="">
                                 <img src="{{ asset('images/img/instagramverde.png') }}" alt="instagram">
                             </a>
-                        @endif
+                        
 
-                        @if ($generales->facebook != null)
-                            <a target="_blank" href=" ">
+                       
+                            <a target="_blank" href="">
                                 <img src="{{ asset('images/img/facebookverde.png') }}" alt="facebook">
                             </a>
-                        @endif
+                       
 
-                        @if ($generales->linkedin != null)
-                            <a target="_blank" href=" ">
+                      
+                            <a target="_blank" href="">
                                 <img src="{{ asset('images/img/linkedverde.png') }}" alt="linkedin">
                             </a>
-                        @endif
+                       
 
-                        @if ($generales->tiktok != null)
-                            <a target="_blank" href=" ">
+                       
+                            <a target="_blank" href="">
                                 <img src="{{ asset('images/img/twitterverde.png') }}" alt="tiktok">
                             </a>
-                        @endif
-
+                       
                     </div>
                 </div>
             </div>
@@ -48,12 +47,12 @@
                 <div class="flex flex-col gap-5">
                     <p class="font-medium font-fontBold text-text16 xl:text-text20">Menu</p>
                     <div class="flex flex-col gap-2 font-fontLight tracking-tight">
-                        <a href="{{ route('index') . '#servicios' }}" class="font-normal text-text14 xl:text-text18 block">Solicitar prestamo</a>
-                        <a href="{{ route('index') . '#servicios' }}"
+                        <a href="{{ route('index') . '#prestamo' }}" class="font-normal text-text14 xl:text-text18 block">Solicitar prestamo</a>
+                        <a href="{{ route('index') . '#beneficios' }}"
                             class="font-normal text-text14 xl:text-text18 block">Beneficios</a>
-                        <a href="{{ route('index') . '#acerca' }}"
+                        <a href="{{ route('index') . '#testimonio' }}"
                             class="font-normal text-text14 xl:text-text18 block">Testimonio</a>
-                        <a href="{{ route('index') . '#proceso' }}"
+                        <a href="{{ route('index') . '#cobertura' }}"
                             class="font-normal text-text14 xl:text-text18 block">Cobertura</a>
                     </div>
                 </div>
@@ -71,8 +70,8 @@
                             <p>Email: usuario@mundoweb.pe</p>
                         </div>
                         <div class="font-normal text-text14 xl:text-text18">
-                            <span>Teléfono:</span> <span>5555-1025</span>
-                            {{-- <p href="#">{{$generales->office_phone}}</p> --}}
+                            <span>Teléfono: 5555-1025</span>
+                           
                         </div>
                     </div>
                 </div>
