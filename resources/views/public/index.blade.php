@@ -9,11 +9,13 @@
             /* Ancho máximo para el contenedor */
         }
 
+        #iframeContainer {
+        display: none; /* Oculto por defecto */
+        }
 
-
-
-
-
+        #iframeContainer.show {
+            display: flex; /* Mostrar como flex para centrar el iframe */
+        }
 
         .img-container {
             position: relative;
@@ -812,58 +814,7 @@
                 </iframe>
             </div>
         </section>
-        <style>
-            #iframeContainer {
-                display: none; /* Oculto por defecto */
-            }
-
-            #iframeContainer.show {
-                display: flex; /* Mostrar como flex para centrar el iframe */
-            }
-        </style>
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                const playButton = document.querySelector('.play-button');
-                const iframeContainer = document.getElementById('iframeContainer');
-                const iframe = document.getElementById('youtubeIframe');
-
-                playButton.addEventListener('click', function() {
-                    iframeContainer.classList.add('show');
-                    // Autoplay el video
-                    const src = iframe.src;
-                    iframe.src = src + "?autoplay=1";
-                });
-
-                // Opcional: Cerrar el iframe al hacer clic fuera de él
-                iframeContainer.addEventListener('click', function(e) {
-                    if (e.target === iframeContainer) {
-                        iframe.src = iframe.src.replace("?autoplay=1", ""); // Detener el video
-                        iframeContainer.classList.remove('show');
-                    }
-                });
-            });
-
-            document.addEventListener('DOMContentLoaded', function() {
-                const playButton = document.querySelector('.play-button2');
-                const iframeContainer = document.getElementById('iframeContainer');
-                const iframe = document.getElementById('youtubeIframe');
-
-                playButton.addEventListener('click', function() {
-                    iframeContainer.classList.add('show');
-                    // Autoplay el video
-                    const src = iframe.src;
-                    iframe.src = src + "?autoplay=1";
-                });
-
-                // Opcional: Cerrar el iframe al hacer clic fuera de él
-                iframeContainer.addEventListener('click', function(e) {
-                    if (e.target === iframeContainer) {
-                        iframe.src = iframe.src.replace("?autoplay=1", ""); // Detener el video
-                        iframeContainer.classList.remove('show');
-                    }
-                });
-            });
-        </script>
+      
         <section class="flex flex-col gap-10 w-full px-[5%] bg-white py-12 lg:py-24" data-aos="fade-up" data-aos-offset="150">
             <div class="flex flex-col gap-3 text-center px-[5%] lg:px-[20%]">
                 <h2
@@ -1390,6 +1341,50 @@
                     secondCircle.setAttribute("fill", "#42BAE2");
                 }
             };
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const playButton = document.querySelector('.play-button');
+            const iframeContainer = document.getElementById('iframeContainer');
+            const iframe = document.getElementById('youtubeIframe');
+
+            playButton.addEventListener('click', function() {
+                iframeContainer.classList.add('show');
+                // Autoplay el video
+                const src = iframe.src;
+                iframe.src = src + "?autoplay=1";
+            });
+
+            // Opcional: Cerrar el iframe al hacer clic fuera de él
+            iframeContainer.addEventListener('click', function(e) {
+                if (e.target === iframeContainer) {
+                    iframe.src = iframe.src.replace("?autoplay=1", ""); // Detener el video
+                    iframeContainer.classList.remove('show');
+                }
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const playButton = document.querySelector('.play-button2');
+            const iframeContainer = document.getElementById('iframeContainer');
+            const iframe = document.getElementById('youtubeIframe');
+
+            playButton.addEventListener('click', function() {
+                iframeContainer.classList.add('show');
+                // Autoplay el video
+                const src = iframe.src;
+                iframe.src = src + "?autoplay=1";
+            });
+
+            // Opcional: Cerrar el iframe al hacer clic fuera de él
+            iframeContainer.addEventListener('click', function(e) {
+                if (e.target === iframeContainer) {
+                    iframe.src = iframe.src.replace("?autoplay=1", ""); // Detener el video
+                    iframeContainer.classList.remove('show');
+                }
+            });
         });
     </script>
 @stop
