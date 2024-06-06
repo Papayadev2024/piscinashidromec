@@ -473,12 +473,12 @@
                     </div>
                 </div>
             </div>
-
-            <div class="pt-[210px] 3md:pt-[200px] lg:pt-[268px] xl:pt-[335px] 2xl:pt-[350px]">
+           
+            <div class="pt-[210px] 3md:pt-[200px] lg:pt-[268px] xl:pt-[335px] 2xl:pt-[350px]" >
                 <div class="w-full mx-auto flex flex-col md:flex-row justify-center text-center items-start sm:pt-[90px] pb-10  md:pt-20 lg:pb-20 lg:px-20 lg:pt-10"
                     data-aos="fade-up" data-aos-offset="150">
 
-                    <div class="text-azulcreditomype flex flex-col gap-14 basis-1/2 text-left p-5 lg:pr-[8%] pb-12">
+                    <div class="text-azulcreditomype flex flex-col gap-14 basis-1/2 text-left p-5 lg:pr-[8%] pb-12" id="prestamo" >
                         <div class="flex flex-col gap-8 md:gap-5">
                             <h1
                                 class="font-bold fontBold text-[50px] md:text-text36 2md:text-text56 leading-none 2md:leading-tight">
@@ -512,7 +512,7 @@
 
                     </div>
 
-                    <div class="image-container flex justify-center items-center basis-1/2 relative " id="prestamo">
+                    <div class="image-container flex justify-center items-center basis-1/2 relative ">
                         <!-- md:mt-24 - mt-12  xl:mt-32-->
                         <div class="flex flex-col justify-end h-full items-end p-5 lg:p-8 bg-plomotransparente rounded-3xl ">
 

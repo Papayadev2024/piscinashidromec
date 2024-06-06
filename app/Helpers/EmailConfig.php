@@ -6,7 +6,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 
 class EmailConfig
 {
-    static  function config($name): PHPMailer
+    static  function config($name, $mensaje): PHPMailer
     {
         
         $mail = new PHPMailer(true);
@@ -18,7 +18,7 @@ class EmailConfig
         $mail->Password = 'idcmqvwnrfifbxnm';
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
         $mail->Port = 465;
-        $mail->Subject = '' . $name . ', Gracias por comunicarte con Dr. Kewin Quispe de la Roca';
+        $mail->Subject = '' . $name . ', ' .$mensaje;
         $mail->CharSet = 'UTF-8';
         $mail->setFrom('endocirugias@gmail.com', 'Dr. Kewin de la Roca');
         return $mail;
