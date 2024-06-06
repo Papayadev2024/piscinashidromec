@@ -489,30 +489,49 @@
                                 préstamo 💸
                             </h1>
                         </div>
-                        <div
-                            class="font-semibold text-text18 xl:text-text22 flex flex-col md:flex-col items-start justify-start gap-5">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                            <div
+                                class="font-semibold text-text18 xl:text-text22 flex flex-col md:flex-col items-start justify-start gap-5">
 
-                            <h2
-                                class="text-white bg-verdecreditomype rounded-full w-20 h-20 text-text60 flex items-center justify-center font-fontMedium">
-                                1</h2>
-                            <h2 class="text-azulcreditomype text-text24 font-fontLight">Contar con un inmueble ubicado en
-                                Lima Metropolitana, Lima provincias o Callao. Este debe estar inscrito en registros públicos
-                                (SUNARP).</h2>
+                                <h2
+                                    class="text-white bg-verdecreditomype rounded-full w-16 h-16 text-text48 flex items-center justify-center font-fontMedium">
+                                    1</h2>
+                                <h2 class="text-azulcreditomype text-text18 font-fontLight">Contar con una propiedad inscrita en registros públicos (SUNARP) 
+                                    dentro de nuestro rango de cobertura (Rango de cobertura)</h2>
 
-                        </div>
+                            </div>
 
-                        <div
-                            class="font-semibold text-text18 xl:text-text22 flex flex-col md:flex-col items-start justify-start gap-5">
+                            <div
+                                class="font-semibold text-text18 xl:text-text22 flex flex-col md:flex-col items-start justify-start gap-5">
 
-                            <h2
-                                class="text-white bg-verdecreditomype rounded-full w-20 h-20 text-text60 flex items-center justify-center font-fontMedium">
-                                2</h2>
-                            <h2 class="text-azulcreditomype text-text24 font-fontLight">Contar con sustentos de ingresos
-                                mensuales (boletas de pago, recibos por honorarios o reportes tributarios).</h2>
+                                <h2
+                                    class="text-white bg-verdecreditomype rounded-full w-16 h-16 text-text48  flex items-center justify-center font-fontMedium">
+                                    2</h2>
+                                <h2 class="text-azulcreditomype text-text18 font-fontLight">DNI de los Propietarios: Copia del Documento Nacional de Identidad de todos los propietarios del inmueble.</h2>
 
-                        </div>
+                            </div>
 
+                            <div
+                                class="font-semibold text-text18 xl:text-text22 flex flex-col md:flex-col items-start justify-start gap-5">
 
+                                <h2
+                                    class="text-white bg-verdecreditomype rounded-full w-16 h-16 text-text48  flex items-center justify-center font-fontMedium">
+                                    3</h2>
+                                <h2 class="text-azulcreditomype text-text18 font-fontLight">DHR PU - Autovalúo (Tributos Municipales): Documentos que indiquen el valor autovalúo y los tributos municipales pagados.</h2>
+
+                            </div>
+
+                            <div
+                                class="font-semibold text-text18 xl:text-text22 flex flex-col md:flex-col items-start justify-start gap-5">
+
+                                <h2
+                                    class="text-white bg-verdecreditomype rounded-full w-16 h-16 text-text48  flex items-center justify-center font-fontMedium">
+                                    4</h2>
+                                <h2 class="text-azulcreditomype text-text18 font-fontLight">Sustento de Ingresos: Documentos que respalden los ingresos propios o los de los avales.</h2>
+
+                            </div>
+
+                        </div>    
                     </div>
 
                     <div class="image-container flex justify-center items-center basis-1/2 relative ">
