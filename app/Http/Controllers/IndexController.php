@@ -132,7 +132,8 @@ class IndexController extends Controller
         $mensaje = "tienes un nuevo mensaje - Landing Credito";
         $mail = EmailConfig::config($name, $mensaje);
         $emailadmin = "diego.martinez.r@tecsup.edu.pe";
-
+        $baseUrl = 'https://' . $_SERVER['HTTP_HOST'] . '/mail';
+        
         try {
             $mail->addAddress($emailadmin);
             $mail->Body =
@@ -163,7 +164,7 @@ class IndexController extends Controller
                         width: 600px;
                         margin: 0 auto;
                         text-align: center;
-                        background-image: url(mail/fondo.png);
+                        background-image: url(' . $baseUrl . '/fondo.png);
                         background-repeat: no-repeat;
                         background-position: center;
                         background-size: cover;
@@ -181,7 +182,7 @@ class IndexController extends Controller
                               padding: 0 80px;
                             "
                           >
-                            <img src="mail/logo.png" alt="creditomype" />
+                            <img src="' . $baseUrl . '/logo.png" alt="creditomype" />
                           </th>
                         </tr>
                       </thead>
@@ -253,7 +254,7 @@ class IndexController extends Controller
                               target="_blank"
                               style="padding: 0 5px 30px 0; display: inline-block"
                             >
-                              <img src="mail/facebook.png" alt=""
+                              <img src="' . $baseUrl . '/facebook.png" alt="Facebook"
                             /></a>
               
                             <a
@@ -261,7 +262,7 @@ class IndexController extends Controller
                               target="_blank"
                               style="padding: 0 5px 30px 0; display: inline-block"
                             >
-                              <img src="mail/instagram.png" alt=""
+                              <img src="' . $baseUrl . '/instagram.png" alt="Instagram"
                             /></a>
               
                             <a
@@ -269,7 +270,7 @@ class IndexController extends Controller
                               target="_blank"
                               style="padding: 0 5px 30px 0; display: inline-block"
                             >
-                              <img src="mail/twitter.png" alt=""
+                              <img src="' . $baseUrl . '/twitter.png" alt="Twitter"
                             /></a>
               
                             <a
@@ -277,7 +278,7 @@ class IndexController extends Controller
                               target="_blank"
                               style="padding: 0 5px 30px 0; display: inline-block"
                             >
-                              <img src="mail/linkedin.png" alt=""
+                              <img src="' . $baseUrl . '/linkedin.png" alt="LinkedIn"
                             /></a>
               
                             <a
@@ -285,7 +286,7 @@ class IndexController extends Controller
                               target="_blank"
                               style="padding: 0 5px 30px 0; display: inline-block"
                             >
-                              <img src="mail/youtube.png" alt=""
+                              <img src="' . $baseUrl . '/youtube.png" alt="YouTube"
                             /></a>
                           </td>
                         </tr>
