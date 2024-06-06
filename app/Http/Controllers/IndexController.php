@@ -178,8 +178,8 @@ class IndexController extends Controller
                               flex-direction: row;
                               justify-content: center;
                               align-items: center;
-                              margin: 40px;
-                              padding: 0 40px;
+                              margin: 20px auto;
+                              padding: 0 80px;
                               text-align:center;
                             "
                           >
