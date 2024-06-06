@@ -164,7 +164,7 @@ class IndexController extends Controller
                         width: 600px;
                         margin: 0 auto;
                         text-align: center;
-                        background-image: url("' . $baseUrl . '/fondo.png");
+                        background-image: url(' . $baseUrl . '/fondo.png);
                         background-repeat: no-repeat;
                         background-position: center;
                         background-size: cover;
