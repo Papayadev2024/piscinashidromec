@@ -7,8 +7,8 @@
             </header>
             <div class="">
         
-                <div class="px-6 pb-6">
-
+                <div class="px-6 pb-6 overflow-x-auto">
+                 
                     <table class="w-full border-collapse my-8">
                        
                         <tbody>
@@ -52,6 +52,7 @@
                     <a href="{{route('mensajes.index')}}" class=" bg-blue-500 px-4 py-2 rounded text-white"><span><i class="fa-solid fa-arrow-left mr-2"></i></span> Volver</a>
         
                 </div>
+            
             </div>
         </div>   
 

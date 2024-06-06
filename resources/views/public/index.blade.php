@@ -963,7 +963,7 @@
 
                 <div class="image-container flex justify-center items-center basis-1/2 relative md:mt-16">
                     <!-- md:mt-24 - mt-12  xl:mt-32-->
-                    <div class="hidden md:flex flex-col justify-center h-full items-center">
+                    <div class="p-8 flex flex-col justify-center h-full items-center">
                         <img src="{{ asset('images/img/mapa.png') }}" alt="doctor Kewin" class="w-full">
                     </div>
                     {{-- <div class=" md:absolute bottom-0">
