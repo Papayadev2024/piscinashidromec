@@ -463,8 +463,9 @@
                     class="flex justify-center items-center absolute xs:-bottom-[110px] 2xs:-bottom-[202px] sm:-bottom-[160px] md:-bottom-[190px] 3md:-bottom-[220px] xl:-bottom-[290px] 2xl:-bottom-[290px] w-full">
                     <div class="relative contenedor_video">
                         {{-- <p>{{$texto_despues_igual = substr(strrchr($generales->title2, '='), 1);}}</p>
-                        <p>{{$texto_despues_igual}}</p> --}}
                         <iframe src="https://www.youtube.com/embed/{{ substr(strrchr($generales->title2, '='), 1) }}"
+                        <p>{{$texto_despues_igual}}</p> --}}
+                        <iframe src="https://www.youtube.com/embed/KO85z8J9i8o"
                             title="YouTube video player" frameborder="0" referrerpolicy="strict-origin-when-cross-origin"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowfullscreen
@@ -756,7 +757,7 @@
                         </div>
                     </div>
 
-                    <div class="basis-2/3 w-full 2md:w-[200px] flex items-center -mt-20 pl-[5%]">
+                    <div class="basis-2/3 w-full 2md:w-[200px] flex items-center mt-0 lg:-mt-20 pl-[5%]">
                         <img class="w-full h-full size-full" src="{{ asset('images/img/bannerchico.png') }}" />
                     </div>
                 </div>
@@ -764,7 +765,7 @@
         </section>
 
 
-        <section class="bannervideo" id="testimonio">
+        <section class="bannervideo relative" id="testimonio">
             <div class="flex flex-col gap-5 text-textAzul w-full" data-aos="fade-up" data-aos-offset="150">
                 <div class="flex flex-col 2md:flex-row gap-10">
 
@@ -787,20 +788,82 @@
                             <h3 class="text-azulcreditomype text-text18 font-fontBold tracking-tighter mt-4">Maria
                                 Rodríguez,</h3>
                             <h2 class="text-azulcreditomype text-text18 font-fontLight tracking-tighter">Emprendendora
-                                <div class="bg-azulcreditomype rounded-full absolute bottom-6 right-10 block lg:hidden"><img class=" animate-bounce animate-infinite w-7 h-7"
+                                <div class="bg-azulcreditomype rounded-full absolute bottom-6 right-10 block lg:hidden play-button cursor-pointer"><img class=" animate-bounce animate-infinite w-7 h-7"
                                     src="{{ asset('images/img/play.png') }}" /></div>
                             </h2>
                         </div>
 
-                        <div class="bg-azulcreditomype rounded-full absolute top-1/2 right-1/2 hidden lg:block animate-bounce animate-infinite"><img class="w-20 h-20"
+                        <div class="bg-azulcreditomype rounded-full absolute top-1/2 right-1/2 hidden lg:block animate-bounce animate-infinite play-button2 cursor-pointer"><img class="w-20 h-20"
                                 src="{{ asset('images/img/play.png') }}" /></div>
                     </div>
 
                 </div>
             </div>
+
+            <div id="iframeContainer" class="hidden absolute inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
+                <iframe id="youtubeIframe" 
+                        src="https://www.youtube.com/embed/R50W2gIOxRw"
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                        class="w-full aspect-video sm:w-[500px] sm:h-[283px] md:w-[500px] md:h-[282px] lg:w-[1000px] lg:h-[550px] 2xl:w-[1000px] 2xl:h-[565px]">
+                </iframe>
+            </div>
         </section>
+        <style>
+            #iframeContainer {
+                display: none; /* Oculto por defecto */
+            }
 
+            #iframeContainer.show {
+                display: flex; /* Mostrar como flex para centrar el iframe */
+            }
+        </style>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const playButton = document.querySelector('.play-button');
+                const iframeContainer = document.getElementById('iframeContainer');
+                const iframe = document.getElementById('youtubeIframe');
 
+                playButton.addEventListener('click', function() {
+                    iframeContainer.classList.add('show');
+                    // Autoplay el video
+                    const src = iframe.src;
+                    iframe.src = src + "?autoplay=1";
+                });
+
+                // Opcional: Cerrar el iframe al hacer clic fuera de él
+                iframeContainer.addEventListener('click', function(e) {
+                    if (e.target === iframeContainer) {
+                        iframe.src = iframe.src.replace("?autoplay=1", ""); // Detener el video
+                        iframeContainer.classList.remove('show');
+                    }
+                });
+            });
+
+            document.addEventListener('DOMContentLoaded', function() {
+                const playButton = document.querySelector('.play-button2');
+                const iframeContainer = document.getElementById('iframeContainer');
+                const iframe = document.getElementById('youtubeIframe');
+
+                playButton.addEventListener('click', function() {
+                    iframeContainer.classList.add('show');
+                    // Autoplay el video
+                    const src = iframe.src;
+                    iframe.src = src + "?autoplay=1";
+                });
+
+                // Opcional: Cerrar el iframe al hacer clic fuera de él
+                iframeContainer.addEventListener('click', function(e) {
+                    if (e.target === iframeContainer) {
+                        iframe.src = iframe.src.replace("?autoplay=1", ""); // Detener el video
+                        iframeContainer.classList.remove('show');
+                    }
+                });
+            });
+        </script>
         <section class="flex flex-col gap-10 w-full px-[5%] bg-white py-12 lg:py-24" data-aos="fade-up" data-aos-offset="150">
             <div class="flex flex-col gap-3 text-center px-[5%] lg:px-[20%]">
                 <h2

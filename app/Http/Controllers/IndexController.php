@@ -255,7 +255,7 @@ class IndexController extends Controller
                         <tr>
                           <td>
                             <a
-                              href=" "
+                              href="https://web.facebook.com/Creditomype"
                               target="_blank"
                               style="padding: 0 5px 30px 0; display: inline-block"
                             >
@@ -263,7 +263,7 @@ class IndexController extends Controller
                             /></a>
               
                             <a
-                              href=" "
+                              href="https://www.instagram.com/creditomype/"
                               target="_blank"
                               style="padding: 0 5px 30px 0; display: inline-block"
                             >
@@ -271,15 +271,7 @@ class IndexController extends Controller
                             /></a>
               
                             <a
-                              href=" "
-                              target="_blank"
-                              style="padding: 0 5px 30px 0; display: inline-block"
-                            >
-                              <img src="' . $baseUrl . '/twitter.png" alt="Twitter"
-                            /></a>
-              
-                            <a
-                              href=" "
+                              href="https://www.linkedin.com/company/creditomype/"
                               target="_blank"
                               style="padding: 0 5px 30px 0; display: inline-block"
                             >
@@ -287,7 +279,7 @@ class IndexController extends Controller
                             /></a>
               
                             <a
-                              href=" "
+                              href="https://www.youtube.com/@prestamocongarantiahipotecaria"
                               target="_blank"
                               style="padding: 0 5px 30px 0; display: inline-block"
                             >
@@ -437,17 +429,17 @@ class IndexController extends Controller
                           </td>
                         </tr>
                         <tr>
-                          <td>
+                         <td>
                             <a
-                              <img src="' . $baseUrl . '/facebook.png" alt="Facebook"
+                              href="https://web.facebook.com/Creditomype"
                               target="_blank"
                               style="padding: 0 5px 30px 0; display: inline-block"
                             >
-                              <img src="./facebook.png" alt=""
+                              <img src="' . $baseUrl . '/facebook.png" alt="Facebook"
                             /></a>
               
                             <a
-                              href=" "
+                              href="https://www.instagram.com/creditomype/"
                               target="_blank"
                               style="padding: 0 5px 30px 0; display: inline-block"
                             >
@@ -455,15 +447,7 @@ class IndexController extends Controller
                             /></a>
               
                             <a
-                              href=" "
-                              target="_blank"
-                              style="padding: 0 5px 30px 0; display: inline-block"
-                            >
-                              <img src="' . $baseUrl . '/twitter.png" alt="Twitter"
-                            /></a>
-              
-                            <a
-                              href=" "
+                              href="https://www.linkedin.com/company/creditomype/"
                               target="_blank"
                               style="padding: 0 5px 30px 0; display: inline-block"
                             >
@@ -471,7 +455,7 @@ class IndexController extends Controller
                             /></a>
               
                             <a
-                              href=" "
+                              href="https://www.youtube.com/@prestamocongarantiahipotecaria"
                               target="_blank"
                               style="padding: 0 5px 30px 0; display: inline-block"
                             >
