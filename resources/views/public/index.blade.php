@@ -10,11 +10,13 @@
         }
 
         #iframeContainer {
-        display: none; /* Oculto por defecto */
+            display: none;
+            /* Oculto por defecto */
         }
 
         #iframeContainer.show {
-            display: flex; /* Mostrar como flex para centrar el iframe */
+            display: flex;
+            /* Mostrar como flex para centrar el iframe */
         }
 
         .img-container {
@@ -414,15 +416,15 @@
             .bg__image-header {
                 background-position: top !important;
                 background-repeat: no-repeat !important;
-                background-size: contain !important;
+                background-size: cover !important;
                 background-image: url({{ asset('images/img/fondoheader.png') }}) !important;
             }
 
             .fontosectionmidle {
-            background-position: top right!important;
-            background-repeat: no-repeat!important;
-            background-size: contain!important;
-            background-image: url({{ asset('images/img/texturasection.png') }})!important;
+                background-position: top right !important;
+                background-repeat: no-repeat !important;
+                background-size: contain !important;
+                background-image: url({{ asset('images/img/texturasection.png') }}) !important;
             }
 
         }
@@ -448,14 +450,14 @@
             background-image: url({{ asset('images/img/bannervideo.png') }});
         }
 
-        .texturapreguntas{
+        .texturapreguntas {
             background-position: top;
             background-repeat: no-repeat;
             background-size: cover;
             background-image: url({{ asset('images/img/texturapreguntas.png') }});
         }
 
-        .texturalogos{
+        .texturalogos {
             background-position: top;
             background-repeat: no-repeat;
             background-size: cover;
@@ -466,43 +468,46 @@
 @stop
 {{-- style="background-image: url({{asset('images/img/Hero_Doctor_mobile.png')}})" --}}
 @section('content')
-    <main class="flex flex-col font-outfit  pt-24 lg:pt-28">
+    <main class="flex flex-col font-outfit">
 
 
         <section class="bg__image-header text-textWhite" id="acerca">
-            <div class="relative py-12 md:pt-32  w-11/12 mx-auto xs:pb-[120px] 2xs:pb-[126px] sm:pb-[280px] lg:pb-[320px]  2xl:pb-[400px] flex flex-col items-center"
+            <div class="relative py-16 md:pt-24  w-11/12 mx-auto  flex flex-col items-center"
                 data-aos="fade-up" data-aos-offset="150">
-                <div class="flex flex-col xl:flex-row gap-6 xl:gap-20 lg:pb-20">
-                    <div class="md:basis-full flex flex-col gap-4 mx-[7%]">
-                        <p class="font-fontBook text-text56 leading-tight xl:text-text64 text-center tracking-tighter">
+                <div class="flex flex-col gap-6 xl:gap-20  py-12">
+                    <div class="md:basis-full flex flex-col gap-4">
+                        <p class="font-fontBook text-text56 leading-tight xl:text-text52 text-center tracking-tighter">
                             Obtén el <span class="text-verdecreditomype font-fontBold">impulso 💰 financiero</span> que tu
                             negocio necesita 💸
 
                         </p>
                     </div>
                 </div>
-
-                <div
-                    class="flex justify-center items-center absolute xs:-bottom-[110px] 2xs:-bottom-[202px] sm:-bottom-[160px] md:-bottom-[190px] 3md:-bottom-[220px] xl:-bottom-[290px] 2xl:-bottom-[290px] w-full">
+                <div class="flex justify-center items-center w-full h-[480px]">
+                
                     <div class="relative contenedor_video">
-                        {{-- <p>{{$texto_despues_igual = substr(strrchr($generales->title2, '='), 1);}}</p>
-                        <iframe src="https://www.youtube.com/embed/{{ substr(strrchr($generales->title2, '='), 1) }}"
-                        <p>{{$texto_despues_igual}}</p> --}}
-                        <iframe src="https://www.youtube.com/embed/KO85z8J9i8o"
-                            title="YouTube video player" frameborder="0" referrerpolicy="strict-origin-when-cross-origin"
+
+                        <iframe src="https://www.youtube.com/embed/KO85z8J9i8o" title="YouTube video player"
+                            frameborder="0" referrerpolicy="strict-origin-when-cross-origin"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowfullscreen
-                            class="w-full aspect-video  sm:w-[500px] sm:h-[283px]  md:w-[500px] md:h-[282px] lg:w-[1000px] lg:h-[550px] 2xl:w-[1000px] 2xl:h-[565px]"></iframe>
-                        <!-- h-[200px] sm:w-[500px] sm:h-[400px] md:w-[500px] md:h-[400px] lg:w-[800px] lg:h-[500px] 2xl:w-[1000px] 2xl:h-[600px] -->
+                            class="aspect-video w-[800px]"></iframe>
+                    
                     </div>
                 </div>
+
             </div>
+
            
-            <div class="pt-[210px] 3md:pt-[200px] lg:pt-[268px] xl:pt-[335px] 2xl:pt-[350px]" >
+        </section>
+
+        <section>
+            <div class="mt-10">
                 <div class="w-full mx-auto flex flex-col md:flex-row justify-center text-center items-start sm:pt-[90px] pb-10  md:pt-20 lg:pb-20 lg:px-20 lg:pt-10"
                     data-aos="fade-up" data-aos-offset="150">
 
-                    <div class="text-azulcreditomype flex flex-col gap-14 basis-1/2 text-left p-5 lg:pr-[8%] pb-12" id="prestamo" >
+                    <div class="text-azulcreditomype flex flex-col gap-14 basis-1/2 text-left p-5 lg:pr-[8%] pb-12"
+                        id="prestamo">
                         <div class="flex flex-col gap-8 md:gap-5">
                             <h1
                                 class="font-bold fontBold text-[50px] md:text-text36 2md:text-text56 leading-none 2md:leading-tight">
@@ -517,7 +522,8 @@
                                 <h2
                                     class="text-white bg-verdecreditomype rounded-full w-16 h-16 text-text48 flex items-center justify-center font-fontMedium">
                                     1</h2>
-                                <h2 class="text-azulcreditomype text-text18 font-fontLight">Contar con una propiedad inscrita en registros públicos (SUNARP) 
+                                <h2 class="text-azulcreditomype text-text18 font-fontLight">Contar con una propiedad
+                                    inscrita en registros públicos (SUNARP)
                                     dentro de nuestro rango de cobertura (Rango de cobertura)</h2>
 
                             </div>
@@ -528,7 +534,8 @@
                                 <h2
                                     class="text-white bg-verdecreditomype rounded-full w-16 h-16 text-text48  flex items-center justify-center font-fontMedium">
                                     2</h2>
-                                <h2 class="text-azulcreditomype text-text18 font-fontLight">DNI de los Propietarios: Copia del Documento Nacional de Identidad de todos los propietarios del inmueble.</h2>
+                                <h2 class="text-azulcreditomype text-text18 font-fontLight">DNI de los Propietarios: Copia
+                                    del Documento Nacional de Identidad de todos los propietarios del inmueble.</h2>
 
                             </div>
 
@@ -538,7 +545,9 @@
                                 <h2
                                     class="text-white bg-verdecreditomype rounded-full w-16 h-16 text-text48  flex items-center justify-center font-fontMedium">
                                     3</h2>
-                                <h2 class="text-azulcreditomype text-text18 font-fontLight">DHR PU - Autovalúo (Tributos Municipales): Documentos que indiquen el valor autovalúo y los tributos municipales pagados.</h2>
+                                <h2 class="text-azulcreditomype text-text18 font-fontLight">DHR PU - Autovalúo (Tributos
+                                    Municipales): Documentos que indiquen el valor autovalúo y los tributos municipales
+                                    pagados.</h2>
 
                             </div>
 
@@ -548,16 +557,18 @@
                                 <h2
                                     class="text-white bg-verdecreditomype rounded-full w-16 h-16 text-text48  flex items-center justify-center font-fontMedium">
                                     4</h2>
-                                <h2 class="text-azulcreditomype text-text18 font-fontLight">Sustento de Ingresos: Documentos que respalden los ingresos propios o los de los avales.</h2>
+                                <h2 class="text-azulcreditomype text-text18 font-fontLight">Sustento de Ingresos: Documentos
+                                    que respalden los ingresos propios o los de los avales.</h2>
 
                             </div>
 
-                        </div>    
+                        </div>
                     </div>
 
                     <div class="image-container flex justify-center items-center basis-1/2 relative ">
                         <!-- md:mt-24 - mt-12  xl:mt-32-->
-                        <div class="flex flex-col justify-end h-full items-end p-5 lg:p-8 bg-plomotransparente rounded-3xl ">
+                        <div
+                            class="flex flex-col justify-end h-full items-end p-5 lg:p-8 bg-plomotransparente rounded-3xl ">
 
                             <h2
                                 class="text-left font-bold font-fontMedium text-azulcreditomype text-text32 leading-none md:leading-tight">
@@ -565,80 +576,104 @@
                                 que tu negocio necesita
                             </h2>
 
-                            
-                                <div class="bg-transparent flex items-center justify-center min-h-screen w-full mt-3 ">
-                                    <div class="bg-transparent   w-full ">
-                                        <form class="text-black font-fontBook gap-5 bg-transparent" id="formContactos">
-                                            @csrf
-                                            <div class="relative mb-4">
-                                                <input name="name" type="text" required style="font-size: 17px" class="bg-transparent  mt-1 block w-full border-0 border-b-2 border-gray-400 rounded-none p-3 pr-24 focus:ring-0 focus:border-b-2 focus:border-gray-500" placeholder="Nombre">
-                                                <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-verdecreditomype text-text14">Obligatorio</span>
-                                            </div>
-                                            <div class="relative mb-4">
-                                                <input name="last_name" type="text" required style="font-size: 17px" class="bg-transparent mt-1 block w-full border-0 border-b-2 border-gray-400 rounded-none p-3 pr-24 focus:ring-0 focus:border-b-2 focus:border-gray-500" placeholder="Apellidos">
-                                                <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-verdecreditomype text-text14">Obligatorio</span>
-                                            </div>
-                                            <div class="relative mb-4">
-                                                <input name="document" type="text" style="font-size: 17px" class="bg-transparent mt-1 block w-full border-0 border-b-2 border-gray-400 rounded-none p-3 pr-24 focus:ring-0 focus:border-b-2 focus:border-gray-500" placeholder="DNI">
-                                                <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-verdecreditomype text-text14"></span>
-                                            </div>
-                                            <div class="relative mb-4">
-                                                <input id="email" name="email" type="email" style="font-size: 17px" class="bg-transparent mt-1 block w-full border-0 border-b-2 border-gray-400 rounded-none p-3 pr-24 focus:ring-0 focus:border-b-2 focus:border-gray-500" placeholder="E-mail">
-                                                <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-verdecreditomype text-text14"></span>
-                                            </div>
-                                            <div class="relative mb-4">
-                                                <input id="telefono" name="cellphone" type="text" style="font-size: 17px" class="bg-transparent placeholder:text-verdecreditomype text-verdecreditomype font-fontBook font-semibold mt-1 block w-full border-0 border-b-2 border-gray-400 rounded-none p-3 pr-24 focus:ring-0 focus:border-b-2 focus:border-gray-500" placeholder="Número de celular">
-                                                <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-verdecreditomype text-text14"></span>
-                                            </div>
-                                            <div class="mb-4">
-                                        
-                                                <select name="monto" class="bg-transparent mt-1 block w-full border-0 border-b-2 border-gray-400 rounded-none p-3 pr-24 focus:ring-0 focus:border-b-2 focus:border-gray-500">
-                                                    <option class="option" value="">Seleccione el monto</option>
-                                                    <option class="option" value="1000">1000</option>
-                                                    <option class="option" value="5000">5000</option>
-                                                    <option class="option" value="10000">10000</option>
-                                                </select>
-                                            </div>
-                                            <div class="relative mb-4">
-                                                <textarea name="garantie" style="font-size: 17px; height: auto;" 
-                                                          class="min-h-28 lg:min-h-14 tracking-tight bg-transparent placeholder:text-text14 mt-1 block w-full border-0 border-b-2 border-gray-400 rounded-none p-3 pr-24 focus:ring-0 focus:border-b-2 focus:border-gray-500 resize-none" 
-                                                          placeholder="Tienes una casa o departamento que puedas dejar como garantía hipotecaria?"></textarea>
-                                                <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-verdecreditomype text-text14"></span>
-                                            </div>
 
-                                            <div class="relative mb-4">
-                                                <textarea name="address" style="font-size: 17px; height: auto;" 
-                                                class="min-h-32 lg:min-h-14 tracking-tight bg-transparent placeholder:text-text14 mt-1 block w-full border-0 border-b-2 border-gray-400 rounded-none p-3 pr-24 focus:ring-0 focus:border-b-2 focus:border-gray-500 resize-none" 
+                            <div class="bg-transparent flex items-center justify-center min-h-screen w-full mt-3 ">
+                                <div class="bg-transparent   w-full ">
+                                    <form class="text-black font-fontBook gap-5 bg-transparent" id="formContactos">
+                                        @csrf
+                                        <div class="relative mb-4">
+                                            <input name="name" type="text" required style="font-size: 17px"
+                                                class="bg-transparent  mt-1 block w-full border-0 border-b-2 border-gray-400 rounded-none p-3 pr-24 focus:ring-0 focus:border-b-2 focus:border-gray-500"
+                                                placeholder="Nombre">
+                                            <span
+                                                class="absolute inset-y-0 right-0 flex items-center pr-3 text-verdecreditomype text-text14">Obligatorio</span>
+                                        </div>
+                                        <div class="relative mb-4">
+                                            <input name="last_name" type="text" required style="font-size: 17px"
+                                                class="bg-transparent mt-1 block w-full border-0 border-b-2 border-gray-400 rounded-none p-3 pr-24 focus:ring-0 focus:border-b-2 focus:border-gray-500"
+                                                placeholder="Apellidos">
+                                            <span
+                                                class="absolute inset-y-0 right-0 flex items-center pr-3 text-verdecreditomype text-text14">Obligatorio</span>
+                                        </div>
+                                        <div class="relative mb-4">
+                                            <input name="document" type="text" style="font-size: 17px"
+                                                class="bg-transparent mt-1 block w-full border-0 border-b-2 border-gray-400 rounded-none p-3 pr-24 focus:ring-0 focus:border-b-2 focus:border-gray-500"
+                                                placeholder="DNI">
+                                            <span
+                                                class="absolute inset-y-0 right-0 flex items-center pr-3 text-verdecreditomype text-text14"></span>
+                                        </div>
+                                        <div class="relative mb-4">
+                                            <input id="email" name="email" type="email" style="font-size: 17px"
+                                                class="bg-transparent mt-1 block w-full border-0 border-b-2 border-gray-400 rounded-none p-3 pr-24 focus:ring-0 focus:border-b-2 focus:border-gray-500"
+                                                placeholder="E-mail">
+                                            <span
+                                                class="absolute inset-y-0 right-0 flex items-center pr-3 text-verdecreditomype text-text14"></span>
+                                        </div>
+                                        <div class="relative mb-4">
+                                            <input id="telefono" name="cellphone" type="text" style="font-size: 17px"
+                                                class="bg-transparent placeholder:text-verdecreditomype text-verdecreditomype font-fontBook font-semibold mt-1 block w-full border-0 border-b-2 border-gray-400 rounded-none p-3 pr-24 focus:ring-0 focus:border-b-2 focus:border-gray-500"
+                                                placeholder="Número de celular">
+                                            <span
+                                                class="absolute inset-y-0 right-0 flex items-center pr-3 text-verdecreditomype text-text14"></span>
+                                        </div>
+                                        <div class="mb-4">
+
+                                            <select name="monto"
+                                                class="bg-transparent mt-1 block w-full border-0 border-b-2 border-gray-400 rounded-none p-3 pr-24 focus:ring-0 focus:border-b-2 focus:border-gray-500">
+                                                <option class="option" value="">Seleccione el monto</option>
+                                                <option class="option" value="1000">1000</option>
+                                                <option class="option" value="5000">5000</option>
+                                                <option class="option" value="10000">10000</option>
+                                            </select>
+                                        </div>
+                                        <div class="relative mb-4">
+                                            <textarea name="garantie" style="font-size: 17px; height: auto;"
+                                                class="min-h-28 lg:min-h-14 tracking-tight bg-transparent placeholder:text-text14 mt-1 block w-full border-0 border-b-2 border-gray-400 rounded-none p-3 pr-24 focus:ring-0 focus:border-b-2 focus:border-gray-500 resize-none"
+                                                placeholder="Tienes una casa o departamento que puedas dejar como garantía hipotecaria?"></textarea>
+                                            <span
+                                                class="absolute inset-y-0 right-0 flex items-center pr-3 text-verdecreditomype text-text14"></span>
+                                        </div>
+
+                                        <div class="relative mb-4">
+                                            <textarea name="address" style="font-size: 17px; height: auto;"
+                                                class="min-h-32 lg:min-h-14 tracking-tight bg-transparent placeholder:text-text14 mt-1 block w-full border-0 border-b-2 border-gray-400 rounded-none p-3 pr-24 focus:ring-0 focus:border-b-2 focus:border-gray-500 resize-none"
                                                 placeholder="Distrito de la casa o departamento (debe estar ubicado en lima metropolitana, callao, lima provincia o huancayo)"></textarea>
-                                                <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-verdecreditomype text-text14"></span>
-                                            </div>
-            
-                   
-                                            
-                                            <div class="flex items-center mb-4 ">
-                                                <input required type="checkbox" id="comunicaciones" class="mr-2 focus:ring-0 bg-transparent rounded border-gray-300 text-verdecreditomype">
-                                                <label for="comunicaciones" class="text-gray-700 tracking-tight">Acepto recibir comunicaciones.</label>
-                                            </div>
-                                            <p class="text-gray-700 text-text16 text-left tracking-tight">Al facilitar mis datos acepto la <a href="#" class="text-verdecreditomype underline">Política de Privacidad.</a></p>
-                                            <div class="mt-6">
-                                                <button type="submit" class="w-full bg-verdecreditomype text-white py-3 rounded-3xl hover:bg-green-600 mt-3">Quiero una cotización</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
+                                            <span
+                                                class="absolute inset-y-0 right-0 flex items-center pr-3 text-verdecreditomype text-text14"></span>
+                                        </div>
 
-                            
-                          
-                          
+
+
+                                        <div class="flex items-center mb-4 ">
+                                            <input required type="checkbox" id="comunicaciones"
+                                                class="mr-2 focus:ring-0 bg-transparent rounded border-gray-300 text-verdecreditomype">
+                                            <label for="comunicaciones" class="text-gray-700 tracking-tight">Acepto
+                                                recibir comunicaciones.</label>
+                                        </div>
+                                        <p class="text-gray-700 text-text16 text-left tracking-tight">Al facilitar mis
+                                            datos acepto la <a href="#"
+                                                class="text-verdecreditomype underline">Política de Privacidad.</a></p>
+                                        <div class="mt-6">
+                                            <button type="submit"
+                                                class="w-full bg-verdecreditomype text-white py-3 rounded-3xl hover:bg-green-600 mt-3">Quiero
+                                                una cotización</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+
+
+
                         </div>
-                      
+
                     </div>
                 </div>
             </div>
         </section>
-
-        <section id="beneficios" class="flex flex-col gap-10 w-full px-[5%] bg-plomocreditomype py-12 lg:py-24" data-aos="fade-up"
-            data-aos-offset="150">
+        <div id="beneficios" class="py-3"></div>
+        <section class="flex flex-col gap-10 w-full px-[5%] bg-plomocreditomype py-12 lg:py-24"
+            data-aos="fade-up" data-aos-offset="150">
             <div class="flex flex-col gap-3 text-center px-[5%] lg:px-[20%]">
                 <h2
                     class="font-bold font-fontBold text-verdecreditomype text-text48 md:text-text52 leading-none md:leading-tight">
@@ -778,8 +813,9 @@
         </section>
 
 
-        <section class="bg-verdecreditomype fontosectionmidle">
-            <div class="flex flex-col gap-5 text-textAzul w-full px-[5%] lg:pl-[5%] " data-aos="fade-up" data-aos-offset="150">
+        {{-- <section class="bg-verdecreditomype fontosectionmidle">
+            <div class="flex flex-col gap-5 text-textAzul w-full px-[5%] lg:pl-[5%] " data-aos="fade-up"
+                data-aos-offset="150">
                 <div class="flex flex-col 2md:flex-row gap-10">
                     <div class="text-azulcreditomype flex flex-col gap-14 basis-1/3 text-left pt-14 lg:py-20">
                         <div class="flex flex-col gap-8 md:gap-5">
@@ -790,7 +826,8 @@
                             </h1>
                         </div>
                         <div class="font-semibold flex flex-col md:flex-col items-start justify-start gap-5">
-                            <h2 class="text-white text-text24 lg:text-text30 font-fontLight">Creditomype conecta a emprendedores y
+                            <h2 class="text-white text-text24 lg:text-text30 font-fontLight">Creditomype conecta a
+                                emprendedores y
                                 empresarios
                                 que buscan financiamiento para sus proyectos, con inversionistas dispuestos a financiar
                                 estos proyectos,
@@ -804,7 +841,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> --}}
 
 
         <section class="bannervideo relative" id="testimonio">
@@ -823,39 +860,43 @@
                         <div
                             class="bg-plomoblanco font-semibold flex flex-col md:flex-col items-start justify-start gap-0 w-4/6 lg:w-2/6 rounded-2xl p-5 relative left-10 lg:left-24">
 
-                            <img class="absolute top-0 right-28 -m-5 w-10 lg:18" src="{{ asset('images/img/triangulo.png') }}" />
-                            <h2 class="text-azulcreditomype  text-text11 lg:text-text24 font-fontLight">"Credito MYPE me ayudó a expandir
+                            <img class="absolute top-0 right-28 -m-5 w-10 lg:18"
+                                src="{{ asset('images/img/triangulo.png') }}" />
+                            <h2 class="text-azulcreditomype  text-text11 lg:text-text24 font-fontLight">"Credito MYPE me
+                                ayudó a expandir
                                 mi tienda en un tiempo récord.
                                 El proceso fue simple y el equipo muy profesional."</h2>
                             <h3 class="text-azulcreditomype text-text18 font-fontBold tracking-tighter mt-4">Maria
                                 Rodríguez,</h3>
                             <h2 class="text-azulcreditomype text-text18 font-fontLight tracking-tighter">Emprendendora
-                                <div class="bg-azulcreditomype rounded-full absolute bottom-6 right-10 block lg:hidden play-button cursor-pointer"><img class=" animate-bounce animate-infinite w-7 h-7"
-                                    src="{{ asset('images/img/play.png') }}" /></div>
+                                <div
+                                    class="bg-azulcreditomype rounded-full absolute bottom-6 right-10 block lg:hidden play-button cursor-pointer">
+                                    <img class=" animate-bounce animate-infinite w-7 h-7"
+                                        src="{{ asset('images/img/play.png') }}" /></div>
                             </h2>
                         </div>
 
-                        <div class="bg-azulcreditomype rounded-full absolute top-1/2 right-1/2 hidden lg:block animate-bounce animate-infinite play-button2 cursor-pointer"><img class="w-20 h-20"
-                                src="{{ asset('images/img/play.png') }}" /></div>
+                        <div
+                            class="bg-azulcreditomype rounded-full absolute top-1/2 right-1/2 hidden lg:block animate-bounce animate-infinite play-button2 cursor-pointer">
+                            <img class="w-20 h-20" src="{{ asset('images/img/play.png') }}" /></div>
                     </div>
 
                 </div>
             </div>
 
-            <div id="iframeContainer" class="hidden absolute inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
-                <iframe id="youtubeIframe" 
-                        src="https://www.youtube.com/embed/R50W2gIOxRw"
-                        title="YouTube video player" 
-                        frameborder="0" 
-                        referrerpolicy="strict-origin-when-cross-origin"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen
-                        class="w-full aspect-video sm:w-[500px] sm:h-[283px] md:w-[500px] md:h-[282px] lg:w-[1000px] lg:h-[550px] 2xl:w-[1000px] 2xl:h-[565px]">
+            <div id="iframeContainer"
+                class="hidden absolute inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
+                <iframe id="youtubeIframe" src="https://www.youtube.com/embed/R50W2gIOxRw" title="YouTube video player"
+                    frameborder="0" referrerpolicy="strict-origin-when-cross-origin"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                    class="w-full aspect-video sm:w-[500px] sm:h-[283px] md:w-[500px] md:h-[282px] lg:w-[1000px] lg:h-[550px] 2xl:w-[1000px] 2xl:h-[565px]">
                 </iframe>
             </div>
         </section>
-      
-        <section class="flex flex-col gap-10 w-full px-[5%] bg-white py-12 lg:py-24 texturalogos" data-aos="fade-up" data-aos-offset="150">
+
+        <section class="flex flex-col gap-10 w-full px-[5%] bg-white py-12 lg:py-24 texturalogos" data-aos="fade-up"
+            data-aos-offset="150">
             <div class="flex flex-col gap-3 text-center px-[5%] lg:px-[20%]">
                 <h2
                     class="tracking-tight font-bold font-fontBold text-verdecreditomype text-text48 md:text-text56 leading-none md:leading-tight">
@@ -997,7 +1038,7 @@
         </section>
 
         <section>
-            <div  class="bg-[#F5F5F5] font-poppins py-12 lg:py-20 texturapreguntas">
+            <div class="bg-[#F5F5F5] font-poppins py-12 lg:py-20 texturapreguntas">
                 <div class="relative  px-6  ring-gray-900/5 sm:mx-auto sm:rounded-lg sm:px-10 ">
                     <div class="mx-auto px-5">
                         <div class="flex flex-col items-center ">
@@ -1012,7 +1053,8 @@
                                 <details class="group">
                                     <summary
                                         class="flex cursor-pointer list-none items-center justify-between font-medium">
-                                        <span class="text-azulcreditomype font-fontBold text-text18 lg:text-text32 leading-5 tracking-tight">
+                                        <span
+                                            class="text-azulcreditomype font-fontBold text-text18 lg:text-text32 leading-5 tracking-tight">
                                             ¿Qué requisitos necesito para solicitar un préstamo?</span>
                                         <span class="transition group-open:rotate-180">
                                             <svg width="50" height="50" viewBox="0 0 53 53" fill="none"
@@ -1026,7 +1068,8 @@
 
                                         </span>
                                     </summary>
-                                    <p class="group-open:animate-fadeIn mt-3 text-neutral-600 font-fontLight text-text16 lg:text-text20 tracking-tight">
+                                    <p
+                                        class="group-open:animate-fadeIn mt-3 text-neutral-600 font-fontLight text-text16 lg:text-text20 tracking-tight">
                                         Nuestro proceso de aprobación es rápido y generalmente toma menos de 48 horas.
                                     </p>
                                 </details>
@@ -1035,7 +1078,8 @@
                                 <details class="group">
                                     <summary
                                         class="flex cursor-pointer list-none items-center justify-between font-medium">
-                                        <span class="text-azulcreditomype font-fontBold text-text18 lg:text-text32 leading-5 tracking-tight">
+                                        <span
+                                            class="text-azulcreditomype font-fontBold text-text18 lg:text-text32 leading-5 tracking-tight">
                                             ¿Cuánto tiempo toma el proceso de aprobación?</span>
                                         <span class="transition group-open:rotate-180">
                                             <svg width="50" height="50" viewBox="0 0 53 53" fill="none"
@@ -1049,7 +1093,8 @@
 
                                         </span>
                                     </summary>
-                                    <p class="group-open:animate-fadeIn mt-3 text-neutral-600 font-fontLight text-text16 lg:text-text20 tracking-tight">
+                                    <p
+                                        class="group-open:animate-fadeIn mt-3 text-neutral-600 font-fontLight text-text16 lg:text-text20 tracking-tight">
                                         Nuestro proceso de aprobación es rápido y generalmente toma menos de 48 horas.
                                     </p>
                                 </details>
@@ -1058,7 +1103,8 @@
                                 <details class="group">
                                     <summary
                                         class="flex cursor-pointer list-none items-center justify-between font-medium">
-                                        <span class="text-azulcreditomype font-fontBold text-text18 lg:text-text32 leading-5 tracking-tight">
+                                        <span
+                                            class="text-azulcreditomype font-fontBold text-text18 lg:text-text32 leading-5 tracking-tight">
                                             ¿Puedo invertir si no tengo experiencia previa?</span>
                                         <span class="transition group-open:rotate-180">
                                             <svg width="50" height="50" viewBox="0 0 53 53" fill="none"
@@ -1072,8 +1118,10 @@
 
                                         </span>
                                     </summary>
-                                    <p class="group-open:animate-fadeIn mt-3 text-neutral-600 font-fontLight text-text16 lg:text-text20 tracking-tight">
-                                        ¡Claro que sí! Nuestro equipo te guiará en todo el proceso para que puedas invertir con confianza.
+                                    <p
+                                        class="group-open:animate-fadeIn mt-3 text-neutral-600 font-fontLight text-text16 lg:text-text20 tracking-tight">
+                                        ¡Claro que sí! Nuestro equipo te guiará en todo el proceso para que puedas invertir
+                                        con confianza.
                                     </p>
                                 </details>
                             </div>
@@ -1081,7 +1129,8 @@
                                 <details class="group">
                                     <summary
                                         class="flex cursor-pointer list-none items-center justify-between font-medium">
-                                        <span class="text-azulcreditomype font-fontBold text-text18 lg:text-text32 leading-5 tracking-tight">
+                                        <span
+                                            class="text-azulcreditomype font-fontBold text-text18 lg:text-text32 leading-5 tracking-tight">
                                             ¿Qué garantías necesito para solicitar un préstamo?</span>
                                         <span class="transition group-open:rotate-180">
                                             <svg width="50" height="50" viewBox="0 0 53 53" fill="none"
@@ -1095,17 +1144,19 @@
 
                                         </span>
                                     </summary>
-                                    <p class="group-open:animate-fadeIn mt-3 text-neutral-600 font-fontLight text-text16 lg:text-text20 tracking-tight">
-                                        Las garantías varían según el tipo y el monto del préstamo, pero nuestro equipo te ayudará a entender todos los requisitos.
+                                    <p
+                                        class="group-open:animate-fadeIn mt-3 text-neutral-600 font-fontLight text-text16 lg:text-text20 tracking-tight">
+                                        Las garantías varían según el tipo y el monto del préstamo, pero nuestro equipo te
+                                        ayudará a entender todos los requisitos.
                                     </p>
                                 </details>
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>
             </div>
-            
+
         </section>
     </main>
 
