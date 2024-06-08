@@ -923,7 +923,7 @@
                     <img src="{{ asset('images/img/logocm4.png') }}" />
                 </div>
                 <div>
-                    <img src="{{ asset('images/img/logocm5.png') }}" />
+                    <img src="{{ asset('images/img/logoequifax.png') }}" />
                 </div>
                 <div>
                     <img src="{{ asset('images/img/logocm6.png') }}" />
