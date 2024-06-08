@@ -432,7 +432,7 @@
         .bg__image-header {
             background-position: top;
             background-repeat: no-repeat;
-            background-size: contain;
+            background-size: cover;
             background-image: url({{ asset('images/img/fondoheadermovil.png') }});
         }
 
@@ -483,7 +483,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="flex justify-center items-center w-full h-[480px]">
+                <div class="flex justify-center items-center w-full h-[200px] md:h-[290px] lg:h-[480px]">
                 
                     <div class="relative contenedor_video">
 
@@ -491,7 +491,7 @@
                             frameborder="0" referrerpolicy="strict-origin-when-cross-origin"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowfullscreen
-                            class="aspect-video w-[800px]"></iframe>
+                            class="aspect-video w-[300px] md:w-[500px] lg:w-[800px]"></iframe>
                     
                     </div>
                 </div>
