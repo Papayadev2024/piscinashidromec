@@ -471,10 +471,10 @@
     <main class="flex flex-col font-outfit">
 
 
-        <section class="bg__image-header text-textWhite" id="acerca">
-            <div class="relative py-16 md:pt-24  w-11/12 mx-auto  flex flex-col items-center"
+        <section class="bg__image-header text-textWhite py-12" id="acerca">
+            <div class="relative w-11/12 mx-auto  flex flex-col items-center gap-10"
                 data-aos="fade-up" data-aos-offset="150">
-                <div class="flex flex-col gap-6 xl:gap-20  py-12">
+                <div class="flex flex-col gap-6 xl:gap-20">
                     <div class="md:basis-full flex flex-col gap-4">
                         <p class="font-fontBook text-text56 leading-tight xl:text-text52 text-center tracking-tighter">
                             Obtén el <span class="text-verdecreditomype font-fontBold">impulso 💰 financiero</span> que tu
@@ -483,7 +483,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="flex justify-center items-center w-full h-[200px] md:h-[290px] lg:h-[480px]">
+                <div class="flex justify-center items-center w-full h-[200px] md:h-[290px] lg:h-[480px] mb-5">
                 
                     <div class="relative contenedor_video">
 
