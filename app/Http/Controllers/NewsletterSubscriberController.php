@@ -209,57 +209,49 @@ class NewsletterSubscriberController extends Controller
             </td>
           </tr>
           <tr style="margin-top: 300px">
-            <td>
+           <tr style="margin-top: 300px">
+             <td>
               <a
-                href="' .
-                htmlspecialchars($generales->facebook, ENT_QUOTES, 'UTF-8') .
-                '"
+                href="https://www.facebook.com/hidromecingenieros"
                 target="_blank"
                 style="padding: 0 5px 30px 0; display: inline-block"
               >
-                <img src="'.$baseUrl .'/facebook.png" alt="facebook"
+                <img src="' .
+                $baseUrl .
+                '/facebook.png" alt="facebook"
               /></a>
 
               <a
-                href="' .
-                htmlspecialchars($generales->instagram, ENT_QUOTES, 'UTF-8') .
-                '"
+                href="https://www.instagram.com/hidromecingenieros/?hl=es"
                 target="_blank"
                 style="padding: 0 5px 30px 0; display: inline-block"
               >
-                <img src="'.$baseUrl .'/instagram.png" alt="instagram"
+                <img src="' .
+                $baseUrl .
+                '/instagram.png" alt="instagram"
               /></a>
 
               <a
-                href="' .
-                htmlspecialchars($generales->twitter, ENT_QUOTES, 'UTF-8') .
-                '"
+                href="https://www.linkedin.com/company/hidromecingenieros/"
                 target="_blank"
                 style="padding: 0 5px 30px 0; display: inline-block"
               >
-                <img src="'.$baseUrl .'/twitter.png" alt="twitter"
+                <img src="' .
+                $baseUrl .
+                '/linkedin.png" alt="linkedin"
               /></a>
 
               <a
-                href="' .
-                htmlspecialchars($generales->linkedin, ENT_QUOTES, 'UTF-8') .
-                '"
+                href="https://www.youtube.com/channel/UC3VTnRz6b1aFrpQleveaxmw"
                 target="_blank"
                 style="padding: 0 5px 30px 0; display: inline-block"
               >
-                <img src="'.$baseUrl .'/linkedin.png" alt="linkedin"
-              /></a>
-
-              <a
-                href="' .
-                htmlspecialchars($generales->youtube, ENT_QUOTES, 'UTF-8') .
-                '"
-                target="_blank"
-                style="padding: 0 5px 30px 0; display: inline-block"
-              >
-                <img src=" '.$baseUrl .'/youtube.png" alt="youtube"
+                <img src=" ' .
+                $baseUrl .
+                '/youtube.png" alt="youtube"
               /></a>
             </td>
+          </tr>
           </tr>
         </tbody>
       </table>
@@ -284,7 +276,7 @@ class NewsletterSubscriberController extends Controller
         $generales = General::first();
         // $name = $data['full_name'];
         $name = 'Suscriptor';
-        $mensaje = 'Gracias por suscribirte - HPI';
+        $mensaje = 'Gracias por suscribirte - Hidromec Agrícola';
         $mail = EmailConfig::config($name, $mensaje);
         $baseUrl = 'https://' . $_SERVER['HTTP_HOST'] . '/mail';
         $baseUrllink = 'https://' . $_SERVER['HTTP_HOST'] . '/';
@@ -343,7 +335,7 @@ class NewsletterSubscriberController extends Controller
                 $baseUrllink .
                 '" target="_blank" style="text-align:center" ><img src="' .
                 $baseUrl .
-                '/logo.png" alt="hpi" /></a>
+                '/logo.png" alt="hidromec" /></a>
             </th>
           </tr>
         </thead>
@@ -444,57 +436,49 @@ class NewsletterSubscriberController extends Controller
             </td>
           </tr>
           <tr>
-            <td>
+           <tr style="margin-top: 300px">
+             <td>
               <a
-                href="' .
-                htmlspecialchars($generales->facebook, ENT_QUOTES, 'UTF-8') .
-                '"
+                href="https://www.facebook.com/hidromecingenieros"
                 target="_blank"
                 style="padding: 0 5px 30px 0; display: inline-block"
               >
-                <img src="'.$baseUrl .'/facebook.png" alt="facebook"
+                <img src="' .
+                $baseUrl .
+                '/facebook.png" alt="facebook"
               /></a>
 
               <a
-                href="' .
-                htmlspecialchars($generales->instagram, ENT_QUOTES, 'UTF-8') .
-                '"
+                href="https://www.instagram.com/hidromecingenieros/?hl=es"
                 target="_blank"
                 style="padding: 0 5px 30px 0; display: inline-block"
               >
-                <img src="'.$baseUrl .'/instagram.png" alt="instagram"
+                <img src="' .
+                $baseUrl .
+                '/instagram.png" alt="instagram"
               /></a>
 
               <a
-                href="' .
-                htmlspecialchars($generales->twitter, ENT_QUOTES, 'UTF-8') .
-                '"
+                href="https://www.linkedin.com/company/hidromecingenieros/"
                 target="_blank"
                 style="padding: 0 5px 30px 0; display: inline-block"
               >
-                <img src="'.$baseUrl .'/twitter.png" alt="twitter"
+                <img src="' .
+                $baseUrl .
+                '/linkedin.png" alt="linkedin"
               /></a>
 
               <a
-                href="' .
-                htmlspecialchars($generales->linkedin, ENT_QUOTES, 'UTF-8') .
-                '"
+                href="https://www.youtube.com/channel/UC3VTnRz6b1aFrpQleveaxmw"
                 target="_blank"
                 style="padding: 0 5px 30px 0; display: inline-block"
               >
-                <img src="'.$baseUrl .'/linkedin.png" alt="linkedin"
-              /></a>
-
-              <a
-                href="' .
-                htmlspecialchars($generales->youtube, ENT_QUOTES, 'UTF-8') .
-                '"
-                target="_blank"
-                style="padding: 0 5px 30px 0; display: inline-block"
-              >
-                <img src=" '.$baseUrl .'/youtube.png" alt="youtube"
+                <img src=" ' .
+                $baseUrl .
+                '/youtube.png" alt="youtube"
               /></a>
             </td>
+          </tr>
           </tr>
         </tbody>
       </table>
