@@ -12,7 +12,7 @@ class EmailConfig
         $mail = new PHPMailer(true);
         // $mail->SMTPDebug = SMTP::DEBUG_SERVER;
         $mail->isSMTP();
-        $mail->Host = 'smtp.gmail.com';
+        $mail->Host = 'mail.hidromecingenieros.com';
         $mail->SMTPAuth = true;
         $mail->Username = 'ventas@hidromecingenieros.com';
         $mail->Password = 'hidromec2024#';
