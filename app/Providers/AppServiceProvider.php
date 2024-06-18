@@ -24,8 +24,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {   
-        Schema::defaultStringLength(191);
-        //
+
         View::composer('components.app.sidebar', function ($view) {
             // Obtener los datos del footer
             $mensajes = Message::where('is_read', '!=', 1 )->where('status', '!=', 0)->count();
