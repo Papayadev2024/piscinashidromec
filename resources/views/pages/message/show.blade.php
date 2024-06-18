@@ -13,36 +13,24 @@
                        
                         <tbody>
                             <tr>
-                                <td class="border px-4 py-2 font-bold text-[18px]">Nombre</td>
-                                <td class="border px-4 py-2 text-[16px]">{{$message->name}}</td>
+                                <td class="border px-4 py-2 font-bold text-[16px]">Nombre completo</td>
+                                <td class="border px-4 py-2 text-[15px]">{{$message->name}}</td>
                             </tr>
                             <tr>
-                                <td class="border px-4 py-2 font-bold text-[18px]">Apellidos</td>
-                                <td class="border px-4 py-2 text-[16px]">{{$message->last_name}}</td>
+                                <td class="border px-4 py-2 font-bold text-[16px]">Teléfono</td>
+                                <td class="border px-4 py-2 text-[15px]">{{$message->cellphone}}</td>
                             </tr>
                             <tr>
-                                <td class="border px-4 py-2 font-bold text-[18px]">Teléfono</td>
-                                <td class="border px-4 py-2 text-[16px]">{{$message->cellphone}}</td>
+                                <td class="border px-4 py-2 font-bold text-[16px]">Correo</td>
+                                <td class="border px-4 py-2 text-[15px]">{{$message->email}}</td>
                             </tr>
                             <tr>
-                                <td class="border px-4 py-2 font-bold text-[18px]">Correo</td>
-                                <td class="border px-4 py-2 text-[16px]">{{$message->email}}</td>
+                                <td class="border px-4 py-2 font-bold text-[16px]">DNI</td>
+                                <td class="border px-4 py-2 text-[15px]">{{$message->document}}</td>
                             </tr>
                             <tr>
-                                <td class="border px-4 py-2 font-bold text-[18px]">DNI</td>
-                                <td class="border px-4 py-2 text-[16px]">{{$message->document}}</td>
-                            </tr>
-                            <tr>
-                                <td class="border px-4 py-2 font-bold text-[18px]">Monto Solicitado</td>
-                                <td class="border px-4 py-2 text-[16px]">S/{{$message->monto}}.00</td>
-                            </tr>
-                            <tr>
-                                <td class="border px-4 py-2 font-bold text-[18px]">Dirección</td>
-                                <td class="border px-4 py-2 text-[16px]">{{$message->address}}</td>
-                            </tr>
-                            <tr>
-                                <td class="border px-4 py-2 font-bold text-[18px]">Garantia</td>
-                                <td class="border px-4 py-2 text-[16px]">{{$message->garantie}}</td>
+                                <td class="border px-4 py-2 font-bold text-[16px]">Mensaje</td>
+                                <td class="border px-4 py-2 text-[15px]">{{$message->address}}</td>
                             </tr>
                         </tbody>
                     </table>

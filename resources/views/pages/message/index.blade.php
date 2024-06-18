@@ -36,7 +36,7 @@
                                         @endif
                                     </td>
                                     <td>{{ $item->email }}</td>
-                                    <td>{{ $item->phone }}</td>
+                                    <td>{{ $item->cellphone }}</td>
                                     <td>
                                         <form action="" method="POST">
                                             @csrf
@@ -54,7 +54,7 @@
                                 <th>Nombre</th>
                                 <th>Correo</th>
                                 <th>Teléfono</th>
-                                <th>Tool</th>
+                                <th>Acciones</th>
                             </tr>
                         </tfoot>
                     </table>
