@@ -96,7 +96,7 @@ class NewsletterSubscriberController extends Controller
         $name = 'Administrador';
         $mensaje = 'tienes un nuevo suscriptor - Hidromec Piscinas';
         $mail = EmailConfig::config($name, $mensaje);
-        $emailadmin = 'diego.martinez.r@tecsup.edu.pe';
+        $emailadmin = 'ventas.digital@hidromecingenieros.com';
         $baseUrl = 'https://' . $_SERVER['HTTP_HOST'] . '/mail';
         $baseUrllink = 'https://' . $_SERVER['HTTP_HOST'] . '/';
 
