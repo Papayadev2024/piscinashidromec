@@ -73,7 +73,7 @@
                 </p>
 
                 <div class="flex justify-start items-center">
-                    <a target="_blank" href="https://api.whatsapp.com/send?phone=51123456789&text=hola" rel="noopener"
+                    <a target="_blank" href="https://api.whatsapp.com/send?phone=51946260675&text=¡Hola%20Hidromec!%20Quisiera%20recibir%20más%20detalles%20sobre%20sus%20productos%20y%20servicios%20especializados%20en%20Piscinas." rel="noopener"
                         class="bg-[#161A32] text-white font-helveticaBold text-text16 py-4 px-6 rounded-xl">Contáctanos
                         ahora</a>
                 </div>
