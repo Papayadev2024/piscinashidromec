@@ -15,7 +15,7 @@ class GeneralSeeder extends Seeder
     {
         General::create([
             'title1' => 'Explora un Nuevo Horizonte de Salud con el Dr. Kewin',
-            'description' => 'Descubre soluciones innovadoras para una vida más saludable con el Dr. Kewin Quispe de la Roca. Somos especialistas en cirugía de vesícula y tratamientos para la obesidad, como el balón gástrico y la banda gástrica. ¡Calcula tu IMC y comienza ahora!',
+            'description' => 'Descubre soluciones.',
             'address' => 'Av. Aramburu 1506',
             'inside' => 'Oficina 404 - Piso 4',
             'district' => 'Miraflores',
