@@ -1,30 +1,57 @@
-<header
-    class="bg-transparent bg__servicios-fondo font-outfit w-full h-24 lg:h-28 ">
-    <div class="text-azulcreditomype flex justify-between items-center w-11/12 mx-auto pt-7 pb-5">
-        <div class="flex justify-start items-center w-60 xl:w-auto" data-aos="fade-up" data-aos-offset="150">
-            <a href="{{route('index')}}">
-                <img src="{{ asset('images/img/logocreditomype.png') }}" alt="creditomype">
-            </a>
+<header>
+    <div class="bg-[#007FC8] py-5">
+      <div class="w-11/12 mx-auto flex justify-between items-center">
+        <div class="flex justify-between items-center gap-10">
+          <div class="hidden md:flex justify-center items-center gap-2">
+            <img src="{{asset('images/svg/image_1.svg')}}" alt="" />
+            <p class="text-white">01 448 5540</p>
+          </div>
 
+          <div class="flex justify-center items-center gap-2">
+            <img src="{{asset('images/svg/image_2.svg')}}" alt="" />
+            <p class="text-white">ventas.digital@hidromecingenieros.com</p>
+          </div>
         </div>
-        <div class="hidden lg:flex justify-center items-center gap-10 font-semibold font-fontMedium text-text16 xl:text-text18">
-            <nav class="flex justify-center items-center gap-10 text-center" data-aos="fade-up" data-aos-offset="150">
-                <a href="{{route('index').'#prestamo'}}" class="text-verdecreditomype">Solicitar Prestamo</a>
-                <a href="{{route('index').'#beneficios'}}">Beneficios</a>
-                <a href="{{route('index').'#testimonio'}}">Testimonios</a>
-                <a href="{{route('index').'#prensa'}}">Prensa</a>
-                <a href="{{route('index').'#cobertura'}}">Cobertura</a>
-            </nav>
+
+        <div class="hidden md:flex justify-center items-center gap-2">
+          <a href="https://www.facebook.com/hidromecingenieros" target="_blank">
+            <img src="{{asset('images/svg/image_3.svg')}}" alt="facebook" />
+          </a>
+          <a href="https://www.instagram.com/hidromecingenieros/?hl=es" target="_blank">
+            <img src="{{asset('images/svg/image_4.svg')}}" alt="instagram" />
+          </a>
+          <a href="https://www.linkedin.com/company/hidromecingenieros/" target="_blank"
+            ><img src="{{asset('images/svg/image_5.svg')}}" alt="linkedin" />
+          </a>
+          <a href="https://www.youtube.com/channel/UC3VTnRz6b1aFrpQleveaxmw" target="_blank"
+            ><img src="{{asset('images/svg/image_6.svg')}}" alt="youtube" />
+          </a>
         </div>
+      </div>
     </div>
 
-    
+    <div
+      class="flex flex-col md:flex-row justify-between items-center w-11/12 mx-auto py-5 gap-5"
+    >
+      <div class="flex justify-center items-center">
+        <a href="#">
+          <img src="{{asset('images/svg/image_7.svg')}}" alt="Hidromec" class="w-full" />
+        </a>
+      </div>
+      <div class="hidden md:flex justify-center items-center w-full md:w-auto">
+        <a
+         target="_blank" href="https://api.whatsapp.com/send?phone=51123456789&text=hola" rel="noopener"
+          class="bg-[#232B52] text-white text-text16 rounded-xl py-3 px-5 w-full md:w-auto text-center font-helveticaBold"
+          >Quiero una cotización</a
+        >
+      </div>
+    </div>
 
-    {{-- <div class="flex justify-end w-11/12 mx-auto mb-4 z-10">
-        <div class="fixed bottom-6 sm:bottom-[2rem] lg:bottom-[4rem] z-20">
-            <a target="_blank" href="https://api.whatsapp.com/send?phone=51951234567&text=hola" rel="noopener">
-                <img src="{{ asset('images/svg/WhatsApp.svg') }}" alt="whatsapp" class="w-20 h-20 md:w-full md:h-full">
-            </a>
-        </div>
-    </div> --}}
-</header>
+    <div class="flex justify-end w-11/12 mx-auto  z-10">
+      <div class="fixed bottom-6 sm:bottom-[2rem] lg:bottom-[4rem] z-20">
+          <a target="_blank" href="https://api.whatsapp.com/send?phone=51123456789&text=hola" rel="noopener">
+              <img src="{{asset('images/svg/image_8.svg')}}" alt="whatsapp" class="w-20 h-20 md:w-full md:h-full">
+          </a>
+      </div>
+    </div> 
+  </header>

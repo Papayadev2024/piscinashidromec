@@ -17,16 +17,28 @@ export default {
             stroke: (theme) => ({
                 custom: theme("colors.black"),
                 strokeWithe: "#ffffff",
+                strokeAzul: "#2E609D",
             }),
             fill: (theme) => ({
-                bgAzul: "#254F9A",
-                bgCeleste: "#42BAE2",
-                bgWhite: "#ffffff",
+                fillWhite: "#FFFFFF",
+                fillGrisStrong: "#575756",
+                fillGrisSuave: "#565555",
+                fillVerde: "#289A7B",
+                fillAzul: "#007FC8",
             }),
             fontWeight: {
                 medium: "500",
                 regular: "400",
                 semibold: "600",
+            },
+            keyframes: {
+                FadeInUp: {
+                  "0%": { transform: "translateY(15px)", opacity: "0" },
+                  "100%": { transform: "translateY(0px)", opacity: "1" },
+                },
+            },
+            animation: {
+                fade: "FadeInUp 700ms ease 1 forwards",
             },
             boxShadow: {
                 DEFAULT:
@@ -39,7 +51,10 @@ export default {
                 blue: "2px solid rgba(0, 112, 244, 0.5)",
             },
             fontFamily: {
-                outfit: ["Outfit", "sans-serif"],
+                helveticaBold: ["helveticaBold", "sans-serif"],
+                helveticaMedium: ["helveticaMedium", "sans-serif"],
+                helveticaRegular: ["helveticaRegular", "sans-serif"],
+                helveticaLight: ["helveticaLight", "sans-serif"],
             },
             fontSize: {
                 xs: ["0.75rem", { lineHeight: "1.5" }],
@@ -74,6 +89,9 @@ export default {
                     { lineHeight: "1.2", letterSpacing: "-0.02em" },
                 ],
 
+                text8: "8px",
+                text10: "10px",
+                text12: "12px",
                 text14: "14px",
                 text16: "16px",
                 text18: "18px",
@@ -82,19 +100,21 @@ export default {
                 text24: "24px",
                 text26: "26px",
                 text28: "28px",
-                text29: "29px",
-                text30: "30px",
                 text32: "32px",
+                text34: "34px",
                 text36: "36px",
                 text40: "40px",
                 text44: "44px",
+                text46: "46px",
                 text48: "48px",
+                text50: "50px",
                 text52: "52px",
                 text56: "56px",
                 text60: "60px",
                 text64: "64px",
-                text68: "68px",
                 text72: "72px",
+                text76: "76px",
+                text80: "80px",
             },
 
             backgroundImage: {
@@ -104,41 +124,14 @@ export default {
             },
 
             backgroundColor: {
-                colorButton: "#173525",
-                colorBackground: "#2D694B",
-                colorFooter: "#173525",
-                colorCombo: "#F9FCFB",
-                bgCeleste: "#42BAE2",
-                bgCelesteStrong: "#0ea5e9",
-                bgWhiteWeak: "#FDFEFD",
-                bgRosa: "#F9F9F9",
-                bgAzul: "#254F9A",
-                bgRosaWeak: "#F6F8FE",
-                bgAzulStrong: "#23498E",
-
-                azulcreditomype: "#052453",
-                verdecreditomype: "#33BF82",
-                plomocreditomype: "#F3F3F3",
-                plomoblanco: "#F5F5F5",
-                plomotransparente: "#F9FAFB",
-            },
-            fontFamily: {
-                fontBold: ["font_Bold"],
-                fontBook: ["font_Book"],
-                fontLight: ["font_Light"],
-                fontMedium: ["font_Medium"],
-                fontThin: ["font_Thin"],
+                primario: "#232B52",
+                secundario: "#007FC8",
+                terciario: "#161A32",
             },
             textColor: {
-                colorSubtitle: "#113E55",
-                colorSubtitleLittle: "#173525",
-                colorAdd: "#2D694B",
-                textWhite: "#FFFFFF",
-                textCeleste: "#42BAE2",
-                textAzul: "#254F9A",
-
-                azulcreditomype: "#052453",
-                verdecreditomype: "#33BF82",
+                primario: "#232B52",
+                secundario: "#007FC8",
+                terciario: "#161A32",
             },
             borderColor: {
                 selectCheck: "#173525",
@@ -176,6 +169,13 @@ export default {
             },
             zIndex: {
                 60: "60",
+            },
+            backgroundSize: {
+                'auto': 'auto',
+                'cover': 'cover',
+                'contain': 'contain',
+                '100%': '100%',
+                '16': '4rem',
             },
         },
     },

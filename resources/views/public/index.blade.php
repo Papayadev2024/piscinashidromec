@@ -2,1482 +2,686 @@
 
 @section('css_improtados')
     <style>
-        .image-container {
-            position: relative;
-            width: 100%;
-            max-width: 600px;
-            /* Ancho máximo para el contenedor */
+        @font-face {
+            font-family: "helveticaBold";
+            src: url("./fonts/helveticaneueltprobd-webfont.woff") format("woff");
         }
 
-        #iframeContainer {
-            display: none;
-            /* Oculto por defecto */
+        @font-face {
+            font-family: "helveticaLight";
+            src: url("./fonts/helveticaneueltprolt-webfont.woff") format("woff");
         }
 
-        #iframeContainer.show {
-            display: flex;
-            /* Mostrar como flex para centrar el iframe */
+        @font-face {
+            font-family: "helveticaMedium";
+            src: url("./fonts/helveticaneueltpromd-webfont.woff") format("woff");
         }
 
-        .img-container {
-            position: relative;
-            width: 100%;
+        .custom-swiper-buttons .swiper-button-prev:after {
+            background-image: url("./images/svg/image_35.svg");
+            transition: background-image 0.2s ease-in-out;
         }
 
-        .img-container img {
-            width: 100%;
-            height: auto;
+        .custom-swiper-buttons .swiper-button-prev:hover:after {
+            background-image: url("./images/svg/image_37.svg");
         }
 
-        .logo-container {
-            position: absolute;
-            bottom: 12px;
-            left: 58px;
-            transform: translate(-50%, 50%);
-            -webkit-transform: translate(-50%, 50%);
-            -moz-transform: translate(-50%, 50%);
-            -ms-transform: translate(-50%, 50%);
-            -o-transform: translate(-50%, 50%);
-            /*Centrarrespectoalaesquinainferiorizquierda*/
+        .custom-swiper-buttons .swiper-button-next:after {
+            background-image: url("./images/svg/image_36.svg");
+            transition: background-image 0.2s ease-in-out;
         }
 
-        .logo-container img {
-            width: 100%;
-            /* Ancho relativo al contenedor padre (.image-container) */
-            height: auto;
+        .custom-swiper-buttons .swiper-button-next:hover:after {
+            background-image: url("./images/svg/image_39.svg");
         }
 
-        /* ------ MODIFICACIO PARA LAS GRILLAS DE SWIPER ------- */
-
-        .swiper-grid-column>.swiper-wrapper {
-            display: flex !important;
-            flex-direction: row !important;
+        .fondobombas {
+            background-image: url("./images/img/fondobombas.png");
+            object-fit: contain;
         }
 
-        .enfermedades .swiper-slide {
-            margin-top: 0 !important;
-            margin-bottom: 50px !important;
+        .fondologos {
+            background-image: url("./images/img/fondologos.png");
+            object-fit: cover;
         }
 
-        .enfermedades .swiper-pagination-grid {
-            display: block;
-            text-align: center;
-        }
-
-        @media (min-width: 768px) {
-            .enfermedades .swiper-pagination-grid {
-                display: none;
-            }
-        }
-
-        /* ------------ botones de navegacion ------------------ */
-
-        .swiper-button-next:after {
-            content: "" !important;
-        }
-
-        .swiper-button-next {
-            background-color: #42bae2;
-            background-image: url(../../../images/svg/arrow-right-sm.svg);
-            background-repeat: no-repeat;
-            background-position: center;
-            width: calc(var(--swiper-navigation-size) / 29 * 27) !important;
-            height: 50px;
-            border-radius: 50%;
-            -webkit-border-radius: 50%;
-            -moz-border-radius: 50%;
-            -ms-border-radius: 50%;
-            -o-border-radius: 50%;
-            position: relative !important;
-        }
-
-        .swiper-button-prev:after {
-            content: "" !important;
-        }
-
-        .swiper-button-prev {
-            background-color: #d4e5fe;
-            background-image: url(../../../images/svg/arrow-left-sm.svg);
-            background-repeat: no-repeat;
-            background-position: center;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            -webkit-border-radius: 50%;
-            -moz-border-radius: 50%;
-            -ms-border-radius: 50%;
-            -o-border-radius: 50%;
-            position: relative !important;
-            width: calc(var(--swiper-navigation-size) / 29 * 27) !important;
-        }
-
-
-        .buttonSliderServicios {
-            display: flex !important;
-            flex-direction: row-reverse;
-            justify-content: start;
-            gap: 2rem;
-            height: 50px;
-        }
-
-        @media (min-width: 768px) {
-            .buttonSliderServicios {
-                flex-direction: row-reverse;
-                justify-content: start;
-            }
-        }
-
-        .swiper-button-lock {
-            display: block !important;
-        }
-
-        /* -------- transparencia ---------------- */
-
-        .bg-indice {
-            background-color: rgba(249, 249, 249, 0.8);
-            /* Color de fondo con opacidad */
-            backdrop-filter: blur(4px);
-            /* Efecto de desenfoque en el fondo */
-        }
-
-        /* --------------- flip card --------- */
-        .contenedor {
-            height: 100%;
-            /* Ajustar altura al contenedor padre */
-            position: relative;
-        }
-
-        .flip {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            -webkit-transform: translate(-50%, -50%);
-            -moz-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            -o-transform: translate(-50%, -50%);
-            perspective: 1200;
-        }
-
-        .card {
-            display: flex;
-            transition: all 0.5s;
-            transform-style: preserve-3d;
-        }
-
-        .front,
-        .back {
-            backface-visibility: none;
-            -webkit-backface-visibility: none;
-        }
-
-        .back {
-            transform: rotateY(-180deg);
-            -webkit-transform: rotateY(-180deg);
-            -moz-transform: rotateY(-180deg);
-            -ms-transform: rotateY(-180deg);
-            -o-transform: rotateY(-180deg);
-        }
-
-        .card.flipCard {
-            transform: rotateY(-180deg);
-            -webkit-transform: rotateY(-180deg);
-            -moz-transform: rotateY(-180deg);
-            -ms-transform: rotateY(-180deg);
-            -o-transform: rotateY(-180deg);
-        }
-
-        /* --- alerta --- */
-
-        .alerta {
-            color: white;
-            font-weight: bold;
-            font-size: 16px;
-            font-family: "Outfit";
-            border-radius: 1rem;
-            background-color: red;
-            text-align: center;
-            padding: 0.6rem;
-            margin-top: 1rem;
-            -webkit-border-radius: 1rem;
-            -moz-border-radius: 1rem;
-            -ms-border-radius: 1rem;
-            -o-border-radius: 1rem;
-        }
-
-        /* --------------------- deslizante ------------------- */
-        ul {
-            display: flex;
-            flex-direction: column;
-
-            gap: 30px;
-        }
-
-        ul li {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        /* Progress Div Css  */
-
-        ul li .progress {
-            border-radius: 50%;
-
-            margin: 14px 0;
-
-            width: 100%;
-
-            position: relative;
-            cursor: pointer;
-        }
-
-        .progress::after {
-            content: "";
-
-            position: absolute;
-            width: 5px;
-
-            height: 268px;
-            /* 210 */
-            top: -184px;
-            /* 150 */
-            left: 23px;
-            background-color: #f8f2f2;
-
-            z-index: -1;
-        }
-
-        .one::after {
-            width: 0;
-            height: 0;
-        }
-
-        /* Active Css  */
-
-        li .active::after {
-            background-color: #42bae2;
-        }
-
-        /* Responsive Css  */
-
-
-
-        @media (min-width: 340px) {
-            .progress::after {
-                height: 322px;
-                top: -286px;
-            }
-        }
-
-
-        @media (min-width: 375px) {
-            .progress::after {
-                height: 290px;
-                top: -266px;
-            }
-        }
-
-        @media (min-width: 400px) {
-            .progress::after {
-                height: 290px;
-                top: -245px;
-            }
-        }
-
-        @media (min-width: 460px) {
-            .progress::after {
-                height: 266px;
-                top: -215px;
-            }
-        }
-
-        @media (min-width: 640px) {
-            .progress::after {
-                height: 220px;
-                top: -200px;
-            }
-        }
-
-        @media (min-width: 768px) {
-            .progress::after {
-                height: 344px;
-                top: -305px;
-            }
-        }
-
-        @media (min-width: 1024px) {
-            .progress::after {
-                height: 250px;
-                top: -200px;
-            }
-        }
-
-        @media (min-width: 1280px) {
-            .progress::after {
-                height: 250px;
-                top: -210px;
-            }
-        }
-
-        @media (min-width: 1920px) {
-            .progress::after {
-                height: 250px;
-                top: -195px;
-            }
-        }
-
-        @keyframes moveLeftAndBack {
-            0% {
-                left: 20%;
-                /* Empieza y termina en la posición original */
-                opacity: 1;
-                /* Opacidad completa */
-            }
-
-            50% {
-                left: -25%;
-                /* Mueve hacia la izquierda fuera del borde */
-                /* opacity: 0; */
-            }
-
-            100% {
-                left: 20%;
-                opacity: 1;
-            }
-        }
-
-        /* Animación para la segunda imagen */
-        @keyframes moveRightAndBack {
-            0% {
-                left: 50%;
-                /* Empieza y termina en la posición original */
-                opacity: 1;
-                /* Opacidad completa */
-            }
-
-            50% {
-                left: 75%;
-                /* Mueve hacia la derecha fuera del borde */
-                /* opacity: 0;  */
-            }
-
-            100% {
-                left: 50%;
-                opacity: 1;
-            }
-        }
-
-        /* Aplicación de las animaciones a las imágenes */
-        .myBox:nth-child(1) {
-            animation: moveLeftAndBack 3s infinite;
-
-            -webkit-animation: moveLeftAndBack 3s infinite;
-        }
-
-        .myBox:nth-child(2) {
-            animation: moveRightAndBack 3s infinite;
-            -webkit-animation: moveRightAndBack 3s infinite;
-        }
-
-        .testimonios .swiper-slide {
+        .modal-open {
             overflow: hidden;
-        }
-
-        /* ---- */
-
-        .contenedor_video {
-            background-color: rgba(249, 249, 249, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 1rem;
-        }
-
-        @media (min-width: 768px) {
-            .contenedor_video {
-                padding: 1.5rem;
-            }
-        }
-
-        [type='text'],
-        input:where(:not([type])),
-        [type='email'],
-        [type='url'],
-        [type='password'],
-        [type='number'],
-        [type='tel'],
-        textarea {
-            font-size: inherit;
-        }
-
-
-        @media (min-width: 868px) {
-            .bg__image-header {
-                background-position: top !important;
-                background-repeat: no-repeat !important;
-                background-size: cover !important;
-                background-image: url({{ asset('images/img/fondoheader.png') }}) !important;
-            }
-
-            .fontosectionmidle {
-                background-position: top right !important;
-                background-repeat: no-repeat !important;
-                background-size: contain !important;
-                background-image: url({{ asset('images/img/texturasection.png') }}) !important;
-            }
-
-        }
-
-        .bg__image-header {
-            background-position: top;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-image: url({{ asset('images/img/fondoheadermovil.png') }});
-        }
-
-        .fontosectionmidle {
-            background-position: bottom right;
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-image: url({{ asset('images/img/texturasection.png') }});
-        }
-
-        .bannervideo {
-            background-position: top;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-image: url({{ asset('images/img/bannervideo.png') }});
-        }
-
-        .texturapreguntas {
-            background-position: top;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-image: url({{ asset('images/img/texturapreguntas.png') }});
-        }
-
-        .texturalogos {
-            background-position: top;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-image: url({{ asset('images/img/texturalogos.png') }});
+            background-color: rgba(0, 0, 0, 1);
         }
     </style>
 
 @stop
-{{-- style="background-image: url({{asset('images/img/Hero_Doctor_mobile.png')}})" --}}
+
 @section('content')
-    <main class="flex flex-col font-outfit">
 
+    <main class="bg-[#F9FAFB]">
+        <section class="relative">
+            <img src="{{ asset('images/img/image_16.png') }}" alt="hidromec piscinas"
+                class="w-full h-[800px] object-cover hidden md:block" />
 
-        <section class="bg__image-header text-textWhite py-12" id="acerca">
-            <div class="relative w-11/12 mx-auto  flex flex-col items-center gap-10"
-                data-aos="fade-up" data-aos-offset="150">
-                <div class="flex flex-col gap-6 xl:gap-20">
-                    <div class="md:basis-full flex flex-col gap-4">
-                        <p class="font-fontBook text-text56 leading-tight xl:text-text52 text-center tracking-tighter">
-                            Obtén el <span class="text-verdecreditomype font-fontBold">impulso 💰 financiero</span> que tu
-                            negocio necesita 💸
+            <img src="{{ asset('images/img/image_16.png') }}" alt="hidromec piscinas"
+                class="w-full h-[1000px] object-cover block md:hidden" />
 
-                        </p>
-                    </div>
-                </div>
-                <div class="flex justify-center items-center w-full h-[200px] md:h-[290px] lg:h-[480px] mb-5">
-                
-                    <div class="relative contenedor_video">
+            <div
+                class="absolute transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 w-11/12 mx-auto pt-[350px] sm:pt-[250px] md:pt-[500px] lg:pt-0">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-24">
+                    <div class="flex flex-col justify-center items-start gap-2 w-full lg:max-w-[700px]">
+                        <div class="flex justify-start items-center gap-2 bg-[#232b52] rounded-full py-2 px-3">
+                            <img src="{{ asset('images/svg/image_9.svg') }}" alt="experiencia" />
+                            <p class="text-white font-helveticaMedium text-text12 md:text-text16">
+                                Más de 17 años en el mercado nos respaldan
+                            </p>
+                        </div>
 
-                        <iframe src="https://www.youtube.com/embed/KO85z8J9i8o" title="YouTube video player"
-                            frameborder="0" referrerpolicy="strict-origin-when-cross-origin"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen
-                            class="aspect-video w-[300px] md:w-[500px] lg:w-[800px]"></iframe>
-                    
-                    </div>
-                </div>
-
-            </div>
-
-           
-        </section>
-
-        <section>
-            <div class="mt-10">
-                <div class="w-full mx-auto flex flex-col md:flex-row justify-center text-center items-start sm:pt-[90px] pb-10  md:pt-20 lg:pb-20 lg:px-20 lg:pt-10"
-                    data-aos="fade-up" data-aos-offset="150">
-
-                    <div class="text-azulcreditomype flex flex-col gap-14 basis-1/2 text-left p-5 lg:pr-[8%] pb-12"
-                        id="prestamo">
-                        <div class="flex flex-col gap-8 md:gap-5">
-                            <h1
-                                class="font-bold fontBold text-[50px] md:text-text36 2md:text-text56 leading-none 2md:leading-tight">
-                                Requisitos <span class="text-verdecreditomype font-fontLight">para solicitar 📄 un </span>
-                                préstamo 💸
+                        <div class="flex flex-col gap-5 items-start">
+                            <h1 class="font-helveticaBold text-text46 md:text-text64 leading-none text-white">
+                                La gama más completa de bombas para el Sector Agrícola
                             </h1>
-                        </div>
-                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
-                            <div
-                                class="font-semibold text-text18 xl:text-text22 flex flex-col md:flex-col items-start justify-start gap-5">
+                            <p class="text-white font-helveticaLight text-text20">
+                                Electrobombas, Calefacción, Iluminación, Filtros, Temperado, limpieza y mantenimiento
 
-                                <h2
-                                    class="text-white bg-verdecreditomype rounded-full w-16 h-16 text-text48 flex items-center justify-center font-fontMedium">
-                                    1</h2>
-                                <h2 class="text-azulcreditomype text-text18 font-fontLight">Contar con una propiedad
-                                    inscrita en registros públicos (SUNARP)
-                                    dentro de nuestro rango de cobertura (Rango de cobertura)</h2>
-
-                            </div>
-
-                            <div
-                                class="font-semibold text-text18 xl:text-text22 flex flex-col md:flex-col items-start justify-start gap-5">
-
-                                <h2
-                                    class="text-white bg-verdecreditomype rounded-full w-16 h-16 text-text48  flex items-center justify-center font-fontMedium">
-                                    2</h2>
-                                <h2 class="text-azulcreditomype text-text18 font-fontLight">DNI de los Propietarios: Copia
-                                    del Documento Nacional de Identidad de todos los propietarios del inmueble.</h2>
-
-                            </div>
-
-                            <div
-                                class="font-semibold text-text18 xl:text-text22 flex flex-col md:flex-col items-start justify-start gap-5">
-
-                                <h2
-                                    class="text-white bg-verdecreditomype rounded-full w-16 h-16 text-text48  flex items-center justify-center font-fontMedium">
-                                    3</h2>
-                                <h2 class="text-azulcreditomype text-text18 font-fontLight">DHR PU - Autovalúo (Tributos
-                                    Municipales): Documentos que indiquen el valor autovalúo y los tributos municipales
-                                    pagados.</h2>
-
-                            </div>
-
-                            <div
-                                class="font-semibold text-text18 xl:text-text22 flex flex-col md:flex-col items-start justify-start gap-5">
-
-                                <h2
-                                    class="text-white bg-verdecreditomype rounded-full w-16 h-16 text-text48  flex items-center justify-center font-fontMedium">
-                                    4</h2>
-                                <h2 class="text-azulcreditomype text-text18 font-fontLight">Sustento de Ingresos: Documentos
-                                    que respalden los ingresos propios o los de los avales.</h2>
-
-                            </div>
-
+                            </p>
                         </div>
                     </div>
 
-                    <div class="image-container flex justify-center items-center basis-1/2 relative ">
-                        <!-- md:mt-24 - mt-12  xl:mt-32-->
-                        <div
-                            class="flex flex-col justify-end h-full items-end p-5 lg:p-8 bg-plomotransparente rounded-3xl ">
+                    <div>
+                        <div class="flex justify-center items-center">
+                            <div class="bg-[#222A51] bg-opacity-80 rounded-xl p-10 backdrop-blur-sm">
+                                <div class="w-full md:max-w-[600px] lg:max-w-[442px] mx-auto flex flex-col gap-5">
+                                    <h2 class="text-white font-helveticaBold text-text32 leading-tight">
+                                        Solicita nuestro servicio llenando este formulario
+                                    </h2>
 
-                            <h2
-                                class="text-left font-bold font-fontMedium text-azulcreditomype text-text32 leading-none md:leading-tight">
-                                Obtén el <span class="text-verdecreditomype">impulso financiero</span>
-                                que tu negocio necesita
-                            </h2>
-
-
-                            <div class="bg-transparent flex items-center justify-center min-h-screen w-full mt-3 ">
-                                <div class="bg-transparent   w-full ">
-                                    <form class="text-black font-fontBook gap-5 bg-transparent" id="formContactos">
+                                    <form action="" id="formContactos">
                                         @csrf
-                                        <div class="relative mb-4">
-                                            <input name="name" type="text" required style="font-size: 17px"
-                                                class="bg-transparent  mt-1 block w-full border-0 border-b-2 border-gray-400 rounded-none p-3 pr-24 focus:ring-0 focus:border-b-2 focus:border-gray-500"
-                                                placeholder="Nombre">
-                                            <span
-                                                class="absolute inset-y-0 right-0 flex items-center pr-3 text-verdecreditomype text-text14">Obligatorio</span>
-                                        </div>
-                                        <div class="relative mb-4">
-                                            <input name="last_name" type="text" required style="font-size: 17px"
-                                                class="bg-transparent mt-1 block w-full border-0 border-b-2 border-gray-400 rounded-none p-3 pr-24 focus:ring-0 focus:border-b-2 focus:border-gray-500"
-                                                placeholder="Apellidos">
-                                            <span
-                                                class="absolute inset-y-0 right-0 flex items-center pr-3 text-verdecreditomype text-text14">Obligatorio</span>
-                                        </div>
-                                        <div class="relative mb-4">
-                                            <input name="document" type="text" style="font-size: 17px"
-                                                class="bg-transparent mt-1 block w-full border-0 border-b-2 border-gray-400 rounded-none p-3 pr-24 focus:ring-0 focus:border-b-2 focus:border-gray-500"
-                                                placeholder="DNI">
-                                            <span
-                                                class="absolute inset-y-0 right-0 flex items-center pr-3 text-verdecreditomype text-text14"></span>
-                                        </div>
-                                        <div class="relative mb-4">
-                                            <input id="email" name="email" type="email" style="font-size: 17px"
-                                                class="bg-transparent mt-1 block w-full border-0 border-b-2 border-gray-400 rounded-none p-3 pr-24 focus:ring-0 focus:border-b-2 focus:border-gray-500"
-                                                placeholder="E-mail">
-                                            <span
-                                                class="absolute inset-y-0 right-0 flex items-center pr-3 text-verdecreditomype text-text14"></span>
-                                        </div>
-                                        <div class="relative mb-4">
-                                            <input id="telefono" name="cellphone" type="text" style="font-size: 17px"
-                                                class="bg-transparent placeholder:text-verdecreditomype text-verdecreditomype font-fontBook font-semibold mt-1 block w-full border-0 border-b-2 border-gray-400 rounded-none p-3 pr-24 focus:ring-0 focus:border-b-2 focus:border-gray-500"
-                                                placeholder="Número de celular">
-                                            <span
-                                                class="absolute inset-y-0 right-0 flex items-center pr-3 text-verdecreditomype text-text14"></span>
-                                        </div>
-                                        <div class="mb-4">
+                                        <div class="flex flex-col gap-5">
+                                            <div class="relative w-full">
+                                                <input id="" name="name" placeholder="Nombre de contacto"
+                                                    type="text"
+                                                    class="w-full py-3 px-4 focus:outline-none font-helveticaLight text-text16 text-[#FFFFFF] focus:ring-0 placeholder:text-[#FFFFFF] placeholder:text-opacity-55 border-white border-b transition-all focus:outline-0 border-t-0 border-l-0 border-r-0 focus:font-helveticaMedium bg-transparent" />
+                                                <p
+                                                    class="absolute right-4 top-1/2 transform -translate-y-1/2 cursor-pointer font-helveticaMedium text-white text-text10">
+                                                    Obligatorio
+                                                </p>
+                                            </div>
 
-                                            <select name="monto"
-                                                class="bg-transparent mt-1 block w-full border-0 border-b-2 border-gray-400 rounded-none p-3 pr-24 focus:ring-0 focus:border-b-2 focus:border-gray-500">
-                                                <option class="option" value="">Seleccione el monto</option>
-                                                <option class="option" value="1000">1000</option>
-                                                <option class="option" value="5000">5000</option>
-                                                <option class="option" value="10000">10000</option>
-                                            </select>
-                                        </div>
-                                        <div class="relative mb-4">
-                                            <textarea name="garantie" style="font-size: 17px; height: auto;"
-                                                class="min-h-28 lg:min-h-14 tracking-tight bg-transparent placeholder:text-text14 mt-1 block w-full border-0 border-b-2 border-gray-400 rounded-none p-3 pr-24 focus:ring-0 focus:border-b-2 focus:border-gray-500 resize-none"
-                                                placeholder="Tienes una casa o departamento que puedas dejar como garantía hipotecaria?"></textarea>
-                                            <span
-                                                class="absolute inset-y-0 right-0 flex items-center pr-3 text-verdecreditomype text-text14"></span>
-                                        </div>
+                                            <div class="relative w-full">
+                                                <input id="" name="document" placeholder="RUC | DNI" type="text"
+                                                    class="w-full py-3 px-4 focus:outline-none font-helveticaLight text-text16 text-[#FFFFFF] focus:ring-0 placeholder:text-[#FFFFFF] placeholder:text-opacity-55 border-white border-b transition-all focus:outline-0 border-t-0 border-l-0 border-r-0 focus:font-helveticaMedium bg-transparent" />
+                                                <p
+                                                    class="absolute right-4 top-1/2 transform -translate-y-1/2 cursor-pointer font-helveticaMedium text-white text-text10">
+                                                    Obligatorio
+                                                </p>
+                                            </div>
 
-                                        <div class="relative mb-4">
-                                            <textarea name="address" style="font-size: 17px; height: auto;"
-                                                class="min-h-32 lg:min-h-14 tracking-tight bg-transparent placeholder:text-text14 mt-1 block w-full border-0 border-b-2 border-gray-400 rounded-none p-3 pr-24 focus:ring-0 focus:border-b-2 focus:border-gray-500 resize-none"
-                                                placeholder="Distrito de la casa o departamento (debe estar ubicado en lima metropolitana, callao, lima provincia o huancayo)"></textarea>
-                                            <span
-                                                class="absolute inset-y-0 right-0 flex items-center pr-3 text-verdecreditomype text-text14"></span>
-                                        </div>
+                                            <div class="relative w-full">
+                                                <input id="telefono" name="cellphone" placeholder="Teléfono" type="tel"
+                                                    class="w-full py-3 px-4 focus:outline-none font-helveticaLight text-text16 text-[#FFFFFF] focus:ring-0 placeholder:text-[#FFFFFF] placeholder:text-opacity-55 border-white border-b transition-all focus:outline-0 border-t-0 border-l-0 border-r-0 focus:font-helveticaMedium bg-transparent" />
+                                                <p
+                                                    class="absolute right-4 top-1/2 transform -translate-y-1/2 cursor-pointer font-helveticaMedium text-white text-text10">
+                                                    Obligatorio
+                                                </p>
+                                            </div>
 
+                                            <div class="relative w-full">
+                                                <input id="email" name="email" placeholder="E-mail" type="tel"
+                                                    class="w-full py-3 px-4 focus:outline-none font-helveticaLight text-text16 text-[#FFFFFF] focus:ring-0 placeholder:text-[#FFFFFF] placeholder:text-opacity-55 border-white border-b transition-all focus:outline-0 border-t-0 border-l-0 border-r-0 focus:font-helveticaMedium bg-transparent" />
+                                            </div>
 
+                                            <div>
+                                                <textarea name="address" id="mensaje" rows="2" cols="30"
+                                                    class="w-full py-3 px-4 focus:outline-none font-helveticaLight text-text16 placeholder:text-white text-white focus:ring-0 placeholder:text-opacity-55 border-white border-b transition-all focus:outline-0 border-t-0 border-l-0 border-r-0 focus:font-helveticaMedium bg-transparent"
+                                                    placeholder="Mensaje"></textarea>
 
-                                        <div class="flex items-center mb-4 ">
-                                            <input required type="checkbox" id="comunicaciones"
-                                                class="mr-2 focus:ring-0 bg-transparent rounded border-gray-300 text-verdecreditomype">
-                                            <label for="comunicaciones" class="text-gray-700 tracking-tight">Acepto
-                                                recibir comunicaciones.</label>
-                                        </div>
-                                        <p class="text-gray-700 text-text16 text-left tracking-tight">Al facilitar mis
-                                            datos acepto la <a href="#"
-                                                class="text-verdecreditomype underline">Política de Privacidad.</a></p>
-                                        <div class="mt-6">
-                                            <button type="submit"
-                                                class="w-full bg-verdecreditomype text-white py-3 rounded-3xl hover:bg-green-600 mt-3">Quiero
-                                                una cotización</button>
+                                            </div>
+
+                                            <div class="flex justify-center items-center py-5">
+                                                <button type="submit"
+                                                    class="text-text18 font-helveticaBold text-white bg-[#007FC8] py-4 px-6 w-full text-center rounded-lg">Quiero
+                                                    una cotización</button>
+                                            </div>
+                                            <div class="flex flex-col gap-1">
+                                                <div class="flex justify-start items-center gap-2">
+                                                    <input required id="aceptar" type="checkbox"
+                                                        class="w-4 h-4 cursor-pointer" />
+                                                    <label for="aceptar"
+                                                        class="font-helveticaLight text-text16 text-white cursor-pointer">Acepto
+                                                        recibir comunicaciones</label>
+                                                </div>
+                                                <div class="flex justify-start items-center gap-1">
+                                                    <p class="font-helveticaLight text-text16 text-white">
+                                                        Al facilitar mis datos acepto la
+                                                        <a target="_blank" id="open-modal" 
+                                                            class="font-helveticaLight text-text16 text-white underline cursor-pointer">Política
+                                                            de Privacidad</a>
+                                                    </p>
+                                                </div>
+                                            </div>
                                         </div>
                                     </form>
                                 </div>
                             </div>
-
-
-
-
                         </div>
-
+                        <!-- --- -->
                     </div>
                 </div>
             </div>
         </section>
-        <div id="beneficios" class="py-3"></div>
-        <section class="flex flex-col gap-10 w-full px-[5%] bg-plomocreditomype py-12 lg:py-24"
-            data-aos="fade-up" data-aos-offset="150">
-            <div class="flex flex-col gap-3 text-center px-[5%] lg:px-[20%]">
-                <h2
-                    class="font-bold font-fontBold text-verdecreditomype text-text48 md:text-text52 leading-none md:leading-tight">
-                    Beneficios <span class="text-azulcreditomype font-fontLight">de adquirir un préstamo 💸 con</span>
-                    garantía hipotecaria 🏡
-                </h2>
-            </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 ">
-                <div class="flex flex-col justify-start  gap-5 text-azulcreditomype rounded-3xl py-4  group relative">
-                    <div class="flex flex-col justify-center items-center gap-3 ">
-
-                        <div class="relative">
-                            <div class="flex justify-center items-center">
-                                <img src="{{ asset('images/img/icono1.png') }}" alt=""
-                                    class="w-16 h-16 rounded-full">
-                            </div>
-                        </div>
-
-                        <div class="font-semibold flex flex-col gap-5 text-center items-center">
-                            <h2 class="font-fontBold text-text29  w-full mx-auto px-5 tracking-tight">
-                                Agilidad ⚡
-                            </h2>
-                            <p class="font-fontLight text-text20  px-5">
-                                Desembolso en 7 días hábiles.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex flex-col justify-start  gap-5 text-azulcreditomype rounded-3xl py-4  group relative">
-                    <div class="flex flex-col justify-center items-center gap-3 ">
-
-                        <div class="relative">
-                            <div class="flex justify-center items-center">
-                                <img src="{{ asset('images/img/icono2.png') }}" alt=""
-                                    class="w-16 h-16 rounded-full">
-                            </div>
-                        </div>
-
-                        <div class="font-semibold flex flex-col gap-5 text-center items-center">
-                            <h2 class="font-fontBold text-text29  w-full mx-auto px-5 tracking-tight">
-                                Acompañamiento 👥
-                            </h2>
-                            <p class="font-fontLight text-text20  px-5">
-                                Desde la solicitud hasta el levantamiento de hipoteca.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex flex-col justify-start  gap-5 text-azulcreditomype rounded-3xl py-4  group relative">
-                    <div class="flex flex-col justify-center items-center gap-3 ">
-
-                        <div class="relative">
-                            <div class="flex justify-center items-center">
-                                <img src="{{ asset('images/img/icono3.png') }}" alt=""
-                                    class="w-16 h-16 rounded-full">
-                            </div>
-                        </div>
-
-                        <div class="font-semibold flex flex-col gap-5 text-center items-center">
-                            <h2 class="font-fontBold text-text29  w-full mx-auto px-5 tracking-tight">
-                                Monto del 💰 Préstamo
-                            </h2>
-                            <p class="font-fontLight text-text20  px-5">
-                                Desde S/.20,000, hasta el 30% del valor del inmueble.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex flex-col justify-start  gap-5 text-azulcreditomype rounded-3xl py-4  group relative">
-                    <div class="flex flex-col justify-center items-center gap-3 ">
-
-                        <div class="relative">
-                            <div class="flex justify-center items-center">
-                                <img src="{{ asset('images/img/icono6.png') }}" alt=""
-                                    class="w-16 h-16 rounded-full">
-                            </div>
-                        </div>
-
-                        <div class="font-semibold flex flex-col gap-5 text-center items-center">
-                            <h2 class="font-fontBold text-text29  w-full mx-auto px-5 tracking-tight">
-                                Tasas 📈 Competitivas
-                            </h2>
-                            <p class="font-fontLight text-text20  px-5">
-                                Del 2.8% al 3.5% mensual.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex flex-col justify-start  gap-5 text-azulcreditomype rounded-3xl py-4 group relative">
-                    <div class="flex flex-col justify-center items-center gap-3 ">
-
-                        <div class="relative">
-                            <div class="flex justify-center items-center">
-                                <img src="{{ asset('images/img/icono5.png') }}" alt=""
-                                    class="w-16 h-16 rounded-full">
-                            </div>
-                        </div>
-
-                        <div class="font-semibold flex flex-col gap-5 text-center items-center">
-                            <h2 class="font-fontBold text-text29 w-full mx-auto px-5 tracking-tight">
-                                Evaluación 🔍 Flexible
-                            </h2>
-                            <p class="font-fontLight text-text20  px-5">
-                                No revisamos Infocorp.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex flex-col justify-start  gap-5 text-azulcreditomype rounded-3xl py-4  group relative">
-                    <div class="flex flex-col justify-center items-center gap-3 ">
-
-                        <div class="relative">
-                            <div class="flex justify-center items-center">
-                                <img src="{{ asset('images/img/icono4.png') }}" alt=""
-                                    class="w-16 h-16 rounded-full">
-                            </div>
-                        </div>
-
-                        <div class="font-semibold flex flex-col gap-5 text-center items-center">
-                            <h2 class="font-fontBold text-text29 w-full mx-auto px-5 tracking-tight">
-                                Confianza ✔️
-                            </h2>
-                            <p class="font-fontLight text-text20  px-5">
-                                Registrados en la SBS (Resolución N° 01144 - 2023)
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-
-
-        {{-- <section class="bg-verdecreditomype fontosectionmidle">
-            <div class="flex flex-col gap-5 text-textAzul w-full px-[5%] lg:pl-[5%] " data-aos="fade-up"
-                data-aos-offset="150">
-                <div class="flex flex-col 2md:flex-row gap-10">
-                    <div class="text-azulcreditomype flex flex-col gap-14 basis-1/3 text-left pt-14 lg:py-20">
-                        <div class="flex flex-col gap-8 md:gap-5">
-                            <h1
-                                class="font-bold fontBold text-[50px] md:text-text36 2md:text-text56 leading-none 2md:leading-tight">
-                                Préstamo <br><span class="text-white font-fontLight">con garantía</span>
-                                hipotecaria 🏡
-                            </h1>
-                        </div>
-                        <div class="font-semibold flex flex-col md:flex-col items-start justify-start gap-5">
-                            <h2 class="text-white text-text24 lg:text-text30 font-fontLight">Creditomype conecta a
-                                emprendedores y
-                                empresarios
-                                que buscan financiamiento para sus proyectos, con inversionistas dispuestos a financiar
-                                estos proyectos,
-                                logrando un beneficio para ambos.</h2>
-
-                        </div>
-                    </div>
-
-                    <div class="basis-2/3 w-full 2md:w-[200px] flex items-center mt-0 lg:-mt-20 pl-[5%]">
-                        <img class="w-full h-full size-full" src="{{ asset('images/img/bannerchico.png') }}" />
-                    </div>
-                </div>
-            </div>
-        </section> --}}
-
-
-        <section class="bannervideo relative" id="testimonio">
-            <div class="flex flex-col gap-5 text-textAzul w-full" data-aos="fade-up" data-aos-offset="150">
-                <div class="flex flex-col 2md:flex-row gap-10">
-
-                    <div class=" flex flex-col gap-40 basis-full text-left py-32">
-                        <div class="flex flex-col gap-8 md:gap-5 bg-verdecreditomype w-2/4 lg:w-1/4 rounded-r-full py-5">
-                            <h1
-                                class="text-white font-bold font-fontBold text-[17px] md:text-text32  leading-none 2md:leading-tight justify-center items-center pl-[10%]">
-                                Conoce <span class="font-fontLight"> nuestra<br> forma de</span>
-                                trabajo
-                            </h1>
-                        </div>
-
-                        <div
-                            class="bg-plomoblanco font-semibold flex flex-col md:flex-col items-start justify-start gap-0 w-4/6 lg:w-2/6 rounded-2xl p-5 relative left-10 lg:left-24">
-
-                            <img class="absolute top-0 right-28 -m-5 w-10 lg:18"
-                                src="{{ asset('images/img/triangulo.png') }}" />
-                            <h2 class="text-azulcreditomype  text-text11 lg:text-text24 font-fontLight">"Credito MYPE me
-                                ayudó a expandir
-                                mi tienda en un tiempo récord.
-                                El proceso fue simple y el equipo muy profesional."</h2>
-                            <h3 class="text-azulcreditomype text-text18 font-fontBold tracking-tighter mt-4">Maria
-                                Rodríguez,</h3>
-                            <h2 class="text-azulcreditomype text-text18 font-fontLight tracking-tighter">Emprendendora
-                                <div
-                                    class="bg-azulcreditomype rounded-full absolute bottom-6 right-10 block lg:hidden play-button cursor-pointer">
-                                    <img class=" animate-bounce animate-infinite w-7 h-7"
-                                        src="{{ asset('images/img/play.png') }}" /></div>
-                            </h2>
-                        </div>
-
-                        <div
-                            class="bg-azulcreditomype rounded-full absolute top-1/2 right-1/2 hidden lg:block animate-bounce animate-infinite play-button2 cursor-pointer">
-                            <img class="w-20 h-20" src="{{ asset('images/img/play.png') }}" /></div>
-                    </div>
-
-                </div>
-            </div>
-
-            <div id="iframeContainer"
-                class="hidden absolute inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
-                <iframe id="youtubeIframe" src="https://www.youtube.com/embed/R50W2gIOxRw" title="YouTube video player"
-                    frameborder="0" referrerpolicy="strict-origin-when-cross-origin"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen
-                    class="w-full aspect-video sm:w-[500px] sm:h-[283px] md:w-[500px] md:h-[282px] lg:w-[1000px] lg:h-[550px] 2xl:w-[1000px] 2xl:h-[565px]">
-                </iframe>
-            </div>
-        </section>
-
-        <section class="flex flex-col gap-10 w-full px-[5%] bg-white py-12 lg:py-24 texturalogos" data-aos="fade-up"
-            data-aos-offset="150">
-            <div class="flex flex-col gap-3 text-center px-[5%] lg:px-[20%]">
-                <h2
-                    class="tracking-tight font-bold font-fontBold text-verdecreditomype text-text48 md:text-text56 leading-none md:leading-tight">
-                    Nuestros aliados 🤝 <span class="text-azulcreditomype font-fontBold"> <br>estratégicos
-                </h2>
-            </div>
-
-            {{-- <div class="flex flex-row gap-5 "> --}}
-            <div
-                class="flex flex-row justify-between items-center gap-5 text-azulcreditomype rounded-3xl py-4  w-full px-[5%] lg:px-[10%]">
-                <div>
-                    <img src="{{ asset('images/img/logocm1.png') }}" />
-                </div>
-                <div>
-                    <img src="{{ asset('images/img/logocm2.png') }}" />
-                </div>
-                <div>
-                    <img src="{{ asset('images/img/logocm3.png') }}" />
-                </div>
-            </div>
-            <div
-                class="flex flex-row justify-between  items-center gap-5 text-azulcreditomype rounded-3xl py-4  w-full px-[10%]">
-                <div>
-                    <img src="{{ asset('images/img/logocm4.png') }}" />
-                </div>
-                <div>
-                    <img src="{{ asset('images/img/logoequifax.png') }}" />
-                </div>
-                <div>
-                    <img src="{{ asset('images/img/logocm6.png') }}" />
-                </div>
-            </div>
-
-            {{-- </div> --}}
-
-        </section>
-
-        <section class="bg-azulcreditomype py-12 lg:py-24 space-y-14" id="prensa">
-            <div class="flex flex-col md:flex-row w-11/12 mx-auto">
-                <h2
-                    class="tracking-tight font-bold font-fontBold text-white text-text48 md:text-text56 leading-none md:leading-tight">
-                    Nuestras 📰 <span class="text-verdecreditomype font-fontBold"> notas de prensa
-                </h2>
-            </div>
-            <div class="flex flex-col md:flex-row w-11/12 mx-auto gap-10">
-                <div class="basis-1/2 flex flex-col" data-aos="fade-up" data-aos-offset="150">
-
-                    <img src="{{ asset('images/img/seniorcm.png') }}" />
-
-                    <h2
-                        class="font-bold font-fontBold text-text32 text-verdecreditomype leading-none md:leading-tight py-5">
-                        ¿Qué requisitos necesito para solicitar un préstamo?
+        <section class="bg-[#F8F8F8] pt-[310px] md:pt-[450px] py-12 lg:py-20">
+            <div class="grid grid-cols-1 md:grid-cols-2 w-11/12 mx-auto gap-5">
+                <div class="flex flex-col gap-10 max-w-[665px]">
+                    <h2 class="text-[#007FC8] font-helveticaBold text-text44 md:text-text48 leading-tight">
+                        Donde hay agua, hay
+                        <span class="text-[#161A32]">PENTAX</span>
                     </h2>
-                    <p class=" font-fontLight text-text18 xl:text-text20 text-white" data-aos="fade-up"
-                        data-aos-offset="150">
-                        Creditomype conecta a emprendedores y empresarios que buscan financiamiento para sus proyectos,
-                        con inversionistas dispuestos a financiar estos proyectos, logrando un beneficio para ambos.
-                    </p>
-                    <a class="text-verdecreditomype font-fontMedium text-text20 mt-3 flex">
-                        Leer más <img class="flex flex-col h-5 mt-1.5" src="{{ asset('images/img/flechaicon.png') }}" />
-                    </a>
 
-                </div>
-                <div class="basis-1/2 flex flex-col" data-aos="fade-up" data-aos-offset="150">
-                    <div class="basis-1/2 flex flex-col" data-aos="fade-up" data-aos-offset="150">
-
-                        <img src="{{ asset('images/img/senoracm.png') }}" />
-
-                        <h2
-                            class="font-bold font-fontBold text-text32 text-verdecreditomype leading-none md:leading-tight py-5">
-                            ¿Qué requisitos necesito para solicitar un préstamo?
-                        </h2>
-                        <p class=" font-fontLight text-text18 xl:text-text20 text-white" data-aos="fade-up"
-                            data-aos-offset="150">
-                            Creditomype conecta a emprendedores y empresarios que buscan financiamiento para sus proyectos,
-                            con inversionistas dispuestos a financiar estos proyectos, logrando un beneficio para ambos.
-                        </p>
-                        <a class="text-verdecreditomype font-fontMedium text-text20 mt-3 flex">
-                            Leer más <img class="flex flex-col h-5 mt-1.5"
-                                src="{{ asset('images/img/flechaicon.png') }}" />
+                    <div class="flex justify-start items-center w-full md:w-auto">
+                        <a href="#"
+                            class="text-white bg-[#007FC8] py-4 px-6 font-helveticaBold text-text18 rounded-xl w-full md:w-auto text-center">
+                            Quiero una cotización
                         </a>
-
                     </div>
+                </div>
+
+                <div class="flex flex-col gap-4 group bg-white p-6 rounded-xl hover:shadow-lg md:duration-300">
+                    <div class="flex flex-col gap-4">
+                        <p class="text-[#007FC8] font-helveticaBold text-text40 leading-none">
+                            Bombas Centrífugas
+                        </p>
+                        <div class="flex flex-col gap-2">
+
+                            <p class="text-[#808080] font-helveticaLight text-text16 md:text-text18">
+                                Ideal para equipos de presurización, sistemas de presión constante y de riego tecnificado
+                                que requieran caudales consistentes con presiones medias o altas. Fabricadas según l norma
+                                EN 733.
+                                Uso en aplicaciones agrícolas e industriales.
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="#"
+                            class="font-helveticaMedium text-text16 text-[#007FC8] flex justify-start items-center gap-2">
+                            <span>Más Información</span>
+                            <div>
+                                <svg width="14" height="12" viewBox="0 0 14 12" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M7.88628 1.33334L12.3307 6.00001M12.3307 6.00001L7.88628 10.6667M12.3307 6.00001L1.66406 6.00001"
+                                        stroke="#007FC8" stroke-width="1.6" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-4 group bg-white p-6 rounded-xl hover:shadow-lg md:duration-300">
+                    <div class="flex flex-col gap-4">
+                        <p class="text-[#007FC8] font-helveticaBold text-text40 leading-none">
+                            Bombas de Caudal
+                        </p>
+                        <div class="flex flex-col gap-2">
+                            <p class="text-[#808080] font-helveticaLight text-text16 md:text-text18">
+                                Idelaes para traspasar o reciclar agua limpia en sistemas agrículas donde se requieren altos
+                                caudales con presiones relativamente bajas
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="#"
+                            class="font-helveticaMedium text-text16 text-[#007FC8] flex justify-start items-center gap-2">
+                            <span>Más Información</span>
+                            <div>
+                                <svg width="14" height="12" viewBox="0 0 14 12" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M7.88628 1.33334L12.3307 6.00001M12.3307 6.00001L7.88628 10.6667M12.3307 6.00001L1.66406 6.00001"
+                                        stroke="#007FC8" stroke-width="1.6" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-4 group bg-white p-6 rounded-xl hover:shadow-lg md:duration-300">
+                    <div class="flex flex-col gap-4">
+                        <p class="text-[#007FC8] font-helveticaBold text-text40 leading-none">
+                            Bombas Multietáticas
+                        </p>
+                        <div class="flex flex-col gap-2">
+                            <p class="text-[#808080] font-helveticaLight text-text16 md:text-text18">
+                                Ideal para el bombeo líquido químicamente y mecánicamente no agresivos. Amplio uso en
+                                equipos de presión constante,
+                                sistemas de riego tecnificado y aplicaciones industriales. Extremadamente silenciosas.
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="#"
+                            class="font-helveticaMedium text-text16 text-[#007FC8] flex justify-start items-center gap-2">
+                            <span>Más Información</span>
+                            <div>
+                                <svg width="14" height="12" viewBox="0 0 14 12" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M7.88628 1.33334L12.3307 6.00001M12.3307 6.00001L7.88628 10.6667M12.3307 6.00001L1.66406 6.00001"
+                                        stroke="#007FC8" stroke-width="1.6" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white fondologos  bg-right bg-cover">
+            <div class="flex flex-col md:flex-row w-11/12 mx-auto gap-10 justify-between py-10 lg:py-20">
+                <div class="flex flex-col gap-3 w-full md:max-w-[450px] justify-center items-start">
+                    <h3 class="text-white font-helveticaBold text-text44 md:text-text72 leading-none">
+                        Representación
+                        <span>Exclusiva</span>
+                    </h3>
+
+                    <div class="flex justify-start items-center py-5">
+                        <a href="#"
+                            class="text-text18 font-helveticaBold text-white bg-[#222A51] py-4 px-6 text-center rounded-lg">Quiero
+                            una cotización</a>
+                    </div>
+                </div>
+
+                <div
+                    class="grid grid-cols-1 gap-10  md:flex md:flex-col md:flex-wrap md:gap-2 justify-center xl:justify-between w-full md:max-w-[768px]">
+
+
+
+                    <div class="flex flex-row gap-2 lg:gap-2 justify-center lg:justify-end items-start">
+                        <div class="flex justify-center items-center">
+                            <img src="{{ asset('images/img/image_20.png') }}" alt="ISO" class="w-24" />
+                        </div>
+                        <div class="flex justify-center items-center">
+                            <img src="{{ asset('images/img/image_21.png') }}" alt="ISO" class="w-24" />
+                        </div>
+                    </div>
+
+                    <div class="flex flex-row justify-center lg:justify-end items-center">
+                        <div class="flex justify-center items-center">
+                            <img src="{{ asset('images/img/pentaxlargeblack.png') }}" alt="pentax" class="w-[600px]" />
+                        </div>
+                    </div>
+
 
                 </div>
             </div>
         </section>
 
-        <section class="pt-12" id="cobertura">
-            <div class="w-full mx-auto flex flex-col md:flex-row justify-center text-center items-start sm:pt-[90px] pb-10 md:pt-20 lg:px-20 lg:pt-10"
-                data-aos="fade-up" data-aos-offset="150">
+        <section class="w-11/12 mx-auto py-20 ">
+            <div class="grid grid-cols-1  w-full md:max-w-[1300px] mx-auto gap-10 ">
+                <div
+                    class="flex flex-col gap-4 group bg-white p-6 rounded-xl hover:shadow-lg md:duration-300 fondobombas bg-cover object-cover">
+                    <div class="flex flex-col gap-5 h-[300px] justify-center pl-[5%]">
+                        <p class="text-white font-helveticaBold text-text40 leading-none">
+                            Bombas de <br>uso agrícola
+                        </p>
 
-                <div class="text-azulcreditomype flex flex-col gap-14 basis-1/2 text-left px-[5%] lg:pr-[8%]">
-                    <div class="flex flex-col gap-8 md:gap-5">
-                        <h1
-                            class="font-bold fontBold text-[50px] md:text-text36 2md:text-text56 leading-none 2md:leading-tight tracking-tight">
-                            Cobertura <span class="text-verdecreditomype font-fontLight">de Servicio en </span>
-                            Todo el Perú 📍
-                        </h1>
-                        <h2 class="text-azulcreditomype text-text24 font-semibold font-fontLight">Lima metropolitana, Lima
-                            provincias, Ica, Huancayo, Arequipa y Cusco</h2>
-                    </div>
-                    <div
-                        class="font-semibold text-text18 xl:text-text22 flex flex-col md:flex-col items-start justify-start gap-5">
-
-                        <h2 class="text-azulcreditomype text-text24 font-fontBold tracking-tight">Elige tu Sucursal</h2>
-                        <ul
-                            class="text-azulcreditomype text-text24 font-semibold font-fontLight tracking-tight gap-5 mt-2">
-                            <li class="flex flex-row"><img class="pr-3"
-                                    src="{{ asset('images/img/iconocasa.png') }}" />Lima metropolitana</li>
-                            <li class="flex flex-row"><img class="pr-3"
-                                    src="{{ asset('images/img/iconocasa.png') }}" />Lima provincias</li>
-                            <li class="flex flex-row"><img class="pr-3"
-                                    src="{{ asset('images/img/iconocasa.png') }}" />Ica</li>
-                            <li class="flex flex-row"><img class="pr-3"
-                                    src="{{ asset('images/img/iconocasa.png') }}" />Huancayo</li>
-                            <li class="flex flex-row"><img class="pr-3"
-                                    src="{{ asset('images/img/iconocasa.png') }}" />Arequipa</li>
-                            <li class="flex flex-row"><img class="pr-3"
-                                    src="{{ asset('images/img/iconocasa.png') }}" />Cusco</li>
-
-                        </ul>
+                        <div class="flex justify-start items-center py-5">
+                            <a href="#"
+                                class="text-text18 font-helveticaBold text-white bg-[#007fc8] py-4 px-6 text-center rounded-lg">Quiero
+                                una cotización</a>
+                        </div>
 
                     </div>
+
                 </div>
 
-                <div class="image-container flex justify-center items-center basis-1/2 relative md:mt-16">
-                    <!-- md:mt-24 - mt-12  xl:mt-32-->
-                    <div class="p-8 flex flex-col justify-center h-full items-center">
-                        <img src="{{ asset('images/img/mapa.png') }}" alt="doctor Kewin" class="w-full">
-                    </div>
-                    {{-- <div class=" md:absolute bottom-0">
-                            <img src="{{ asset('images/img/mapa.png') }}" alt="doctor kevin"
-                                class="h-full w-full">
-                        </div> --}}
-                </div>
             </div>
-
         </section>
 
-        <section>
-            <div class="bg-[#F5F5F5] font-poppins py-12 lg:py-20 texturapreguntas">
-                <div class="relative  px-6  ring-gray-900/5 sm:mx-auto sm:rounded-lg sm:px-10 ">
-                    <div class="mx-auto px-5">
-                        <div class="flex flex-col items-center ">
-                            <h2
-                                class="tracking-tight font-bold font-fontBold text-verdecreditomype text-text48 md:text-text56 leading-none md:leading-tight text-center">
-                                Preguntas Frecuentes: <span class="text-azulcreditomype font-fontBold"> Todo lo<br> que
-                                    Necesitas Saber 💡
-                            </h2>
+        <section class="bg-[#007FC8]">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-11/12 mx-auto gap-10 py-20">
+                <div class="flex flex-col gap-3 items-center">
+                    <div class="flex flex-col gap-2 items-center">
+                        <div class="flex justify-center items-center">
+                            <img src="{{ asset('images/svg/image_31.svg') }}" alt="Calidad" />
                         </div>
-                        <div class="mx-auto pt-2 lg:mt-8 grid max-w-[900px] divide-y divide-neutral-200">
-                            <div class="py-8">
-                                <details class="group">
-                                    <summary
-                                        class="flex cursor-pointer list-none items-center justify-between font-medium">
-                                        <span
-                                            class="text-azulcreditomype font-fontBold text-text18 lg:text-text32 leading-5 tracking-tight">
-                                            ¿Qué requisitos necesito para solicitar un préstamo?</span>
-                                        <span class="transition group-open:rotate-180">
-                                            <svg width="50" height="50" viewBox="0 0 53 53" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <rect x="53" width="53" height="53" rx="26.5"
-                                                    transform="rotate(90 53 0)" fill="#33BF82" />
-                                                <path
-                                                    d="M18.8244 28.2123C18.307 27.6949 17.468 27.6949 16.9506 28.2123C16.4331 28.7297 16.4331 29.5687 16.9506 30.0861L24.6262 37.7617C25.6611 38.7966 27.3389 38.7966 28.3738 37.7617L36.0494 30.0861C36.5669 29.5687 36.5669 28.7297 36.0494 28.2123C35.532 27.6949 34.693 27.6949 34.1756 28.2123L27.825 34.5629L27.825 15.8992C27.825 15.1674 27.2318 14.5742 26.5 14.5742C25.7682 14.5742 25.175 15.1674 25.175 15.8992L25.175 34.5629L18.8244 28.2123Z"
-                                                    fill="white" />
-                                            </svg>
+                        <h2 class="font-helveticaBold text-text32 text-white text-center">
+                            Calidad
+                        </h2>
+                    </div>
+                    <p class="text-white font-helveticaLight text-text16 text-center">
+                        Somos representantes y distribuidores de marcas reconocidas y
+                        certificadas.
+                    </p>
+                </div>
 
-                                        </span>
-                                    </summary>
-                                    <p
-                                        class="group-open:animate-fadeIn mt-3 text-neutral-600 font-fontLight text-text16 lg:text-text20 tracking-tight">
-                                        Nuestro proceso de aprobación es rápido y generalmente toma menos de 48 horas.
-                                    </p>
-                                </details>
-                            </div>
-                            <div class="py-8">
-                                <details class="group">
-                                    <summary
-                                        class="flex cursor-pointer list-none items-center justify-between font-medium">
-                                        <span
-                                            class="text-azulcreditomype font-fontBold text-text18 lg:text-text32 leading-5 tracking-tight">
-                                            ¿Cuánto tiempo toma el proceso de aprobación?</span>
-                                        <span class="transition group-open:rotate-180">
-                                            <svg width="50" height="50" viewBox="0 0 53 53" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <rect x="53" width="53" height="53" rx="26.5"
-                                                    transform="rotate(90 53 0)" fill="#33BF82" />
-                                                <path
-                                                    d="M18.8244 28.2123C18.307 27.6949 17.468 27.6949 16.9506 28.2123C16.4331 28.7297 16.4331 29.5687 16.9506 30.0861L24.6262 37.7617C25.6611 38.7966 27.3389 38.7966 28.3738 37.7617L36.0494 30.0861C36.5669 29.5687 36.5669 28.7297 36.0494 28.2123C35.532 27.6949 34.693 27.6949 34.1756 28.2123L27.825 34.5629L27.825 15.8992C27.825 15.1674 27.2318 14.5742 26.5 14.5742C25.7682 14.5742 25.175 15.1674 25.175 15.8992L25.175 34.5629L18.8244 28.2123Z"
-                                                    fill="white" />
-                                            </svg>
-
-                                        </span>
-                                    </summary>
-                                    <p
-                                        class="group-open:animate-fadeIn mt-3 text-neutral-600 font-fontLight text-text16 lg:text-text20 tracking-tight">
-                                        Nuestro proceso de aprobación es rápido y generalmente toma menos de 48 horas.
-                                    </p>
-                                </details>
-                            </div>
-                            <div class="py-8">
-                                <details class="group">
-                                    <summary
-                                        class="flex cursor-pointer list-none items-center justify-between font-medium">
-                                        <span
-                                            class="text-azulcreditomype font-fontBold text-text18 lg:text-text32 leading-5 tracking-tight">
-                                            ¿Puedo invertir si no tengo experiencia previa?</span>
-                                        <span class="transition group-open:rotate-180">
-                                            <svg width="50" height="50" viewBox="0 0 53 53" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <rect x="53" width="53" height="53" rx="26.5"
-                                                    transform="rotate(90 53 0)" fill="#33BF82" />
-                                                <path
-                                                    d="M18.8244 28.2123C18.307 27.6949 17.468 27.6949 16.9506 28.2123C16.4331 28.7297 16.4331 29.5687 16.9506 30.0861L24.6262 37.7617C25.6611 38.7966 27.3389 38.7966 28.3738 37.7617L36.0494 30.0861C36.5669 29.5687 36.5669 28.7297 36.0494 28.2123C35.532 27.6949 34.693 27.6949 34.1756 28.2123L27.825 34.5629L27.825 15.8992C27.825 15.1674 27.2318 14.5742 26.5 14.5742C25.7682 14.5742 25.175 15.1674 25.175 15.8992L25.175 34.5629L18.8244 28.2123Z"
-                                                    fill="white" />
-                                            </svg>
-
-                                        </span>
-                                    </summary>
-                                    <p
-                                        class="group-open:animate-fadeIn mt-3 text-neutral-600 font-fontLight text-text16 lg:text-text20 tracking-tight">
-                                        ¡Claro que sí! Nuestro equipo te guiará en todo el proceso para que puedas invertir
-                                        con confianza.
-                                    </p>
-                                </details>
-                            </div>
-                            <div class="py-8">
-                                <details class="group">
-                                    <summary
-                                        class="flex cursor-pointer list-none items-center justify-between font-medium">
-                                        <span
-                                            class="text-azulcreditomype font-fontBold text-text18 lg:text-text32 leading-5 tracking-tight">
-                                            ¿Qué garantías necesito para solicitar un préstamo?</span>
-                                        <span class="transition group-open:rotate-180">
-                                            <svg width="50" height="50" viewBox="0 0 53 53" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <rect x="53" width="53" height="53" rx="26.5"
-                                                    transform="rotate(90 53 0)" fill="#33BF82" />
-                                                <path
-                                                    d="M18.8244 28.2123C18.307 27.6949 17.468 27.6949 16.9506 28.2123C16.4331 28.7297 16.4331 29.5687 16.9506 30.0861L24.6262 37.7617C25.6611 38.7966 27.3389 38.7966 28.3738 37.7617L36.0494 30.0861C36.5669 29.5687 36.5669 28.7297 36.0494 28.2123C35.532 27.6949 34.693 27.6949 34.1756 28.2123L27.825 34.5629L27.825 15.8992C27.825 15.1674 27.2318 14.5742 26.5 14.5742C25.7682 14.5742 25.175 15.1674 25.175 15.8992L25.175 34.5629L18.8244 28.2123Z"
-                                                    fill="white" />
-                                            </svg>
-
-                                        </span>
-                                    </summary>
-                                    <p
-                                        class="group-open:animate-fadeIn mt-3 text-neutral-600 font-fontLight text-text16 lg:text-text20 tracking-tight">
-                                        Las garantías varían según el tipo y el monto del préstamo, pero nuestro equipo te
-                                        ayudará a entender todos los requisitos.
-                                    </p>
-                                </details>
-                            </div>
-
+                <div class="flex flex-col gap-3 items-center">
+                    <div class="flex flex-col gap-2 items-center">
+                        <div class="flex justify-center items-center">
+                            <img src="{{ asset('images/svg/image_32.svg') }}" alt="Calidad" />
                         </div>
+                        <h2 class="font-helveticaBold text-text32 text-white text-center">
+                            Experiencia
+                        </h2>
+                    </div>
+                    <p class="text-white font-helveticaLight text-text16 text-center">
+                        Contamos con más de 17 años de experiencia trabajando con
+                        ingeniería acuática.
+                    </p>
+                </div>
+
+                <div class="flex flex-col gap-3 items-center">
+                    <div class="flex flex-col gap-2 items-center">
+                        <div class="flex justify-center items-center">
+                            <img src="{{ asset('images/svg/image_33.svg') }}" alt="Calidad" />
+                        </div>
+                        <h2 class="font-helveticaBold text-text32 text-white text-center">
+                            Profesionalismo
+                        </h2>
+                    </div>
+                    <p class="text-white font-helveticaLight text-text16 text-center">
+                        Nuestro equipo de especialistas es constantemente capacitado para
+                        estar siempre a la vanguardia.
+                    </p>
+                </div>
+
+                <div class="flex flex-col gap-3 items-center">
+                    <div class="flex flex-col gap-2 items-center">
+                        <div class="flex justify-center items-center">
+                            <img src="{{ asset('images/svg/image_34.svg') }}" alt="Calidad" />
+                        </div>
+                        <h2 class="font-helveticaBold text-text32 text-white text-center">
+                            Compromiso
+                        </h2>
+                    </div>
+                    <p class="text-white font-helveticaLight text-text16 text-center">
+                        Contamos con 6 locales en todo el Perú y más de 200 distribuidores
+                        oficiales.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white">
+            <div class="flex flex-col gap-10 py-20 w-11/12 mx-auto">
+                <div class="flex flex-col items-center gap-2">
+                    <h3 class="text-[#161A32] text-text48 font-helveticaBold leading-tight text-center">
+                        Distribuidores <span class="text-[#007FC8]">Autorizados</span>
+                    </h3>
+                    <p class="text-[#808080] font-helveticaLight text-text18 text-center">
+                        De las siguientes marcas
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-5 md:gap-10">
+
+                    <div class="flex justify-center items-center">
+                        <img src="{{ asset('images/img/image_27.png') }}" alt="pentair" />
+                    </div>
+                    <div class="flex justify-center items-center">
+                        <img src="{{ asset('images/img/image_30.png') }}" alt="pentair" />
+                    </div>
+                    <div class="flex justify-center items-center">
+                        <img src="{{ asset('images/img/image_31.png') }}" alt="pentair" />
+                    </div>
+                    <div class="flex justify-center items-center">
+                        <img src="{{ asset('images/img/pentax.png') }}" alt="pentair" />
                     </div>
                 </div>
             </div>
+        </section>
 
+        <section class="pb-20 pt-10 md:pt-20">
+            <h3
+                class="text-[#161A32] font-helveticaBold text-text32 md:text-text48 text-center w-[300px] md:w-[500px] mx-auto leading-tight pb-10">
+                Reconocimiento de
+                <span class="text-[#007FC8]">nuestros clientes</span>
+            </h3>
+
+            <div class="w-11/12 md:w-9/12 mx-auto relative">
+                <div class="swiper testimonios rounded-2xl">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="flex flex-col gap-8 bg-white rounded-lg p-6 md:p-8 items-center">
+                                <p class="text-[#808080] font-helveticaLight text-text18 text-center max-w-[600px]">
+                                    La eficiencia y confiabilidad de estas bombas son incomparables, y el equipo de servicio
+                                    al cliente fue excepcional
+                                    en ayudarnos a encontrar la solución perfecta para nuestras necesidades específicas.
+                                </p>
+
+                                <div class="flex flex-col gap-3 max-w-[600px]">
+                                    <p class="font-helveticaBold text-text20 text-[#161A32]">
+                                        Carmén Arámbulo
+                                    </p>
+                                    <div class="flex justify-center items-center gap-2">
+                                        <img src="{{ asset('images/svg/image_29.svg') }}" alt="start" />
+                                        <img src="{{ asset('images/svg/image_29.svg') }}" alt="start" />
+                                        <img src="{{ asset('images/svg/image_29.svg') }}" alt="start" />
+                                        <img src="{{ asset('images/svg/image_29.svg') }}" alt="start" />
+                                        <img src="{{ asset('images/svg/image_29.svg') }}" alt="start" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="flex flex-col gap-8 bg-white rounded-lg p-6 items-center">
+                                <p class="text-[#808080] font-helveticaLight text-text18 text-center max-w-[600px]">
+                                    Era escéptico de los productos químicos para piscinas, pero
+                                    ahora estoy muy contento con los resultados. Mi piscina está
+                                    siempre limpia y cristalina, y los recomiendo a cualquiera
+                                    que tenga una piscina.
+                                </p>
+
+                                <div class="flex flex-col gap-3 max-w-[600px]">
+                                    <p class="font-helveticaBold text-text20 text-[#161A32]">
+                                        Carmén Arámbulo
+                                    </p>
+                                    <div class="flex justify-center items-center gap-2">
+                                        <img src="{{ asset('images/svg/image_29.svg') }}" alt="start" />
+                                        <img src="{{ asset('images/svg/image_29.svg') }}" alt="start" />
+                                        <img src="{{ asset('images/svg/image_29.svg') }}" alt="start" />
+                                        <img src="{{ asset('images/svg/image_29.svg') }}" alt="start" />
+                                        <img src="{{ asset('images/svg/image_29.svg') }}" alt="start" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="flex flex-col gap-8 bg-white rounded-lg p-6 items-center">
+                                <p class="text-[#808080] font-helveticaLight text-text18 text-center max-w-[600px]">
+                                    Era escéptico de los productos químicos para piscinas, pero
+                                    ahora estoy muy contento con los resultados. Mi piscina está
+                                    siempre limpia y cristalina, y los recomiendo a cualquiera
+                                    que tenga una piscina.
+                                </p>
+
+                                <div class="flex flex-col gap-3 max-w-[600px]">
+                                    <p class="font-helveticaBold text-text20 text-[#161A32]">
+                                        Carmén Arámbulo
+                                    </p>
+                                    <div class="flex justify-center items-center gap-2">
+                                        <img src="{{ asset('images/svg/image_29.svg') }}" alt="start" />
+                                        <img src="{{ asset('images/svg/image_29.svg') }}" alt="start" />
+                                        <img src="{{ asset('images/svg/image_29.svg') }}" alt="start" />
+                                        <img src="{{ asset('images/svg/image_29.svg') }}" alt="start" />
+                                        <img src="{{ asset('images/svg/image_29.svg') }}" alt="start" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="flex flex-col gap-8 bg-white rounded-lg p-6 items-center">
+                                <p class="text-[#808080] font-helveticaLight text-text18 text-center max-w-[600px]">
+                                    Era escéptico de los productos químicos para piscinas, pero
+                                    ahora estoy muy contento con los resultados. Mi piscina está
+                                    siempre limpia y cristalina, y los recomiendo a cualquiera
+                                    que tenga una piscina.
+                                </p>
+
+                                <div class="flex flex-col gap-3 max-w-[600px]">
+                                    <p class="font-helveticaBold text-text20 text-[#161A32]">
+                                        Carmén Arámbulo
+                                    </p>
+                                    <div class="flex justify-center items-center gap-2">
+                                        <img src="{{ asset('images/svg/image_29.svg') }}" alt="start" />
+                                        <img src="{{ asset('images/svg/image_29.svg') }}" alt="start" />
+                                        <img src="{{ asset('images/svg/image_29.svg') }}" alt="start" />
+                                        <img src="{{ asset('images/svg/image_29.svg') }}" alt="start" />
+                                        <img src="{{ asset('images/svg/image_29.svg') }}" alt="start" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="custom-swiper-buttons xl:flex xl:absolute hidden">
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                <div class="swiper-pagination !-bottom-[56px] block xl:hidden mb-[6px] xl:mb-0"></div>
+            </div>
         </section>
     </main>
+
+    <div id="default-modal" tabindex="-1" aria-hidden="true"
+        class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+        <div class="relative p-4 w-full max-w-2xl max-h-full">
+            <!-- Modal content -->
+            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                <!-- Modal header -->
+                <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                        Políticas de privacidad
+                    </h3>
+                    <button type="button"
+                        class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                        data-modal-hide="default-modal">
+                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 14 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                        </svg>
+                        <span class="sr-only">Cerrar modal</span>
+                    </button>
+                </div>
+                <!-- Modal body -->
+                <div class="p-4 md:p-5 space-y-4">
+                    <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                        With less than a month to go before the European Union enacts new consumer privacy laws for its
+                        citizens, companies around the world are updating their terms of service agreements to comply.
+                    </p>
+                    <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                        The European Union’s General Data Protection Regulation (G.D.P.R.) goes into effect on May 25 and is
+                        meant to ensure a common set of data rights in the European Union. It requires organizations to
+                        notify users as soon as possible of high-risk data breaches that could personally affect them.
+                    </p>
+                </div>
+                <!-- Modal footer -->
+                <div class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
+                    <button data-modal-hide="default-modal" type="button"
+                        class="text-white bg-terciario p-3 rounded-lg">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 
 @section('scripts_improtados')
     <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            var especialidades = new Swiper(".especialidades", {
-                slidesPerView: 4,
-                spaceBetween: 20,
-                loop: true,
-                grab: true,
-                centeredSlides: true,
-                initialSlide: 2,
-                pagination: {
-                    el: ".swiper-pagination-estadisticas",
-                    clickable: true,
+        /*  */
+        var swiper = new Swiper(".testimonios", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            grabCursor: true,
+            centeredSlides: false,
+            initialSlide: 0,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
                 },
-                allowTouchMove: false,
-                autoplay: {
-                    delay: 1500,
-                    disableOnInteraction: false,
+                768: {
+                    slidesPerView: 2,
                 },
-                breakpoints: {
-                    0: {
-                        slidesPerView: 2,
-                    },
-                    768: {
-                        slidesPerView: 4,
-                    },
+                1024: {
+                    slidesPerView: 1,
                 },
-            });
-
-            /* ---------------- CARROSUEL PARA GRILLAS --------- */
-
-            var enfermedades = new Swiper(".enfermedades", {
-                slidesPerView: 1,
-                spaceBetween: 20,
-                loop: true,
-                grab: true,
-                centeredSlides: true,
-                initialSlide: 2,
-                allowTouchMove: true,
-            });
-            /* --------------------- CARRUSEL PARA MARCAS ------- */
-
-            var logosHospitales = new Swiper(".logosHospitales", {
-                slidesPerView: 2,
-                spaceBetween: 10,
-                loop: true,
-                grab: true,
-                centeredSlides: false,
-                allowTouchMove: false,
-                initialSlide: 0, // Empieza en el cuarto slide (índice 3) */
-                autoplay: {
-                    delay: 1500,
-                    disableOnInteraction: false,
+            },
+        });
+        /*  */
+        var swiper = new Swiper(".logos", {
+            slidesPerView: 4,
+            spaceBetween: 30,
+            centeredSlides: false,
+            initialSlide: 0,
+            loop: true,
+            autoplay: {
+                delay: 1500,
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 2,
+                    centeredSlides: true,
                 },
-                breakpoints: {
-                    0: {
-                        slidesPerView: 2,
-                        centeredSlides: true,
-                    },
-                    768: {
-                        slidesPerView: 2,
-                    },
+                768: {
+                    slidesPerView: 4,
+                    centeredSlides: false,
+                    autoplay: false,
                 },
-            });
-
-            /* ----- carrusel de testimonios --------- */
-
-            var testimonios = new Swiper(".testimonios", {
-                slidesPerView: 1,
-                spaceBetween: 10,
-                loop: true,
-                grab: true,
-                allowTouchMove: false,
-                navigation: {
-                    nextEl: ".swiper-button-next",
-                    prevEl: ".swiper-button-prev",
-                },
-                centeredSlides: true,
-                initialSlide: 0, // Empieza en el cuarto slide (índice 3) */
-                autoplay: {
-                    delay: 2500,
-                    disableOnInteraction: false,
-                },
-                breakpoints: {
-                    0: {
-                        slidesPerView: 1,
-                    },
-                },
-            });
-
-            /* ---------------- FLIPCARD IMC  ----------------------------- */
-            const onCalcular = document.querySelector(".btnCalcular");
-            const onRegresar = document.querySelector(".btnRegresar");
-            const card = document.querySelector(".card");
-            const front = document.querySelector(".front");
-            const back = document.querySelector(".back");
-            const resultado = document.querySelector(".resultado");
-            const peso = document.querySelector(".peso");
-            const altura = document.querySelector(".altura");
-
-            const imc0 = document.getElementById("imc0");
-            const imc1 = document.getElementById("imc1");
-            const imc2 = document.getElementById("imc2");
-            const imc3 = document.getElementById("imc3");
-            const imc4 = document.getElementById("imc4");
-            const imc5 = document.getElementById("imc5");
-            const imcItems = document.querySelectorAll(".imcItems");
-            const imcp = document.querySelectorAll(".imcpInfo");
-
-            let imc = null;
-
-            onCalcular.addEventListener("click", () => {
-                imc = (
-                    parseFloat(peso.value) / Math.pow(parseFloat(altura.value), 2)
-                ).toFixed(1);
-
-                if (imc < 0) {
-                    createAlert("Solo se aceptan valores mayores a cero");
-                    return;
-                }
-
-                if (isNaN(imc)) {
-                    createAlert("Debe llenar los campos peso y altura");
-                    return;
-                }
-
-                resultado.textContent = imc;
-
-                card.classList.toggle("flipCard");
-                front.classList.add("hidden");
-                back.classList.remove("hidden");
-
-                validateImc(imc);
-            });
-
-            onRegresar.addEventListener("click", () => {
-                back.classList.add("hidden");
-                card.classList.toggle("flipCard");
-                front.classList.remove("hidden");
-                resultado.textContent = "";
-                peso.value = "";
-                altura.value = "";
-
-                imc0.classList.remove("bg-green-200");
-                imc1.classList.remove("bg-green-200");
-                imc2.classList.remove("bg-green-200");
-                imc3.classList.remove("bg-red-200");
-                imc4.classList.remove("bg-red-200");
-                imc5.classList.remove("bg-red-200");
-
-                /* Vuelve a eliminar los estilos y coloca el color inicial */
-                imcp.forEach((imc) => {
-                    imc.classList.remove(
-                        "text-red-600",
-                        "bg-green-200",
-                        "text-green-600",
-                        "bg-red-200"
-                    );
-
-                    imc.classList.add("text-textAzul");
-                });
-            });
-
-            function createAlert(mensaje) {
-                const alerta = document.createElement("p");
-                onCalcular.disabled = true;
-                alerta.textContent = mensaje;
-                alerta.classList.add("alerta");
-                card.parentNode.insertBefore(alerta, card.nextSibling);
-                setTimeout(() => {
-                    alerta.remove();
-                    onCalcular.disabled = false;
-                }, 3000);
-            }
-
-            function validateImc(imc) {
-                if (imc <= 18.5) {
-                    imc0.classList.add("bg-green-200");
-                } else if (imc >= 18.5 && imc <= 24.9) {
-                    imc1.classList.add("bg-green-200");
-                } else if (imc >= 25 && imc <= 29.9) {
-                    imc2.classList.add("bg-green-200");
-                } else if (imc >= 30 && imc <= 34.9) {
-                    imc3.classList.add("bg-red-200");
-                } else if (imc >= 35 && imc <= 39.9) {
-                    imc4.classList.add("bg-red-200");
-                } else {
-                    imc5.classList.add("bg-red-200");
-                }
-
-                /* Cambia de color al parrafo */
-                imcItems.forEach((imc) => {
-                    if (imc.classList.contains("bg-green-200")) {
-                        imc.children[1].classList.remove("text-textAzul");
-                        imc.children[1].classList.add("text-green-600");
-                    }
-                    if (imc.classList.contains("bg-red-200")) {
-                        imc.children[1].classList.remove("text-textAzul");
-                        imc.children[1].classList.add("text-red-600");
-                    }
-                });
-            }
-
-            /* ------------------------ deslizante --------------- */
-
-            const one = document.querySelector(".one");
-            const two = document.querySelector(".two");
-            const three = document.querySelector(".three");
-            const four = document.querySelector(".four");
-            const five = document.querySelector(".five");
-            const firstIcon = document.querySelector("#firstIcon");
-            const firstCircle = document.querySelector("#firstCircle");
-            const secondIcon = document.querySelector("#secondIcon");
-            const secondCircle = document.querySelector("#secondCircle");
-            const thirdsIcon = document.querySelector("#thirdsIcon");
-            const thirdsCircle = document.querySelector("#thirdsCircle");
-
-            let stepOne = null;
-            let stepTwo = null;
-            let stepThree = null;
-
-            one.onclick = function() {
-                stepOne = 1;
-                one.classList.add("active");
-                two.classList.remove("active");
-                three.classList.remove("active");
-
-                if (stepOne < stepTwo || stepOne < stepThree) {
-                    secondIcon.setAttribute("stroke", "#66AAD8");
-                    secondCircle.setAttribute("fill", "#F8FBFD");
-                    thirdsIcon.setAttribute("stroke", "#66AAD8");
-                    thirdsCircle.setAttribute("fill", "#F8FBFD");
-                }
-                if (stepOne < stepTwo && stepOne < stepThree) {
-                    stepTwo = null;
-                    stepThree = null;
-                }
-            };
-
-            two.onclick = function() {
-                stepTwo = 2;
-                one.classList.add("active");
-                two.classList.add("active");
-                three.classList.remove("active");
-                secondIcon.setAttribute("stroke", "#ffffff");
-                secondCircle.setAttribute("fill", "#42BAE2");
-
-                if (stepTwo < stepThree || stepTwo > stepOne) {
-                    thirdsIcon.setAttribute("stroke", "#66AAD8");
-                    thirdsCircle.setAttribute("fill", "#F8FBFD");
-
-                    firstIcon.setAttribute("stroke", "#ffffff");
-                    firstCircle.setAttribute("fill", "#42BAE2");
-                }
-            };
-            three.onclick = function() {
-                stepThree = 3;
-                one.classList.add("active");
-                two.classList.add("active");
-                three.classList.add("active");
-
-                thirdsIcon.setAttribute("stroke", "#ffffff");
-                thirdsCircle.setAttribute("fill", "#42BAE2");
-
-                if (stepThree > stepTwo || stepThree > stepOne) {
-                    firstIcon.setAttribute("stroke", "#ffffff");
-                    firstCircle.setAttribute("fill", "#42BAE2");
-                    secondIcon.setAttribute("stroke", "#ffffff");
-                    secondCircle.setAttribute("fill", "#42BAE2");
-                }
-            };
+            },
         });
     </script>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const playButton = document.querySelector('.play-button');
-            const iframeContainer = document.getElementById('iframeContainer');
-            const iframe = document.getElementById('youtubeIframe');
+        let modal = document.getElementById("default-modal");
+        let btn = document.getElementById("open-modal");
+        let btn2 = document.getElementById("open-modal2");
+        let closeButtons = document.querySelectorAll("[data-modal-hide='default-modal']");
+        let body = document.body;
 
-            playButton.addEventListener('click', function() {
-                iframeContainer.classList.add('show');
-                // Autoplay el video
-                const src = iframe.src;
-                iframe.src = src + "?autoplay=1";
-            });
+        btn.onclick = function() {
+            modal.classList.remove("hidden");
+            modal.classList.add("flex");
+            body.classList.add("modal-open");
+        }
 
-            // Opcional: Cerrar el iframe al hacer clic fuera de él
-            iframeContainer.addEventListener('click', function(e) {
-                if (e.target === iframeContainer) {
-                    iframe.src = iframe.src.replace("?autoplay=1", ""); // Detener el video
-                    iframeContainer.classList.remove('show');
-                }
-            });
+        btn2.onclick = function() {
+            modal.classList.remove("hidden");
+            modal.classList.add("flex");
+            body.classList.add("modal-open");
+        }
+
+        closeButtons.forEach(button => {
+            button.onclick = function() {
+                modal.classList.remove("flex");
+                modal.classList.add("hidden");
+                body.classList.remove("modal-open");
+            }
         });
 
-        document.addEventListener('DOMContentLoaded', function() {
-            const playButton = document.querySelector('.play-button2');
-            const iframeContainer = document.getElementById('iframeContainer');
-            const iframe = document.getElementById('youtubeIframe');
-
-            playButton.addEventListener('click', function() {
-                iframeContainer.classList.add('show');
-                // Autoplay el video
-                const src = iframe.src;
-                iframe.src = src + "?autoplay=1";
-            });
-
-            // Opcional: Cerrar el iframe al hacer clic fuera de él
-            iframeContainer.addEventListener('click', function(e) {
-                if (e.target === iframeContainer) {
-                    iframe.src = iframe.src.replace("?autoplay=1", ""); // Detener el video
-                    iframeContainer.classList.remove('show');
-                }
-            });
-        });
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.classList.remove("flex");
+                modal.classList.add("hidden");
+                body.classList.remove("modal-open");
+            }
+        }
     </script>
+
 @stop
 
 @stop

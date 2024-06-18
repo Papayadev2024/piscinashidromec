@@ -20,29 +20,8 @@
         </svg>
       </button>
       <!-- Logo -->
-      <a class="block" href="{{ route('dashboard') }}">
-        <svg width="32" height="32" viewBox="0 0 32 32">
-          <defs>
-            <linearGradient x1="28.538%" y1="20.229%" x2="100%" y2="108.156%" id="logo-a">
-              <stop stop-color="#A5B4FC" stop-opacity="0" offset="0%" />
-              <stop stop-color="#A5B4FC" offset="100%" />
-            </linearGradient>
-            <linearGradient x1="88.638%" y1="29.267%" x2="22.42%" y2="100%" id="logo-b">
-              <stop stop-color="#38BDF8" stop-opacity="0" offset="0%" />
-              <stop stop-color="#38BDF8" offset="100%" />
-            </linearGradient>
-          </defs>
-          <rect fill="#6366F1" width="32" height="32" rx="16" />
-          <path
-            d="M18.277.16C26.035 1.267 32 7.938 32 16c0 8.837-7.163 16-16 16a15.937 15.937 0 01-10.426-3.863L18.277.161z"
-            fill="#4F46E5" />
-          <path
-            d="M7.404 2.503l18.339 26.19A15.93 15.93 0 0116 32C7.163 32 0 24.837 0 16 0 10.327 2.952 5.344 7.404 2.503z"
-            fill="url(#logo-a)" />
-          <path
-            d="M2.223 24.14L29.777 7.86A15.926 15.926 0 0132 16c0 8.837-7.163 16-16 16-5.864 0-10.991-3.154-13.777-7.86z"
-            fill="url(#logo-b)" />
-        </svg>
+      <a class="block" href="{{ route('mensajes.index') }}">
+        <img src="{{asset('images/img/logohidromec.png')}}" />
       </a>
     </div>
 
@@ -53,7 +32,7 @@
         <h3 class="text-xs uppercase text-slate-500 font-semibold pl-3">
           <span class="hidden lg:block lg:sidebar-expanded:hidden 2xl:hidden text-center w-6"
             aria-hidden="true">•••</span>
-          <span class="lg:hidden lg:sidebar-expanded:block 2xl:block">Dr. Kewin - BackEnd</span>
+          <span class="lg:hidden lg:sidebar-expanded:block 2xl:block">Hidromec - Agrícola</span>
         </h3>
         <ul class="mt-3">
 
@@ -84,6 +63,29 @@
                     </span>
                   @endif
                   
+                </div>
+              </div>
+            </a>
+          </li>
+
+          <!-- Suscripciones -->
+
+          <li
+            class="px-3 py-2 rounded-sm mb-0.5 last:mb-0 @if (in_array(Request::segment(2), ['suscripcion'])) {{ 'bg-slate-900' }} @endif">
+            <a class="block text-slate-200 hover:text-white truncate transition duration-150 @if (in_array(Request::segment(2), ['suscripcion'])) {{ 'hover:text-slate-200' }} @endif"
+              href="{{ route('subscripciones') }}">
+              <div class="flex items-center justify-between">
+                <div class="grow flex items-center">
+                  <svg class="shrink-0 h-6 w-6" viewBox="0 0 24 24">
+                    <path
+                      class="fill-current @if (in_array(Request::segment(2), ['suscripcion'])) {{ 'text-indigo-500' }}@else{{ 'text-slate-600' }} @endif"
+                      d="M14.5 7c4.695 0 8.5 3.184 8.5 7.111 0 1.597-.638 3.067-1.7 4.253V23l-4.108-2.148a10 10 0 01-2.692.37c-4.695 0-8.5-3.184-8.5-7.11C6 10.183 9.805 7 14.5 7z" />
+                    <path
+                      class="fill-current @if (in_array(Request::segment(2), ['suscripcion'])) {{ 'text-indigo-300' }}@else{{ 'text-slate-400' }} @endif"
+                      d="M11 1C5.477 1 1 4.582 1 9c0 1.797.75 3.45 2 4.785V19l4.833-2.416C8.829 16.85 9.892 17 11 17c5.523 0 10-3.582 10-8s-4.477-8-10-8z" />
+                  </svg>
+                  <span
+                    class="text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Suscriptores</span>
                 </div>
               </div>
             </a>

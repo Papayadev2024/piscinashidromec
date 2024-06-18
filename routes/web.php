@@ -21,6 +21,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\LogosClientController;
 
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\NewsletterSubscriberController;
 use App\Http\Controllers\StaffController;
 
 /*
@@ -40,7 +41,7 @@ Route::get('/nosotros', [IndexController::class, 'index'] )->name('nosotros');
 /* Route::get('/servicios', [IndexController::class, 'index'] )->name('servicios'); */
 Route::get('/servicios/{id}', [IndexController::class, 'servicios'] )->name('servicios');
 
-
+Route::post('/subscripciones/guardar', [NewsletterSubscriberController::class, 'saveSubscripciones'])->name('subscripciones.guardar');
 Route::post('guardarContactos', [IndexController::class, 'guardarContacto'] )->name('guardarContactos');
 
 
@@ -88,7 +89,10 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
         Route::resource('/staff', StaffController::class);
         Route::post('/staff/updateVisible', [StaffController::class, 'updateVisible'])->name('staff.updateVisible');
 
-        //t
+        //Suscripciones
+        Route::get('/subscripciones', [NewsletterSubscriberController::class, 'showSubscripciones'])->name('subscripciones');
+
+        
 
         Route::fallback(function() {
             return view('pages/utility/404');

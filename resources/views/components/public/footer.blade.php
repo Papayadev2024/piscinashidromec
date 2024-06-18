@@ -1,81 +1,95 @@
-<footer class="bg-azulcreditomype font-outfit text-textWhite">
-    <div class="w-11/12 mx-auto flex flex-col gap-10 pt-12 border-b-white border-b-[1px]"> {{-- py-12 --}}
-        <div class="flex flex-col 2md:flex-row 2md:justify-between  pb-10 gap-12 2md:gap-24"> {{-- border-b-2 border-white -  data-aos="fade-up" data-aos-offset="150"  --}}
+<footer class="bg-[#007FC8]">
+    <div class="grid grid-cols-1 md:grid-cols-2 w-11/12 mx-auto py-16 gap-14 md:gap-5">
+        <div class="w-full md:max-w-[500px] flex flex-col gap-5">
+            <a href="#">
+                <img src="{{asset('images/svg/image_21.svg')}}" alt="Hidromec" />
+            </a>
+            <p class="text-white font-helveticaLight text-text16">
+                Somos una empresa con más de 17 años de experiencia en el mercado
+                peruano especializada en el suministro e instalación de equipos de
+                bombeo para aplicación industrial, residencial, agrícola y minera.
+            </p>
 
-            <div class="flex flex-col gap-5 basis-1/3">
-                <div class="flex flex-col gap-3">
-                    <img class="w-52" src="{{ asset('images/img/logocmblanco.png') }}" />
-                    <p class="font-fontLight tracking-tight text-text14 xl:text-text18 w-full">
-                        ¡Más de 5,000 pequeñas empresas ya se han beneficiado de nuestros servicios!
-                    </p>
-                </div>
-
-
-                <div
-                    class="flex flex-col gap-5 2md:flex-row 2md:justify-between items-start 2md:items-center text-text14 xl:text-text18">
-
-                    <div class="flex justify-start 2md:justify-between gap-5 w-full 2md:w-auto">
-
-                        
-                            <a target="_blank" href="https://www.instagram.com/creditomype/">
-                                <img src="{{ asset('images/img/instagramverde.png') }}" alt="instagram">
-                            </a>
-                        
-
-                       
-                            <a target="_blank" href="https://www.facebook.com/Creditomype">
-                                <img src="{{ asset('images/img/facebookverde.png') }}" alt="facebook">
-                            </a>
-                       
-
-                      
-                            <a target="_blank" href="https://www.linkedin.com/company/creditomype">
-                                <img src="{{ asset('images/img/linkedverde.png') }}" alt="linkedin">
-                            </a>
-                       
+            <div class="flex flex-col gap-2">
+                <form action="" id="footerFormulario"
+                    class="flex flex-col md:flex-row md:justify-start md:items-center gap-5">
+                    @csrf
+                    <div class="w-full">
+                        <input required name="email" type="email" id="emailFooter" class="bg-white px-5 py-3 rounded-xl w-full" placeholder="Dejanos tu email" />
                     </div>
-                </div>
-            </div>
+                    <input type="hidden" id="nameFooter" required name="full_name" value="Usuario suscrito" />
+                    <input type="hidden" id="tipo" placeholder="tipo" name="tipo_message" value="Inscripción" />
 
-            <div class="flex flex-col 2md:flex-row gap-12 2md:gap-16 basis-2/3 2md:justify-end">
-                <div class="flex flex-col gap-5">
-                    <p class="font-medium font-fontBold text-text16 xl:text-text20">Menu</p>
-                    <div class="flex flex-col gap-2 font-fontLight tracking-tight">
-                        <a href="{{ route('index') . '#prestamo' }}" class="font-normal text-text14 xl:text-text18 block">Solicitar prestamo</a>
-                        <a href="{{ route('index') . '#beneficios' }}"
-                            class="font-normal text-text14 xl:text-text18 block">Beneficios</a>
-                        <a href="{{ route('index') . '#testimonio' }}"
-                            class="font-normal text-text14 xl:text-text18 block">Testimonio</a>
-                        <a href="{{ route('index') . '#cobertura' }}"
-                            class="font-normal text-text14 xl:text-text18 block">Cobertura</a>
+                    <div class="flex justify-center items-center w-full md:w-auto">
+                         <button
+                            type="submit"
+                            class="font-helveticaBold text-text16 text-white border border-white py-3 px-6 rounded-xl w-full md:w-auto text-center">Suscribe
+                        </button>
                     </div>
-                </div>
-
-
-                <div class="flex flex-col gap-5">
-                    <p class="font-medium text-text16 xl:text-text20 font-fontBold">
-                        Datos de contacto
-                    </p>
-                    <div class="flex flex-col gap-2  font-fontLight tracking-tight">
-                        <p class="font-normal text-text14 xl:text-text18">
-                            Avenida Javier Prado Este 560, San Isidro. Oficina 1102
-                        </p>
-                        <div class="font-normal text-text14 xl:text-text18">
-                            <p>Email: hola@creditomype.com</p>
-                        </div>
-                        <div class="font-normal text-text14 xl:text-text18">
-                            <span>Teléfono: +51 913 883 322</span>
-                           
-                        </div>
-                    </div>
-                </div>
+                </form>
+                <p class="font-helveticaLight text-text12 text-white">
+                    Al suscribirse, acepta nuestra Política de privacidad y brinda su
+                    consentimiento para recibir actualizaciones de nuestra empresa.
+                </p>
             </div>
         </div>
 
-        {{-- <a href="http://mundoweb.pe/" target="_blank">Copyright &copy; 2023 Mundo Web. Reservados todos los derechos</a> --}}
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-0">
+            <div class="flex flex-col gap-5">
+                <p class="font-helveticaBold text-text16 text-white">Síganos</p>
 
+                <div class="flex flex-col gap-5">
+                    <a href="https://www.facebook.com/hidromecingenieros" target="_blank"
+                        class="flex justify-start items-center gap-2 text-white font-helveticaLight text-text14">
+                        <img src="{{asset('images/svg/image_16.svg')}}" alt="facebook" />
+                        <span>Facebook</span>
+                    </a>
+                    <a href="https://www.instagram.com/hidromecingenieros/?hl=es" target="_blank"
+                        class="flex justify-start items-center gap-2 text-white font-helveticaLight text-text14">
+                        <img src="{{asset('images/svg/image_17.svg')}}" alt="instagram" />
+                        <span>Instagram</span>
+                    </a>
+                    <a href="https://www.linkedin.com/company/hidromecingenieros/" target="_blank"
+                        class="flex justify-start items-center gap-2 text-white font-helveticaLight text-text14">
+                        <img src="{{asset('images/svg/image_19.svg')}}" alt="linkedin" />
+                        <span>Linkedin</span>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UC3VTnRz6b1aFrpQleveaxmw" target="_blank"
+                        class="flex justify-start items-center gap-2 text-white font-helveticaLight text-text14">
+                        <img src="{{asset('images/svg/image_20.svg')}}" alt="youtube" />
+                        <span>YouTube</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-5">
+                <p class="font-helveticaBold text-text24 text-white leading-none">
+                    Habla con un experto
+                </p>
+
+                <p class="text-white font-helveticaLight text-text16">
+                    Gracias por su interés, por favor déjenos su consulta. Nos
+                    pondremos en contacto con usted.
+                </p>
+
+                <div class="flex justify-start items-center">
+                    <a target="_blank" href="https://api.whatsapp.com/send?phone=51123456789&text=hola" rel="noopener"
+                        class="bg-[#198CCD] text-white font-helveticaBold text-text16 py-4 px-6 rounded-xl">Contáctanos
+                        ahora</a>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="w-11/12 mx-auto flex flex-col gap-10 py-8 border-b-white">
-        <p class="font-fontLight">Copyright © 2024 <a class="font-bold" href="https://mundoweb.pe/" target="blank">Mundo Web.</a> Reservados todos los derehos.</p>
+
+    <div
+        class="flex flex-col items-start gap-3 md:flex-row md:justify-between md:items-center w-11/12 mx-auto py-10 border-t border-white">
+        <a href="#" target="_blank" class="text-white font-helveticaLight text-text14">&copy; 2024 Mundo Web.
+            Reservados todos los derechos</a>
+        <div>
+            <a id="open-modal2" target="_blank" class="underline text-white font-helveticaLight text-text14 cursor-pointer">Política de
+                privacidad</a>
+        </div>
     </div>
 </footer>
+
+
