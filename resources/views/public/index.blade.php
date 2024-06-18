@@ -57,37 +57,38 @@
 
     <main class="bg-[#F9FAFB]">
         <section class="relative">
-            <img src="{{ asset('images/img/image_16.png') }}" alt="hidromec piscinas"
+            <img src="{{asset('images/img/image_1.png')}}" alt="hidromec piscinas"
                 class="w-full h-[800px] object-cover hidden md:block" />
 
-            <img src="{{ asset('images/img/image_16.png') }}" alt="hidromec piscinas"
+            <img src="{{asset('images/img/image_15.png')}}" alt="hidromec piscinas"
                 class="w-full h-[1000px] object-cover block md:hidden" />
 
             <div
                 class="absolute transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 w-11/12 mx-auto pt-[350px] sm:pt-[250px] md:pt-[500px] lg:pt-0">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-24">
                     <div class="flex flex-col justify-center items-start gap-2 w-full lg:max-w-[700px]">
-                        <div class="flex justify-start items-center gap-2 bg-[#232b52] rounded-full py-2 px-3">
-                            <img src="{{ asset('images/svg/image_9.svg') }}" alt="experiencia" />
+                        <div class="flex justify-start items-center gap-2 bg-[#007FC8] rounded-full py-2 px-3">
+                            <img src="{{asset('images/svg/image_9.svg')}}" alt="experiencia" />
                             <p class="text-white font-helveticaMedium text-text12 md:text-text16">
-                                Más de 17 años en el mercado nos respaldan
+                                Más de 17 años de experiencia en el mercado.
                             </p>
                         </div>
 
                         <div class="flex flex-col gap-5 items-start">
-                            <h1 class="font-helveticaBold text-text46 md:text-text64 leading-none text-white">
-                                La gama más completa de bombas para el Sector Agrícola
+                            <h1 class="font-helveticaBold text-text46 md:text-text64 leading-none  text-white">
+                                Suministro y Mantenimiento de equipos de piscinas.
                             </h1>
                             <p class="text-white font-helveticaLight text-text20">
-                                Electrobombas, Calefacción, Iluminación, Filtros, Temperado, limpieza y mantenimiento
-
+                                Electrobombas, Filtros, Clorinadores, Accesorios Empotables, Calentadores, Iluminación y Kit
+                                de Limpieza.
                             </p>
                         </div>
                     </div>
 
                     <div>
+                        <!-- corregir -->
                         <div class="flex justify-center items-center">
-                            <div class="bg-[#222A51] bg-opacity-80 rounded-xl p-10 backdrop-blur-sm">
+                            <div class="bg-[#007FC8] bg-opacity-80 text-opacity-0 rounded-xl p-10">
                                 <div class="w-full md:max-w-[600px] lg:max-w-[442px] mx-auto flex flex-col gap-5">
                                     <h2 class="text-white font-helveticaBold text-text32 leading-tight">
                                         Solicita nuestro servicio llenando este formulario
@@ -138,7 +139,7 @@
 
                                             <div class="flex justify-center items-center py-5">
                                                 <button type="submit"
-                                                    class="text-text18 font-helveticaBold text-white bg-[#007FC8] py-4 px-6 w-full text-center rounded-lg">Quiero
+                                                    class="text-text18 font-helveticaBold text-white bg-[#222a51] py-4 px-6 w-full text-center rounded-lg">Quiero
                                                     una cotización</button>
                                             </div>
                                             <div class="flex flex-col gap-1">
@@ -169,265 +170,570 @@
             </div>
         </section>
 
-        <section class="bg-[#F8F8F8] pt-[310px] md:pt-[450px] py-12 lg:py-20">
-            <div class="grid grid-cols-1 md:grid-cols-2 w-11/12 mx-auto gap-5">
-                <div class="flex flex-col gap-10 max-w-[665px]">
-                    <h2 class="text-[#007FC8] font-helveticaBold text-text44 md:text-text48 leading-tight">
-                        Donde hay agua, hay
-                        <span class="text-[#161A32]">PENTAX</span>
-                    </h2>
+        <section class="bg-[#F8F8F8] pt-[350px] md:pt-[495px] lg:pt-16 pb-10">
+            <div class="w-11/12 mx-auto flex flex-col gap-10">
+                <h3 class="text-[#023B54] font-helveticaMedium text-text40 leading-tight text-center">
+                    Categorías del <span class="text-[#007FC8]">negocio</span>
+                </h3>
 
-                    <div class="flex justify-start items-center w-full md:w-auto">
-                        <a href="#"
-                            class="text-white bg-[#007FC8] py-4 px-6 font-helveticaBold text-text18 rounded-xl w-full md:w-auto text-center">
-                            Quiero una cotización
-                        </a>
-                    </div>
-                </div>
-
-                <div class="flex flex-col gap-4 group bg-white p-6 rounded-xl hover:shadow-lg md:duration-300">
-                    <div class="flex flex-col gap-4">
-                        <p class="text-[#007FC8] font-helveticaBold text-text40 leading-none">
-                            Bombas Centrífugas
-                        </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                    <div class="flex flex-col gap-4 group bg-white hover:bg-[#C2E0F2] p-6 rounded-xl md:duration-300">
                         <div class="flex flex-col gap-2">
-
-                            <p class="text-[#808080] font-helveticaLight text-text16 md:text-text18">
-                                Ideal para equipos de presurización, sistemas de presión constante y de riego tecnificado
-                                que requieran caudales consistentes con presiones medias o altas. Fabricadas según l norma
-                                EN 733.
-                                Uso en aplicaciones agrícolas e industriales.
-                            </p>
-                        </div>
-                    </div>
-                    <div>
-                        <a href="#"
-                            class="font-helveticaMedium text-text16 text-[#007FC8] flex justify-start items-center gap-2">
-                            <span>Más Información</span>
                             <div>
-                                <svg width="14" height="12" viewBox="0 0 14 12" fill="none"
+                                <svg width="56" height="56" viewBox="0 0 56 56" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
-                                        d="M7.88628 1.33334L12.3307 6.00001M12.3307 6.00001L7.88628 10.6667M12.3307 6.00001L1.66406 6.00001"
-                                        stroke="#007FC8" stroke-width="1.6" stroke-linecap="round"
-                                        stroke-linejoin="round" />
+                                        d="M5.83301 28.0007C5.83301 17.5512 5.83301 12.3265 9.07923 9.08021C12.3255 5.83398 17.5502 5.83398 27.9997 5.83398C38.449 5.83398 43.6738 5.83398 46.9202 9.08021C50.1663 12.3265 50.1663 17.5512 50.1663 28.0007C50.1663 38.45 50.1663 43.6748 46.9202 46.9212C43.6738 50.1673 38.449 50.1673 27.9997 50.1673C17.5502 50.1673 12.3255 50.1673 9.07923 46.9212C5.83301 43.6748 5.83301 38.45 5.83301 28.0007Z"
+                                        fill="#C2E0F2" stroke="#007FC8" stroke-width="3.5"
+                                        class="group-hover:stroke-strokeWithe group-hover:fill-fillAzul md:duration-300" />
+                                    <path d="M18.667 29.1667L24.5003 35L37.3337 21" stroke="#007FC8" stroke-width="3.5"
+                                        stroke-linecap="round" stroke-linejoin="round"
+                                        class="group-hover:stroke-strokeWithe md:duration-300" />
                                 </svg>
                             </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="flex flex-col gap-4 group bg-white p-6 rounded-xl hover:shadow-lg md:duration-300">
-                    <div class="flex flex-col gap-4">
-                        <p class="text-[#007FC8] font-helveticaBold text-text40 leading-none">
-                            Bombas de Caudal
-                        </p>
-                        <div class="flex flex-col gap-2">
-                            <p class="text-[#808080] font-helveticaLight text-text16 md:text-text18">
-                                Idelaes para traspasar o reciclar agua limpia en sistemas agrículas donde se requieren altos
-                                caudales con presiones relativamente bajas
-                            </p>
-                        </div>
-                    </div>
-                    <div>
-                        <a href="#"
-                            class="font-helveticaMedium text-text16 text-[#007FC8] flex justify-start items-center gap-2">
-                            <span>Más Información</span>
-                            <div>
-                                <svg width="14" height="12" viewBox="0 0 14 12" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M7.88628 1.33334L12.3307 6.00001M12.3307 6.00001L7.88628 10.6667M12.3307 6.00001L1.66406 6.00001"
-                                        stroke="#007FC8" stroke-width="1.6" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
+                            <div class="flex flex-col gap-2">
+                                <h3 class="text-[#161A32] font-helveticaBold text-text32 md:duration-300 leading-tight">
+                                    Bombas de Piscinas y Repuestos
+                                </h3>
+                                <p
+                                    class="text-[#808080] font-helveticaLight text-text18 group-hover:text-[#161A32] md:duration-300">
+                                    Son esenciales para mantener una piscina limpia y saludable.
+                                </p>
                             </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="flex flex-col gap-4 group bg-white p-6 rounded-xl hover:shadow-lg md:duration-300">
-                    <div class="flex flex-col gap-4">
-                        <p class="text-[#007FC8] font-helveticaBold text-text40 leading-none">
-                            Bombas Multietáticas
-                        </p>
-                        <div class="flex flex-col gap-2">
-                            <p class="text-[#808080] font-helveticaLight text-text16 md:text-text18">
-                                Ideal para el bombeo líquido químicamente y mecánicamente no agresivos. Amplio uso en
-                                equipos de presión constante,
-                                sistemas de riego tecnificado y aplicaciones industriales. Extremadamente silenciosas.
-                            </p>
                         </div>
-                    </div>
-                    <div>
-                        <a href="#"
-                            class="font-helveticaMedium text-text16 text-[#007FC8] flex justify-start items-center gap-2">
-                            <span>Más Información</span>
-                            <div>
-                                <svg width="14" height="12" viewBox="0 0 14 12" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M7.88628 1.33334L12.3307 6.00001M12.3307 6.00001L7.88628 10.6667M12.3307 6.00001L1.66406 6.00001"
-                                        stroke="#007FC8" stroke-width="1.6" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="bg-white fondologos  bg-right bg-cover">
-            <div class="flex flex-col md:flex-row w-11/12 mx-auto gap-10 justify-between py-10 lg:py-20">
-                <div class="flex flex-col gap-3 w-full md:max-w-[450px] justify-center items-start">
-                    <h3 class="text-white font-helveticaBold text-text44 md:text-text72 leading-none">
-                        Representación
-                        <span>Exclusiva</span>
-                    </h3>
-
-                    <div class="flex justify-start items-center py-5">
-                        <a href="#"
-                            class="text-text18 font-helveticaBold text-white bg-[#222A51] py-4 px-6 text-center rounded-lg">Quiero
-                            una cotización</a>
-                    </div>
-                </div>
-
-                <div
-                    class="grid grid-cols-1 gap-10  md:flex md:flex-col md:flex-wrap md:gap-2 justify-center xl:justify-between w-full md:max-w-[768px]">
-
-
-
-                    <div class="flex flex-row gap-2 lg:gap-2 justify-center lg:justify-end items-start">
-                        <div class="flex justify-center items-center">
-                            <img src="{{ asset('images/img/image_20.png') }}" alt="ISO" class="w-24" />
-                        </div>
-                        <div class="flex justify-center items-center">
-                            <img src="{{ asset('images/img/image_21.png') }}" alt="ISO" class="w-24" />
-                        </div>
-                    </div>
-
-                    <div class="flex flex-row justify-center lg:justify-end items-center">
-                        <div class="flex justify-center items-center">
-                            <img src="{{ asset('images/img/pentaxlargeblack.png') }}" alt="pentax" class="w-[600px]" />
-                        </div>
-                    </div>
-
-
-                </div>
-            </div>
-        </section>
-
-        <section class="w-11/12 mx-auto py-20 ">
-            <div class="grid grid-cols-1  w-full md:max-w-[1300px] mx-auto gap-10 ">
-                <div
-                    class="flex flex-col gap-4 group bg-white p-6 rounded-xl hover:shadow-lg md:duration-300 fondobombas bg-cover object-cover">
-                    <div class="flex flex-col gap-5 h-[300px] justify-center pl-[5%]">
-                        <p class="text-white font-helveticaBold text-text40 leading-none">
-                            Bombas de <br>uso agrícola
-                        </p>
-
-                        <div class="flex justify-start items-center py-5">
+                        <div>
                             <a href="#"
-                                class="text-text18 font-helveticaBold text-white bg-[#007fc8] py-4 px-6 text-center rounded-lg">Quiero
+                                class="font-helveticaMedium text-text16 text-[#007FC8] flex justify-start items-center gap-2">
+                                <span>Más Información</span>
+                                <div>
+                                    <svg width="14" height="12" viewBox="0 0 14 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M7.88628 1.33334L12.3307 6.00001M12.3307 6.00001L7.88628 10.6667M12.3307 6.00001L1.66406 6.00001"
+                                            stroke="#007FC8" stroke-width="1.6" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-4 group bg-white hover:bg-[#C2E0F2] p-6 rounded-xl md:duration-300">
+                        <div class="flex flex-col gap-2">
+                            <div>
+                                <svg width="56" height="56" viewBox="0 0 56 56" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M5.83301 28.0007C5.83301 17.5512 5.83301 12.3265 9.07923 9.08021C12.3255 5.83398 17.5502 5.83398 27.9997 5.83398C38.449 5.83398 43.6738 5.83398 46.9202 9.08021C50.1663 12.3265 50.1663 17.5512 50.1663 28.0007C50.1663 38.45 50.1663 43.6748 46.9202 46.9212C43.6738 50.1673 38.449 50.1673 27.9997 50.1673C17.5502 50.1673 12.3255 50.1673 9.07923 46.9212C5.83301 43.6748 5.83301 38.45 5.83301 28.0007Z"
+                                        fill="#C2E0F2" stroke="#007FC8" stroke-width="3.5"
+                                        class="group-hover:stroke-strokeWithe group-hover:fill-fillAzul md:duration-300" />
+                                    <path d="M18.667 29.1667L24.5003 35L37.3337 21" stroke="#007FC8" stroke-width="3.5"
+                                        stroke-linecap="round" stroke-linejoin="round"
+                                        class="group-hover:stroke-strokeWithe md:duration-300" />
+                                </svg>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <h3 class="text-[#161A32] font-helveticaBold text-text32 md:duration-300 leading-tight">
+                                    Calefacción de Piscinas
+                                </h3>
+                                <p
+                                    class="text-[#808080] font-helveticaLight text-text18 group-hover:text-[#161A32] md:duration-300">
+                                    Un sistema que permite aumentar la temperatura del agua de
+                                    una piscina.
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <a href="#"
+                                class="font-helveticaMedium text-text16 text-[#007FC8] flex justify-start items-center gap-2">
+                                <span>Más Información</span>
+                                <div>
+                                    <svg width="14" height="12" viewBox="0 0 14 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M7.88628 1.33334L12.3307 6.00001M12.3307 6.00001L7.88628 10.6667M12.3307 6.00001L1.66406 6.00001"
+                                            stroke="#007FC8" stroke-width="1.6" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-4 group bg-white hover:bg-[#C2E0F2] p-6 rounded-xl md:duration-300">
+                        <div class="flex flex-col gap-2">
+                            <div>
+                                <svg width="56" height="56" viewBox="0 0 56 56" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M5.83301 28.0007C5.83301 17.5512 5.83301 12.3265 9.07923 9.08021C12.3255 5.83398 17.5502 5.83398 27.9997 5.83398C38.449 5.83398 43.6738 5.83398 46.9202 9.08021C50.1663 12.3265 50.1663 17.5512 50.1663 28.0007C50.1663 38.45 50.1663 43.6748 46.9202 46.9212C43.6738 50.1673 38.449 50.1673 27.9997 50.1673C17.5502 50.1673 12.3255 50.1673 9.07923 46.9212C5.83301 43.6748 5.83301 38.45 5.83301 28.0007Z"
+                                        fill="#C2E0F2" stroke="#007FC8" stroke-width="3.5"
+                                        class="group-hover:stroke-strokeWithe group-hover:fill-fillAzul md:duration-300" />
+                                    <path d="M18.667 29.1667L24.5003 35L37.3337 21" stroke="#007FC8" stroke-width="3.5"
+                                        stroke-linecap="round" stroke-linejoin="round"
+                                        class="group-hover:stroke-strokeWithe md:duration-300" />
+                                </svg>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <h3 class="text-[#161A32] font-helveticaBold text-text32 md:duration-300 leading-tight">
+                                    Iluminación Subacuática
+                                </h3>
+                                <p
+                                    class="text-[#808080] font-helveticaLight text-text18 group-hover:text-[#161A32] md:duration-300">
+                                    Mejora la seguridad, la visibilidad y la estética de tu
+                                    piscina.
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <a href="#"
+                                class="font-helveticaMedium text-text16 text-[#007FC8] flex justify-start items-center gap-2">
+                                <span>Más Información</span>
+                                <div>
+                                    <svg width="14" height="12" viewBox="0 0 14 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M7.88628 1.33334L12.3307 6.00001M12.3307 6.00001L7.88628 10.6667M12.3307 6.00001L1.66406 6.00001"
+                                            stroke="#007FC8" stroke-width="1.6" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-4 group bg-white hover:bg-[#C2E0F2] p-6 rounded-xl md:duration-300">
+                        <div class="flex flex-col gap-2">
+                            <div>
+                                <svg width="56" height="56" viewBox="0 0 56 56" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M5.83301 28.0007C5.83301 17.5512 5.83301 12.3265 9.07923 9.08021C12.3255 5.83398 17.5502 5.83398 27.9997 5.83398C38.449 5.83398 43.6738 5.83398 46.9202 9.08021C50.1663 12.3265 50.1663 17.5512 50.1663 28.0007C50.1663 38.45 50.1663 43.6748 46.9202 46.9212C43.6738 50.1673 38.449 50.1673 27.9997 50.1673C17.5502 50.1673 12.3255 50.1673 9.07923 46.9212C5.83301 43.6748 5.83301 38.45 5.83301 28.0007Z"
+                                        fill="#C2E0F2" stroke="#007FC8" stroke-width="3.5"
+                                        class="group-hover:stroke-strokeWithe group-hover:fill-fillAzul md:duration-300" />
+                                    <path d="M18.667 29.1667L24.5003 35L37.3337 21" stroke="#007FC8" stroke-width="3.5"
+                                        stroke-linecap="round" stroke-linejoin="round"
+                                        class="group-hover:stroke-strokeWithe md:duration-300" />
+                                </svg>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <h3 class="text-[#161A32] font-helveticaBold text-text32 md:duration-300 leading-tight">
+                                    Accesorios de Empotrado
+                                </h3>
+                                <p
+                                    class="text-[#808080] font-helveticaLight text-text18 group-hover:text-[#161A32] md:duration-300">
+                                    Una variedad de funciones, para la iluminación, la
+                                    filtración y la seguridad.
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <a href="#"
+                                class="font-helveticaMedium text-text16 text-[#007FC8] flex justify-start items-center gap-2">
+                                <span>Más Información</span>
+                                <div>
+                                    <svg width="14" height="12" viewBox="0 0 14 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M7.88628 1.33334L12.3307 6.00001M12.3307 6.00001L7.88628 10.6667M12.3307 6.00001L1.66406 6.00001"
+                                            stroke="#007FC8" stroke-width="1.6" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-4 group bg-white hover:bg-[#C2E0F2] p-6 rounded-xl md:duration-300">
+                        <div class="flex flex-col gap-2">
+                            <div>
+                                <svg width="56" height="56" viewBox="0 0 56 56" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M5.83301 28.0007C5.83301 17.5512 5.83301 12.3265 9.07923 9.08021C12.3255 5.83398 17.5502 5.83398 27.9997 5.83398C38.449 5.83398 43.6738 5.83398 46.9202 9.08021C50.1663 12.3265 50.1663 17.5512 50.1663 28.0007C50.1663 38.45 50.1663 43.6748 46.9202 46.9212C43.6738 50.1673 38.449 50.1673 27.9997 50.1673C17.5502 50.1673 12.3255 50.1673 9.07923 46.9212C5.83301 43.6748 5.83301 38.45 5.83301 28.0007Z"
+                                        fill="#C2E0F2" stroke="#007FC8" stroke-width="3.5"
+                                        class="group-hover:stroke-strokeWithe group-hover:fill-fillAzul md:duration-300" />
+                                    <path d="M18.667 29.1667L24.5003 35L37.3337 21" stroke="#007FC8" stroke-width="3.5"
+                                        stroke-linecap="round" stroke-linejoin="round"
+                                        class="group-hover:stroke-strokeWithe md:duration-300" />
+                                </svg>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <h3 class="text-[#161A32] font-helveticaBold text-text32 md:duration-300 leading-tight">
+                                    Filtros de Piscinas y Repuestos
+                                </h3>
+                                <p
+                                    class="text-[#808080] font-helveticaLight text-text18 group-hover:text-[#161A32] md:duration-300">
+                                    Dispositivos que se utilizan para limpiar el agua de la
+                                    piscina y eliminar impurezas.
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <a href="#"
+                                class="font-helveticaMedium text-text16 text-[#007FC8] flex justify-start items-center gap-2">
+                                <span>Más Información</span>
+                                <div>
+                                    <svg width="14" height="12" viewBox="0 0 14 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M7.88628 1.33334L12.3307 6.00001M12.3307 6.00001L7.88628 10.6667M12.3307 6.00001L1.66406 6.00001"
+                                            stroke="#007FC8" stroke-width="1.6" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-4 group bg-white hover:bg-[#C2E0F2] p-6 rounded-xl md:duration-300">
+                        <div class="flex flex-col gap-2">
+                            <div>
+                                <svg width="56" height="56" viewBox="0 0 56 56" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M5.83301 28.0007C5.83301 17.5512 5.83301 12.3265 9.07923 9.08021C12.3255 5.83398 17.5502 5.83398 27.9997 5.83398C38.449 5.83398 43.6738 5.83398 46.9202 9.08021C50.1663 12.3265 50.1663 17.5512 50.1663 28.0007C50.1663 38.45 50.1663 43.6748 46.9202 46.9212C43.6738 50.1673 38.449 50.1673 27.9997 50.1673C17.5502 50.1673 12.3255 50.1673 9.07923 46.9212C5.83301 43.6748 5.83301 38.45 5.83301 28.0007Z"
+                                        fill="#C2E0F2" stroke="#007FC8" stroke-width="3.5"
+                                        class="group-hover:stroke-strokeWithe group-hover:fill-fillAzul md:duration-300" />
+                                    <path d="M18.667 29.1667L24.5003 35L37.3337 21" stroke="#007FC8" stroke-width="3.5"
+                                        stroke-linecap="round" stroke-linejoin="round"
+                                        class="group-hover:stroke-strokeWithe md:duration-300" />
+                                </svg>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <h3 class="text-[#161A32] font-helveticaBold text-text32 md:duration-300 leading-tight">
+                                    Productos Químicos
+                                </h3>
+                                <p
+                                    class="text-[#808080] font-helveticaLight text-text18 group-hover:text-[#161A32] md:duration-300">
+                                    Sustancias que se utilizan para mantener el agua de la
+                                    piscina saludable y segura.
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <a href="#"
+                                class="font-helveticaMedium text-text16 text-[#007FC8] flex justify-start items-center gap-2">
+                                <span>Más Información</span>
+                                <div>
+                                    <svg width="14" height="12" viewBox="0 0 14 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M7.88628 1.33334L12.3307 6.00001M12.3307 6.00001L7.88628 10.6667M12.3307 6.00001L1.66406 6.00001"
+                                            stroke="#007FC8" stroke-width="1.6" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex justify-center items-center pt-10">
+                <a href="#"
+                    class="text-white bg-[#222A51] py-4 px-6 font-helveticaBold text-text18 rounded-xl">Quiero una
+                    cotización</a>
+            </div>
+        </section>
+
+        <section class="py-20 bg-white">
+            <div class="max-w-[700px] mx-auto pb-10 w-11/12">
+                <h2 class="text-[#161A32] font-helveticaBold text-text32 lg:text-text48 leading-tight text-center">
+                    Somos distribuidores oficiales de
+                    <span class="text-[#007FC8]">prestigiosas marcas</span>
+                </h2>
+
+                <p class="text-[#808080] font-helveticaLight text-text18 text-center">
+                    Distribuidores Autorizados.
+                </p>
+            </div>
+
+            <div class="w-full md:w-11/12 mx-auto">
+                <div class="swiper logos">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="flex justify-center items-center">
+                                <img src="{{asset('images/img/image_3.png')}}" alt="" />
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="flex justify-center items-center">
+                                <img src="{{asset('images/img/image_4.png')}}" alt="" />
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="flex justify-center items-center">
+                                <img src="{{asset('images/img/image_5.png')}}" alt="" />
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="flex justify-center items-center">
+                                <img src="{{asset('images/img/image_6.png')}}" alt="" />
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="flex justify-center items-center">
+                                <img src="{{asset('images/img/pentax.png')}}" alt="" />
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="flex justify-center items-center">
+                                <img src="{{asset('images/img/aquamec.png')}}" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="w-11/12 mx-auto py-20">
+            <div class="grid grid-cols-1 md:grid-cols-2 w-full md:max-w-[1200px] mx-auto gap-10">
+                <div class="flex flex-col bg-white rounded-3xl p-6 gap-10 hover:shadow-lg md:duration-300">
+                    <div class="flex flex-col gap-2">
+                        <h2 class="text-[#161A32] font-helveticaBold text-text32 leading-tight">
+                            <span class="text-[#007FC8]">Equipos</span> de Recirculación
+                            para piscinas
+                        </h2>
+                        <p class="text-[#808080] font-helveticaLight text-text20">
+                            ¡Cuida tu piscina y ahorra en el mantenimiento!
+                        </p>
+                    </div>
+
+                    <div class="flex justify-center items-center">
+                        <img src="{{asset('images/img/image_7.png')}}" alt="equipo de recirculación"
+                            class="w-full h-[355px] object-cover rounded-xl" />
+                    </div>
+
+                    <div class="rounded-xl bg-[#F9FAFB] py-8 px-5 flex flex-col gap-10">
+                        <div class="flex flex-col gap-5">
+                            <div class="flex gap-3 justify-start items-start">
+                                <img src="{{asset('images/svg/image_11.svg')}}" alt="" />
+                                <p class="text-[#808080] font-helveticaLight text-text18">
+                                    Filtro para piscinas
+                                </p>
+                            </div>
+
+                            <div class="flex gap-3 justify-start items-start">
+                                <img src="{{asset('images/svg/image_11.svg')}}" alt="" />
+                                <p class="text-[#808080] font-helveticaLight text-text18">
+                                    Bombas de calor
+                                </p>
+                            </div>
+
+                            <div class="flex gap-3 justify-start items-start">
+                                <img src="{{asset('images/svg/image_11.svg')}}" alt="" />
+                                <p class="text-[#808080] font-helveticaLight text-text18">
+                                    Calentadores eléctricos
+                                </p>
+                            </div>
+
+                            <div class="flex gap-3 justify-start items-start">
+                                <img src="{{asset('images/svg/image_11.svg')}}" alt="" />
+                                <p class="text-[#808080] font-helveticaLight text-text18">
+                                    Calentadores a gas
+                                </p>
+                            </div>
+
+                            <div class="flex gap-3 justify-start items-start">
+                                <img src="{{asset('images/svg/image_11.svg')}}" alt="" />
+                                <p class="text-[#808080] font-helveticaLight text-text18">
+                                    Electrobombas
+                                </p>
+                            </div>
+
+                            <div class="flex gap-3 justify-start items-start">
+                                <img src="{{asset('images/svg/image_11.svg')}}" alt="" />
+                                <p class="text-[#808080] font-helveticaLight text-text18">
+                                    Equipo de coloración
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex justify-center items-center">
+                            <a href="#"
+                                class="bg-[#222A51] font-helveticaBold text-text18 rounded-xl py-4 px-6 w-full text-center text-white">Quiero
                                 una cotización</a>
                         </div>
-
                     </div>
-
                 </div>
 
-            </div>
-        </section>
-
-        <section class="bg-[#007FC8]">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-11/12 mx-auto gap-10 py-20">
-                <div class="flex flex-col gap-3 items-center">
-                    <div class="flex flex-col gap-2 items-center">
-                        <div class="flex justify-center items-center">
-                            <img src="{{ asset('images/svg/image_31.svg') }}" alt="Calidad" />
-                        </div>
-                        <h2 class="font-helveticaBold text-text32 text-white text-center">
-                            Calidad
+                <div class="flex flex-col bg-white rounded-3xl p-6 gap-10 hover:shadow-lg md:duration-300">
+                    <div class="flex flex-col gap-2">
+                        <h2 class="text-[#161A32] font-helveticaBold text-text32 leading-tight">
+                            <span class="text-[#007FC8]">Kits</span> de Limpieza para
+                            piscinas
                         </h2>
+                        <p class="text-[#808080] font-helveticaLight text-text20">
+                            ¡Cuida tu piscina y ahorra en el mantenimiento!
+                        </p>
                     </div>
-                    <p class="text-white font-helveticaLight text-text16 text-center">
-                        Somos representantes y distribuidores de marcas reconocidas y
-                        certificadas.
-                    </p>
-                </div>
 
-                <div class="flex flex-col gap-3 items-center">
-                    <div class="flex flex-col gap-2 items-center">
-                        <div class="flex justify-center items-center">
-                            <img src="{{ asset('images/svg/image_32.svg') }}" alt="Calidad" />
-                        </div>
-                        <h2 class="font-helveticaBold text-text32 text-white text-center">
-                            Experiencia
-                        </h2>
+                    <div class="flex justify-center items-center">
+                        <img src="./images/img/image_8.png" alt="equipo de recirculación"
+                            class="w-full h-[355px] object-cover rounded-xl" />
                     </div>
-                    <p class="text-white font-helveticaLight text-text16 text-center">
-                        Contamos con más de 17 años de experiencia trabajando con
-                        ingeniería acuática.
-                    </p>
-                </div>
 
-                <div class="flex flex-col gap-3 items-center">
-                    <div class="flex flex-col gap-2 items-center">
-                        <div class="flex justify-center items-center">
-                            <img src="{{ asset('images/svg/image_33.svg') }}" alt="Calidad" />
-                        </div>
-                        <h2 class="font-helveticaBold text-text32 text-white text-center">
-                            Profesionalismo
-                        </h2>
-                    </div>
-                    <p class="text-white font-helveticaLight text-text16 text-center">
-                        Nuestro equipo de especialistas es constantemente capacitado para
-                        estar siempre a la vanguardia.
-                    </p>
-                </div>
+                    <div class="rounded-xl bg-[#F9FAFB] py-8 px-5 flex flex-col gap-10 flex-grow justify-between">
+                        <div class="flex flex-col gap-5">
+                            <div class="flex gap-3 justify-start items-start">
+                                <img src="{{asset('images/svg/image_11.svg')}}" alt="" />
+                                <p class="text-[#808080] font-helveticaLight text-text18">
+                                    Elimina las impurezas, bacterias y microorganismos.
+                                </p>
+                            </div>
 
-                <div class="flex flex-col gap-3 items-center">
-                    <div class="flex flex-col gap-2 items-center">
-                        <div class="flex justify-center items-center">
-                            <img src="{{ asset('images/svg/image_34.svg') }}" alt="Calidad" />
+                            <div class="flex gap-3 justify-start items-start">
+                                <img src="{{asset('images/svg/image_11.svg')}}" alt="" />
+                                <p class="text-[#808080] font-helveticaLight text-text18">
+                                    Expulsa bacterias y microorganismos.
+                                </p>
+                            </div>
+
+                            <div class="flex gap-3 justify-start items-start">
+                                <img src="{{asset('images/svg/image_11.svg')}}" alt="" />
+                                <p class="text-[#808080] font-helveticaLight text-text18">
+                                    Protege tu salud y la de los tuyos con nuestros productos y
+                                    equipos de mantenimiento y limpieza.
+                                </p>
+                            </div>
                         </div>
-                        <h2 class="font-helveticaBold text-text32 text-white text-center">
-                            Compromiso
-                        </h2>
+
+                        <div class="flex justify-center items-center">
+                            <a href="#"
+                                class="bg-[#222A51] font-helveticaBold text-text18 rounded-xl py-4 px-6 w-full text-center text-white">Quiero
+                                una cotización</a>
+                        </div>
                     </div>
-                    <p class="text-white font-helveticaLight text-text16 text-center">
-                        Contamos con 6 locales en todo el Perú y más de 200 distribuidores
-                        oficiales.
-                    </p>
                 </div>
             </div>
         </section>
 
-        <section class="bg-white">
-            <div class="flex flex-col gap-10 py-20 w-11/12 mx-auto">
-                <div class="flex flex-col items-center gap-2">
-                    <h3 class="text-[#161A32] text-text48 font-helveticaBold leading-tight text-center">
-                        Distribuidores <span class="text-[#007FC8]">Autorizados</span>
-                    </h3>
-                    <p class="text-[#808080] font-helveticaLight text-text18 text-center">
-                        De las siguientes marcas
-                    </p>
+        <section class="bg-[#161A32]">
+            <div class="grid grid-cols-1 lg:grid-cols-2">
+                <div class="grid grid-cols-1 lg:grid-cols-2 py-20 px-16 gap-10 md:gap-16">
+                    <div class="flex flex-col gap-5 justify-center">
+                        <div class="flex justify-center items-center">
+                            <img src="{{asset('images/svg/image_12.svg')}}" alt="" />
+                        </div>
+                        <div class="flex flex-col items-center gap-2">
+                            <h2 class="text-white font-helveticaBold text-text32 leading-tight text-center">
+                                Fiabilidad
+                            </h2>
+                            <p class="text-white font-helveticaLight text-text16 text-center">
+                                Elegir Pentax significa elegir la seguridad, en cualquier fase operativa.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-5 justify-center">
+                        <div class="flex justify-center items-center">
+                            <img src="{{asset('images/svg/image_12.svg')}}" alt="" />
+                        </div>
+                        <div class="flex flex-col items-center gap-2">
+                            <h2 class="text-white font-helveticaBold text-text32 leading-tight text-center">
+                                Calidad
+                            </h2>
+                            <p class="text-white font-helveticaLight text-text16 text-center">
+                                Pentax somete sus productos a un control de calidad constante.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-5 justify-center">
+                        <div class="flex justify-center items-center">
+                            <img src="{{asset('images/svg/image_12.svg')}}" alt="" />
+                        </div>
+                        <div class="flex flex-col items-center gap-2">
+                            <h2 class="text-white font-helveticaBold text-text32 leading-tight text-center">
+                                Variedad
+                            </h2>
+                            <p class="text-white font-helveticaLight text-text16 text-center">
+                                Una extensa gama de productos Pentax para cada exigencia.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-5 justify-center">
+                        <div class="flex justify-center items-center">
+                            <img src="{{asset('images/svg/image_12.svg')}}" alt="" />
+                        </div>
+                        <div class="flex flex-col items-center gap-2">
+                            <h2 class="text-white font-helveticaBold text-text32 leading-tight text-center">
+                                Velocidad
+                            </h2>
+                            <p class="text-white font-helveticaLight text-text16 text-center">
+                                Cada pedido se tramita exactamente en los plazos previamente establecidos.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-5 justify-center col-span-1 lg:col-span-2 px-[20%]">
+                        <div class="flex justify-center items-center">
+                            <img src="{{asset('images/svg/image_12.svg')}}" alt="" />
+                        </div>
+                        <div class="flex flex-col items-center gap-2">
+                            <h2 class="text-white font-helveticaBold text-text32 leading-tight text-center">
+                                Flexibilidad
+                            </h2>
+                            <p class="text-white font-helveticaLight text-text16 text-center">
+                                Pentax escucha, analiza y pone manos a la obra para ofrecer lo mejor a sus
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="grid grid-cols-2 lg:grid-cols-4 gap-5 md:gap-10">
+                <div class="flex justify-center items-center">
+                    <img src="{{asset('images/img/image_9.png')}}" alt=""
+                        class="w-full h-full object-cover hidden md:block" />
 
-                    <div class="flex justify-center items-center">
-                        <img src="{{ asset('images/img/image_27.png') }}" alt="pentair" />
-                    </div>
-                    <div class="flex justify-center items-center">
-                        <img src="{{ asset('images/img/image_30.png') }}" alt="pentair" />
-                    </div>
-                    <div class="flex justify-center items-center">
-                        <img src="{{ asset('images/img/image_31.png') }}" alt="pentair" />
-                    </div>
-                    <div class="flex justify-center items-center">
-                        <img src="{{ asset('images/img/pentax.png') }}" alt="pentair" />
+                    <img src="{{asset('images/img/image_10.png')}}" alt=""
+                        class="w-full h-[800px] object-cover block md:hidden" />
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="flex flex-col gap-10 py-24 bg-white">
+                <div class="md:max-w-[1000px] mx-auto pb-10 w-11/12">
+                    <h2 class="text-[#161A32] font-helveticaBold text-text48 leading-tight text-center">
+                        La confianza de nuestros clientes es la
+                        <span class="text-[#007FC8]">clave de nuestro éxito</span>
+                    </h2>
+                </div>
+
+                <div class="w-full md:w-11/12 mx-auto">
+                    <div class="swiper logos">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="flex justify-center items-center">
+                                    <img src="{{asset('images/img/image_11.png')}}" alt="" />
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="flex justify-center items-center">
+                                    <img src="{{asset('images/img/image_12.png')}}" alt="" />
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="flex justify-center items-center">
+                                    <img src="{{asset('images/img/image_13.png')}}" alt="" />
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="flex justify-center items-center">
+                                    <img src="{{asset('images/img/COAR2.png')}}" alt="" />
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -436,114 +742,180 @@
         <section class="pb-20 pt-10 md:pt-20">
             <h3
                 class="text-[#161A32] font-helveticaBold text-text32 md:text-text48 text-center w-[300px] md:w-[500px] mx-auto leading-tight pb-10">
-                Reconocimiento de
-                <span class="text-[#007FC8]">nuestros clientes</span>
+                Lo que dicen <span class="text-[#007FC8]">nuestros clientes</span>
             </h3>
 
-            <div class="w-11/12 md:w-9/12 mx-auto relative">
+            <div class="w-11/12 lg:w-9/12 mx-auto relative">
                 <div class="swiper testimonios rounded-2xl">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <div class="flex flex-col gap-8 bg-white rounded-lg p-6 md:p-8 items-center">
-                                <p class="text-[#808080] font-helveticaLight text-text18 text-center max-w-[600px]">
-                                    La eficiencia y confiabilidad de estas bombas son incomparables, y el equipo de servicio
-                                    al cliente fue excepcional
-                                    en ayudarnos a encontrar la solución perfecta para nuestras necesidades específicas.
-                                </p>
-
-                                <div class="flex flex-col gap-3 max-w-[600px]">
-                                    <p class="font-helveticaBold text-text20 text-[#161A32]">
-                                        Carmén Arámbulo
-                                    </p>
-                                    <div class="flex justify-center items-center gap-2">
-                                        <img src="{{ asset('images/svg/image_29.svg') }}" alt="start" />
-                                        <img src="{{ asset('images/svg/image_29.svg') }}" alt="start" />
-                                        <img src="{{ asset('images/svg/image_29.svg') }}" alt="start" />
-                                        <img src="{{ asset('images/svg/image_29.svg') }}" alt="start" />
-                                        <img src="{{ asset('images/svg/image_29.svg') }}" alt="start" />
+                            <div class="flex flex-col gap-5 bg-white rounded-lg p-6">
+                                <div class="flex flex-col gap-5">
+                                    <div class="flex flex-col gap-2">
+                                        <h2 class="font-helveticaBold text-text16 text-[#1D1D1B]">
+                                            Carmen Arámbulo
+                                        </h2>
+                                        <p class="font-helveticaMedium text-text10 text-[#1D1D1B] text-opacity-50">
+                                            Cliente
+                                        </p>
                                     </div>
+
+                                    <div class="flex justify-start items-center gap-2">
+                                        <div class="flex justify-start items-center gap-1">
+                                            <img src="{{asset('images/svg/image_26.svg')}}" alt="start" />
+                                            <img src="{{asset('images/svg/image_26.svg')}}" alt="start" />
+                                            <img src="{{asset('images/svg/image_26.svg')}}" alt="start" />
+                                            <img src="{{asset('images/svg/image_26.svg')}}" alt="start" />
+                                            <img src="{{asset('images/svg/image_26.svg')}}" alt="start" />
+                                        </div>
+                                        <p class="text-[#1D1D1B] text-opacity-50 font-helveticaMedium text-text10">
+                                            -12 de agosto de 2023
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <p class="text-[#1D1D1B] font-helveticaLight text-text14">
+                                        ¡No puedo estar más feliz con el servicio de mantenimiento
+                                        de piscinas que recibí! Desde que empecé a utilizarlo, mi
+                                        piscina ha estado en perfectas condiciones en todo
+                                        momento. Los equipos para piscinas que utilizan son de
+                                        última tecnología y realmente hacen la diferencia. ¡Ahora
+                                        puedo disfrutar de mi piscina sin tener que preocuparme
+                                        por nada más que relajarme y disfrutar del agua
+                                        cristalina!
+                                    </p>
                                 </div>
                             </div>
                         </div>
 
                         <div class="swiper-slide">
-                            <div class="flex flex-col gap-8 bg-white rounded-lg p-6 items-center">
-                                <p class="text-[#808080] font-helveticaLight text-text18 text-center max-w-[600px]">
-                                    Era escéptico de los productos químicos para piscinas, pero
-                                    ahora estoy muy contento con los resultados. Mi piscina está
-                                    siempre limpia y cristalina, y los recomiendo a cualquiera
-                                    que tenga una piscina.
-                                </p>
-
-                                <div class="flex flex-col gap-3 max-w-[600px]">
-                                    <p class="font-helveticaBold text-text20 text-[#161A32]">
-                                        Carmén Arámbulo
-                                    </p>
-                                    <div class="flex justify-center items-center gap-2">
-                                        <img src="{{ asset('images/svg/image_29.svg') }}" alt="start" />
-                                        <img src="{{ asset('images/svg/image_29.svg') }}" alt="start" />
-                                        <img src="{{ asset('images/svg/image_29.svg') }}" alt="start" />
-                                        <img src="{{ asset('images/svg/image_29.svg') }}" alt="start" />
-                                        <img src="{{ asset('images/svg/image_29.svg') }}" alt="start" />
+                            <div class="flex flex-col gap-5 bg-white rounded-lg p-6">
+                                <div class="flex flex-col gap-5">
+                                    <div class="flex flex-col gap-2">
+                                        <h2 class="font-helveticaBold text-text16 text-[#1D1D1B]">
+                                            Crishtian León
+                                        </h2>
+                                        <p class="font-helveticaMedium text-text10 text-[#1D1D1B] text-opacity-50">
+                                            Profesional
+                                        </p>
                                     </div>
+
+                                    <div class="flex justify-start items-center gap-2">
+                                        <div class="flex justify-start items-center gap-1">
+                                            <img src="{{asset('images/svg/image_26.svg')}}" alt="start" />
+                                            <img src="{{asset('images/svg/image_26.svg')}}" alt="start" />
+                                            <img src="{{asset('images/svg/image_26.svg')}}" alt="start" />
+                                            <img src="{{asset('images/svg/image_26.svg')}}" alt="start" />
+                                            <img src="{{asset('images/svg/image_26.svg')}}" alt="start" />
+                                        </div>
+                                        <p class="text-[#1D1D1B] text-opacity-50 font-helveticaMedium text-text10">
+                                            -12 de agosto de 2023
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <p class="text-[#1D1D1B] font-helveticaLight text-text14">
+                                        Como propietario de una piscina, siempre he luchado con el mantenimiento
+                                        adecuado. Sin embargo, desde que contraté este servicio, todo ha
+                                        cambiado. Sus expertos no solo son increíblemente profesionales, sino que
+                                        también utilizan los mejores equipos para piscinas disponibles en el
+                                        mercado. ¡Mi piscina nunca había estado tan limpia y bien cuidada como lo
+                                        está ahora! Definitivamente recomendaría este servicio a cualquier persona
+                                        que quiera mantener su piscina en perfecto estado sin ningún esfuerzo.
+                                    </p>
                                 </div>
                             </div>
                         </div>
 
                         <div class="swiper-slide">
-                            <div class="flex flex-col gap-8 bg-white rounded-lg p-6 items-center">
-                                <p class="text-[#808080] font-helveticaLight text-text18 text-center max-w-[600px]">
-                                    Era escéptico de los productos químicos para piscinas, pero
-                                    ahora estoy muy contento con los resultados. Mi piscina está
-                                    siempre limpia y cristalina, y los recomiendo a cualquiera
-                                    que tenga una piscina.
-                                </p>
-
-                                <div class="flex flex-col gap-3 max-w-[600px]">
-                                    <p class="font-helveticaBold text-text20 text-[#161A32]">
-                                        Carmén Arámbulo
-                                    </p>
-                                    <div class="flex justify-center items-center gap-2">
-                                        <img src="{{ asset('images/svg/image_29.svg') }}" alt="start" />
-                                        <img src="{{ asset('images/svg/image_29.svg') }}" alt="start" />
-                                        <img src="{{ asset('images/svg/image_29.svg') }}" alt="start" />
-                                        <img src="{{ asset('images/svg/image_29.svg') }}" alt="start" />
-                                        <img src="{{ asset('images/svg/image_29.svg') }}" alt="start" />
+                            <div class="flex flex-col gap-5 bg-white rounded-lg p-6">
+                                <div class="flex flex-col gap-5">
+                                    <div class="flex flex-col gap-2">
+                                        <h2 class="font-helveticaBold text-text16 text-[#1D1D1B]">
+                                            Geraldine Cabrera
+                                        </h2>
+                                        <p class="font-helveticaMedium text-text10 text-[#1D1D1B] text-opacity-50">
+                                            Comerciante
+                                        </p>
                                     </div>
+
+                                    <div class="flex justify-start items-center gap-2">
+                                        <div class="flex justify-start items-center gap-1">
+                                            <img src="{{asset('images/svg/image_26.svg')}}" alt="start" />
+                                            <img src="{{asset('images/svg/image_26.svg')}}" alt="start" />
+                                            <img src="{{asset('images/svg/image_26.svg')}}" alt="start" />
+                                            <img src="{{asset('images/svg/image_26.svg')}}" alt="start" />
+                                            <img src="{{asset('images/svg/image_26.svg')}}" alt="start" />
+                                        </div>
+                                        <p class="text-[#1D1D1B] text-opacity-50 font-helveticaMedium text-text10">
+                                            -6 de octubre de 2023
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <p class="text-[#1D1D1B] font-helveticaLight text-text14">
+                                        Nunca me ha gustado lidiar con el mantenimiento de mi piscina, pero gracias a este
+                                        servicio, todo se ha vuelto mucho más fácil. Lo que más me impresiona son los
+                                        equipos para piscinas que utilizan; son eficientes,
+                                        confiables y realmente hacen que el mantenimiento sea un proceso sin
+                                        problemas. Ahora puedo pasar más tiempo disfrutando de mi piscina con mi
+                                        familia y menos tiempo preocupándome por su limpieza ¡Definitivamente
+                                        vale la pena cada centavo invertido!
+                                    </p>
                                 </div>
                             </div>
                         </div>
 
                         <div class="swiper-slide">
-                            <div class="flex flex-col gap-8 bg-white rounded-lg p-6 items-center">
-                                <p class="text-[#808080] font-helveticaLight text-text18 text-center max-w-[600px]">
-                                    Era escéptico de los productos químicos para piscinas, pero
-                                    ahora estoy muy contento con los resultados. Mi piscina está
-                                    siempre limpia y cristalina, y los recomiendo a cualquiera
-                                    que tenga una piscina.
-                                </p>
-
-                                <div class="flex flex-col gap-3 max-w-[600px]">
-                                    <p class="font-helveticaBold text-text20 text-[#161A32]">
-                                        Carmén Arámbulo
-                                    </p>
-                                    <div class="flex justify-center items-center gap-2">
-                                        <img src="{{ asset('images/svg/image_29.svg') }}" alt="start" />
-                                        <img src="{{ asset('images/svg/image_29.svg') }}" alt="start" />
-                                        <img src="{{ asset('images/svg/image_29.svg') }}" alt="start" />
-                                        <img src="{{ asset('images/svg/image_29.svg') }}" alt="start" />
-                                        <img src="{{ asset('images/svg/image_29.svg') }}" alt="start" />
+                            <div class="flex flex-col gap-5 bg-white rounded-lg p-6">
+                                <div class="flex flex-col gap-5">
+                                    <div class="flex flex-col gap-2">
+                                        <h2 class="font-helveticaBold text-text16 text-[#1D1D1B]">
+                                            Crishtian León
+                                        </h2>
+                                        <p class="font-helveticaMedium text-text10 text-[#1D1D1B] text-opacity-50">
+                                            Profesional
+                                        </p>
                                     </div>
+
+                                    <div class="flex justify-start items-center gap-2">
+                                        <div class="flex justify-start items-center gap-1">
+                                            <img src="{{asset('images/svg/image_26.svg')}}" alt="start" />
+                                            <img src="{{asset('images/svg/image_26.svg')}}" alt="start" />
+                                            <img src="{{asset('images/svg/image_26.svg')}}" alt="start" />
+                                            <img src="{{asset('images/svg/image_26.svg')}}" alt="start" />
+                                            <img src="{{asset('images/svg/image_26.svg')}}" alt="start" />
+                                        </div>
+                                        <p class="text-[#1D1D1B] text-opacity-50 font-helveticaMedium text-text10">
+                                            -12 de agosto de 2023
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <p class="text-[#1D1D1B] font-helveticaLight text-text14">
+                                        ¡No puedo estar más feliz con el servicio de mantenimiento
+                                        de piscinas que recibí! Desde que empecé a utilizarlo, mi
+                                        piscina ha estado en perfectas condiciones en todo
+                                        momento. Los equipos para piscinas que utilizan son de
+                                        última tecnología y realmente hacen la diferencia. ¡Ahora
+                                        puedo disfrutar de mi piscina sin tener que preocuparme
+                                        por nada más que relajarme y disfrutar del agua
+                                        cristalina!
+                                    </p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="custom-swiper-buttons xl:flex xl:absolute hidden">
+                <div class="custom-swiper-buttons lg:flex lg:absolute hidden">
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-button-next"></div>
                 </div>
-                <div class="swiper-pagination !-bottom-[56px] block xl:hidden mb-[6px] xl:mb-0"></div>
+                <div class="swiper-pagination !-bottom-[56px] block lg:hidden mb-[6px] md:mb-0"></div>
             </div>
         </section>
     </main>

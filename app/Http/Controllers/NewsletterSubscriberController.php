@@ -94,7 +94,7 @@ class NewsletterSubscriberController extends Controller
         $generales = General::first();
         // $name = $data['full_name'];
         $name = 'Administrador';
-        $mensaje = 'tienes un nuevo suscriptor - Hidromec Agrícola';
+        $mensaje = 'tienes un nuevo suscriptor - Hidromec Piscinas';
         $mail = EmailConfig::config($name, $mensaje);
         $emailadmin = 'diego.martinez.r@tecsup.edu.pe';
         $baseUrl = 'https://' . $_SERVER['HTTP_HOST'] . '/mail';
@@ -276,7 +276,7 @@ class NewsletterSubscriberController extends Controller
         $generales = General::first();
         // $name = $data['full_name'];
         $name = 'Suscriptor';
-        $mensaje = 'Gracias por suscribirte - Hidromec Agrícola';
+        $mensaje = 'Gracias por suscribirte - Hidromec Piscinas';
         $mail = EmailConfig::config($name, $mensaje);
         $baseUrl = 'https://' . $_SERVER['HTTP_HOST'] . '/mail';
         $baseUrllink = 'https://' . $_SERVER['HTTP_HOST'] . '/';

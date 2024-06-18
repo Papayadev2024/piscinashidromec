@@ -1,4 +1,4 @@
-<footer class="bg-[#007FC8]">
+<footer class="bg-[#222A51]">
     <div class="grid grid-cols-1 md:grid-cols-2 w-11/12 mx-auto py-16 gap-14 md:gap-5">
         <div class="w-full md:max-w-[500px] flex flex-col gap-5">
             <a href="#">
@@ -74,7 +74,7 @@
 
                 <div class="flex justify-start items-center">
                     <a target="_blank" href="https://api.whatsapp.com/send?phone=51123456789&text=hola" rel="noopener"
-                        class="bg-[#198CCD] text-white font-helveticaBold text-text16 py-4 px-6 rounded-xl">Contáctanos
+                        class="bg-[#161A32] text-white font-helveticaBold text-text16 py-4 px-6 rounded-xl">Contáctanos
                         ahora</a>
                 </div>
             </div>

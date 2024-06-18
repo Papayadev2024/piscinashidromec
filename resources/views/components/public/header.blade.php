@@ -1,5 +1,5 @@
 <header>
-    <div class="bg-[#007FC8] py-5">
+    <div class="bg-primario py-5">
       <div class="w-11/12 mx-auto flex justify-between items-center">
         <div class="flex justify-between items-center gap-10">
           <div class="hidden md:flex justify-center items-center gap-2">

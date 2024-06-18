@@ -126,7 +126,7 @@ class IndexController extends Controller
         $generales = General::first();
         // $name = $data['full_name'];
         $name = 'Administrador';
-        $mensaje = 'tienes un nuevo mensaje - Hidromec Agrícola';
+        $mensaje = 'tienes un nuevo mensaje - Hidromec Piscinas';
         $mail = EmailConfig::config($name, $mensaje);
         $emailadmin = 'diego.martinez.r@tecsup.edu.pe';
         $baseUrl = 'https://' . $_SERVER['HTTP_HOST'] . '/mail';
@@ -303,7 +303,7 @@ class IndexController extends Controller
     {
         $generales = General::first();
         $name = $data['full_name'];
-        $mensaje = 'Gracias por comunicarte - Hidromec Agrícola';
+        $mensaje = 'Gracias por comunicarte - Hidromec Piscinas';
         $mail = EmailConfig::config($name, $mensaje);
         $baseUrl = 'https://' . $_SERVER['HTTP_HOST'] . '/mail';
         $baseUrllink = 'https://' . $_SERVER['HTTP_HOST'] . '/';
