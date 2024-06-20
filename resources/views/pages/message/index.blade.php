@@ -17,6 +17,7 @@
                                 <th>Nombre</th>
                                 <th>Correo</th>
                                 <th>Teléfono</th>
+                                <th>DNI</th>
                                 <th>Acción</th>
                             </tr>
                         </thead>
@@ -37,6 +38,7 @@
                                     </td>
                                     <td>{{ $item->email }}</td>
                                     <td>{{ $item->cellphone }}</td>
+                                    <td>{{ $item->document }}</td>
                                     <td>
                                         <form action="" method="POST">
                                             @csrf
@@ -54,6 +56,7 @@
                                 <th>Nombre</th>
                                 <th>Correo</th>
                                 <th>Teléfono</th>
+                                <th>DNI</th>
                                 <th>Acciones</th>
                             </tr>
                         </tfoot>

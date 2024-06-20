@@ -23,5 +23,11 @@ class UsersSeeder extends Seeder
             'password' => Hash::make('12345678'),
         ]);
 
+        User::create([
+            'name' => 'hidromec',
+            'email' => 'ventas.digital@hidromecingenieros.com',
+            'password' => Hash::make('hidromec2024#'),
+        ]);
+
     }
 }
