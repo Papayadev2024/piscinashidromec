@@ -682,7 +682,7 @@
                                 Flexibilidad
                             </h2>
                             <p class="text-white font-helveticaLight text-text16 text-center">
-                                Pentax escucha, analiza y pone manos a la obra para ofrecer lo mejor a sus
+                                Pentax escucha, analiza y pone manos a la obra para ofrecer lo mejor a sus clientes
                             </p>
                         </div>
                     </div>
