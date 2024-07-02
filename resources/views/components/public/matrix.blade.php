@@ -138,6 +138,9 @@
                     Swal.fire({
                         title: response.message,
                         icon: "success",
+                    }).then(function() {
+            
+                        window.location.href = '{{ route('agradecimiento') }}';
                     });
 
                     $('#formContactos')[0].reset();

@@ -61,7 +61,7 @@
 
 <section class="relative">
     <img src="{{asset('images/img/image_1.png')}}" alt="hidromec piscinas"
-        class="w-full h-[800px] object-cover hidden md:block" />
+        class="w-full h-[600px] object-cover hidden md:block" />
 
     <img src="{{asset('images/img/image_15.png')}}" alt="hidromec piscinas"
         class="w-full h-[380px] object-cover block md:hidden" />
@@ -78,6 +78,13 @@
                     </h1>
                   
                 </div>
+
+                
+                <a
+                 href="{{route('index')}}"
+                 class="bg-secundario tracking-wide text-white text-text16 rounded-xl py-3 px-10 w-full md:w-auto text-center font-helveticaBold"
+                 >Regresar</a
+               >
             </div>
         </div>
     </div>
