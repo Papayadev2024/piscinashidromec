@@ -121,6 +121,12 @@ class IndexController extends Controller
         }
     }
 
+
+
+    public function agradecimiento(){
+        return view('public.thankyou');
+    }
+
     private function envioCorreoAdmin($data)
     {
         $generales = General::first();

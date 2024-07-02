@@ -38,7 +38,7 @@
           <img src="{{asset('images/svg/image_7.svg')}}" alt="Hidromec" class="w-full" />
         </a>
       </div>
-      <div class="hidden md:flex justify-center items-center w-full md:w-auto">
+      <div id="botoncotizar" class="hidden md:flex justify-center items-center w-full md:w-auto">
         <a
          target="_blank" href="https://api.whatsapp.com/send?phone=51946260675&text=¡Hola%20Hidromec!%20Quisiera%20recibir%20más%20detalles%20sobre%20sus%20productos%20y%20servicios%20especializados%20en%20Piscinas." rel="noopener"
           class="bg-[#232B52] text-white text-text16 rounded-xl py-3 px-5 w-full md:w-auto text-center font-helveticaBold"
