@@ -47,7 +47,7 @@
 
         .modal-open {
             overflow: hidden;
-            background-color: rgba(0, 0, 0, 1);
+            background-color: black;
         }
     </style>
 
@@ -154,8 +154,7 @@
                                                     <p class="font-helveticaLight text-text16 text-white">
                                                         Al facilitar mis datos acepto la
                                                         <a target="_blank" id="open-modal" 
-                                                            class="font-helveticaLight text-text16 text-white underline cursor-pointer">Política
-                                                            de Privacidad</a>
+                                                            class="font-helveticaLight text-text16 text-white underline cursor-pointer">Política de privacidad y Tratamiento de datos</a>
                                                     </p>
                                                 </div>
                                             </div>
@@ -921,14 +920,14 @@
     </main>
 
     <div id="default-modal" tabindex="-1" aria-hidden="true"
-        class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+        class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%)] max-h-full  bg-black bg-opacity-50">
         <div class="relative p-4 w-full max-w-2xl max-h-full">
             <!-- Modal content -->
             <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
                 <!-- Modal header -->
                 <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
                     <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-                        Políticas de privacidad
+                        Política de privacidad y Tratamiento de datos
                     </h3>
                     <button type="button"
                         class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
@@ -942,16 +941,71 @@
                     </button>
                 </div>
                 <!-- Modal body -->
-                <div class="p-4 md:p-5 space-y-4">
-                    <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                        With less than a month to go before the European Union enacts new consumer privacy laws for its
-                        citizens, companies around the world are updating their terms of service agreements to comply.
-                    </p>
-                    <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                        The European Union’s General Data Protection Regulation (G.D.P.R.) goes into effect on May 25 and is
-                        meant to ensure a common set of data rights in the European Union. It requires organizations to
-                        notify users as soon as possible of high-risk data breaches that could personally affect them.
-                    </p>
+                <div class="p-4 md:p-5 space-y-4 h-[500px] overflow-y-auto">
+                    <p dir="ltr"><strong>1. Introducci&oacute;n</strong></p>
+                    <p dir="ltr">En Hidromec Ingenieros, nos comprometemos a proteger la privacidad de nuestros usuarios y a cumplir con la Ley de Protecci&oacute;n de Datos Personales (Ley N&deg; 29733) y su Reglamento. Estas pol&iacute;ticas de tratamiento de datos personales describen c&oacute;mo recopilamos, usamos, almacenamos y protegemos la informaci&oacute;n personal que nos proporciona a trav&eacute;s de nuestro formulario en nuestra landing page.</p>
+                    <p dir="ltr"><strong>2. Responsable del Tratamiento de Datos Personales</strong></p>
+                    <p dir="ltr">El responsable del tratamiento de sus datos personales es Hidromec Ingenieros, con domicilio en Av. Aviaci&oacute;n N&ordm; 3985. Puede contactarnos al correo electr&oacute;nico info@hidromecingenieros.com o al tel&eacute;fono 448 5540.</p>
+                    <p dir="ltr"><strong>3. Datos Personales Recopilados</strong></p>
+                    <p dir="ltr">Recopilamos los siguientes datos personales a trav&eacute;s de nuestro formulario:</p>
+                    <ul>
+                    <li dir="ltr" aria-level="1">
+                    <p dir="ltr">Nombre completo</p>
+                    </li>
+                    <li dir="ltr" aria-level="1">
+                    <p dir="ltr">RUC o DNI</p>
+                    </li>
+                    <li dir="ltr" aria-level="1">
+                    <p dir="ltr">Direcci&oacute;n de correo electr&oacute;nico</p>
+                    </li>
+                    <li dir="ltr" aria-level="1">
+                    <p dir="ltr">N&uacute;mero de tel&eacute;fono</p>
+                    </li>
+                    <li dir="ltr" aria-level="1">
+                    <p dir="ltr">Mensaje del usuario</p>
+                    </li>
+                    </ul>
+                    <p dir="ltr"><strong>4. Finalidades del Tratamiento de Datos</strong></p>
+                    <p dir="ltr">Los datos personales que nos proporciona ser&aacute;n utilizados para las siguientes finalidades:</p>
+                    <ul>
+                    <li dir="ltr" aria-level="1">
+                    <p dir="ltr">Gestionar su solicitud o consulta.</p>
+                    </li>
+                    <li dir="ltr" aria-level="1">
+                    <p dir="ltr">Enviar informaci&oacute;n comercial y promociones de nuestros productos y servicios.</p>
+                    </li>
+                    <li dir="ltr" aria-level="1">
+                    <p dir="ltr">Realizar encuestas de satisfacci&oacute;n y estudios de mercado.</p>
+                    </li>
+                    </ul>
+                    <p dir="ltr"><strong>5. Base Legal para el Tratamiento de Datos</strong></p>
+                    <p dir="ltr">El tratamiento de sus datos personales se basa en el consentimiento que usted nos otorga al completar y enviar el formulario. Usted tiene derecho a retirar su consentimiento en cualquier momento, sin afectar la legalidad del tratamiento basado en el consentimiento previo a su retirada.</p>
+                    <p dir="ltr"><strong>6. Almacenamiento y Seguridad de los Datos</strong></p>
+                    <p dir="ltr">Sus datos personales ser&aacute;n almacenados en en servidores de alta seguridad ubicados f&iacute;sicamente en Canad&aacute; y ser&aacute;n tratados de manera confidencial y segura. Implementamos medidas de seguridad t&eacute;cnicas y organizativas para proteger sus datos contra el acceso no autorizado, la p&eacute;rdida o destrucci&oacute;n nuestros datacenter cumplen las normas de Arco.</p>
+                    <p dir="ltr"><strong>7. Transferencia de Datos Personales</strong></p>
+                    <p dir="ltr">No compartiremos sus datos personales con terceros, salvo que sea necesario para cumplir con las finalidades descritas en esta pol&iacute;tica o en caso de que exista una obligaci&oacute;n legal.</p>
+                    <p dir="ltr"><strong>8. Derechos del Titular de los Datos</strong></p>
+                    <p dir="ltr">Usted tiene derecho a acceder, rectificar, suprimir, oponerse, y limitar el tratamiento de sus datos personales. Para ejercer estos derechos, puede contactarnos a trav&eacute;s del correo electr&oacute;nico info@hidromecingenieros.com o al tel&eacute;fono 448 5540.</p>
+                    <p dir="ltr"><strong>9. Consentimiento para el Env&iacute;o de Publicidad</strong></p>
+                    <p dir="ltr">Al completar y enviar el formulario, usted consiente expresamente que Hidromec Ingenieros pueda enviarle comunicaciones publicitarias y comerciales a trav&eacute;s de correo electr&oacute;nico, mensajes de texto (SMS), llamadas telef&oacute;nicas, y cualquier otro medio de comunicaci&oacute;n electr&oacute;nica o f&iacute;sica.</p>
+                    <p dir="ltr"><strong>10. Duraci&oacute;n del Consentimiento</strong></p>
+                    <p dir="ltr">El consentimiento otorgado tendr&aacute; una duraci&oacute;n indefinida, salvo que usted decida revocar. Usted puede retirar su consentimiento en cualquier momento, comunic&aacute;ndose con nosotros a trav&eacute;s del correo electr&oacute;nico info@hidromecingenieros.com o al tel&eacute;fono 448 5540.</p>
+                    <p dir="ltr"><strong>11. Procedimiento para Retirar el Consentimiento</strong></p>
+                    <p dir="ltr">Si en alg&uacute;n momento no desea seguir recibiendo nuestras comunicaciones publicitarias, puede optar por:</p>
+                    <ul>
+                    <li dir="ltr" aria-level="1">
+                    <p dir="ltr">Enviar un correo electr&oacute;nico a info@hidromecingenieros.com con el asunto "Cancelar Suscripci&oacute;n".</p>
+                    </li>
+                    <li dir="ltr" aria-level="1">
+                    <p dir="ltr">Llamar al n&uacute;mero 448 5540 y solicitar la cancelaci&oacute;n de la suscripci&oacute;n.</p>
+                    </li>
+                    </ul>
+                    <p dir="ltr"><strong>12. Seguridad de sus Datos Personales</strong></p>
+                    <p dir="ltr">Implementamos medidas de seguridad t&eacute;cnicas y organizativas adecuadas para proteger sus datos personales contra el acceso no autorizado, la p&eacute;rdida o destrucci&oacute;n.</p>
+                    <p dir="ltr"><strong>13. Cambios en la Pol&iacute;tica de Tratamiento de Datos</strong></p>
+                    <p dir="ltr">Nos reservamos el derecho de modificar estas pol&iacute;ticas de tratamiento de datos en cualquier momento. Cualquier cambio ser&aacute; publicado en nuestra landing page y, si corresponde, le notificaremos a trav&eacute;s del correo electr&oacute;nico que nos haya proporcionado.</p>
+                    <p dir="ltr"><strong>14. Contacto</strong></p>
+                    <p dir="ltr">Si tiene alguna pregunta o inquietud sobre nuestras pol&iacute;ticas de tratamiento de datos personales, puede contactarnos a trav&eacute;s del correo electr&oacute;nico info@hidromecingenieros.com o al tel&eacute;fono 448 5540.</p>
                 </div>
                 <!-- Modal footer -->
                 <div class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
