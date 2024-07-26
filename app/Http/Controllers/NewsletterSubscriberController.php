@@ -69,7 +69,7 @@ class NewsletterSubscriberController extends Controller
 
     public function showSubscripciones(){
         
-        $subscripciones = NewsletterSubscriber::orderBy('created_at','desc')->get();;
+        $subscripciones = NewsletterSubscriber::where('phone','=','piscinas')->orderBy('created_at','desc')->get();;
         
         return view('pages.subscripciones.index', compact('subscripciones'));
 
@@ -78,6 +78,7 @@ class NewsletterSubscriberController extends Controller
         
         $data = $request->all() ; 
         $data['nombre'] = $data['full_name'];
+        $data['phone'] = 'piscinas';
         NewsletterSubscriber::create($data);
 
         $this->envioCorreoAdmin($data);
