@@ -36,12 +36,12 @@
         }
 
         .fondobombas {
-            background-image: url("./images/img/fondobombas.png");
+            background-image: url("./images/img/fondobombas.webp");
             object-fit: contain;
         }
 
         .fondologos {
-            background-image: url("./images/img/fondologos.png");
+            background-image: url("./images/img/fondologos.webp");
             object-fit: cover;
         }
 
@@ -60,10 +60,10 @@
 @section('content')
 
 <section class="relative">
-    <img src="{{asset('images/img/image_1.png')}}" alt="hidromec piscinas"
+    <img src="{{asset('images/img/image_1.webp')}}" alt="hidromec piscinas"
         class="w-full h-[600px] object-cover hidden md:block" />
 
-    <img src="{{asset('images/img/image_15.png')}}" alt="hidromec piscinas"
+    <img src="{{asset('images/img/image_15.webp')}}" alt="hidromec piscinas"
         class="w-full h-[380px] object-cover block md:hidden" />
 
     <div

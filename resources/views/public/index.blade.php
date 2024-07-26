@@ -36,12 +36,12 @@
         }
 
         .fondobombas {
-            background-image: url("./images/img/fondobombas.png");
+            background-image: url("./images/img/fondobombas.webp");
             object-fit: contain;
         }
 
         .fondologos {
-            background-image: url("./images/img/fondologos.png");
+            background-image: url("./images/img/fondologos.webp");
             object-fit: cover;
         }
 
@@ -57,10 +57,10 @@
 
     <main class="bg-[#F9FAFB]">
         <section class="relative">
-            <img src="{{asset('images/img/image_1.png')}}" alt="hidromec piscinas"
+            <img src="{{asset('images/img/image_1.webp')}}" alt="hidromec piscinas"
                 class="w-full h-[800px] object-cover hidden md:block" />
 
-            <img src="{{asset('images/img/image_15.png')}}" alt="hidromec piscinas"
+            <img src="{{asset('images/img/image_15.webp')}}" alt="hidromec piscinas"
                 class="w-full h-[1000px] object-cover block md:hidden" />
 
             <div
@@ -453,37 +453,37 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="flex justify-center items-center">
-                                <img src="{{asset('images/img/image_3.png')}}" alt="" />
+                                <img src="{{asset('images/img/image_3.webp')}}" alt="" />
                             </div>
                         </div>
 
                         <div class="swiper-slide">
                             <div class="flex justify-center items-center">
-                                <img src="{{asset('images/img/image_4.png')}}" alt="" />
+                                <img src="{{asset('images/img/image_4.webp')}}" alt="" />
                             </div>
                         </div>
 
                         <div class="swiper-slide">
                             <div class="flex justify-center items-center">
-                                <img src="{{asset('images/img/image_5.png')}}" alt="" />
+                                <img src="{{asset('images/img/image_5.webp')}}" alt="" />
                             </div>
                         </div>
 
                         <div class="swiper-slide">
                             <div class="flex justify-center items-center">
-                                <img src="{{asset('images/img/image_6.png')}}" alt="" />
+                                <img src="{{asset('images/img/image_6.webp')}}" alt="" />
                             </div>
                         </div>
 
                         <div class="swiper-slide">
                             <div class="flex justify-center items-center">
-                                <img src="{{asset('images/img/pentax.png')}}" alt="" />
+                                <img src="{{asset('images/img/pentax.webp')}}" alt="" />
                             </div>
                         </div>
 
                         <div class="swiper-slide">
                             <div class="flex justify-center items-center">
-                                <img src="{{asset('images/img/aquamec.png')}}" alt="" />
+                                <img src="{{asset('images/img/aquamec.webp')}}" alt="" />
                             </div>
                         </div>
                     </div>
@@ -505,7 +505,7 @@
                     </div>
 
                     <div class="flex justify-center items-center">
-                        <img src="{{asset('images/img/image_7.png')}}" alt="equipo de recirculación"
+                        <img src="{{asset('images/img/image_7.webp')}}" alt="equipo de recirculación"
                             class="w-full h-[355px] object-cover rounded-xl" />
                     </div>
 
@@ -574,7 +574,7 @@
                     </div>
 
                     <div class="flex justify-center items-center">
-                        <img src="./images/img/image_8.png" alt="equipo de recirculación"
+                        <img src="./images/img/image_8.webp" alt="equipo de recirculación"
                             class="w-full h-[355px] object-cover rounded-xl" />
                     </div>
 
@@ -688,10 +688,10 @@
                 </div>
 
                 <div class="flex justify-center items-center">
-                    <img src="{{asset('images/img/image_9.png')}}" alt=""
+                    <img src="{{asset('images/img/image_9.webp')}}" alt=""
                         class="w-full h-full object-cover hidden md:block" />
 
-                    <img src="{{asset('images/img/image_10.png')}}" alt=""
+                    <img src="{{asset('images/img/image_10.webp')}}" alt=""
                         class="w-full h-[800px] object-cover block md:hidden" />
                 </div>
             </div>
@@ -711,25 +711,25 @@
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="flex justify-center items-center">
-                                    <img src="{{asset('images/img/image_11.png')}}" alt="" />
+                                    <img src="{{asset('images/img/image_11.webp')}}" alt="" />
                                 </div>
                             </div>
 
                             <div class="swiper-slide">
                                 <div class="flex justify-center items-center">
-                                    <img src="{{asset('images/img/image_12.png')}}" alt="" />
+                                    <img src="{{asset('images/img/image_12.webp')}}" alt="" />
                                 </div>
                             </div>
 
                             <div class="swiper-slide">
                                 <div class="flex justify-center items-center">
-                                    <img src="{{asset('images/img/image_13.png')}}" alt="" />
+                                    <img src="{{asset('images/img/image_13.webp')}}" alt="" />
                                 </div>
                             </div>
 
                             <div class="swiper-slide">
                                 <div class="flex justify-center items-center">
-                                    <img src="{{asset('images/img/COAR2.png')}}" alt="" />
+                                    <img src="{{asset('images/img/COAR2.webp')}}" alt="" />
                                 </div>
                             </div>
                         </div>
