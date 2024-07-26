@@ -22,7 +22,7 @@
     <link rel="preload" as="image" href="https://piscinas.hidromecproductos.com/images/img/image_1.webp">
 
     {{-- Aqui van los CSS --}}
-    @yield('css_improtados')
+    {{-- @yield('css_improtados') --}}
 
     {{-- Swipper --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -58,7 +58,9 @@
     @include('components.public.footer')
     
 
-    @yield('scripts_improtados')
+    {{-- @yield('scripts_improtados') --}}
+
+    
 
     <script>
         function alerta(message) {
