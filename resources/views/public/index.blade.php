@@ -56,7 +56,7 @@
 @section('content')
 
     <main class="bg-[#F9FAFB]">
-        <section class="relative">
+        {{-- <section class="relative">
             <img src="{{asset('images/img/image_1.webp')}}" alt="hidromec piscinas"
                 class="w-full h-[1000px] md:h-[800px] object-cover" loading="lazy"/>
 
@@ -164,7 +164,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> --}}
 
         <section class="bg-[#F8F8F8] pt-[350px] md:pt-[495px] lg:pt-16 pb-10">
             <div class="w-11/12 mx-auto flex flex-col gap-10">
