@@ -166,7 +166,7 @@
             </div>
         </section> --}}
 
-        <section class="bg-[#F8F8F8] pt-[350px] md:pt-[495px] lg:pt-16 pb-10">
+        {{-- <section class="bg-[#F8F8F8] pt-[350px] md:pt-[495px] lg:pt-16 pb-10">
             <div class="w-11/12 mx-auto flex flex-col gap-10">
                 <h3 class="text-[#023B54] font-helveticaMedium text-text40 leading-tight text-center">
                     Categorías del <span class="text-[#007FC8]">negocio</span>
@@ -913,7 +913,7 @@
                 </div>
                 <div class="swiper-pagination !-bottom-[56px] block lg:hidden mb-[6px] md:mb-0"></div>
             </div>
-        </section>
+        </section> --}}
     </main>
 
     <div id="default-modal" tabindex="-1" aria-hidden="true"
