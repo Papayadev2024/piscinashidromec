@@ -18,6 +18,9 @@
     <link rel="icon" href="{{ asset('logohidromec.svg') }}" type="image/x-icon">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
 
+    <link rel="preconnect" href="https://piscinas.hidromecproductos.com">
+    <link rel="preload" as="image" href="https://piscinas.hidromecproductos.com/images/img/image_1.webp">
+
     {{-- Aqui van los CSS --}}
     @yield('css_improtados')
 
