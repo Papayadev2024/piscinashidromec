@@ -21,6 +21,12 @@ class Kernel extends HttpKernel
         \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
         \App\Http\Middleware\TrimStrings::class,
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
+         // Middleware to minify CSS
+        \Fahlisaputra\Minify\Middleware\MinifyCss::class,
+        // Middleware to minify Javascript
+        \Fahlisaputra\Minify\Middleware\MinifyJavascript::class,
+        // Middleware to minify Blade
+        \Fahlisaputra\Minify\Middleware\MinifyHtml::class,
     ];
 
     /**
@@ -35,8 +41,8 @@ class Kernel extends HttpKernel
             \Illuminate\Session\Middleware\StartSession::class,
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \App\Http\Middleware\VerifyCsrfToken::class,
-            \Illuminate\Routing\Middleware\SubstituteBindings::class,
-            \DipeshSukhia\LaravelHtmlMinify\Middleware\LaravelMinifyHtml::class
+            \Illuminate\Routing\Middleware\SubstituteBindings::class
+         
 
            
         ],

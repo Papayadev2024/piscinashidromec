@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7185d1d9ebe4269d3961be22e3e4a049",
+    "content-hash": "140dfe7e12c370b41d396a71ca05c632",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -315,73 +315,6 @@
             "time": "2024-07-08T12:26:09+00:00"
         },
         {
-            "name": "dipeshsukhia/laravel-html-minify",
-            "version": "v3.3.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/dipeshsukhia/laravel-html-minify.git",
-                "reference": "e4fb20db200b2db0631a7afe842d9ae0cf7d90ba"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/dipeshsukhia/laravel-html-minify/zipball/e4fb20db200b2db0631a7afe842d9ae0cf7d90ba",
-                "reference": "e4fb20db200b2db0631a7afe842d9ae0cf7d90ba",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/support": "^10.0|^11.0",
-                "php": ">=8.1"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^10.5"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "DipeshSukhia\\LaravelHtmlMinify\\Providers\\LaravelHtmlMinifyServiceProvider",
-                        "DipeshSukhia\\LaravelHtmlMinify\\Providers\\ExcludeMinifyBladeServiceProvider"
-                    ],
-                    "aliases": {
-                        "LaravelHtmlMinify": "DipeshSukhia\\LaravelHtmlMinify\\LaravelHtmlMinifyFacade"
-                    }
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "DipeshSukhia\\LaravelHtmlMinify\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Dipesh Sukhia",
-                    "email": "dipesh.sukhia@gmail.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "laravel minify html output",
-            "homepage": "https://github.com/dipeshsukhia/laravel-html-minify",
-            "keywords": [
-                "dipeshsukhia",
-                "laravel-html-minify"
-            ],
-            "support": {
-                "issues": "https://github.com/dipeshsukhia/laravel-html-minify/issues",
-                "source": "https://github.com/dipeshsukhia/laravel-html-minify/tree/v3.3.4"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/dipeshsukhia",
-                    "type": "github"
-                }
-            ],
-            "time": "2024-06-18T06:10:13+00:00"
-        },
-        {
             "name": "doctrine/inflector",
             "version": "2.0.10",
             "source": {
@@ -676,6 +609,72 @@
                 }
             ],
             "time": "2023-10-06T06:47:41+00:00"
+        },
+        {
+            "name": "fahlisaputra/laravel-minify",
+            "version": "v1.1.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fahlisaputra/laravel-minify.git",
+                "reference": "6246821a15b70a5f91928c7b684837fa63bf0081"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fahlisaputra/laravel-minify/zipball/6246821a15b70a5f91928c7b684837fa63bf0081",
+                "reference": "6246821a15b70a5f91928c7b684837fa63bf0081",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/http": "^6.0 || ^7.0 || ^8.0 || ^9.0 || ^10.0 || ^11.0",
+                "illuminate/support": "^6.0 || ^7.0 || ^8.0 || ^9.0 || ^10.0 || ^11.0",
+                "illuminate/view": "^6.0 || ^7.0 || ^8.0 || ^9.0 || ^10.0 || ^11.0",
+                "php": "^7.2.5 || ^8.0 || ^8.1 || ^8.2 || ^8.3"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Fahlisaputra\\Minify\\MinifyServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/Helpers.php"
+                ],
+                "psr-4": {
+                    "Fahlisaputra\\Minify\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "fahlisaputra",
+                    "email": "saputra@fahli.net"
+                }
+            ],
+            "description": "Minify your blade views, html, css and js files on the fly for Laravel 6, 7, 8, 9 and 10",
+            "keywords": [
+                "css-minifier",
+                "html-minifier",
+                "js-minifier",
+                "js-obfuscate",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/fahlisaputra/laravel-minify/issues",
+                "source": "https://github.com/fahlisaputra/laravel-minify/tree/v1.1.5"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/fahlisaputra",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-03-14T02:52:29+00:00"
         },
         {
             "name": "fruitcake/php-cors",
