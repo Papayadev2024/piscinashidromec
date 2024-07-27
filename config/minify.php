@@ -57,7 +57,7 @@ return [
     */
     'insert_semicolon' => [
         'css' => env('MINIFY_CSS_SEMICOLON', true),
-        'js'  => env('MINIFY_JS_SEMICOLON', true),
+        'js'  => env('MINIFY_JS_SEMICOLON', false),
     ],
 
     /*
