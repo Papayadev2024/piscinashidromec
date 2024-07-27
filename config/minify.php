@@ -41,7 +41,7 @@ return [
     | Default: false
     |
     */
-    'assets_enabled' => env('MINIFY_ASSETS_ENABLED', true),
+    'assets_enabled' => env('MINIFY_ASSETS_ENABLED', false),
 
     /*
     |--------------------------------------------------------------------------
@@ -56,7 +56,7 @@ return [
     |
     */
     'insert_semicolon' => [
-        'css' => env('MINIFY_CSS_SEMICOLON', true),
+        'css' => env('MINIFY_CSS_SEMICOLON', false),
         'js'  => env('MINIFY_JS_SEMICOLON', false),
     ],
 
