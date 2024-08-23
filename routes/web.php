@@ -36,7 +36,7 @@ use App\Http\Controllers\StaffController;
 */
 
 /* Las rutas publicas */
-Route::middleware('cacheResponse')->get('/', [IndexController::class, 'index'] )->name('index');
+Route::get('/', [IndexController::class, 'index'] )->name('index');
 Route::get('agradecimiento', [IndexController::class, 'agradecimiento'] )->name('agradecimiento');
 
 Route::get('/nosotros', [IndexController::class, 'index'] )->name('nosotros');

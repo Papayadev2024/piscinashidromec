@@ -70,7 +70,7 @@
     <script>
         $('document').ready(function() {
           new DataTable('#tabladatos', {
-    
+            ordering: false, 
             buttons: ['copy', 'csv', 'excel', 'pdf', 'print'],
             layout: {
               topStart: 'buttons'
